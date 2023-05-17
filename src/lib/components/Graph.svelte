@@ -2,11 +2,15 @@
 	import XAxis from "$lib/components/axes/XAxis.svelte";
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
-  import { onMount } from 'svelte'
-	import { stepValue } from "$lib/stores.js"
-  import onClassChange from '$lib/noncomponents/classwatcher.js'
+  import { afterUpdate } from 'svelte'
+  import { slice } from 'lodash'
+  // import onClassChange from '$lib/noncomponents/classwatcher.js'
 
+  export let index
   export let csvData
+  export let offset
+
+  $: ratioOfCsvData = Math.round((offset*1.4)*csvData.length)
 
   let xScale = d3.scaleTime()
       .domain(d3.extent(csvData, function(d) { return d.date; }))
@@ -16,54 +20,51 @@
     .domain([0, d3.max(csvData, function(d) { return +d.value; })])
     .range([ 270, 0 ]);
   
-  onMount(() => {
-      
-    var itemToWatch = document.querySelector('#graph');
-    onClassChange(itemToWatch, (node) => {
-      if(node.classList.contains('active')){
-        const path = d3.select('svg')
-          .append("path")
-          .attr('class', 'graphpath')
-          .datum(csvData)
-          .attr("fill", "none")
-          .attr("stroke", "steelblue")
-          .attr("stroke-width", 1.5)
-          .attr("d", d3.line()
-            .x(function(d) { return xScale(d.date) })
-            .y(function(d) { return yScale(d.value) })
-            )
-    
-        const totalLength = path.node().getTotalLength();
+  afterUpdate(() => {
 
-        path
-          .attr("stroke-dasharray", totalLength + " " + totalLength)
-          .attr("stroke-dashoffset", totalLength)
-          .transition().duration(5000).ease(d3.easeLinear)
-          .attr("stroke-dashoffset", 0);
-      }else{
-        // d3.select('.graphpath').remove()
-      }
-    });
+    d3.select('.graphpath').remove()
+    
+    if(index === 1){
+      d3.select('svg')
+      .append("path")
+      .attr('class', 'graphpath')
+      .datum(slice(csvData, 0, ratioOfCsvData))
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", 1.5)
+      .attr("d", d3.line()
+        .x(function(d) { return xScale(d.date) })
+        .y(function(d) { return yScale(d.value) })
+        )
+    }
+
   })
 
 </script>
 
-<div class='sticky-div'>
-  <svg>
-    <XAxis {xScale} /> 
-    <YAxis {yScale} />
-  </svg>
+<div class='divgraph'>
+  <div class='sticky-div'>
+    <svg>
+      <XAxis {xScale} /> 
+      <YAxis {yScale} />
+    </svg>
+  </div>
 </div>
 
 
 <style>
+  .divgraph{
+    height:100%;
+    position:relative;
+  }
+
   .sticky-div{
     position: sticky;
     position: -webkit-sticky; /* Safari */
-    bottom:50px;
+    top:100px;
     width: 400px;
     height: 300px;
-    align-self: flex-end;
+    /* align-self: flex-end; */
     margin: 0 auto;
   }
   svg{
