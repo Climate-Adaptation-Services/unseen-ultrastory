@@ -1,19 +1,23 @@
 <script>
 	// import Scrolly from "$lib/components/Scrolly.svelte";
 	import Graph from "$lib/components/Graph.svelte";
+	import Scatter from "$lib/components/Scatter.svelte";
 	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
 
 	export let data;
+	
 
 	const csvData = data['data'].map(d => {
 		return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
 	})
 
-	$: console.log(csvData)
+	const maxTempData = data.datatest
 
-	const steps = ["Test", "graph", "Test2", "Test3"];
+	$: console.log(data.datatest)
+
+	const steps = ["Test", "scatter", "graph", "Test3"];
 
 	let index = 0;
 	let offset;
@@ -39,15 +43,20 @@
 		{#each steps as stepName, i}
 			
 			<section class='step'>
-				{#if stepName === 'graph'}
-					<Graph {csvData} {offset} {index}/>
-				{/if}
+				{#if stepName === 'scatter'}
+					<Scatter {maxTempData} {offset} {index} {stepName}/>
+				<!-- {:else if stepName === 'scatter'}
+					<Scatter {maxTempData} {offset} {index}/>
+				{:else} -->
 				<p>{stepName}</p>
+				{/if}
 			</section>
 
 		{/each}
 	</div>
 </Scroller>
+
+
 	
 
 <style>
