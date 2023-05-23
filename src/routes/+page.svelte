@@ -1,6 +1,9 @@
 <script>
 	// import Scrolly from "$lib/components/Scrolly.svelte";
 	import Graph from "$lib/components/Graph.svelte";
+	import BackgroundMap from "$lib/components/BackgroundMap.svelte";
+	import 'leaflet/dist/leaflet.css';
+
 	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
@@ -30,7 +33,10 @@
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
-	<div slot='background' top='0' bottom='0'>
+	<div class='background' slot='background' top='0' bottom='0'>
+		{#if data}
+			<BackgroundMap />
+		{/if}
 	</div>
 
 	<div class='spacer'></div>
@@ -68,6 +74,7 @@
 		position: fixed;
 		left:10px;
 		top:10px;
+		height:1000px;
 	}
 	
 	section {
