@@ -11,6 +11,8 @@
 
 	export let data;
 	
+	let leafletMap;
+	
 
 	const csvData = data['data'].map(d => {
 		return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
@@ -37,15 +39,15 @@
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
-	<div class='background' slot='background' top='0' bottom='0'>
+	<div slot='background' top='0' bottom='0'>
 		{#if data}
-			<BackgroundMap />
+			<BackgroundMap {leafletMap} {offset} />
 		{/if}
 	</div>
 
 	<div class='spacer'></div>
 
-	<div slot='foreground' class='foreground'>
+	<div slot='foreground'>
 		{#each steps as stepName, i}
 			
 			<section class='step'>
@@ -63,8 +65,6 @@
 </Scroller>
 
 
-	
-
 <style>
 	.info {
 		padding: 0.5em;
@@ -74,16 +74,17 @@
 		color: white !important;
 	}
 
-	.foreground{
+	[slot="foreground"] {
 		margin-top:500px;
 	}
 
-	.background{
+	[slot="background"] {
 		color: white;
 		position: fixed;
-		left:10px;
-		top:10px;
-		height:1000px;
+		left:0px;
+		top:0px;
+		height:100vh;
+		width:100vw;
 	}
 	
 	section {
@@ -94,7 +95,7 @@
 
   .step {
     height: 200vh;
-    background: #aaa;
+    background: #aaaaaa2b;
     margin-top: 1em;
     text-align: center;
     transition: background 100ms;
