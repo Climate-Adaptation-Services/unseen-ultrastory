@@ -26,6 +26,7 @@
   .scaleLinear()
   .domain([28,42])
   .range(['orange', 'darkred'])
+
   
   afterUpdate(() => {
 
@@ -44,6 +45,10 @@
         .style("fill", function (d) {return colorScale(+d.T) ; } )
     }
 
+    if(offset > 0.7 && index === 1){
+      d3.select('.recordyear')
+      .attr('opacity', 1)
+    }
   })
 
 </script>
@@ -53,6 +58,7 @@
     <svg>
       <XAxis {xScale} /> 
       <YAxis {yScale} />
+      <text x={xScale(2019)-40} y={yScale(40)} class="recordyear" opacity = {0}>2019</text>
     </svg>
   </div>
 </div>
