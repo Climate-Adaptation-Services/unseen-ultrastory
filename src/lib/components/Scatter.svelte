@@ -3,15 +3,12 @@
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import { slice } from 'lodash'
-  import onClassChange from '$lib/noncomponents/classwatcher.js'
 
   export let index
   export let maxTempData
   export let offset
-  export let stepName
 
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
-  $: console.log(offset, ratioOfCsvData, index)
 
   let xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))

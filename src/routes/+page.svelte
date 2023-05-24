@@ -1,7 +1,7 @@
 <script>
 	// import Scrolly from "$lib/components/Scrolly.svelte";
-	import Graph from "$lib/components/Graph.svelte";
 	import Scatter from "$lib/components/Scatter.svelte";
+	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
@@ -14,10 +14,11 @@
 	})
 
 	const maxTempData = data.datatest
+	const middellijnData = data.datamiddellijn
 
 	$: console.log(data.datatest)
 
-	const steps = ["Test", "scatter", "graph", "Test3"];
+	const steps = ["Test", "scatter", "kansen", "Test3"];
 
 	let index = 0;
 	let offset;
@@ -41,13 +42,12 @@
 
 	<div slot='foreground' class='foreground'>
 		{#each steps as stepName, i}
-			
 			<section class='step'>
 				{#if stepName === 'scatter'}
 					<Scatter {maxTempData} {offset} {index} {stepName}/>
-				<!-- {:else if stepName === 'scatter'}
-					<Scatter {maxTempData} {offset} {index}/>
-				{:else} -->
+				{:else if stepName === 'kansen'}
+					<Kansgrafiek {middellijnData} {offset} {index} {stepName}/>
+				{:else}
 				<p>{stepName}</p>
 				{/if}
 			</section>
