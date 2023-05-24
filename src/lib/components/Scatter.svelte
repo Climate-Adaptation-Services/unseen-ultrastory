@@ -3,7 +3,6 @@
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import { slice } from 'lodash'
-  import onClassChange from '$lib/noncomponents/classwatcher.js'
 
   export let index
   export let maxTempData

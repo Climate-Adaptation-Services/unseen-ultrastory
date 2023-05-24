@@ -10,4 +10,6 @@ body {
   background-image: linear-gradient(rgba(82, 82, 17, 0.504), rgb(255, 0, 0));
   color:white;
   margin:0 !important;
+  text-align: center;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

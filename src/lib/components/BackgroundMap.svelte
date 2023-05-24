@@ -1,21 +1,25 @@
 <script>
-  // import { LeafletMap, TileLayer } from 'svelte-leafletjs';
-  import { afterUpdate, onMount } from 'svelte'
+  import { onMount } from 'svelte'
   import { browser } from '$app/environment';
+
+  import { testRoute } from '$lib/noncomponents/routes.js';
 
   export let leafletMap;
   export let offset;
+  export let index
 
-  let LeafletMapModule
-  let TileLayerModule
+  let LeafletMap;
+  let TileLayer;
+  let Polyline;
 
   let zoomedIn = false
+  let showingRoute = false
 
   onMount(async () => {
 		const SL = await import('svelte-leafletjs');
-    LeafletMapModule = SL.LeafletMap
-    TileLayerModule = SL.TileLayer
-
+    LeafletMap = SL.LeafletMap
+    TileLayer = SL.TileLayer
+    Polyline = SL.Polyline
 	});
 
   $: if(leafletMap){
@@ -40,35 +44,44 @@
       maxBounds: [[51.263871, 3.892372],[52.263871, 4.892372]],
   };
 
-  $: if(leafletMap && offset > 0.3 && !zoomedIn){
+  $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
-    leafletMap.flyTo([51.437061, 5.478283], 14, {duration: 6})
+    leafletMap.flyTo([51.437061, 5.478283], 15, {duration: 5})
+
+    setTimeout(() => {  
+      showingRoute = true 
+    }, 5000);
+
   }
 
-  $: if(leafletMap && offset < 0.3 && zoomedIn){
+  $: if(leafletMap && offset < 0.1 && zoomedIn && index === 0){
     zoomedIn = false
-    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 6})
+    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 5})
+    showingRoute = false
   }
 
 </script>
 
-  {#if LeafletMapModule}
+  {#if LeafletMap}
     <div class="backgroundMap">
-      <svelte:component this={LeafletMapModule} bind:this={leafletMap} options={mapOptions}>
-        <svelte:component this={TileLayerModule} url={tileUrl} options={tileLayerOptions}/>
-      </svelte:component >
-
-      <!-- <LeafletMapModule bind:this={leafletMap} options={mapOptions}>
-        <TileLayerModule url={tileUrl} options={tileLayerOptions}/>
-      </LeafletMapModule> -->
+      <LeafletMap bind:this={leafletMap} options={mapOptions}>
+        <TileLayer url={tileUrl} options={tileLayerOptions}/>
+        {#if showingRoute}
+          <Polyline latLngs={testRoute.slice(0, Math.round((offset)*testRoute.length))} />
+        {/if}
+      </LeafletMap>
     </div>
   {/if}
 
 
 <style>
-div{
-  height:100%;
-  width:100%;
-}
+  div{
+    height:100%;
+    width:100%;
+  }
+
+  .backgroundMap{
+    z-index: -1000;
+  }
 
 </style>

@@ -4,7 +4,6 @@
   import * as d3 from 'd3'
   import { afterUpdate } from 'svelte'
   import { slice } from 'lodash'
-  // import onClassChange from '$lib/noncomponents/classwatcher.js'
 
   export let index
   export let csvData
