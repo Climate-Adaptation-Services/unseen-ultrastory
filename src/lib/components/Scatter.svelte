@@ -63,6 +63,7 @@
 .divscatter{
     height:100%;
     position:relative;
+    background-color: #f1f1f1
   }
 
   .sticky-div{

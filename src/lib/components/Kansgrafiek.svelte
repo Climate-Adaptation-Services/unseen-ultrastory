@@ -9,7 +9,7 @@
   export let offset
   
   $: ratioOfCsvData = Math.round((offset*4)*middellijnData.length)
-  
+
   let xScale = d3.scaleLog()
       .domain(d3.extent(middellijnData, function(d) { return +d.Return; }))
       .range([ 30, 340 ]);
@@ -65,6 +65,7 @@
 .divkansgrafiek{
     height:100%;
     position:relative;
+    background-color: #f1f1f1;
   }
 
   .sticky-div{

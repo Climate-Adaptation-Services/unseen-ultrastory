@@ -33,8 +33,7 @@
 </script>
 
 <div class='title'>
-	<h1>Record verpulverende hitte in Brabant</h1>
-
+	<h1>Brabant onvoorbereid <br></h1>
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
@@ -75,7 +74,7 @@
 		justify-content: center;
 		align-items: center;
 		color: white;
-		background-image: url('images/heatwave.jpg');
+		background-image: url('images/heatwave.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
