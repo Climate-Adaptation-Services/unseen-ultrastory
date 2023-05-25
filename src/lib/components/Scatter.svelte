@@ -10,7 +10,6 @@
   export let stepName
 
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
-  $: console.log(offset, ratioOfCsvData, index)
 
   let xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
@@ -32,7 +31,7 @@
     <svg>
       <XAxis {xScale} /> 
       <YAxis {yScale} />
-      {#if ratioOfCsvData > 68 && index === 1}
+      {#if ratioOfCsvData > 68 && index === 2}
         <text x={xScale(1988)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
         <text x={xScale(1988)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
@@ -45,7 +44,7 @@
           d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
         />
       {/if}
-      {#if index === 1}
+      {#if index === 2}
         {#each slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
             cx = {xScale(+d.year)} 

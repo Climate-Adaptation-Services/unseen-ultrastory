@@ -22,7 +22,7 @@
 
 	$: console.log(data.datatest)
 
-	const steps = ["Test", "scatter", "graph", "Test3"];
+	const steps = ["huis", "testRoute", "scatter", "graph", "Test3"];
 
 	let index = 0;
 	let offset;
@@ -32,7 +32,6 @@
 
 <div class='title'>
 	<h1>Record verpulverende hitte in Brabant</h1>
-
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
@@ -67,6 +66,10 @@
 
 
 <style>
+	h1{
+		margin-bottom:1.5em;
+		font-size: 40px;
+	}
 
 	.title{
 		height: 100vh;
