@@ -7,7 +7,6 @@
   export let index
   export let maxTempData
   export let offset
-  export let stepName
 
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
 
@@ -64,6 +63,7 @@
 .divscatter{
     height:100%;
     position:relative;
+    background-color: #f1f1f1
   }
 
   .sticky-div{

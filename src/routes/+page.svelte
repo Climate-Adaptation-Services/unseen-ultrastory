@@ -5,6 +5,7 @@
 	import 'leaflet/dist/leaflet.css';
 
 	import Scatter from "$lib/components/Scatter.svelte";
+	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
@@ -19,6 +20,7 @@
 	})
 
 	const maxTempData = data.datatest
+	const middellijnData = data.datamiddellijn
 
 	$: console.log(data.datatest)
 
@@ -31,7 +33,7 @@
 </script>
 
 <div class='title'>
-	<h1>Record verpulverende hitte in Brabant</h1>
+	<h1>Brabant onvoorbereid</h1>
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
@@ -49,13 +51,12 @@
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
 		{#each steps as stepName, i}
-			
 			<section class='step'>
 				{#if stepName === 'scatter'}
 					<Scatter {maxTempData} {offset} {index} {stepName}/>
-				<!-- {:else if stepName === 'scatter'}
-					<Scatter {maxTempData} {offset} {index}/>
-				{:else} -->
+				{:else if stepName === 'kansen'}
+					<Kansgrafiek {middellijnData} {offset} {index} {stepName}/>
+				{:else}
 				<p>{stepName}</p>
 				{/if}
 			</section>
@@ -77,7 +78,7 @@
 		justify-content: center;
 		align-items: center;
 		color: white;
-		background-image: url('images/heatwave.jpg');
+		background-image: url('images/heatwave.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
