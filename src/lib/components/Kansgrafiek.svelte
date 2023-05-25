@@ -9,6 +9,8 @@
   export let middellijnData
   export let offset
   export let confidenceData
+
+  $:console.log(confidenceData)
   
   $: ratioOfCsvData = Math.round((offset*4)*middellijnData.length)
   $: ratioOfCsvDataConfidence = Math.round((offset*4)*confidenceData.length)

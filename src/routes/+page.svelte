@@ -57,7 +57,7 @@
 				{#if stepName === 'scatter'}
 					<Scatter {maxTempData} {offset} {index} {stepName}/>
 				{:else if stepName === 'kansen'}
-					<Kansgrafiek {middellijnData} {offset} {index} {stepName}/>
+					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData}/>
 				{:else if stepName === 'huis'}
 					<Introductie {offset} {index} />
 				{/if}
