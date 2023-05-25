@@ -31,8 +31,8 @@
       <XAxis {xScale} /> 
       <YAxis {yScale} />
       {#if ratioOfCsvData > 68 && index === 1}
-        <text x={xScale(1988)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
-        <text x={xScale(1988)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
+        <text x={xScale(1988)} y={yScale(40)} class="recordyear" opacity = {1} font-size = '2.5vh'>De eerste keer</text>
+        <text x={xScale(1988)} y={yScale(39)} class="recordyear" opacity = {1} font-size = '2.5vh'>40+ °C in 2019</text>
         <path
           transform="translate(290 10)"
           id='arrow-line'

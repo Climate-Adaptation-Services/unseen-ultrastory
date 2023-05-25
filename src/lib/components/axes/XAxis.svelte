@@ -1,5 +1,5 @@
 <script>
-  import { scaleLinear, axisBottom, select, selectAll } from "d3";
+  import { scaleLinear, axisBottom, select, selectAll, format } from "d3";
 
   export let xScale
 
@@ -14,9 +14,9 @@
 
   // call axis generators on the scale and pin the SVG pins.
   $: if (pinXAxis) {
-    select(pinXAxis).call(axisBottom(xScale).ticks(width / 60));
+    select(pinXAxis).call(axisBottom(xScale).ticks(6).tickSizeOuter(0).tickFormat(format("d")));
     selectAll(".domain, line")
-      .style('stroke', 'black')
+      .style('stroke', '#808080')
   }
 
 </script>
@@ -25,7 +25,7 @@
   class="xAxis"
   bind:this={pinXAxis}
   transform="translate({0},{margin + height})"
-  stroke='black'
+  stroke='#404040'
 />
 
 <style>

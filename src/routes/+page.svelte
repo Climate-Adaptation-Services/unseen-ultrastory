@@ -21,6 +21,7 @@
 
 	const maxTempData = data.datatest
 	const middellijnData = data.datamiddellijn
+	const confidenceData = data.dataconfidence
 
 	$: console.log(data.datatest)
 
@@ -55,7 +56,7 @@
 				{#if stepName === 'scatter'}
 					<Scatter {maxTempData} {offset} {index} {stepName}/>
 				{:else if stepName === 'kansen'}
-					<Kansgrafiek {middellijnData} {offset} {index} {stepName}/>
+					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData}/>
 				{:else}
 				<p>{stepName}</p>
 				{/if}
