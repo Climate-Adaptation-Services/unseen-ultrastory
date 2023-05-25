@@ -30,7 +30,7 @@
 
   
   const mapOptions = {
-    center: [51.437061, 5.478283],
+    center: [51.4328156, 5.4846993],
     zoom: 7,
     preferCanvas: true,
     zoomControl: false,
@@ -48,7 +48,7 @@
 
   $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
-    leafletMap.flyTo([51.437061, 5.478283], 15, {duration: 5})
+    leafletMap.flyTo([51.4328156, 5.4846993], 15, {duration: 1})
 
     // momentarily stop scrolling until zoomed in
     const scrollY = document.documentElement.scrollTop || document.body.scrollTop
@@ -56,13 +56,13 @@
     setTimeout(() => {  
       showingRoute = true 
       window.onscroll = function () {};
-    }, 5000);
+    }, 1);
 
   }
 
   $: if(leafletMap && offset < 0.1 && zoomedIn && index === 0){
     zoomedIn = false
-    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 5})
+    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 1})
     showingRoute = false
   }
 
