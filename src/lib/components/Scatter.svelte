@@ -30,9 +30,9 @@
     <svg>
       <XAxis {xScale} /> 
       <YAxis {yScale} />
-      {#if ratioOfCsvData > 68 && index === 1}
-        <text x={xScale(1988)} y={yScale(40)} class="recordyear" opacity = {1} font-size = '2.5vh'>De eerste keer</text>
-        <text x={xScale(1988)} y={yScale(39)} class="recordyear" opacity = {1} font-size = '2.5vh'>40+ °C in 2019</text>
+      {#if ratioOfCsvData > 68 && index === 2}
+        <text x={xScale(1988)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
+        <text x={xScale(1988)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
           transform="translate(290 10)"
           id='arrow-line'
@@ -43,7 +43,7 @@
           d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
         />
       {/if}
-      {#if index === 1}
+      {#if index === 2}
         {#each slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
             cx = {xScale(+d.year)} 

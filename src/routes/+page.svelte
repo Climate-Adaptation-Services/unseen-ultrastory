@@ -4,6 +4,7 @@
 	import BackgroundMap from "$lib/components/BackgroundMap.svelte";
 	import 'leaflet/dist/leaflet.css';
 
+	import Introductie from "$lib/components/Introductie.svelte";
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import { timeParse } from 'd3'
@@ -25,7 +26,7 @@
 
 	$: console.log(data.datatest)
 
-	const steps = ["Test", "scatter", "kansen", "Test3"];
+	const steps = ["huis", "testRoute", "kansen", "scatter", "graph", "Test3"];
 
 	let index = 0;
 	let offset;
@@ -34,7 +35,7 @@
 </script>
 
 <div class='title'>
-	<h1>Brabant onvoorbereid <br></h1>
+	<h1>Brabant onvoorbereid</h1>
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
@@ -52,13 +53,13 @@
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
 		{#each steps as stepName, i}
-			<section class='step'>
+			<section class='step step_{stepName}'>
 				{#if stepName === 'scatter'}
 					<Scatter {maxTempData} {offset} {index} {stepName}/>
 				{:else if stepName === 'kansen'}
-					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData}/>
-				{:else}
-				<p>{stepName}</p>
+					<Kansgrafiek {middellijnData} {offset} {index} {stepName}/>
+				{:else if stepName === 'huis'}
+					<Introductie {offset} {index} />
 				{/if}
 			</section>
 
@@ -68,6 +69,10 @@
 
 
 <style>
+	h1{
+		margin-bottom:1.5em;
+		font-size: 40px;
+	}
 
 	.title{
 		height: 100vh;
@@ -102,7 +107,7 @@
 	}
 	
 	section {
-		width:50%;
+		width:90%;
 		margin: 0 auto;
 		position:relative;
 	}

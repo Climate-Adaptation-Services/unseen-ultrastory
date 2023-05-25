@@ -1,35 +1,37 @@
 <script>
   import { onMount } from 'svelte'
-  import { browser } from '$app/environment';
-
   import { testRoute } from '$lib/noncomponents/routes.js';
 
-  export let leafletMap;
-  export let offset;
-  export let index
-
+  // modules loaded from the client
   let LeafletMap;
   let TileLayer;
+  let Marker;
   let Polyline;
-
-  let zoomedIn = false
-  let showingRoute = false
-
+  let Tooltip;
   onMount(async () => {
 		const SL = await import('svelte-leafletjs');
     LeafletMap = SL.LeafletMap
     TileLayer = SL.TileLayer
+    Marker = SL.Marker
     Polyline = SL.Polyline
+    Tooltip = SL.Tooltip
 	});
+
+  export let leafletMap;
+  export let offset;
+  export let index;
+
+  let zoomedIn = false
+  let showingRoute = false
 
   $: if(leafletMap){
     leafletMap = leafletMap.getMap()
   }
 
+  
   const mapOptions = {
-    center: [51.437061, 5.478283],
+    center: [51.4328156, 5.4846993],
     zoom: 7,
-    // zoomSnap: 0.1,
     preferCanvas: true,
     zoomControl: false,
   };
@@ -46,17 +48,21 @@
 
   $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
-    leafletMap.flyTo([51.437061, 5.478283], 15, {duration: 5})
+    leafletMap.flyTo([51.4328156, 5.4846993], 15, {duration: 1})
 
+    // momentarily stop scrolling until zoomed in
+    const scrollY = document.documentElement.scrollTop || document.body.scrollTop
+    window.onscroll = function () { window.scrollTo(0, scrollY); };
     setTimeout(() => {  
       showingRoute = true 
-    }, 5000);
+      window.onscroll = function () {};
+    }, 1);
 
   }
 
   $: if(leafletMap && offset < 0.1 && zoomedIn && index === 0){
     zoomedIn = false
-    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 5})
+    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 1})
     showingRoute = false
   }
 
@@ -67,7 +73,14 @@
       <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         {#if showingRoute}
-          <Polyline latLngs={testRoute.slice(0, Math.round((offset)*testRoute.length))} />
+          {#if index === 0}
+            <Marker latLng={testRoute[0]}>
+              <Tooltip>Huis van Leonie en Niels</Tooltip>
+            </Marker>
+          {:else if index === 1}
+            <Marker latLng={testRoute[0]}/>
+            <Polyline latLngs={testRoute.slice(0, Math.round(offset*testRoute.length))} color="steelblue" />
+          {/if}
         {/if}
       </LeafletMap>
     </div>
@@ -81,7 +94,7 @@
   }
 
   .backgroundMap{
-    z-index: -1000;
+    pointer-events:none;
   }
 
 </style>
