@@ -10,6 +10,7 @@
   export let middellijnData
   export let offset
   export let confidenceData
+  export let currentStepName
 
   $: ratioOfCsvData = Math.round((offset*4)*middellijnData.length)
   $: ratioOfCsvDataConfidence = Math.round((offset*6)*confidenceData.length)
@@ -45,8 +46,9 @@
     
   afterUpdate(() => {
   
-    d3.select('.kansgraphpathzonder').remove()
-    if(index === 2){     
+    if(currentStepName === 'kansen'){
+      d3.select('.kansgraphpathzonder').remove()
+      
       d3.select('.svgkansgrafiek')
       .append("path")
       .attr('class', 'kansgraphpathzonder')
@@ -60,8 +62,9 @@
         )
     }
       
-    d3.select('.kansgraphpathconfidencezonder').remove() 
-    if(index === 2 && ratioOfCsvData > 67){    
+    if(currentStepName === 'kansen'){
+      d3.select('.kansgraphpathconfidencezonder').remove() 
+      
       d3.select(".svgkansgrafiek")
           .append("path")
           .attr('class', 'kansgraphpathconfidencezonder')
@@ -70,9 +73,10 @@
           .attr("stroke", "none")
           .attr("fill-opacity", "0.2");
     }
-    
-    d3.select('.kansgraphpathmet').remove()
-    if(index === 2 && ratioOfCsvData > 200){  
+      
+    if(currentStepName === 'kansen' && ratioOfCsvData > 200){  
+      d3.select('.kansgraphpathmet').remove()
+      
       d3.select('.svgkansgrafiek')
       .append("path")
       .attr('class', 'kansgraphpathmet')
@@ -85,8 +89,10 @@
         .y(function(d) { return yScale(d.Klimaatverandering) })
         )
     }
-    d3.select('.kansgraphpathconfidencemet').remove()  
-    if(index === 2 && ratioOfCsvData > 265){    
+
+    if(currentStepName === 'kansen' && ratioOfCsvData > 265){    
+      d3.select('.kansgraphpathconfidencemet').remove()    
+      
       d3.select(".svgkansgrafiek")
         .append("path")
         .attr('class', 'kansgraphpathconfidencemet')
@@ -112,12 +118,12 @@
       <svg class='svgkansgrafiek'>
         <XAxis {xScale} /> 
         <YAxis {yScale} />     
-        <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="red" stroke-dasharray="5,5"/>        
-        {#if ratioOfCsvData > 180 && index === 2}
+        <line x1={xScale(1)}  y1={yScale(40)} x2={xScale(10000)} y2={yScale(40)} stroke="red" stroke-dasharray="5,5"/>        
+        {#if ratioOfCsvData > 180 && currentStepName === 'kansen'}
             <text x={xScale(800)} y={yScale(35)} class="recordyear" fill="green" font-size = "12px">Zonder klimaatverandering</text>
             <text x={xScale(800)} y={yScale(34)} class="recordyear" font-size = "12px">kon 40°C niet voorkomen</text>
         {/if}
-        {#if ratioOfCsvData > 280 && index === 2}
+        {#if ratioOfCsvData > 280 && currentStepName === 'kansen'}
             <text x={xScale(20)} y={yScale(38)} class="recordyear" fill="red" font-size = "12px">Met klimaatverandering</text>
             <text x={xScale(20)} y={yScale(37)} class="recordyear" font-size = "12px">wel!</text>
         {/if}
@@ -129,7 +135,6 @@
 .divkansgrafiek{
     height:100%;
     position:relative;
-    background-color: #f1f1f1;
   }
 
   .sticky-div{

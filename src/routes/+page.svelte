@@ -5,6 +5,8 @@
 	import 'leaflet/dist/leaflet.css';
 
 	import Introductie from "$lib/components/Introductie.svelte";
+	import Ziekenhuis from "$lib/components/Ziekenhuis.svelte";
+	import Wandeling from "$lib/components/Wandeling.svelte";
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import { timeParse } from 'd3'
@@ -26,11 +28,13 @@
 
 	$: console.log(data.datatest)
 
-	const steps = ["huis", "testRoute", "kansen", "scatter", "graph", "Test3"];
+	const stepNames = ["huis", "ziekenhuis", "wandeling", "scatter", "kansen", "Test3"];
 
 	let index = 0;
 	let offset;
 	let progress;
+
+	$: currentStepName = stepNames[index];
 
 </script>
 
@@ -41,7 +45,7 @@
 <Scroller bind:index bind:offset bind:progress>
 	<div slot='background' top='0' bottom='0'>
 		{#if data}
-			<BackgroundMap {leafletMap} {offset} {index}/>
+			<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 		{/if}
 
 	</div>
@@ -52,14 +56,18 @@
 			<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
-		{#each steps as stepName, i}
+		{#each stepNames as stepName, i}
 			<section class='step step_{stepName}'>
 				{#if stepName === 'scatter'}
-					<Scatter {maxTempData} {offset} {index} {stepName}/>
+					<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
 				{:else if stepName === 'kansen'}
-					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData}/>
+					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 				{:else if stepName === 'huis'}
-					<Introductie {offset} {index} />
+					<Introductie {offset} {index} {currentStepName}/>
+				{:else if stepName === 'ziekenhuis'}
+					<Ziekenhuis {offset} {index} {currentStepName}/>
+				{:else if stepName === 'wandeling'}
+					<Wandeling {offset} {index} {currentStepName}/>
 				{/if}
 			</section>
 
@@ -113,11 +121,12 @@
 	}
 
   .step {
-    height: 5000px;
-    background: #aaaaaa2b;
+    height: 3000px;
+    /* background: #aaaaaa2b; */
     margin-top: 1em;
     text-align: center;
     transition: background 100ms;
+		position: relative;
   }
 
 	#graph{
