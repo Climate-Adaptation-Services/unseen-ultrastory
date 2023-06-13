@@ -36,7 +36,6 @@
         .y(function(d) { return yScale(d.value) })
         )
     }
-
   })
 
 </script>
