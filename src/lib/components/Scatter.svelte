@@ -45,6 +45,7 @@
 
   <div class='sticky-div'>
     <svg>
+      <g transform="translate(10,0)">
       <XAxis {xScale} /> 
       <YAxis {yScale} />
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
@@ -68,17 +69,18 @@
             r = {3}
             fill = {colorScale(+d.T)}
           />
-        {/if}
-        {#if currentStepName === 'scatter'}
-          {#each slice(maxTempData, 0, ratioOfCsvData) as d}
-            <circle 
-              cx = {xScale(+d.year)} 
-              cy = {yScale(+d.T)} 
-              r = {3}
-              fill = {colorScale(+d.T)}
-            />
-          {/each}
-        {/if}
+        {/each}
+      {/if}
+      {#if currentStepName === 'scatter'}
+        {#each slice(maxTempData, 0, ratioOfCsvData) as d}
+          <circle 
+            cx = {xScale(+d.year)} 
+            cy = {yScale(+d.T)} 
+            r = {3}
+            fill = {colorScale(+d.T)}
+          />
+        {/each}
+      {/if}
       </g>
     </svg>
   </div>
