@@ -26,21 +26,19 @@
       .domain([100,0.01])
       .range([ 30, 340 ]);
 
-  
-
   let yScale = d3.scaleLinear()
     .domain([25, d3.max(middellijnData, function(d) { return +d.Klimaatverandering; })])
     .range([ 270, 20 ]);
 
   const areaZonder = d3
     .area()
-    .x(d => xScale(d.Kans))
+    .x(d => xScale(+d.Kans))
     .y0(d => yScale(d.Lower_zonder))
     .y1(d => yScale(d.Upper_zonder))
 
   const areaMet = d3
     .area()
-    .x(d => xScale(d.Kans))
+    .x(d => xScale(+d.Kans))
     .y0(d => yScale(d.Lower_met))
     .y1(d => yScale(d.Upper_met))
     
@@ -57,7 +55,7 @@
       .attr("stroke", "green")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
-        .x(function(d) { return xScale(d.Kans) })
+        .x(function(d) { return xScale(+d.Kans) })
         .y(function(d) { return yScale(d.Zonder) })
         )
     }
@@ -85,7 +83,7 @@
       .attr("stroke", "red")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
-        .x(function(d) { return xScale(d.Kans) })
+        .x(function(d) { return xScale(+d.Kans) })
         .y(function(d) { return yScale(d.Klimaatverandering) })
         )
     }
