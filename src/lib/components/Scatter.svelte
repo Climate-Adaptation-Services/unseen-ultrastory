@@ -48,9 +48,11 @@
       <g transform="translate(10,0)">
       <XAxis {xScale} /> 
       <YAxis {yScale} />
+      <text x={xScale(1985)} y={yScale(23.3)} font-size = "12px">Jaar</text>  
+      <text x={xScale(1900)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "12px">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
-        <text x={xScale(1988)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
-        <text x={xScale(1988)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
+        <text x={xScale(1986)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
+        <text x={xScale(1986)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
           transform="translate(290 10)"
           id='arrow-line'

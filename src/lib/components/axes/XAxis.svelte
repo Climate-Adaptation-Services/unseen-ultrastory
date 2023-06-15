@@ -14,7 +14,7 @@
 
   // call axis generators on the scale and pin the SVG pins.
   $: if (pinXAxis) {
-    select(pinXAxis).call(axisBottom(xScale).ticks(6).tickSizeOuter(0).tickFormat(format("d")));
+    select(pinXAxis).call(axisBottom(xScale).ticks(3).tickSizeOuter(0).tickFormat(format("")));
     selectAll(".domain, line")
       .style('stroke', '#808080')
   }

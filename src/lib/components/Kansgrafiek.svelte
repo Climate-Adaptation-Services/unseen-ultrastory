@@ -24,21 +24,21 @@
 
   let xScale = d3.scaleLog()
       .domain([100,0.01])
-      .range([ 30, 340 ]);
+      .range([ 40, 350 ]);
 
   let yScale = d3.scaleLinear()
-    .domain([25, d3.max(middellijnData, function(d) { return +d.Klimaatverandering; })])
+    .domain([25, 46])
     .range([ 270, 20 ]);
 
   const areaZonder = d3
     .area()
-    .x(d => xScale(+d.Kans))
+    .x(d => xScale(d.Kans))
     .y0(d => yScale(d.Lower_zonder))
     .y1(d => yScale(d.Upper_zonder))
 
   const areaMet = d3
     .area()
-    .x(d => xScale(+d.Kans))
+    .x(d => xScale(d.Kans))
     .y0(d => yScale(d.Lower_met))
     .y1(d => yScale(d.Upper_met))
     
@@ -55,7 +55,7 @@
       .attr("stroke", "green")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
-        .x(function(d) { return xScale(+d.Kans) })
+        .x(function(d) { return xScale(d.Kans) })
         .y(function(d) { return yScale(d.Zonder) })
         )
     }
@@ -83,7 +83,7 @@
       .attr("stroke", "red")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
-        .x(function(d) { return xScale(+d.Kans) })
+        .x(function(d) { return xScale(d.Kans) })
         .y(function(d) { return yScale(d.Klimaatverandering) })
         )
     }
@@ -115,16 +115,22 @@
     <div class='sticky-div'>
       <svg class='svgkansgrafiek'>
         <XAxis {xScale} /> 
-        <YAxis {yScale} />     
-        <line x1={xScale(1)}  y1={yScale(40)} x2={xScale(10000)} y2={yScale(40)} stroke="red" stroke-dasharray="5,5"/>        
+        <g transform="translate(10,0)">
+          <YAxis {yScale} /> 
+        </g>
+      <svg class='svgkansgrafiek'>
+        <text x={xScale(1.5)} y={yScale(22.5)} font-size = "12px">Kans (%)</text>  
+        <text x={xScale(100000)} y={yScale(46.9)} transform="rotate(-90)" font-size = "12px">Maximum temperatuur (°C)</text>  
+        <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="red" stroke-dasharray="5,5"/>        
         {#if ratioOfCsvData > 180 && currentStepName === 'kansen'}
-            <text x={xScale(800)} y={yScale(35)} class="recordyear" fill="green" font-size = "12px">Zonder klimaatverandering</text>
-            <text x={xScale(800)} y={yScale(34)} class="recordyear" font-size = "12px">kon 40°C niet voorkomen</text>
+            <text x={xScale(0.1)} y={yScale(34)} class="recordyear" fill="green" font-size = "12px">Zonder klimaatverandering</text>
+            <text x={xScale(0.1)} y={yScale(33)} class="recordyear" font-size = "12px">kon 40°C niet voorkomen</text>
         {/if}
         {#if ratioOfCsvData > 280 && currentStepName === 'kansen'}
-            <text x={xScale(20)} y={yScale(38)} class="recordyear" fill="red" font-size = "12px">Met klimaatverandering</text>
-            <text x={xScale(20)} y={yScale(37)} class="recordyear" font-size = "12px">wel!</text>
+            <text x={xScale(29)} y={yScale(43)} class="recordyear" fill="red" font-size = "12px">Met klimaatverandering</text>
+            <text x={xScale(29)} y={yScale(42)} class="recordyear" font-size = "12px">wel!</text>
         {/if}
+      
       </svg>
     </div>
   </div>
