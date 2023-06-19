@@ -112,13 +112,13 @@
       </p>
       {#if ratioOfCsvData > 100}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Allereerst kijken we naar de kans zonder klimaatverandering. Je ziet dat 40 °C bijna onmogelijk is.  
+          <p class='scroll-text'> Allereerst kijken we naar de kans <mark style="background: #bcf5bc !important">zonder klimaatverandering.</mark> Je ziet dat 40 °C bijna onmogelijk is.  
           </p> 
         </div>   
       {/if}
       {#if ratioOfCsvData > 250}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Maar door het effect van klimaatverandering is de kans op 40 °C in ons huidige klimaat ongeveer 2%. In de toekomst zal deze kans alleen maar groter worden. 
+          <p class='scroll-text'> Maar door het effect van <mark style="background: #ff9194 !important">klimaatverandering</mark> is de kans op 40 °C in ons huidige klimaat ongeveer 2%. In de toekomst zal deze kans alleen maar groter worden. 
           </p> 
         </div>   
       {/if}       
@@ -131,7 +131,7 @@
         <g transform="translate(10,0)">
           <YAxis {yScale} /> 
         </g>
-      <svg class='svgkansgrafiek'>
+      <svg class='svgkansgrafiek' xmlns="http://www.w3.org/2000/svg">
         <text x={xScale(1.5)} y={yScale(22.5)} font-size = "12px">Kans (%)</text>  
         <text x={xScale(100000)} y={yScale(46.9)} transform="rotate(-90)" font-size = "12px">Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
@@ -141,6 +141,12 @@
         {#if ratioOfCsvData > 180 && currentStepName === 'kansen'}
             <text x={xScale(0.1)} y={yScale(34)} class="recordyear" fill="green" font-size = "12px">Zonder klimaatverandering</text>
             <text x={xScale(0.1)} y={yScale(33)} class="recordyear" font-size = "12px">kon 40°C niet voorkomen</text>
+        {/if}
+        {#if ratioOfCsvData > 120 && currentStepName === 'kansen'}
+          <line x1={xScale(0.008)}  y1={yScale(35.4371)} x2={xScale(0.008)} y2={yScale(42.2131)} stroke="grey"/>
+          <line x1={xScale(0.0075)}  y1={yScale(35.4371)} x2={xScale(0.0085)} y2={yScale(35.4371)} stroke="grey"/>
+          <line x1={xScale(0.0075)}  y1={yScale(42.2131)} x2={xScale(0.0085)} y2={yScale(42.2131)} stroke="grey"/>
+          <text x={xScale(0.007)} y={yScale(38.5)} fill="grey" font-size = "10px" marker-end="url(#triangle)">Bandbreedte</text>
         {/if}
         {#if ratioOfCsvData > 280 && currentStepName === 'kansen'}
             <text x={xScale(29)} y={yScale(43)} class="recordyear" fill="red" font-size = "12px">Met klimaatverandering</text>
