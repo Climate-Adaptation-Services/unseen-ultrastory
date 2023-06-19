@@ -9,6 +9,7 @@
 	import Wandeling from "$lib/components/Wandeling.svelte";
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
+	import Unseen from "$lib/components/Unseen.svelte";
 	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
@@ -28,7 +29,7 @@
 
 	$: console.log(data.datatest)
 
-	const stepNames = ["huis", "ziekenhuis", "scatter", "kansen", "wandeling"];
+	const stepNames = ["huis", "ziekenhuis", "scatter", "kansen", "wandeling", "unseen"];
 
 	let index = 0;
 	let offset;
@@ -68,6 +69,8 @@
 					<Ziekenhuis {offset} {index} {currentStepName}/>
 				{:else if stepName === 'wandeling'}
 					<Wandeling {offset} {index} {currentStepName}/>
+				{:else if stepName === 'unseen'}
+					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName}/>
 				{/if}
 			</section>
 
