@@ -24,7 +24,7 @@
 
 <div class='stepdiv'>
   <div class='scroll-text-block block1' style='top:{`${0.2*stepSize}px`}'>
-    <p class='scroll-text'>"Het is al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet. We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is adviseur duurzaamheid bij de gemeente Eindhoven. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis.​"</p>
+    <p class='scroll-text'>Het is al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet. We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is adviseur duurzaamheid bij de gemeente Eindhoven. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis.​</p>
   </div>
 
   <div class='scroll-text-block block2' style='top:{`${0.3*stepSize}px`}'>
