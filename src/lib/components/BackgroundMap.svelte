@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte'
+  import { afterUpdate, onMount } from 'svelte'
   import { testRoute } from '$lib/noncomponents/routes.js';
   import { select } from 'd3';
 
@@ -22,18 +22,24 @@
   export let offset;
   export let index;
   export let currentStepName;
-  let marker;
 
   let zoomedIn = false
   let showingRoute = false
 
   $: if(leafletMap){
     leafletMap = leafletMap.getMap()
-  }
+    
+    const huis = L.tooltip(testRoute[0], {direction:'top', offset:[0,-40]})
+    huis
+      .setContent("Huis van Niels en Leonie")
+      .addTo(leafletMap);
 
-  $: if(marker){
-    console.log(marker)
-    marker.fire("mouseover")
+    const ziekenhuis = L.tooltip([51.466143, 5.472363], {direction:'top', offset:[0,-40]})
+    ziekenhuis
+      .setContent("Catharina ziekenhuis")
+      .addTo(leafletMap);
+
+
   }
   
   const mapOptions = {
@@ -78,7 +84,7 @@
     tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
   }
   $: if(leafletMap && currentStepName === 'wandeling'){
-    leafletMap.flyTo([51.426437, 5.470482], 17, {duration: 2})
+    leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   }
 
@@ -92,7 +98,7 @@
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         {#if showingRoute}
           {#if currentStepName === 'huis'}
-            <Marker bind:this={marker} latLng={testRoute[0]}/>
+            <Marker latLng={testRoute[0]}/>
           {:else if currentStepName === 'ziekenhuis'}
             <Marker latLng={[51.466143, 5.472363]}/>
           {:else if currentStepName === 'wandeling'}
