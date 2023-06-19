@@ -1,26 +1,28 @@
 <script>
   import { onMount } from 'svelte'
   import { testRoute } from '$lib/noncomponents/routes.js';
+  import { select } from 'd3';
 
   // modules loaded from the client
   let LeafletMap;
   let TileLayer;
   let Marker;
   let Polyline;
-  let Popup;
+  let Tooltip;
   onMount(async () => {
 		const SL = await import('svelte-leafletjs');
     LeafletMap = SL.LeafletMap
     TileLayer = SL.TileLayer
     Marker = SL.Marker
     Polyline = SL.Polyline
-    Popup = SL.Popup
+    Tooltip = SL.Tooltip
 	});
 
   export let leafletMap;
   export let offset;
   export let index;
   export let currentStepName;
+  let marker;
 
   let zoomedIn = false
   let showingRoute = false
@@ -29,6 +31,10 @@
     leafletMap = leafletMap.getMap()
   }
 
+  $: if(marker){
+    console.log(marker)
+    marker.fire("mouseover")
+  }
   
   const mapOptions = {
     center: [51.426437, 5.470482],
@@ -76,6 +82,8 @@
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   }
 
+
+
 </script>
 
   {#if LeafletMap}
@@ -84,9 +92,7 @@
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         {#if showingRoute}
           {#if currentStepName === 'huis'}
-            <Marker latLng={testRoute[0]}>
-              <Popup permanent='true'>Huis van Leonie en Niels</Popup>
-            </Marker>
+            <Marker bind:this={marker} latLng={testRoute[0]}/>
           {:else if currentStepName === 'ziekenhuis'}
             <Marker latLng={[51.466143, 5.472363]}/>
           {:else if currentStepName === 'wandeling'}
@@ -100,6 +106,7 @@
 
 
 <style>
+
   div{
     height:100%;
     width:100%;
