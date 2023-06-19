@@ -36,12 +36,17 @@
 </script>
 
 <div class='divscatter grafiek'>
-  {#if currentStepName === 'scatter'}
   <div class='graphtext' style='top:{`${0.03*stepSize}px`}'>
-    <p class='scroll-text'>Je ziet in de grafiek dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen sinds 1951. Tot 2019 was een temperatuur boven de 40 °C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4 °C in Eindhoven. Het vorige hitterecord werd verpulverd! De reden voor deze extreme temperatuurstijgingen is klimaatverandering. 
-    </p>      
+    <p class='scroll-text'> De grafiek aan de rechterkant weergeeft de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
+    </p> 
+    {#if ratioOfCsvData > 68}
+    <div class= 'fade-in'>
+      <p class='scroll-text' > Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40 °C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4 °C in Eindhoven. Het vorige hitterecord werd verpulverd! De reden voor deze extreme temperatuurstijgingen is klimaatverandering. 
+    </p> 
+    </div>   
+    {/if} 
   </div>
-  {/if}
+ 
 
   <div class='sticky-div'>
     <svg>
@@ -118,8 +123,37 @@
     position: -webkit-sticky; /* Safari */
     width: 48%;
     /* align-self: flex-end; */
-    margin-top: 1000px;
+    margin-top: 10px;
     text-align: left;   
   }
+
+  .fade-in {
+    animation: fadeIn 2s;
+  }
+
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 </style>

@@ -17,6 +17,7 @@ body {
 .scroll-text{
   color:#313131;
   font-size:18px;
+  text-align: left;
 }
 
 .scroll-text-block{
