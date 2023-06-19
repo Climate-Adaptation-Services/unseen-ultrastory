@@ -28,7 +28,7 @@
 
 	$: console.log(data.datatest)
 
-	const stepNames = ["huis", "ziekenhuis", "wandeling", "scatter", "kansen", "Test3"];
+	const stepNames = ["huis", "ziekenhuis", "scatter", "kansen", "wandeling"];
 
 	let index = 0;
 	let offset;
