@@ -107,8 +107,21 @@
 
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.03*stepSize}px`}'>
-      <p class='scroll-text'>In deze grafiek zie je dat de kans op 40 graden in een gegeven jaar in het huidig klimaat ongeveer 2 procent is. Zonder klimaatverandering is die kans heel veel kleiner, en was het virtueel onmogelijk om 40 graden mee te maken. In de toekomst zal deze kans alleen maar groter worden
-      </p>      
+      <p class='scroll-text'>
+        Wat is dan de kans dat 40 °C wordt gehaald in een jaar? Dat zie je hiernaast.  
+      </p>
+      {#if ratioOfCsvData > 100}
+        <div class= 'fade-in'>
+          <p class='scroll-text'> Allereerst kijken we naar de kans zonder klimaatverandering. Je ziet dat 40 °C bijna onmogelijk is.  
+          </p> 
+        </div>   
+      {/if}
+      {#if ratioOfCsvData > 250}
+        <div class= 'fade-in'>
+          <p class='scroll-text'> Maar door het effect van klimaatverandering is de kans op 40 °C in ons huidige klimaat ongeveer 2%. In de toekomst zal deze kans alleen maar groter worden. 
+          </p> 
+        </div>   
+      {/if}       
     </div>
   {/if}
   
@@ -120,8 +133,11 @@
         </g>
       <svg class='svgkansgrafiek'>
         <text x={xScale(1.5)} y={yScale(22.5)} font-size = "12px">Kans (%)</text>  
-        <text x={xScale(100000)} y={yScale(46.9)} transform="rotate(-90)" font-size = "12px">Maximum temperatuur (°C)</text>  
-        <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="red" stroke-dasharray="5,5"/>        
+        <text x={xScale(100000)} y={yScale(46.9)} transform="rotate(-90)" font-size = "12px">Temperatuur (°C)</text>  
+        <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
+        {#if ratioOfCsvData > 270}
+          <line x1={xScale(2)}  y1={yScale(25)} x2={xScale(2)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
+        {/if}
         {#if ratioOfCsvData > 180 && currentStepName === 'kansen'}
             <text x={xScale(0.1)} y={yScale(34)} class="recordyear" fill="green" font-size = "12px">Zonder klimaatverandering</text>
             <text x={xScale(0.1)} y={yScale(33)} class="recordyear" font-size = "12px">kon 40°C niet voorkomen</text>
@@ -166,8 +182,37 @@
     position: -webkit-sticky; /* Safari */
     width: 48%;
     /* align-self: flex-end; */
-    margin-top: 1000px;
+    margin-top: 10px;
     text-align: left;   
+  }
+
+  .fade-in {
+    animation: fadeIn 2s;
+  }
+
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
 </style>
