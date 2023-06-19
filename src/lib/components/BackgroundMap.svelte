@@ -7,14 +7,14 @@
   let TileLayer;
   let Marker;
   let Polyline;
-  let Tooltip;
+  let Popup;
   onMount(async () => {
 		const SL = await import('svelte-leafletjs');
     LeafletMap = SL.LeafletMap
     TileLayer = SL.TileLayer
     Marker = SL.Marker
     Polyline = SL.Polyline
-    Tooltip = SL.Tooltip
+    Popup = SL.Popup
 	});
 
   export let leafletMap;
@@ -37,8 +37,11 @@
     zoomControl: false,
   };
 
-  const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-
+  // const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+  // const tileUrl = 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+  // const tileUrl = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
+  let tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+  
   const tileLayerOptions = {
       minZoom: 2,
       maxZoom: 20,
@@ -66,9 +69,11 @@
   }
   $: if(leafletMap && currentStepName === 'ziekenhuis'){
     leafletMap.flyTo([51.466143, 5.472363], 15, {duration: 2})
+    tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
   }
   $: if(leafletMap && currentStepName === 'wandeling'){
-    leafletMap.flyTo([51.426437, 5.470482], 15, {duration: 2})
+    leafletMap.flyTo([51.426437, 5.470482], 17, {duration: 2})
+    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   }
 
 </script>
@@ -80,13 +85,13 @@
         {#if showingRoute}
           {#if currentStepName === 'huis'}
             <Marker latLng={testRoute[0]}>
-              <Tooltip>Huis van Leonie en Niels</Tooltip>
+              <Popup permanent='true'>Huis van Leonie en Niels</Popup>
             </Marker>
           {:else if currentStepName === 'ziekenhuis'}
             <Marker latLng={[51.466143, 5.472363]}/>
           {:else if currentStepName === 'wandeling'}
             <Marker latLng={testRoute[0]}/>
-            <Polyline latLngs={testRoute.slice(0, Math.round(offset*1.2*testRoute.length))} color="steelblue" />
+            <Polyline latLngs={testRoute.slice(0, Math.round(offset*1.2*testRoute.length))} color="#00bcd4" />
           {/if}
         {/if}
       </LeafletMap>

@@ -103,7 +103,7 @@
 
 </script>
 
-<div class='divkansgrafiek'>
+<div class='divkansgrafiek grafiek'>
 
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.03*stepSize}px`}'>
