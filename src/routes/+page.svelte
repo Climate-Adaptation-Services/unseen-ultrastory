@@ -26,6 +26,7 @@
 	const maxTempData = data.datatest
 	const middellijnData = data.datamiddellijn
 	const confidenceData = data.dataconfidence
+	const unseenData = data.unseen
 
 	$: console.log(data.datatest)
 
@@ -70,7 +71,7 @@
 				{:else if stepName === 'wandeling'}
 					<Wandeling {offset} {index} {currentStepName}/>
 				{:else if stepName === 'unseen'}
-					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName}/>
+					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
 				{/if}
 			</section>
 
