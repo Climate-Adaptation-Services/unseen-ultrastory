@@ -24,22 +24,22 @@
     <p class='scroll-text'>Het is buiten nog steeds heel warm. De stenen op straat stralen nog steeds warmte uit. ​​</p>
   </div>
 
-  <div class='scroll-text-block' style='left:0; top:{`${0.4*stepSize}px`}'>
+  <div class='scroll-text-block' style='left:0; top:{`${0.3*stepSize}px`}'>
     <img class='dommelplantsoen' style='width:300px' src={'/images/dommelplantsoen.jpg'} />
     <p class='scroll-text'>Gelukkig is het in het Dommelplantsoen een stukje koeler. Het is hier wel ontzettend druk.​</p>
   </div>
 
-  <div class='scroll-text-block' style='left:0; top:{`${0.55*stepSize}px`}'>
+  <div class='scroll-text-block' style='left:0; top:{`${0.5*stepSize}px`}'>
     <img class='festival' style='width:300px' src={'/images/festival.jpg'} />
     <p class='scroll-text'>Ook al is het festival afgelast, wordt er alsnog veel lawaai gemaakt en gedronken. <strong>Ondanks het lawaai slapen sommige mensen buiten.​</strong></p>
   </div>
 
-  <div class='scroll-text-block' style='right:0; top:{`${0.65*stepSize}px`}'>
+  <div class='scroll-text-block' style='left:0; top:{`${0.7*stepSize}px`}'>
     <img class='politie' style='width:250px' src={'/images/politie.jpg'} />
     <p class='scroll-text'>Er is politie in de buurt om de situatie in de gaten te houden.</p>
   </div>
 
-  <div class='scroll-text-block' style='right:100; top:{`${0.85*stepSize}px`}'>
+  <div class='scroll-text-block' style='right:100; top:{`${0.87*stepSize}px`}'>
     <img class='rustigplekje' style='width:250px' src={'/images/rustigplekje.jpg'} />
     <p class='scroll-text'>Hij vindt eindelijk een rustig plekje bij een boom. Terwijl hij terugdenkt aan de vraag over hitte van Sem, mijmert hij over een zorgwekkende vraag: <em>“Hoe heet kan het eigenlijk worden?” ​</em></p>
   </div>

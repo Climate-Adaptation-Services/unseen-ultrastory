@@ -15,19 +15,19 @@ body {
 }
 
 .scroll-text{
-  color:#4c4c4c;
+  color:#313131;
   font-size:18px;
 }
 
 .scroll-text-block{
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: white;
   width:40%;
   padding:20px;
 }
 
 .grafiek{
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
 
 }
 
