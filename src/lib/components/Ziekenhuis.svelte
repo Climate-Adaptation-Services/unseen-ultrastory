@@ -15,8 +15,8 @@
 
 <div class='stepdiv'>
   <div class='scroll-text-block' style='top:{`${0.1*stepSize}px`}'>
-    <img class='ziekenhuischaos' src={'/images/ziekenhuischaos.jpg'} />
-    <p class='scroll-text'>"Leonie voelt zich radeloos. Het was vandaag op de spoedeisende hulp van het Catharina Ziekenhuis heel erg druk vanwege massale gezondheidsproblemen als gevolg van hittestress. Een collega had zich ziekgemeld vanwege een hitteberoerte. En morgen moet ze weer.…​"</p>
+    <img class='ziekenhuischaos' width='300px' src={'/images/ziekenhuischaos.png'} />
+    <p class='scroll-text'>Leonie voelt zich radeloos. Het was vandaag op de spoedeisende hulp van het Catharina Ziekenhuis heel erg druk vanwege massale gezondheidsproblemen als gevolg van hittestress. Een collega had zich ziekgemeld vanwege een hitteberoerte. En morgen moet ze weer…​</p>
   </div>
 
   <div class='scroll-text-block' style='top:{`${0.33*stepSize}px`}'>
