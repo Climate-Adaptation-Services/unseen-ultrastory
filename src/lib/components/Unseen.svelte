@@ -15,7 +15,9 @@
 
   $: unseenDataYear = unseenData.filter(d => d.year === '2019');
 
-  $: unseenDataYear = _.sortBy(unseenDataYear, 'celcius');
+  $: unseenDataExtreme = unseenData.filter(d => d.celcius > 40);
+
+  $: unseenDataYear = _.sortBy(unseenDataYear, 'number');
 
   $: ratioOfCsvData = Math.round((offset * 2)*unseenDataYear.length)
 
@@ -25,14 +27,14 @@
     stepSize = stepRect.bottom - stepRect.top;
   }
 
-  $:console.log(unseenDataYear)
+  $:console.log(unseenDataExtreme)
 
   let yScale = d3.scaleLinear()
     .domain([28, 42])
-    .range([ 300, 0 ]);
+    .range([ 270, 20 ]);
 
   let xScale = d3.scaleLinear()
-    .domain([2018, 2021])
+    .domain([1990, 2022])
     .range([ 30,340 ]);
 
   let colorScale = d3
@@ -44,26 +46,33 @@
 
 <div class='divscatter grafiek'>
   <div class='graphtext' style='top:{`${0.03*stepSize}px`}'>
-    <p class='scroll-text'> Was de 40.3 graden uit 2019 echt zo onwaarschijnlijk? We gebruiken de UNSEEN methodiek om dit te onderzoeken.  
+    <p class='scroll-text'> We gebruiken de UNSEEN methode om dit te onderzoeken. Laten we beginnen met het jaar 2019.
     </p> 
     {#if ratioOfCsvData > 63}
     <div class= 'fade-in'>
-      <p class='scroll-text'>Weermodellen maken temperatuurvoorspellingen voor het komende seizoen. Dit model wordt vele malen gedraaid met variërende startomstandigheden. Hierdoor ontstaan er jaarlijks ongeveer 75 verschillende ‘virtuele waarnemingen’. Hiernaast zie je de mogelijke maximum temperaturen uit deze voorspellingen van 2019 als grijze stip.  
+      <p class='scroll-text'>Weermodellen maken temperatuurvoorspellingen voor het komende seizoen. Dit model wordt vele malen gedraaid met variërende startomstandigheden. Hierdoor ontstaan er jaarlijks ongeveer 75 verschillende ‘virtuele waarnemingen’ voor maximale temperatuur. Deze zie je hiernaast als grijze stip.
     </p> 
     </div>   
     {/if} 
     {#if ratioOfCsvData > 200}
     <div class= 'fade-in'>  
-      <p class='scroll-text'> De meeste virtuele waarnermingen bevinden zich onder de 40 graden. Maar één waarneming laat een temperatuur zien van 40.6 graden. Deze methodiek laat dus zien dat deze onvoorstelbare hitte toch voorkwam in voorspellingen.  
+      <p class='scroll-text'> De meeste virtuele waarnermingen zijn onder de 40 °C. Maar één waarneming laat een temperatuur zien van 40.6 °C. We zien dus dat de extremen uit de weermodellen wel degelijk kunnen voorkomen.
     </p> 
     </div>   
     {/if} 
+    {#if ratioOfCsvData > 230}
+    <div class= 'fade-in'>  
+      <p class='scroll-text'> Als we dan naar de extremen in andere jaren kijken zien we sinds 1991 vaker 40 °C in de modellen. Deze 'virtuele waarnemingen' zijn toen niet uitgekomen maar hadden zo hoog kunnen zijn als 42 graden. 
+    </p> 
+    </div>   
+    {/if}
   </div>
  
 
   <div class='sticky-div'>
     <svg>
         <YAxis {yScale} />
+        <XAxis {xScale} />
         <circle 
             cx = {xScale(2019)} 
             cy = {yScale(40.3)} 
@@ -81,7 +90,7 @@
             />
             {/each}
         {/if}
-        {#if ratioOfCsvData > 200}
+        <!-- {#if ratioOfCsvData > 200}
             <text x={xScale(2018.15)} y={yScale(40.4)} class="recordyear" fill="grey" font-size = "12px">UNSEEN</text>
             <path
                 transform="translate(100 18)"
@@ -92,9 +101,21 @@
                 stroke='grey'  
                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
             />
+        {/if} -->
+        {#if currentStepName === 'unseen'&& ratioOfCsvData > 230}
+            {#each slice(unseenDataExtreme, 0, ratioOfCsvData - 230) as d}
+            <circle 
+                cx = {xScale(+d.year)} 
+                cy = {yScale(+d.celcius)} 
+                r = {3}
+                fill = {colorScale(+d.T)}
+                opacity = {0.5}
+            />
+            {/each}
         {/if}
-        <text x={xScale(2019.1)} y={yScale(40)} class="recordyear" fill="red" font-size = "12px">2019 hitterecord</text>
-        <text x={xScale(2018.87)} y={yScale(27.2)}  class="xAxis" fill="darkgrey" font-size = "12px">2019</text>
+        
+        <text x={xScale(2020.2)} y={yScale(40)} class="recordyear" fill="red" font-size = "12px">2019 hitterecord</text>
+        
     </svg>
   </div>
 </div>
@@ -118,7 +139,7 @@
   }
 
   svg{
-    width:40%;
+    width:50%;
     height:100%;
     float:right;
     
