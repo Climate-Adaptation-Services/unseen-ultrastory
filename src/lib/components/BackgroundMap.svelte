@@ -1,7 +1,7 @@
 <script>
   import { afterUpdate, onMount } from 'svelte'
   import { testRoute } from '$lib/noncomponents/routes.js';
-  import { select } from 'd3';
+  import { map, select } from 'd3';
 
   // modules loaded from the client
   let LeafletMap;
@@ -26,6 +26,8 @@
   let zoomedIn = false
   let showingRoute = false
 
+  let ziekenhuis;
+
   $: if(leafletMap){
     leafletMap = leafletMap.getMap()
     
@@ -34,11 +36,7 @@
       .setContent("Huis van Niels en Leonie")
       .addTo(leafletMap);
 
-    const ziekenhuis = L.tooltip([51.466143, 5.472363], {direction:'top', offset:[0,-40]})
-    ziekenhuis
-      .setContent("Catharina ziekenhuis")
-      .addTo(leafletMap);
-
+    ziekenhuis = L.tooltip([51.466143, 5.472363], {direction:'top', offset:[0,-40]})
 
   }
   
@@ -64,7 +62,7 @@
 
   $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
-    leafletMap.flyTo([51.426437, 5.470482], 15, {duration: 1})
+    leafletMap.flyTo([51.426437, 5.470482-0.0025], 15, {duration: 1})
 
     // momentarily stop scrolling until zoomed in
     const scrollY = document.documentElement.scrollTop || document.body.scrollTop
@@ -76,16 +74,33 @@
   }
   $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'huis'){
     zoomedIn = false
-    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 1})
+    leafletMap.flyTo([51.437061, 5.478283-0.0025], 7, {duration: 1})
     showingRoute = false
   }
   $: if(leafletMap && currentStepName === 'ziekenhuis'){
-    leafletMap.flyTo([51.466143, 5.472363], 15, {duration: 2})
+    leafletMap.flyTo([51.466143, 5.472363-0.0025], 15, {duration: 2})
     tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+    
+    ziekenhuis
+      .setContent("Catharina ziekenhuis")
+      .addTo(leafletMap);
+    
   }
+
+  let audio;
   $: if(leafletMap && currentStepName === 'wandeling'){
-    leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
+    leafletMap.flyTo([51.426437, 5.470482-0.0025], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+
+    audio = new Audio('sounds/night.mp3');
+    audio.play();
+  }
+
+  $: if(leafletMap && currentStepName === 'unseen'){
+    leafletMap.flyTo([51.426437, 5.470482-0.0025], 16, {duration: 2})
+    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+
+    audio.pause();
   }
 
 
@@ -103,7 +118,7 @@
             <Marker latLng={[51.466143, 5.472363]}/>
           {:else if currentStepName === 'wandeling'}
             <Marker latLng={testRoute[0]}/>
-            <Polyline latLngs={testRoute.slice(0, Math.round(offset*1.2*testRoute.length))} color="#00bcd4" />
+            <Polyline latLngs={testRoute.slice(0, Math.max(0, Math.round(offset*1.2*testRoute.length - 5)))} color="#00bcd4" />
           {/if}
         {/if}
       </LeafletMap>

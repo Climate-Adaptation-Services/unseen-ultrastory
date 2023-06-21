@@ -121,17 +121,6 @@
     width:40%;
     height:100%;
     float:right;
-    
-  }
-
-  .graphtext{
-    float:left;
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    width: 48%;
-    /* align-self: flex-end; */
-    margin-top: 10px;
-    text-align: left;   
   }
 
   .fade-in {
