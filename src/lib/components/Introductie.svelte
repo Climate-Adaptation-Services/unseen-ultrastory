@@ -28,14 +28,14 @@
   </div>
 
   <div class='scroll-text-block block2' style='top:{`${0.3*stepSize}px`}'>
-    <img width='300px' src={'/images/inbed.jpg'} />
+    <img width='300px' src={'/images/inbed.png'} />
     <p class='scroll-text'>Leonie en Niels slapen al nachten slecht omdat hun slaapkamer zo warm is.</p>
     <img src={'/images/tempmeter.png'} width='250px'/>
     <p class='temp-text'>{Math.max(25.0, Math.min(30.5, Math.round(offset*670)/10))}</p>
   </div>
 
   <div class='scroll-text-block block3' style='top:{`${0.55*stepSize}px`};'>
-    <img src={'/images/sem.jpg'} />
+    <img width='300px' src={'/images/sem.png'} />
     <p class='scroll-text'>Hun 7-jarige zoon Sem kan niet slapen. Hij is huilerig en moe. Hij heeft ‘hittevrij’ van school. Niels heeft vrij genomen van werk om voor hem te zorgen terwijl Leonie de volgende dag weer aan de slag moet op de spoedeisende hulp. ​</p>
   </div>
 </div>

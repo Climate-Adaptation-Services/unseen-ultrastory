@@ -42,6 +42,10 @@
 
 <div class='title'>
 	<h1>Brabant onvoorbereid</h1>
+	<div class = 'scrolldown'>
+		<h4>Scroll naar beneden</h4>
+		<img  width='7%' src={'/images/arrowdown.png'} />
+	</div>
 </div>
 
 <Scroller bind:index bind:offset bind:progress>
@@ -141,6 +145,38 @@
   .step p {
     font-size: 4em;
   }
+
+  .scrolldown{
+	position: absolute;
+	margin-left:auto;
+	margin-right:auto;
+	bottom: 1%;
+	-webkit-animation: flickerAnimation 3s infinite;
+    -moz-animation: flickerAnimation 3s infinite;
+    -o-animation: flickerAnimation 3s infinite;
+    animation: flickerAnimation 3s infinite;
+  }
+
+	@keyframes flickerAnimation {
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+	}
+	@-o-keyframes flickerAnimation{
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+	}
+	@-moz-keyframes flickerAnimation{
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+	}
+	@-webkit-keyframes flickerAnimation{
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+}
 
 
 </style>
