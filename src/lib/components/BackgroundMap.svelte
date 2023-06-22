@@ -62,7 +62,7 @@
 
   $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
-    leafletMap.flyTo([51.426437, 5.470482-0.0025], 15, {duration: 1})
+    leafletMap.flyTo([51.426437, 5.470482-0.0025], 15, {duration: 5})
 
     // momentarily stop scrolling until zoomed in
     const scrollY = document.documentElement.scrollTop || document.body.scrollTop
@@ -118,7 +118,7 @@
             <Marker latLng={[51.466143, 5.472363]}/>
           {:else if currentStepName === 'wandeling'}
             <Marker latLng={testRoute[0]}/>
-            <Polyline latLngs={testRoute.slice(0, Math.max(0, Math.round(offset*1.2*testRoute.length - 5)))} color="#00bcd4" />
+            <Polyline latLngs={testRoute.slice(0, Math.max(0, Math.round(offset*1.2*testRoute.length - 5)))} color="#00bcd4" weight='5'/>
           {/if}
         {/if}
       </LeafletMap>

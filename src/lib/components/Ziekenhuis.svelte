@@ -41,6 +41,14 @@
     </div>
   </div>
 
+  <div class='scroll-text-block' style='top:{`${0.7*stepSize}px`}'>
+    <img class='gesprek' width='400px' src={'/images/gesprek.jpg'} />
+    <p class='scroll-text'>Thuis probeert Niels Leonie te ontlasten door Sem in slaap te helpen met natte washandjes en een ventilator. Terwijl hij hier mee bezig is vraagt Sem: “ik hoorde op school dat het vroeger nooit zo heet werd. Klopt dat?”​</p>
+    <br/>
+    <p class='scroll-text'>“Ja, dat klopt. Toen ik jouw leeftijd had kwam dit nooit voor. Als je mij toen had verteld dat het zó heet zou kunnen worden in Nederland, had ik je voor gek verklaard.“​</p>
+  </div>
+
+
 
 
 </div>

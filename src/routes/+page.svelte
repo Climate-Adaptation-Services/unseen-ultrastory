@@ -42,6 +42,8 @@
 
 <div class='title'>
 	<h1>Brabant onvoorbereid</h1>
+	<h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3>
+
 	<div class = 'scrolldown'>
 		<h4>Scroll naar beneden</h4>
 		<img  width='7%' src={'/images/arrowdown.png'} />
