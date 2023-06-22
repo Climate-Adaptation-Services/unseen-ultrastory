@@ -3,7 +3,7 @@
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import { afterUpdate } from 'svelte'
-  import { slice } from 'lodash'
+  import * as _ from 'lodash'
 
   export let index
   export let csvData
@@ -27,7 +27,7 @@
       d3.select('svg')
       .append("path")
       .attr('class', 'graphpath')
-      .datum(slice(csvData, 0, ratioOfCsvData))
+      .datum(_.slice(csvData, 0, ratioOfCsvData))
       .attr("fill", "none")
       .attr("stroke", "steelblue")
       .attr("stroke-width", 1.5)

@@ -2,7 +2,6 @@
   import XAxis from "$lib/components/axes/XAxis.svelte";
   import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
-  import { slice } from 'lodash'
   import _ from 'lodash';
   import { browser } from "$app/environment";
   import { scaleLinear, axisBottom, select, selectAll, format } from "d3";
@@ -80,7 +79,7 @@
             fill = 'red'
         />
         {#if currentStepName === 'unseen'&& ratioOfCsvData > 50}
-            {#each slice(unseenDataYear, 0, ratioOfCsvData - 50) as d}
+            {#each _.slice(unseenDataYear, 0, ratioOfCsvData - 50) as d}
             <circle 
                 cx = {xScale(+d.year)} 
                 cy = {yScale(+d.celcius)} 
@@ -103,7 +102,7 @@
             />
         {/if} -->
         {#if currentStepName === 'unseen'&& ratioOfCsvData > 230}
-            {#each slice(unseenDataExtreme, 0, ratioOfCsvData - 230) as d}
+            {#each _.slice(unseenDataExtreme, 0, ratioOfCsvData - 230) as d}
             <circle 
                 cx = {xScale(+d.year)} 
                 cy = {yScale(+d.celcius)} 

@@ -2,7 +2,7 @@
 	import XAxis from "$lib/components/axes/XAxis.svelte";
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
-  import { slice } from 'lodash'
+  import * as _ from 'lodash'
   import { browser } from "$app/environment";
 
   export let index
@@ -69,7 +69,7 @@
         />
       {/if}
       {#if currentStepName === 'scatter'}
-        {#each slice(maxTempData, 0, ratioOfCsvData) as d}
+        {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
             cx = {xScale(+d.year)} 
             cy = {yScale(+d.T)} 

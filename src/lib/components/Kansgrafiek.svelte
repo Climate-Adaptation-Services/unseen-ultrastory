@@ -2,7 +2,7 @@
   import XAxis from "$lib/components/axes/XAxis.svelte";
   import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
-  import { slice } from 'lodash'
+  import * as _ from 'lodash'
   import { afterUpdate } from 'svelte'
   import { browser } from "$app/environment";
 
@@ -50,7 +50,7 @@
       d3.select('.svgkansgrafiek')
       .append("path")
       .attr('class', 'kansgraphpathzonder')
-      .datum(slice(middellijnData, 0, ratioOfCsvData))
+      .datum(_.slice(middellijnData, 0, ratioOfCsvData))
       .attr("fill", "none")
       .attr("stroke", "green")
       .attr("stroke-width", 1.5)
