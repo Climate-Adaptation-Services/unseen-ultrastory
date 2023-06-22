@@ -66,7 +66,7 @@
       d3.select(".svgkansgrafiek")
           .append("path")
           .attr('class', 'kansgraphpathconfidencezonder')
-          .attr("d", areaZonder(slice(confidenceData, 0, ratioOfCsvDataConfidence - 4)))
+          .attr("d", areaZonder(_.slice(confidenceData, 0, ratioOfCsvDataConfidence - 4)))
           .attr("fill", "lightgreen")
           .attr("stroke", "none")
           .attr("fill-opacity", "0.2");
@@ -78,7 +78,7 @@
       d3.select('.svgkansgrafiek')
       .append("path")
       .attr('class', 'kansgraphpathmet')
-      .datum(slice(middellijnData, 0, ratioOfCsvData-200))
+      .datum(_.slice(middellijnData, 0, ratioOfCsvData-200))
       .attr("fill", "none")
       .attr("stroke", "red")
       .attr("stroke-width", 1.5)
@@ -94,7 +94,7 @@
       d3.select(".svgkansgrafiek")
         .append("path")
         .attr('class', 'kansgraphpathconfidencemet')
-        .attr("d", areaMet(slice(confidenceData, 0, ratioOfCsvDataConfidence-30)))
+        .attr("d", areaMet(_.slice(confidenceData, 0, ratioOfCsvDataConfidence-30)))
         .attr("fill", "red")
         .attr("stroke", "none")
         .attr("fill-opacity", "0.2");

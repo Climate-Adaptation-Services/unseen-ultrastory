@@ -79,7 +79,7 @@
         {/each}
       {/if}
       {#if currentStepName === 'scatter'}
-        {#each slice(maxTempData, 0, ratioOfCsvData) as d}
+        {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
             cx = {xScale(+d.year)} 
             cy = {yScale(+d.T)} 
