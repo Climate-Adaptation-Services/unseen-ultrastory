@@ -4,9 +4,9 @@
   export let xScale
 
   let pinXAxis; // declare pins
-  let margin = 30; // declare initial values for margin and svg_height/width
+  let margin = 0; // declare initial values for margin and svg_height/width
   let svg_width = 400;
-  let svg_height = 300;
+  let svg_height = 350;
 
 
   $: width = svg_width - margin * 2;

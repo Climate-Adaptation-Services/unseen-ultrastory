@@ -22,11 +22,11 @@
 
   let xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
-      .range([ 30,340 ]);
+      .range([ 30,940 ]);
 
   let yScale = d3.scaleLinear()
-    .domain([25, d3.max(maxTempData, function(d) { return +d.T; })])
-    .range([ 270, 20 ]);
+    .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
+    .range([ 350, 20 ]);
 
   let colorScale = d3
   .scaleLinear()
@@ -36,9 +36,11 @@
 </script>
 
 <div class='divscatter grafiek'>
-  <div class='graphtext' style='top:{`${0.03*stepSize}px`}'>
-    <p class='scroll-text'> De grafiek aan de rechterkant weergeeft de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
+  <div class='graphtext' style='top:{`${0.01*stepSize}px`}'>
+    {#if ratioOfCsvData < 63}
+    <p class='scroll-text'> De grafiek weergeeft de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
     </p> 
+    {/if} 
     {#if ratioOfCsvData > 63}
     <div class= 'fade-in'>
       <p class='scroll-text' > Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40 °C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4 °C in Eindhoven. Het vorige hitterecord werd verpulverd! De reden voor deze extreme temperatuurstijgingen is klimaatverandering. 
@@ -47,7 +49,6 @@
     {/if} 
   </div>
  
-
   <div class='sticky-div'>
     <svg>
       <g transform="translate(10,0)">
@@ -56,10 +57,10 @@
       <text x={xScale(1985)} y={yScale(23.3)} font-size = "12px">Jaar</text>  
       <text x={xScale(1900)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "12px">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
-        <text x={xScale(1986)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
-        <text x={xScale(1986)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
+        <text x={xScale(2005)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
+        <text x={xScale(2005)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
-          transform="translate(290 10)"
+          transform="translate(850 10)"
           id='arrow-line'
           marker-end='url(#head)'
           stroke-width='1'
@@ -83,7 +84,7 @@
           <circle 
             cx = {xScale(+d.year)} 
             cy = {yScale(+d.T)} 
-            r = {3}
+            r = {5}
             fill = {colorScale(+d.T)}
           />
         {/each}
@@ -104,17 +105,18 @@
   .sticky-div{
     position: sticky;
     position: -webkit-sticky; /* Safari */
-    top:100px;
+    top:0px;
     width: 100%;
-    height: 300px;
+    height: 20%;
     /* align-self: flex-end; */
     margin: 0 auto;
   }
 
   svg{
-    width:50%;
+    width:100%;
     height:100%;
     float:right;
+    margin-top:8%
   }
 
   .fade-in {
