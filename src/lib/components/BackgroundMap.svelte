@@ -135,6 +135,7 @@
 
   .backgroundMap{
     pointer-events:none;
+    filter: contrast(1) saturate(1) hue-rotate(-30deg) sepia(10%) opacity(0.9);
   }
 
 </style>

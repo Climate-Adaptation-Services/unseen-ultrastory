@@ -12,12 +12,6 @@
     stepSize = stepRect.bottom - stepRect.top;
   }
 
-  // afterUpdate(() => {
-  //   var rect = document.getElementsByClassName('tempmeter')[0].getBoundingClientRect();
-  //   select('.temp-text')
-  //     .style('top', rect.top + 52 + 'px')
-  //     .style('left', rect.left + 67 + 'px')
-  // }, [offset])
 
 
 </script>

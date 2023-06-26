@@ -10,9 +10,10 @@
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import Unseen from "$lib/components/Unseen.svelte";
-	import { timeParse } from 'd3'
+	import { easeLinear, select, timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
+    import { onMount } from "svelte";
 
 	export let data;
 	
@@ -38,12 +39,34 @@
 
 	$: currentStepName = stepNames[index];
 
+	function audioPlay(){
+    console.log('ello')
+    const audio = new Audio('sounds/heat.mp3');
+    audio.play();
+  }
+
+	onMount(() => {
+		const cloud = select('.cloud')
+		function moveCloud(){
+			cloud
+				.style('left', '-900px')
+			
+			cloud
+				.transition().ease(easeLinear).duration(200000)
+				.style('left', '4000px')
+				.on('end', moveCloud)
+		}
+		moveCloud()
+		
+	})
+
 </script>
 
-<div class='title'>
-	<h1>Brabant onvoorbereid</h1>
-	<h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3>
-
+<div class='title' on:click={() => audioPlay()}>
+	<div>
+		<h1>Brabant onvoorbereid</h1>
+		<h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3>
+	</div>
 	<div class = 'scrolldown'>
 		<h4>Scroll naar beneden</h4>
 		<img  width='7%' src={'/images/arrowdown.png'} />
@@ -55,6 +78,7 @@
 		{#if data}
 			<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 		{/if}
+		<img class='cloud' src='images/cloud.png' width='400px'/>
 
 	</div>
 
@@ -87,6 +111,14 @@
 
 
 <style>
+	.cloud{
+		position: fixed;
+		z-index: 1000;
+		top:300px;
+		filter: contrast(0) sepia(100%) hue-rotate(116deg) brightness(1.3) saturate(0.28) grayscale(100%) opacity(60%);
+	}
+
+
 	h1{
 		margin-bottom:1.5em;
 		font-size: 40px;
