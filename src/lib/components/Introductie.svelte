@@ -43,8 +43,9 @@
   .temp-text{
     color:black;
     font-size:35px;
-    margin-top:-160px;
+    margin-top:-150px;
     margin-left:-20px;
+    font-family: Digital;
   }
   
 </style>

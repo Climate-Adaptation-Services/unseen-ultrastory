@@ -3,6 +3,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+@font-face {
+  font-family: Belanosima;
+  src: url(Belanosima-Regular.ttf);
+}
+
+@font-face {
+  font-family: Digital;
+  src: url(digital.ttf);
+}
+
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
   -ms-overflow-style: none;  /* IE and Edge */
@@ -11,18 +21,19 @@ body {
   color:white;
   margin:0 !important;
   text-align: center;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Belanosima, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .scroll-text{
   color:#313131;
-  font-size:18px;
+  font-size:20px;
   text-align: left;
 }
 
 .scroll-text-block{
   position: absolute;
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.2);
+  border: solid;
   width:40%;
   padding:20px;
 }
