@@ -62,7 +62,7 @@
 
   $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
-    leafletMap.flyTo([51.426437, 5.470482-0.0025], 15, {duration: 5})
+    leafletMap.flyTo([51.426437, 5.470482], 15, {duration: 5})
 
     // momentarily stop scrolling until zoomed in
     const scrollY = document.documentElement.scrollTop || document.body.scrollTop
@@ -74,11 +74,11 @@
   }
   $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'huis'){
     zoomedIn = false
-    leafletMap.flyTo([51.437061, 5.478283-0.0025], 7, {duration: 1})
+    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 1})
     showingRoute = false
   }
   $: if(leafletMap && currentStepName === 'ziekenhuis'){
-    leafletMap.flyTo([51.466143, 5.472363-0.0025], 15, {duration: 2})
+    leafletMap.flyTo([51.466143, 5.472363], 15, {duration: 2})
     tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
     
     ziekenhuis
@@ -89,7 +89,7 @@
 
   let audio;
   $: if(leafletMap && currentStepName === 'wandeling'){
-    leafletMap.flyTo([51.426437, 5.470482-0.0025], 16, {duration: 2})
+    leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
 
     audio = new Audio('sounds/night.mp3');
@@ -97,7 +97,7 @@
   }
 
   $: if(leafletMap && currentStepName === 'unseen'){
-    leafletMap.flyTo([51.426437, 5.470482-0.0025], 16, {duration: 2})
+    leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
 
     audio.pause();

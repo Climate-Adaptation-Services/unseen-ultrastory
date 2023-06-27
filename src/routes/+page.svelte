@@ -88,6 +88,8 @@
 			<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
+		<img class='fixed-image' src='' />
+
 		{#each stepNames as stepName, i}
 			<section class='step step_{stepName}'>
 				{#if stepName === 'scatter'}
@@ -95,7 +97,7 @@
 				{:else if stepName === 'kansen'}
 					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 				{:else if stepName === 'huis'}
-					<Introductie {offset} {index} {currentStepName}/>
+					<Introductie {offset} {index} {currentStepName} {stepName}/>
 				{:else if stepName === 'ziekenhuis'}
 					<Ziekenhuis {offset} {index} {currentStepName}/>
 				{:else if stepName === 'wandeling'}

@@ -50,7 +50,7 @@
 <style>
 
   .night{
-    background-color: rgb(81, 71, 71);
+    background-color: rgba(81, 71, 71, 0.5);
   }
 
   .nighttext{

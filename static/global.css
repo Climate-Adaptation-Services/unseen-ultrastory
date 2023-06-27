@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  background-image: linear-gradient(rgba(82, 82, 17, 0.504), rgb(255, 0, 0));
+  /* background-image: linear-gradient(rgba(82, 82, 17, 0.504), rgb(255, 0, 0)); */
   color:white;
   margin:0 !important;
   text-align: center;
@@ -25,7 +25,7 @@ body {
 }
 
 .scroll-text{
-  color:#313131;
+  color:#4e4e4e;
   font-size:20px;
   text-align: left;
 }
@@ -34,12 +34,47 @@ body {
   position: absolute;
   background-color: rgb(255, 255, 255, 0.2);
   border: solid;
-  width:40%;
+  width:30%;
   padding:20px;
 }
 
+.fixed-image{
+  position: fixed;
+  width:400px;
+  padding:20px;
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  transition: src 2s;
+}
+
+.tempmeter{
+  position: fixed;
+  width:250px;
+  padding:20px;
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  margin-top:-210px;
+  margin-right:-110px;
+}
+
+.temp-text{
+  color:black;
+  font-size:42px;
+  font-family: Digital;
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  margin-top:-210px;
+  margin-right:8px;
+  z-index: 10000;
+}
+
 .grafiek{
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color: rgb(255, 255, 255, 0.4);
 
 }
 
