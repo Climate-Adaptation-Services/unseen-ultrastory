@@ -10,6 +10,7 @@
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import Unseen from "$lib/components/Unseen.svelte";
+	import Thermometer from "$lib/components/Thermometer.svelte";
 	import { easeLinear, select, timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
@@ -101,7 +102,7 @@
 				{:else if stepName === 'wandeling'}
 					<Wandeling {offset} {index} {currentStepName}/>
 				{:else if stepName === 'unseen'}
-					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
+					<Thermometer {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
 				{/if}
 			</section>
 
