@@ -39,12 +39,6 @@
 
 	$: currentStepName = stepNames[index];
 
-	function audioPlay(){
-    console.log('ello')
-    const audio = new Audio('sounds/heat.mp3');
-    audio.play();
-  }
-
 	onMount(() => {
 		const cloud = select('.cloud')
 		function moveCloud(){
@@ -56,13 +50,15 @@
 				.style('left', '4000px')
 				.on('end', moveCloud)
 		}
-		moveCloud()
-		
+		moveCloud();
 	})
 
 </script>
 
-<div class='title' on:click={() => audioPlay()}>
+<div class='title' on:click={() => document.getElementById('heat').play()}>
+	{#if currentStepName === 'huis'}
+		<audio src="sounds/heat.mp3" autoplay loop id='heat'/> 
+	{/if}
 	<div>
 		<h1>Brabant onvoorbereid</h1>
 		<h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3>
@@ -99,9 +95,9 @@
 				{:else if stepName === 'huis'}
 					<Introductie {offset} {index} {currentStepName} {stepName}/>
 				{:else if stepName === 'ziekenhuis'}
-					<Ziekenhuis {offset} {index} {currentStepName}/>
+					<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
 				{:else if stepName === 'wandeling'}
-					<Wandeling {offset} {index} {currentStepName}/>
+					<Wandeling {offset} {index} {currentStepName} {stepName} />
 				{:else if stepName === 'unseen'}
 					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
 				{/if}
@@ -135,6 +131,9 @@
 		background-image: url('$lib/heatwave.png');
 		background-repeat: no-repeat;
 		background-size: cover;
+		animation: blur 7s ease 0s infinite;
+		-webkit-animation: blur 7s ease 0s infinite;
+		-moz-animation: blur 7s ease 0s infinite;
 	}
 
 	.info {
@@ -212,7 +211,31 @@
 	0%   { opacity:1; }
 	50%  { opacity:0; }
 	100% { opacity:1; }
-}
+	}
+
+	@keyframes blur {
+		0%,
+		90% {
+			-webkit-filter: blur(0px);
+			-moz-filter: blur(0px);
+			-o-filter: blur(0px);
+			-ms-filter: blur(0px);
+		}
+		50% {
+			-webkit-filter: blur(4px);
+			-moz-filter: blur(4px);
+			-o-filter: blur(4px);
+			-ms-filter: blur(4px);
+		}
+	}
+
+	/* filter: blur(3px);
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: url(blur.svg#blur);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); */
 
 
 </style>

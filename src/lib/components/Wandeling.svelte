@@ -3,7 +3,8 @@
 
   export let offset;
   export let index;
-  export let currentStepName
+  export let currentStepName;
+  export let stepName;
 
   let stepSize;
   $: if(browser){
@@ -12,6 +13,10 @@
   }
 
 </script>
+
+{#if stepName === currentStepName}
+  <audio src="sounds/night.mp3" autoplay loop /> 
+{/if}
 
 <div class='stepdiv'>
   <div class='scroll-text-block night' style='top:{`${0*stepSize}px`}'>

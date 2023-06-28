@@ -13,17 +13,16 @@ function fadeOutIn(src){
 }
 
 export function showImages(stepName, currentStepName, scenes, currentScene, offset){
-  if(stepName === currentStepName){
-    let newScene;
-    scenes.forEach(scene => {
-      if(offset > scene.time){
-        newScene = scene
-      }     
-    });
-    if(newScene !== currentScene && newScene !== undefined){
-      currentScene = newScene
-      fadeOutIn('/images/' + currentScene.name + '.png')
-    }
+  // console.log(stepName, currentStepName, scenes, currentScene, offset)
+  let newScene;
+  scenes.forEach(scene => {
+    if(offset > scene.time){
+      newScene = scene
+    }     
+  });
+  if(newScene !== currentScene && newScene !== undefined){
+    currentScene = newScene
+    fadeOutIn('/images/' + currentScene.name + '.' + currentScene.image)
   }
   return currentScene;
 }

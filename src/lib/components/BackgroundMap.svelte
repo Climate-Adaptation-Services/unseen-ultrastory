@@ -87,20 +87,14 @@
     
   }
 
-  let audio;
   $: if(leafletMap && currentStepName === 'wandeling'){
     leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
-
-    audio = new Audio('sounds/night.mp3');
-    audio.play();
   }
 
   $: if(leafletMap && currentStepName === 'unseen'){
     leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
-
-    audio.pause();
   }
 
 
