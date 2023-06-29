@@ -22,11 +22,11 @@
 
   let xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
-      .range([ 30,940 ]);
+      .range([ 30,600 ]);
 
   let yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
-    .range([ 350, 20 ]);
+    .range([ 350, 60 ]);
 
   let colorScale = d3
   .scaleLinear()
@@ -51,7 +51,7 @@
  
   <div class='sticky-div'>
     <svg>
-      <g transform="translate(10,0)">
+      <g transform="translate(150,0)">
       <XAxis {xScale} /> 
       <YAxis {yScale} />
       <text x={xScale(1985)} y={yScale(23.3)} font-size = "12px">Jaar</text>  
@@ -74,7 +74,7 @@
           <circle 
             cx = {xScale(+d.year)} 
             cy = {yScale(+d.T)} 
-            r = {3}
+            r = {2}
             fill = {colorScale(+d.T)}
           />
         {/each}
@@ -107,7 +107,7 @@
     position: -webkit-sticky; /* Safari */
     top:0px;
     width: 100%;
-    height: 20%;
+    height: 18%;
     /* align-self: flex-end; */
     margin: 0 auto;
   }
@@ -115,7 +115,6 @@
   svg{
     width:100%;
     height:100%;
-    float:right;
     margin-top:8%
   }
 
