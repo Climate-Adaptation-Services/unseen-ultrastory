@@ -84,7 +84,7 @@
 			<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
-		<img class='fixed-image' src='' />
+		<img class='fixed-image' src='' style='opacity:0'/>
 
 		{#each stepNames as stepName, i}
 			<section class='step step_{stepName}'>
@@ -228,14 +228,5 @@
 			-ms-filter: blur(4px);
 		}
 	}
-
-	/* filter: blur(3px);
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	-o-filter: blur(3px);
-	-ms-filter: blur(3px);
-	filter: url(blur.svg#blur);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); */
-
 
 </style>

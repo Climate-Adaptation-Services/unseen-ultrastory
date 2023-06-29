@@ -33,7 +33,7 @@
       image:'jpg',
       time:0.7,
       text:'Thuis probeert Niels Leonie te ontlasten door Sem in slaap te helpen met natte washandjes en een ventilator. Terwijl hij hier mee bezig is vraagt Sem: “ik hoorde op school dat het vroeger nooit zo heet werd. Klopt dat? <br/> <br/> Ja, dat klopt. Toen ik jouw leeftijd had kwam dit nooit voor. Als je mij toen had verteld dat het zó heet zou kunnen worden in Nederland, had ik je voor gek verklaard.​'
-    },
+    }
   ]
 
   let currentScene;
