@@ -31,7 +31,7 @@ export function showImages(stepName, currentStepName, scenes, currentScene, offs
     if(currentScene.name === ''){
       fadeOut()
     }else{
-      fadeOutIn('/images/' + currentScene.name + '.' + currentScene.image)
+      fadeOutIn('/static/images/' + currentScene.name + '.' + currentScene.image)
     }
   }
   if(offset > 0.98){

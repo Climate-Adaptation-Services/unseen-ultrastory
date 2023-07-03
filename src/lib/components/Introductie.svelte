@@ -58,7 +58,7 @@
   {/each}
 
   {#if offset > 0.35 && offset < 0.5 && currentStepName === stepName}
-    <img class='tempmeter' src={'/images/tempmeter.png'} />
+    <img class='tempmeter' src={'/static/images/tempmeter.png'} />
     <p class='temp-text'>{Math.max(25.0, Math.min(30.5, Math.round(offset*670)/10))}</p>
   {/if}
 

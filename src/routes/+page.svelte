@@ -11,13 +11,13 @@
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import Unseen from "$lib/components/Unseen.svelte";
 	import AutoRitje from "$lib/components/AutoRitje.svelte";
-	import { easeLinear, select, timeParse } from 'd3'
+	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { onMount } from "svelte";
 
 	// for preloading images
-	let imageModules = import.meta.glob("/images/*");
+	let imageModules = import.meta.glob("/static/images/*");
 
 	export let data;
 	
@@ -108,8 +108,6 @@
 						<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 					{:else if stepName === 'unseen'}
 						<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
-					{:else if stepName === 'autoritje'}
-						<AutoRitje {offset} {index} {stepName} {currentStepName} />
 					{/if}
 				</section>
 			{:else}
@@ -120,6 +118,8 @@
 						<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
 					{:else if stepName === 'wandeling'}
 						<Wandeling {offset} {index} {currentStepName} {stepName} />
+					{:else if stepName === 'autoritje'}
+						<AutoRitje {offset} {index} {stepName} {currentStepName} />
 					{/if}
 				</section>
 			{/if}
