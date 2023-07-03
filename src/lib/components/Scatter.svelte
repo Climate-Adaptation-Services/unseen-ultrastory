@@ -19,14 +19,12 @@
   
   $: if(browser){
     let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
-    console.log(stepRect)
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
     stepSize = stepRect.bottom - stepRect.top;
     stepWidth = stepRect.width;
   }
 
-  $:console.log(screenHeight)
 
   $: xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
