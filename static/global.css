@@ -38,8 +38,9 @@ body {
   position: -webkit-sticky; /* Safari */
   width: 40%;
   height:1.5%;
+  bottom: 0;
   /* align-self: flex-end; */
-  margin-top: 100px;
+  margin-top: 10px;
   text-align: left;   
   padding-left:30px;
 }
