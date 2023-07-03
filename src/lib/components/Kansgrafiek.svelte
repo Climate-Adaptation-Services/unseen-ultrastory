@@ -117,7 +117,7 @@
 <div class='divkansgrafiek grafiek'>
 
   {#if index > 1}
-    <div class='graphtext' style='top:{`${0.1*stepSize}px`}'>
+    <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
       <p class='scroll-text'>
         Wat is dan de kans dat 40 °C wordt gehaald in een jaar? Dat zie je hiernaast.  
       </p>
