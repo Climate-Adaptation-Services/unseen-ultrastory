@@ -19,14 +19,10 @@
 {/if}
 
 <div class='stepdiv'>
-  <div class='scroll-text-block night' style='top:{`${0*stepSize}px`}'>
-    <img class='semslaapt' style='width:250px' src={'/images/semslaapt.jpg'} />
-    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, wil Niels niet weer in bed gaan liggen dus besluit een rondje te lopen buiten. ​</p>
-  </div>
-
+  
   <div class='scroll-text-block night' style='top:{`${0.15*stepSize}px`}'>
     <img class='nielsgaatwandelen' style='width:300px' src={'/images/nielsgaatwandelen.jpg'} />
-    <p class='scroll-text nighttext'>Het is buiten nog steeds heel warm. De stenen op straat stralen nog steeds warmte uit. ​​</p>
+    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, wil Niels niet weer in bed gaan liggen dus besluit een rondje te lopen buiten. Het is buiten nog steeds heel warm. De stenen op straat stralen nog steeds warmte uit. ​​</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.1 && offset < 0.6}
