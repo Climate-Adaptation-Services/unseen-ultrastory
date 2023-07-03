@@ -15,7 +15,7 @@
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { onMount } from "svelte";
 
-	let imageModules = import.meta.glob("/static/images/*");
+	let imageModules = import.meta.glob("/images/*");
 
 	export let data;
 	
@@ -40,20 +40,20 @@
 
 	$: currentStepName = stepNames[index];
 
-	onMount(() => {
-		const cloud = select('.cloud')
-		function moveCloud(){
-			cloud
-				.style('left', '-900px')
+	// onMount(() => {
+	// 	const cloud = select('.cloud')
+	// 	function moveCloud(){
+	// 		cloud
+	// 			.style('left', '-900px')
 			
-			cloud
-				.transition().ease(easeLinear).duration(200000)
-				.style('left', '4000px')
-				.on('end', moveCloud)
-		}
-		moveCloud();
+	// 		cloud
+	// 			.transition().ease(easeLinear).duration(200000)
+	// 			.style('left', '4000px')
+	// 			.on('end', moveCloud)
+	// 	}
+	// 	moveCloud();
 
-	})
+	// })
 
 </script>
 
@@ -83,7 +83,7 @@
 		{#if data}
 			<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 		{/if}
-		<img class='cloud' src='images/cloud.png' width='400px'/>
+		<!-- <img class='cloud' src='images/cloud.png' width='400px'/> -->
 
 	</div>
 
