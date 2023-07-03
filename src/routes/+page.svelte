@@ -115,11 +115,11 @@
 			{:else}
 				<section class='step step_{stepName}'>		
 					{#if stepName === 'huis'}
-						<Introductie {offset} {index} {currentStepName}/>
+						<Introductie {offset} {index} {currentStepName} {stepName} />
 					{:else if stepName === 'ziekenhuis'}
-						<Ziekenhuis {offset} {index} {currentStepName}/>
+						<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
 					{:else if stepName === 'wandeling'}
-						<Wandeling {offset} {index} {currentStepName}/>
+						<Wandeling {offset} {index} {currentStepName} {stepName} />
 					{/if}
 				</section>
 			{/if}
