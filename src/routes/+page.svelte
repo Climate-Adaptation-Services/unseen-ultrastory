@@ -65,21 +65,27 @@
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
 		{#each stepNames as stepName, i}
-			<section class='step step_{stepName}'>
-				{#if stepName === 'scatter'}
-					<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
-				{:else if stepName === 'kansen'}
-					<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
-				{:else if stepName === 'huis'}
-					<Introductie {offset} {index} {currentStepName}/>
-				{:else if stepName === 'ziekenhuis'}
-					<Ziekenhuis {offset} {index} {currentStepName}/>
-				{:else if stepName === 'wandeling'}
-					<Wandeling {offset} {index} {currentStepName}/>
-				{:else if stepName === 'unseen'}
-					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
-				{/if}
-			</section>
+			{#if ['scatter', 'kansen', 'unseen' ].includes(stepName)}
+				<section class='graphstep step_{stepName}'>
+					{#if stepName === 'scatter'}
+						<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
+					{:else if stepName === 'kansen'}
+						<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
+					{:else if stepName === 'unseen'}
+						<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
+					{/if}
+				</section>
+			{:else}
+				<section class='step step_{stepName}'>		
+					{#if stepName === 'huis'}
+						<Introductie {offset} {index} {currentStepName}/>
+					{:else if stepName === 'ziekenhuis'}
+						<Ziekenhuis {offset} {index} {currentStepName}/>
+					{:else if stepName === 'wandeling'}
+						<Wandeling {offset} {index} {currentStepName}/>
+					{/if}
+				</section>
+			{/if}
 
 		{/each}
 	</div>
@@ -125,18 +131,27 @@
 	}
 	
 	section {
-		width:90%;
+		
 		margin: 0 auto;
 		position:relative;
 	}
 
-  .step {
+  .step, .graphstep {
     height: 3000px;
     /* background: #aaaaaa2b; */
     margin-top: 1em;
     text-align: center;
     transition: background 100ms;
-		position: relative;
+	position: relative;
+	width:90%;
+  }
+
+  .step {
+	width:90%;
+  }
+
+  .graphstep {
+	width:100%;
   }
 
 	#graph{

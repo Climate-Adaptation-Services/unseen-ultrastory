@@ -13,20 +13,28 @@
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
 
   let stepSize;
+  let stepWidth
+  let screenHeight
+  let screenWidth
+  
   $: if(browser){
     let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
+    console.log(stepRect)
+    screenHeight = document.documentElement.clientHeight
+    screenWidth = document.documentElement.clientWidth
     stepSize = stepRect.bottom - stepRect.top;
+    stepWidth = stepRect.width;
   }
 
-  $:console.log(stepSize)
+  $:console.log(screenHeight)
 
-  let xScale = d3.scaleLinear()
+  $: xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
-      .range([ 30,600 ]);
+      .range([ 0,screenWidth * 0.45]);
 
-  let yScale = d3.scaleLinear()
+  $: yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
-    .range([ 350, 60 ]);
+    .range([ screenHeight * 0.7, 0 ]);
 
   let colorScale = d3
   .scaleLinear()
@@ -51,16 +59,16 @@
  
   <div class='sticky-div'>
     <svg>
-      <g transform="translate(150,0)">
-      <XAxis {xScale} /> 
-      <YAxis {yScale} />
+      <g transform="translate({screenWidth * 0.5},{screenHeight * 0.15})">
+      <XAxis {xScale} height={screenHeight * 0.7}/> 
+      <YAxis {yScale} height={screenHeight * 0.7}/>
       <text x={xScale(1985)} y={yScale(23.3)} font-size = "12px">Jaar</text>  
       <text x={xScale(1900)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "12px">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
         <text x={xScale(2005)} y={yScale(40)} class="recordyear" opacity = {1}>De eerste keer</text>
         <text x={xScale(2005)} y={yScale(39)} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
-          transform="translate(850 10)"
+          transform="translate(300 10)"
           id='arrow-line'
           marker-end='url(#head)'
           stroke-width='1'
@@ -107,7 +115,7 @@
     position: -webkit-sticky; /* Safari */
     top:0px;
     width: 100%;
-    height: 18%;
+    height: 100vh;
     /* align-self: flex-end; */
     margin: 0 auto;
   }
@@ -115,7 +123,7 @@
   svg{
     width:100%;
     height:100%;
-    margin-top:8%
+    margin-top:0%
   }
 
   .fade-in {

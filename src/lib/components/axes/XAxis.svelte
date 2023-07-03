@@ -2,15 +2,9 @@
   import { scaleLinear, axisBottom, select, selectAll, format } from "d3";
 
   export let xScale
+  export let height
 
   let pinXAxis; // declare pins
-  let margin = 0; // declare initial values for margin and svg_height/width
-  let svg_width = 400;
-  let svg_height = 350;
-
-
-  $: width = svg_width - margin * 2;
-  $: height = svg_height - margin * 2;
 
   // call axis generators on the scale and pin the SVG pins.
   $: if (pinXAxis) {
@@ -24,7 +18,7 @@
 <g
   class="xAxis"
   bind:this={pinXAxis}
-  transform="translate({0},{margin + height})"
+  transform="translate({0},{height})"
   stroke='#404040'
 />
 
