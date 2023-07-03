@@ -1,10 +1,12 @@
 <script>
   import { browser } from "$app/environment";
-  import { afterUpdate, onMount } from "svelte";
-  import { select } from "d3";
+  import { showImages } from "$lib/noncomponents/fadeOutIn";
+  import { afterUpdate } from "svelte";
 
   export let offset;
   export let index;
+  export let stepName;
+  export let currentStepName;
 
   let stepSize;
   $: if(browser){
@@ -12,45 +14,61 @@
     stepSize = stepRect.bottom - stepRect.top;
   }
 
-  // afterUpdate(() => {
-  //   var rect = document.getElementsByClassName('tempmeter')[0].getBoundingClientRect();
-  //   select('.temp-text')
-  //     .style('top', rect.top + 52 + 'px')
-  //     .style('left', rect.left + 67 + 'px')
-  // }, [offset])
+  const scenes = [
+    {
+      name:'',
+      image:'',
+      time:0.2,
+      text:'Het is al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet. We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is adviseur duurzaamheid bij de gemeente Eindhoven. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis.​'
+    },
+    {
+      name:'inbed',
+      image:'png',
+      time:0.3,
+      text:'Leonie en Niels slapen al nachten slecht omdat hun slaapkamer zo warm is.'
+    },
+    {
+      name:'sem',
+      image:'png',
+      time:0.5,
+      text:'Hun 7-jarige zoon Sem kan niet slapen. Hij is huilerig en moe. Hij heeft ‘hittevrij’ van school. Niels heeft vrij genomen van werk om voor hem te zorgen terwijl Leonie de volgende dag weer aan de slag moet op de spoedeisende hulp.'
+    }
+  ]
+
+  let currentScene;
+  afterUpdate(() => {
+    if(stepName === currentStepName){
+      currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
+    }else{
+      currentScene = undefined
+    }
+  })
+
+  
 
 
 </script>
 
 <div class='stepdiv'>
-  <div class='scroll-text-block block1' style='top:{`${0.2*stepSize}px`}'>
-    <p class='scroll-text'>Het is al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet. We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is adviseur duurzaamheid bij de gemeente Eindhoven. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis.​</p>
-  </div>
 
-  <div class='scroll-text-block block2' style='top:{`${0.3*stepSize}px`}'>
-    <img width='300px' src={'/images/inbed.png'} />
-    <p class='scroll-text'>Leonie en Niels slapen al nachten slecht omdat hun slaapkamer zo warm is.</p>
-    <img src={'/images/tempmeter.png'} width='250px'/>
+  {#each scenes as scene,i}
+    <div class='scroll-text-block' style='top:{`${(scene['time']+0.1)*stepSize}px`}'>
+      <p class='scroll-text'>{scene['text']}</p>
+    </div>
+  {/each}
+
+  {#if offset > 0.35 && offset < 0.5 && currentStepName === stepName}
+    <img class='tempmeter' src={'/images/tempmeter.png'} />
     <p class='temp-text'>{Math.max(25.0, Math.min(30.5, Math.round(offset*670)/10))}</p>
-  </div>
+  {/if}
 
-  <div class='scroll-text-block block3' style='top:{`${0.55*stepSize}px`};'>
-    <img width='300px' src={'/images/sem.png'} />
-    <p class='scroll-text'>Hun 7-jarige zoon Sem kan niet slapen. Hij is huilerig en moe. Hij heeft ‘hittevrij’ van school. Niels heeft vrij genomen van werk om voor hem te zorgen terwijl Leonie de volgende dag weer aan de slag moet op de spoedeisende hulp. ​</p>
-  </div>
+
 </div>
 
 <style>
 
   .stepdiv{
     height:100%;
-  }
-
-  .temp-text{
-    color:black;
-    font-size:35px;
-    margin-top:-160px;
-    margin-left:-20px;
   }
   
 </style>
