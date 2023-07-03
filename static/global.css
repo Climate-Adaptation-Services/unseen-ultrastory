@@ -46,6 +46,7 @@ body {
   right: 10%;
   transform: translate(0%, -50%);
   transition: src 2s;
+  stroke:none;
 }
 
 .tempmeter{

@@ -10,11 +10,13 @@
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import Unseen from "$lib/components/Unseen.svelte";
+	import AutoRitje from "$lib/components/AutoRitje.svelte";
 	import { easeLinear, select, timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { onMount } from "svelte";
 
+	// for preloading images
 	let imageModules = import.meta.glob("/images/*");
 
 	export let data;
@@ -32,7 +34,7 @@
 
 	$: console.log(data.datatest)
 
-	const stepNames = ["huis", "ziekenhuis", "scatter", "kansen", "wandeling", "unseen"];
+	const stepNames = ["huis", "ziekenhuis", "scatter", "kansen", "wandeling", "unseen", "autoritje"];
 
 	let index = 0;
 	let offset;
@@ -69,8 +71,9 @@
 		<audio src="sounds/heat.mp3" autoplay loop id='heat'/> 
 	{/if}
 	<div>
-		<h1>Brabant onvoorbereid</h1>
-		<h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3>
+		<h1>Ongekend heet</h1>
+		<h3>Een verhaal over extreme hitte in Nederland</h3>
+		<!-- <h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3> -->
 	</div>
 	<div class = 'scrolldown'>
 		<h4>Scroll naar beneden</h4>
@@ -93,6 +96,7 @@
 			<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 		</div>
+		
 		<img class='fixed-image' src='' style='opacity:0'/>
 
 		{#each stepNames as stepName, i}
@@ -109,6 +113,8 @@
 					<Wandeling {offset} {index} {currentStepName} {stepName} />
 				{:else if stepName === 'unseen'}
 					<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
+				{:else if stepName === 'autoritje'}
+					<AutoRitje {offset} {index} {stepName} {currentStepName} />
 				{/if}
 			</section>
 

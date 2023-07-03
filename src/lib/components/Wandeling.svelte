@@ -43,7 +43,7 @@
   {/if}
 
   <div class='scroll-text-block night' style='top:{`${0.49*stepSize}px`}'>
-    <img class='festival' style='width:300px' src={'/images/festival.jpg'} />
+    <img class='festival' style='width:300px' src={'/images/dronkenmans.jpg'} />
     <p class='scroll-text nighttext'>Ook al is het festival afgelast, wordt er alsnog veel lawaai gemaakt en gedronken. <strong>Ondanks het lawaai slapen sommige mensen buiten.​</strong></p>
   </div>
 

@@ -1,6 +1,6 @@
 <script>
   import { afterUpdate, onMount } from 'svelte'
-  import { testRoute } from '$lib/noncomponents/routes.js';
+  import { wandelRoute, autoRoute } from '$lib/noncomponents/routes.js';
   import { map, select } from 'd3';
 
   // modules loaded from the client
@@ -24,14 +24,15 @@
   export let currentStepName;
 
   let zoomedIn = false
-  let showingRoute = false
+  let showingWandelRoute = false
+  let showingAutoRoute = false
 
   let ziekenhuis;
 
   $: if(leafletMap){
     leafletMap = leafletMap.getMap()
     
-    const huis = L.tooltip(testRoute[0], {direction:'top', offset:[0,-40]})
+    const huis = L.tooltip(wandelRoute[0], {direction:'top', offset:[0,-40]})
     huis
       .setContent("Huis van Niels en Leonie")
       .addTo(leafletMap);
@@ -68,14 +69,14 @@
     const scrollY = document.documentElement.scrollTop || document.body.scrollTop
     window.onscroll = function () { window.scrollTo(0, scrollY); };
     setTimeout(() => {  
-      showingRoute = true 
+      showingWandelRoute = true 
       window.onscroll = function () {};
     }, 1);
   }
   $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'huis'){
     zoomedIn = false
     leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 1})
-    showingRoute = false
+    showingWandelRoute = false
   }
   $: if(leafletMap && currentStepName === 'ziekenhuis'){
     leafletMap.flyTo([51.466143, 5.472363], 15, {duration: 2})
@@ -84,7 +85,6 @@
     ziekenhuis
       .setContent("Catharina ziekenhuis")
       .addTo(leafletMap);
-    
   }
 
   $: if(leafletMap && currentStepName === 'wandeling'){
@@ -95,9 +95,15 @@
   $: if(leafletMap && currentStepName === 'unseen'){
     leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+    showingAutoRoute = false
   }
 
-
+  $: if(leafletMap && currentStepName === 'autoritje'){
+    leafletMap.flyTo([51.426437, 5.470482], 13, {duration: 2})
+    tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+    showingWandelRoute = false
+    showingAutoRoute = true
+  }
 
 </script>
 
@@ -105,15 +111,18 @@
     <div class="backgroundMap">
       <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
-        {#if showingRoute}
+        {#if showingWandelRoute}
           {#if currentStepName === 'huis'}
-            <Marker latLng={testRoute[0]}/>
+            <Marker latLng={wandelRoute[0]}/>
           {:else if currentStepName === 'ziekenhuis'}
             <Marker latLng={[51.466143, 5.472363]}/>
           {:else if currentStepName === 'wandeling'}
-            <Marker latLng={testRoute[0]}/>
-            <Polyline latLngs={testRoute.slice(0, Math.max(0, Math.round(offset*1.2*testRoute.length - 5)))} color="#00bcd4" weight='5'/>
+            <Marker latLng={wandelRoute[0]}/>
+            <Polyline latLngs={wandelRoute.slice(0, Math.max(0, Math.round(offset*1.2*wandelRoute.length - 5)))} color="#00bcd4" weight='5'/>
           {/if}
+        {:else if showingAutoRoute}
+          <Marker latLng={wandelRoute[0]}/>
+          <Polyline latLngs={autoRoute.slice(0, Math.max(0, Math.round(offset*1.2*autoRoute.length - 5)))} color="#00bcd4" weight='5'/>
         {/if}
       </LeafletMap>
     </div>
