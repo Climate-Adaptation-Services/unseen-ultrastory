@@ -13,12 +13,13 @@
 	import { easeLinear, select, timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
-    import { onMount } from "svelte";
+	import { onMount } from "svelte";
+
+	let imageModules = import.meta.glob("/static/images/*");
 
 	export let data;
 	
 	let leafletMap;
-	
 
 	const csvData = data['data'].map(d => {
 		return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
@@ -51,9 +52,17 @@
 				.on('end', moveCloud)
 		}
 		moveCloud();
+
 	})
 
 </script>
+
+<!-- preload images -->
+<svelte:head>
+	{#each Object.keys(imageModules) as imageUrl}
+    <link rel="preload" as="image" href={imageUrl} />
+	{/each}
+</svelte:head>
 
 <div class='title' on:click={() => document.getElementById('heat').play()}>
 	{#if currentStepName === 'huis'}

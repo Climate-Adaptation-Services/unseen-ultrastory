@@ -56,7 +56,7 @@
     <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden.</p>
   </div>
 
-  {#if stepName === currentStepName && offset > 0.65 && offset < 0.8}
+  {#if stepName === currentStepName && offset > 0.5 && offset < 0.8}
     <audio src="sounds/politie.mp3" autoplay loop /> 
   {/if}
 
