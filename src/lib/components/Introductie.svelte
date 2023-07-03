@@ -16,8 +16,8 @@
 
   const scenes = [
     {
-      name:'',
-      image:'',
+      name:'inbed',
+      image:'png',
       time:0.2,
       text:'Het is al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet. We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is adviseur duurzaamheid bij de gemeente Eindhoven. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis. <br/><br/>Leonie en Niels slapen al nachten slecht omdat hun slaapkamer zo warm is.​'
     },
