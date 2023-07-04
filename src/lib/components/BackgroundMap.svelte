@@ -99,7 +99,7 @@
   }
 
   $: if(leafletMap && currentStepName === 'autoritje'){
-    leafletMap.flyTo([51.426437, 5.470482], 13, {duration: 2})
+    leafletMap.flyTo([51.426437, 5.500482], 13, {duration: 2})
     tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
     showingWandelRoute = false
     showingAutoRoute = true
