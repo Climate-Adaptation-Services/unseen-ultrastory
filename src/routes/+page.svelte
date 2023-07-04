@@ -62,7 +62,7 @@
 <!-- preload images -->
 <svelte:head>
 	{#each Object.keys(imageModules) as imageUrl}
-    <link rel="preload" as="image" href={imageUrl} />
+    <link rel="preload" as="image" href={imageUrl.slice(7)} />
 	{/each}
 </svelte:head>
 
