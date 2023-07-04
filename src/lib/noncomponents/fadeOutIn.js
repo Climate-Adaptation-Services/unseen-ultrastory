@@ -34,7 +34,7 @@ export function showImages(stepName, currentStepName, scenes, currentScene, offs
       fadeOutIn('/images/' + currentScene.name + '.' + currentScene.image)
     }
   }
-  if(offset > 0.98){
+  if(offset > 0.98 || offset < 0.05){
     fadeOut()
     currentScene = undefined
   }

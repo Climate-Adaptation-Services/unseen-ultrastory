@@ -64,14 +64,6 @@
   $: if(leafletMap && offset > 0.1 && !zoomedIn){
     zoomedIn = true
     leafletMap.flyTo([51.426437, 5.470482], 15, {duration: 5})
-
-    // momentarily stop scrolling until zoomed in
-    const scrollY = document.documentElement.scrollTop || document.body.scrollTop
-    window.onscroll = function () { window.scrollTo(0, scrollY); };
-    setTimeout(() => {  
-      showingWandelRoute = true 
-      window.onscroll = function () {};
-    }, 1);
   }
   $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'huis'){
     zoomedIn = false
@@ -88,6 +80,7 @@
   }
 
   $: if(leafletMap && currentStepName === 'wandeling'){
+    showingWandelRoute = true
     leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   }
@@ -98,11 +91,18 @@
     showingAutoRoute = false
   }
 
-  $: if(leafletMap && currentStepName === 'autoritje'){
+  $: if(leafletMap && currentStepName === 'autoritje' && offset > 0.1){
     leafletMap.flyTo([51.426437, 5.500482], 13, {duration: 2})
     tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
     showingWandelRoute = false
-    showingAutoRoute = true
+
+    // momentarily stop scrolling until zoomed in
+    const scrollY = document.documentElement.scrollTop || document.body.scrollTop
+    // window.onscroll = function () { window.scrollTo(0, scrollY); };
+    setTimeout(() => {  
+      // window.onscroll = function () {};
+      showingAutoRoute = true
+    }, 2000);
   }
 
 </script>
@@ -111,18 +111,15 @@
     <div class="backgroundMap">
       <LeafletMap bind:this={leafletMap} options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
+        <Marker latLng={wandelRoute[0]}/>
         {#if showingWandelRoute}
-          {#if currentStepName === 'huis'}
-            <Marker latLng={wandelRoute[0]}/>
-          {:else if currentStepName === 'ziekenhuis'}
-            <Marker latLng={[51.466143, 5.472363]}/>
-          {:else if currentStepName === 'wandeling'}
-            <Marker latLng={wandelRoute[0]}/>
-            <Polyline latLngs={wandelRoute.slice(0, Math.max(0, Math.round(offset*1.2*wandelRoute.length - 5)))} color="#00bcd4" weight='5'/>
-          {/if}
-        {:else if showingAutoRoute}
-          <Marker latLng={wandelRoute[0]}/>
-          <Polyline latLngs={autoRoute.slice(0, Math.max(0, Math.round(offset*1.2*autoRoute.length - 5)))} color="#00bcd4" weight='5'/>
+          <Polyline latLngs={wandelRoute.slice(0, Math.max(0, Math.round(offset*1.2*wandelRoute.length - 5)))} color="#00bcd4" weight='5'/>
+        {/if}
+        {#if currentStepName === 'ziekenhuis'}
+          <Marker latLng={[51.466143, 5.472363]}/>
+        {/if}
+        {#if showingAutoRoute}
+          <Polyline latLngs={autoRoute.slice(0, Math.max(0, Math.round(offset*1.2*autoRoute.length - 50)))} color="#00bcd4" weight='5'/>
         {/if}
       </LeafletMap>
     </div>
