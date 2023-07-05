@@ -153,7 +153,7 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
       <p class='scroll-text'>
-        De kans dat 40°C wordt gehaald in een jaar is sterk toegenomen. Hiernaast zie je hoe groot de verschillen zijn per generatie.  
+        De kans dat 40°C wordt gehaald in een jaar is sterk toegenomen door klimaatverandering. Hiernaast zie je hoe groot de verschillen zijn per generatie.  
       </p>
       {#if ratioOfCsvData > 100}
         <div class= 'fade-in'>
