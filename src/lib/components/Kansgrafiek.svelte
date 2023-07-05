@@ -28,9 +28,11 @@
     stepWidth = stepRect.width;
   }
 
+  $: console.log(screenHeight)
+
   $: xScale = d3.scaleLog()
       .domain([100,0.01])
-      .range([ 0,screenWidth * 0.45]);
+      .range([ 0,screenWidth * 0.4]);
 
   $: yScale = d3.scaleLinear()
     .domain([25, 46])
@@ -119,26 +121,32 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
       <p class='scroll-text'>
-        Wat is dan de kans dat 40 °C wordt gehaald in een jaar? Dat zie je hiernaast.  
+        De kans dat 40 °C wordt gehaald in een jaar is sterk toegenomen. Hiernaast zie je hoe groot de verschillen zijn per generatie.  
       </p>
       {#if ratioOfCsvData > 100}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Allereerst kijken we naar de kans <mark style="background: #bcf5bc !important">zonder klimaatverandering.</mark> Je ziet dat 40 °C bijna onmogelijk is.  
+          <p class='scroll-text'> Toen <mark style="background: #bcf5bc !important">Niels klein was, rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
           </p> 
         </div>   
       {/if}
       {#if ratioOfCsvData > 250}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Maar door het effect van <mark style="background: #ff9194 !important">klimaatverandering</mark> is de kans op 40 °C in ons huidige klimaat ongeveer 2%. In de toekomst zal deze kans alleen maar groter worden. 
+          <p class='scroll-text'> Inmiddels, <mark style="background: #ff9194 !important">in 2023, nu Sem jong is,</mark> is de kans op 40 °C ongeveer 2%. 
           </p> 
         </div>   
-      {/if}       
+      {/if}   
+      {#if ratioOfCsvData > 250}
+        <div class= 'fade-in'>
+          <p class='scroll-text'> <mark style="background: #b49eb8 !important">In 2050, als Sem inmiddels volwassen is,</mark> is de kans op 40 °C toegenomen tot ongeveer 7%. 
+          </p> 
+        </div>   
+      {/if}      
     </div>
   {/if}
   
     <div class='sticky-div'>
       <svg >
-        <g class='svgkansgrafiek' transform="translate({screenWidth * 0.5},{screenHeight * 0.15})">
+        <g class='svgkansgrafiek' transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
         <text x={xScale(1.5)} y={yScale(23.5)} font-size = "1.5vh">Kans (%)</text>  
@@ -178,8 +186,6 @@
     top:0px;
     width: 100%;
     height: 100vh;
-    /* align-self: flex-end; */
-    margin: 0 auto;
   }
   svg{
     width:100%;

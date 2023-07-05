@@ -42,9 +42,9 @@
 </script>
 
 <div class='divscatter grafiek'>
-  <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
+  <div class='graphtext' style='top:{`${0.05*screenHeight}px`}'>
     {#if (ratioOfCsvData < 63 && currentStepName === 'scatter') || currentStepName === 'ziekenhuis'}
-    <p class='scroll-text'> De grafiek weergeeft de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
+    <p class='scroll-text'> Bij klimaatverandering gaat het meestal over trends, of veranderingen van gemiddelden. Omdat juist de extremen ontwrichtend zijn, focussen we hier op extreme temperaturen. Zo zie je hier de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
     </p> 
     {/if} 
     {#if ratioOfCsvData > 63 && currentStepName === 'scatter'}
