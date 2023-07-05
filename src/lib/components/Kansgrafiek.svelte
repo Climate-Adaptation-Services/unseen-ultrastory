@@ -153,23 +153,23 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
       <p class='scroll-text'>
-        De kans dat 40 °C wordt gehaald in een jaar is sterk toegenomen. Hiernaast zie je hoe groot de verschillen zijn per generatie.  
+        De kans dat 40°C wordt gehaald in een jaar is sterk toegenomen. Hiernaast zie je hoe groot de verschillen zijn per generatie.  
       </p>
       {#if ratioOfCsvData > 100}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Toen <mark style="background: #bcf5bc !important">Niels klein was, rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
+          <p class='scroll-text'> Toen Niels klein was, <mark style="background: #bcf5bc !important"> rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
           </p> 
         </div>   
       {/if}
       {#if ratioOfCsvData > 250}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Inmiddels, <mark style="background: #ff9194 !important">in 2023, nu Sem jong is,</mark> is de kans op 40 °C ongeveer 2%. 
+          <p class='scroll-text'> Inmiddels, <mark style="background: #ff9194 !important">in 2023</mark>, nu Sem jong is, is de kans op 40 °C ongeveer 2%. 
           </p> 
         </div>   
       {/if}   
       {#if ratioOfCsvData > 360}
         <div class= 'fade-in'>
-          <p class='scroll-text'> <mark style="background: #b49eb8 !important">In 2050, als Sem inmiddels volwassen is,</mark> is de kans op 40 °C toegenomen tot ongeveer 7%. 
+          <p class='scroll-text'> <mark style="background: #b49eb8 !important">In 2050</mark>, als Sem inmiddels volwassen is, is de kans op 40 °C toegenomen tot ongeveer 7%. 
           </p> 
         </div>   
       {/if}      
