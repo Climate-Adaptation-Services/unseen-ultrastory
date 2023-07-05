@@ -65,8 +65,8 @@
       <g transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/> 
       <YAxis {yScale} height={screenHeight * 0.7}/>
-      <text x={xScale(1990)} y={yScale(26)} font-size = "2vh">Jaar</text>  
-      <text x={xScale(1920)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "2vh">Maximum temperatuur (°C)</text>
+      <text x={xScale(1990)} y={yScale(26)} font-size = "2.5vh">Jaar</text>  
+      <text x={xScale(1920)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "2.5vh">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
         <text x={xScale(2000)} y={yScale(40.5)} class="recordyear" opacity = {1}>De eerste keer</text>
         <text x={xScale(2000)} y={yScale(40.5)+15} class="recordyear" opacity = {1}>40+ °C in 2019</text>

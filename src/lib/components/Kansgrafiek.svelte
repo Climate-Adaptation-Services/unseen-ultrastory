@@ -181,8 +181,8 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
-        <text x={xScale(1.5)} y={yScale(22.5)} font-size = "2vh">Kans (%)</text>  
-        <text x={xScale(5000)} y={yScale(54.5)} transform="rotate(-90)" font-size = "2vh">Temperatuur (°C)</text>  
+        <text x={xScale(1.5)} y={yScale(22.5)} font-size = "2.5vh">Kans (%)</text>  
+        <text x={xScale(5000)} y={yScale(54.5)} transform="rotate(-90)" font-size = "2.5vh">Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
         {#if ratioOfCsvData > 270}
           <line x1={xScale(2.1)}  y1={yScale(25)} x2={xScale(2.1)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
