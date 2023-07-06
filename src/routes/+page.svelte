@@ -31,6 +31,7 @@
 
 	const maxTempData = data.datatest
 	const middellijnData = data.datamiddellijn
+	const middellijnData2050 = data.datamiddellijn2050
 	const confidenceData = data.dataconfidence
 	const unseenData = data.unseen
 
@@ -116,7 +117,7 @@
 					{#if stepName === 'scatter'}
 						<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
 					{:else if stepName === 'kansen'}
-						<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
+						<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 					{:else if stepName === 'unseen'}
 						<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
 					{:else if stepName === 'aftiteling'}

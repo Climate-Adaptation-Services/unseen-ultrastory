@@ -4,11 +4,16 @@
   import * as d3 from 'd3'
   import * as _ from 'lodash'
   import { browser } from "$app/environment";
+  import { fade } from 'svelte/transition';
+  import { fly } from 'svelte/transition'
+  
 
   export let index
   export let maxTempData
   export let offset
   export let currentStepName
+
+  let visible = true;
 
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
 
@@ -42,14 +47,14 @@
 </script>
 
 <div class='divscatter grafiek'>
-  <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
+  <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
     {#if (ratioOfCsvData < 63 && currentStepName === 'scatter') || currentStepName === 'ziekenhuis'}
-    <p class='scroll-text'> De grafiek weergeeft de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
+    <p class='scroll-text'> Bij klimaatverandering gaat het meestal over trends, of veranderingen van gemiddelden. Omdat juist de extremen ontwrichtend zijn, focussen we hier op extreme temperaturen. Zo zie je hier de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
     </p> 
     {/if} 
     {#if ratioOfCsvData > 63 && currentStepName === 'scatter'}
     <div class= 'fade-in'>
-      <p class='scroll-text' > Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40 °C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4 °C in Eindhoven. Het vorige hitterecord werd verpulverd! De reden voor deze extreme temperatuurstijgingen is klimaatverandering. 
+      <p class='scroll-text' > Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het vorige hitterecord werd verpulverd! 
     </p> 
     </div>   
     {/if} 
@@ -57,16 +62,16 @@
  
   <div class='sticky-div'>
     <svg>
-      <g transform="translate({screenWidth * 0.5},{screenHeight * 0.15})">
+      <g transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/> 
       <YAxis {yScale} height={screenHeight * 0.7}/>
-      <text x={xScale(1990)} y={yScale(26)} font-size = "1.5vh">Jaar</text>  
-      <text x={xScale(1920)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "1.5vh">Maximum temperatuur (°C)</text>
+      <text x={xScale(1990)} y={yScale(26)} font-size = "2vh">Jaar</text>  
+      <text x={xScale(1920)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "2vh">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
-        <text x={xScale(2005)} y={yScale(40.5)} class="recordyear" opacity = {1}>De eerste keer</text>
-        <text x={xScale(2005)} y={yScale(40.5)+15} class="recordyear" opacity = {1}>40+ °C in 2019</text>
+        <text x={xScale(2000)} y={yScale(40.5)} class="recordyear" opacity = {1}>De eerste keer</text>
+        <text x={xScale(2000)} y={yScale(40.5)+15} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
-          transform="translate( {xScale(2015.5)} {yScale(40.7)} )"
+          transform="translate( {xScale(2014.5)} {yScale(40.8)} )"
           id='arrow-line'
           marker-end='url(#head)'
           stroke-width='1'
@@ -88,6 +93,7 @@
       {#if currentStepName === 'scatter'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
+            class= 'fade-in dot'
             cx = {xScale(+d.year)} 
             cy = {yScale(+d.T)} 
             r = {5}
@@ -126,6 +132,10 @@
 
   .fade-in {
     animation: fadeIn 2s;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s;
   }
 
   @keyframes fadeIn {
