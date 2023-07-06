@@ -1,6 +1,4 @@
 <script>
-	// import Scrolly from "$lib/components/Scrolly.svelte";
-	import Graph from "$lib/components/Graph.svelte";
 	import BackgroundMap from "$lib/components/BackgroundMap.svelte";
 	import 'leaflet/dist/leaflet.css';
 
@@ -12,6 +10,7 @@
 	import Unseen from "$lib/components/Unseen.svelte";
 	import AutoRitje from "$lib/components/AutoRitje.svelte";
 	import Aftiteling from "$lib/components/Aftiteling.svelte";
+	import NavigationPanel from "$lib/components/NavigationPanel.svelte";
 
 	import { timeParse } from 'd3'
 
@@ -51,6 +50,8 @@
 	let index = 0;
 	let offset;
 	let progress;
+
+	let navigationPanelHeight;
 
 	$: currentStepName = stepNames[index];
 
@@ -107,6 +108,10 @@
 			<p>Step: {index}</p>
 			<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 			<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
+		</div>
+
+		<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
+			<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight}/>
 		</div>
 		
 		<img class='fixed-image' src='' style='opacity:0'/>
@@ -177,6 +182,15 @@
 		left: 0;
 		color: black !important;
 		z-index: 1000;
+	}
+
+	.navigation-panel{
+		position: fixed;
+		z-index: 20000;
+		right:0px;
+		width:200px;
+		height:60%;
+		top:20%;
 	}
 
 	[slot="foreground"] {
