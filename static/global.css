@@ -77,6 +77,10 @@ body {
   background-color: rgba(255, 255, 255, 1)
 }
 
+.aftiteling{
+  background-color: rgba(0, 0, 0, 1)
+}
+
 .graphtext{
   float:left;
   position: sticky;

@@ -11,6 +11,8 @@
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
 	import Unseen from "$lib/components/Unseen.svelte";
 	import AutoRitje from "$lib/components/AutoRitje.svelte";
+	import Aftiteling from "$lib/components/Aftiteling.svelte";
+
 	import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
@@ -34,7 +36,16 @@
 
 	$: console.log(data.datatest)
 
-	const stepNames = ["huis", "ziekenhuis", "scatter", "kansen", "wandeling", "unseen", "autoritje"];
+	const stepNames = [
+		"huis", 
+		"ziekenhuis", 
+		"scatter", 
+		"kansen", 
+		"wandeling", 
+		"unseen", 
+		"autoritje",
+		"aftiteling"
+	];
 
 	let index = 0;
 	let offset;
@@ -100,14 +111,16 @@
 		<img class='fixed-image' src='' style='opacity:0'/>
 
 		{#each stepNames as stepName, i}
-			{#if ['scatter', 'kansen', 'unseen' ].includes(stepName)}
-				<section class='graphstep step_{stepName}'>
+			{#if ['scatter', 'kansen', 'unseen', 'aftiteling'].includes(stepName)}
+				<section class='widestep step_{stepName}'>
 					{#if stepName === 'scatter'}
 						<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
 					{:else if stepName === 'kansen'}
 						<Kansgrafiek {middellijnData} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 					{:else if stepName === 'unseen'}
 						<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
+					{:else if stepName === 'aftiteling'}
+						<Aftiteling {offset} {index} {stepName} {currentStepName} />
 					{/if}
 				</section>
 			{:else}
@@ -178,28 +191,31 @@
 	}
 	
 	section {
-		
 		margin: 0 auto;
 		position:relative;
 	}
 
-  .step, .graphstep {
+  .step, .widestep {
     height: 3000px;
     /* background: #aaaaaa2b; */
     margin-top: 1em;
     text-align: center;
     transition: background 100ms;
-	position: relative;
-	width:90%;
+		position: relative;
+		width:90%;
   }
 
   .step {
-	width:90%;
+		width:90%;
   }
 
-  .graphstep {
-	width:100%;
+  .widestep {
+		width:100%;
   }
+
+	.outrostep{
+		width:100%;
+	}
 
 	#graph{
 		height: 200vh;
