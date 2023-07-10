@@ -62,7 +62,7 @@
 			setTimeout(() => {  
 				window.scrollBy(0, 1) 
 				scroll()
-			}, 5);
+			}, 7);
 		}
 		scroll()
 	}
