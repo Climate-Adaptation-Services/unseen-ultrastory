@@ -4,19 +4,26 @@
 
 </script>
 
-<div class='title' on:click={() => document.getElementById('heat').play()}>
+<div class='title {$started ? 'title-started' : ''}' on:click={() => document.getElementById('heat').play()}>
 	{#if currentStepName === 'huis'}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat'/> 
 	{/if}
-	<div>
-		<h1>Ongekend heet</h1>
-		<h3>Een verhaal over extreme hitte in Nederland</h3>
-		<!-- <h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3> -->
-	</div>
+
   {#if $started}
+    <div>
+      <h1>Ongekend heet</h1>
+      <h3>Een verhaal over extreme hitte in Nederland</h3>
+      <!-- <h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3> -->
+    </div>
     <div class = 'scrolldown'>
       <h4>Scroll naar beneden</h4>
       <img  width='7%' src={'/images/arrowdown.png'} />
+    </div>
+  {:else}
+    <div style='cursor:pointer' on:click={() => {started.set(true)}}>
+      <em><h1>Klik om te starten</h1>
+      <h3>Dit beeldverhaal bevat audio. Het is aanbevolen om een koptelefoon op te doen.</h3></em>
+      <img class='headphones' src='/images/headphones.png' width='60px'/>
     </div>
   {/if}
 </div>
@@ -28,6 +35,10 @@
 		font-size: 40px;
 	}
 
+  .headphones{
+    filter:invert(1);
+  }
+
 	.title{
 		height: 100vh;
 		display: flex;
@@ -37,10 +48,13 @@
 		background-image: url('$lib/heatwave.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-		animation: blurry-animation 8s infinite alternate;
+	}
+
+  .title-started{
+    animation: blurry-animation 8s infinite alternate;
 		-webkit-animation: blurry-animation 8s infinite alternate;
 		-moz-animation: blurry-animation 8s infinite alternate;
-	}
+  }
 
   .scrolldown{
 	position: absolute;

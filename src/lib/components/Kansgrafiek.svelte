@@ -3,7 +3,7 @@
   import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import * as _ from 'lodash'
-  import { afterUpdate } from 'svelte'
+  import { afterUpdate, onMount } from 'svelte'
   import { browser } from "$app/environment";
 
   export let index
@@ -21,13 +21,13 @@
   $: ratioOfCsvData = Math.round((offset*6)*middellijnData.length)
   $: ratioOfCsvDataConfidence = Math.round((offset*6)*confidenceData.length)
   
-  $: if(browser){
+  onMount(() => {
     let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
     stepSize = stepRect.bottom - stepRect.top;
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
     stepWidth = stepRect.width;
-  }
+  })
 
   $: console.log()
 

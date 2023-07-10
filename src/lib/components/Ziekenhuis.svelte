@@ -1,7 +1,7 @@
 <script>
   import { browser } from "$app/environment";
   import { showImages } from "$lib/noncomponents/fadeOutIn";
-  import { afterUpdate } from "svelte";
+  import { afterUpdate, onMount } from "svelte";
 
   export let offset;
   export let index;
@@ -10,10 +10,10 @@
 
 
   let stepSize;
-  $: if(browser){
+  onMount(() => {
     let stepRect = document.getElementsByClassName('step_ziekenhuis')[0].getBoundingClientRect()
     stepSize = stepRect.bottom - stepRect.top;
-  }
+  })
 
   const scenes = [
     {

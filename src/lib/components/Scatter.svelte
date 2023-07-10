@@ -6,7 +6,7 @@
   import { browser } from "$app/environment";
   import { fade } from 'svelte/transition';
   import { fly } from 'svelte/transition'
-  
+  import { onMount } from "svelte";
 
   export let index
   export let maxTempData
@@ -22,13 +22,13 @@
   let screenHeight
   let screenWidth
   
-  $: if(browser){
+  onMount(() => {
     let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
     stepSize = stepRect.bottom - stepRect.top;
     stepWidth = stepRect.width;
-  }
+  })
 
 
   $: xScale = d3.scaleLinear()
