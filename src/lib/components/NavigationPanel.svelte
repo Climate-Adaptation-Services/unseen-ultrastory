@@ -3,6 +3,7 @@
   export let stepNames;
   export let currentStepName;
   export let height;
+  export let offset;
 
   const yOffset = 40
   $: innerHeight = height - 2*yOffset;
@@ -13,17 +14,18 @@
 
 </script>
 
-<svg class='navigation-svg'>
-  {#each stepNames as stepName,i}
-    <g class='chapterg' transform='translate(170,{yOffset + (innerHeight/stepNames.length)*i})'>
-      <text class='chapter-text' dy='0.26em' dx='-25' opacity={(stepName === currentStepName) ? '1' : '0'}>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
-      <circle class='chapter-circle' r={(stepName === currentStepName) ? '10' : '2'} stroke-width={(stepName === currentStepName) ? '5px' : '10px'} opacity='1' fill='cyan' />
-      <rect width='130' height={innerHeight/stepNames.length} opacity='0' x='-110' y={-(innerHeight/stepNames.length)/2} on:click={() => click(stepName)} pointer-events={(currentStepName === stepName) ? 'none' : 'default'}/>
-    </g>
+{#if offset > 0.1 || currentStepName !== 'huis'}
+  <svg class='navigation-svg'>
+    {#each stepNames as stepName,i}
+      <g class='chapterg' transform='translate(170,{yOffset + (innerHeight/stepNames.length)*i})'>
+        <text class='chapter-text' dy='0.26em' dx='-25' opacity={(stepName === currentStepName) ? '1' : '0'}>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
+        <circle class='chapter-circle' r={(stepName === currentStepName) ? '10' : '2'} stroke-width={(stepName === currentStepName) ? '5px' : '10px'} opacity='1' fill='cyan' />
+        <rect width='130' height={innerHeight/stepNames.length} opacity='0' x='-110' y={-(innerHeight/stepNames.length)/2} on:click={() => click(stepName)} pointer-events={(currentStepName === stepName) ? 'none' : 'default'}/>
+      </g>
 
-  {/each}
-</svg>
-
+    {/each}
+  </svg>
+{/if}
 
 <style>
 
