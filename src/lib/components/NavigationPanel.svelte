@@ -15,13 +15,10 @@
 
 <svg class='navigation-svg'>
   {#each stepNames as stepName,i}
-    <g transform='translate(170,{yOffset + (innerHeight/stepNames.length)*i})'>
-      {#if stepName === currentStepName}
-          <text class='chapter-text' dy='0.26em' dx='-25'>{stepName}</text>
-          <circle class='chapter-circle' r='10' stroke-width='5px' opacity='1' fill='cyan' pointer-events='none'/>
-      {:else}
-          <circle class='chapter-circle' r='3' stroke-width='10px' on:click={() => click(stepName)}/>
-      {/if}
+    <g class='chapterg' transform='translate(170,{yOffset + (innerHeight/stepNames.length)*i})'>
+      <text class='chapter-text' dy='0.26em' dx='-25' opacity={(stepName === currentStepName) ? '1' : '0'}>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
+      <circle class='chapter-circle' r={(stepName === currentStepName) ? '10' : '2'} stroke-width={(stepName === currentStepName) ? '5px' : '10px'} opacity='1' fill='cyan' />
+      <rect width='130' height={innerHeight/stepNames.length} opacity='0' x='-110' y={-(innerHeight/stepNames.length)/2} on:click={() => click(stepName)} pointer-events={(currentStepName === stepName) ? 'none' : 'default'}/>
     </g>
 
   {/each}
@@ -42,15 +39,25 @@
     stroke-width: 10px;
     transition: all 0.5s;
     opacity:0.7;
+    cursor:pointer;
   }
 
   .chapter-text{
     text-anchor: end;
+    fill:rgb(81, 81, 81);
   }
 
-  .chapter-circle:hover{
+  .chapterg:hover .chapter-text{
+    opacity:0.5;
+  }
+
+  .chapterg:hover .chapter-circle{
     r:10;
     stroke-width: 5px;
+  }
+
+  .chapterg{
+    cursor: pointer;
   }
 
 </style>
