@@ -57,7 +57,7 @@
     
   afterUpdate(() => {
   
-    if(currentStepName === 'kansen' ){
+    if(currentStepName === 'kansgrafiek' ){
       d3.select('.kansgraphpathzonder').remove()
       d3.select('.kansgraphpathconfidencemet').remove()
       d3.select('.kansgraphpathconfidence2050').remove()
@@ -67,7 +67,7 @@
       d3.select('.svgkansgrafiek')
       .append("path")
       .attr('class', 'kansgraphpathzonder')
-      .datum((currentStepName === 'kansen') ? _.slice(middellijnData, 0, ratioOfCsvData) : [])
+      .datum((currentStepName === 'kansgrafiek') ? _.slice(middellijnData, 0, ratioOfCsvData) : [])
       .attr("fill", "none")
       .attr("stroke", "green")
       .attr("stroke-width", 1.5)
@@ -182,17 +182,17 @@
         {#if ratioOfCsvData > 360}
           <line x1={xScale(7.8)}  y1={yScale(25)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
         {/if}
-        <!-- {#if ratioOfCsvData > 180 && currentStepName === 'kansen'}
+        <!-- {#if ratioOfCsvData > 180 && currentStepName === 'kansgrafiek'}
             <text x={xScale(0.1)} y={yScale(34)} class="recordyear" fill="green" font-size = "1.5vh">Zonder klimaatverandering</text>
             <text x={xScale(0.1)} y={yScale(34) + 15} class="recordyear" font-size = "1.5vh">kon 40°C niet voorkomen</text>
         {/if} -->
-        {#if ratioOfCsvData > 120 && currentStepName === 'kansen'}
+        {#if ratioOfCsvData > 120 && currentStepName === 'kansgrafiek'}
           <line x1={xScale(0.008)}  y1={yScale(35.4371)} x2={xScale(0.008)} y2={yScale(42.2131)} stroke="grey"/>
           <line x1={xScale(0.0075)}  y1={yScale(35.4371)} x2={xScale(0.0085)} y2={yScale(35.4371)} stroke="grey"/>
           <line x1={xScale(0.0075)}  y1={yScale(42.2131)} x2={xScale(0.0085)} y2={yScale(42.2131)} stroke="grey"/>
           <text x={xScale(0.0075)} y={yScale(38.5)} fill="grey" font-size = "10px" marker-end="url(#triangle)">Bandbreedte</text>
         {/if}
-        <!-- {#if ratioOfCsvData > 280 && currentStepName === 'kansen'}
+        <!-- {#if ratioOfCsvData > 280 && currentStepName === 'kansgrafiek'}
             <text x={xScale(29)} y={yScale(43)} class="recordyear" fill="red" font-size = "1.5vh">Met klimaatverandering</text>
             <text x={xScale(29)} y={yScale(43  )+ 15} class="recordyear" font-size = "1.5vh">wel!</text>
         {/if} -->
