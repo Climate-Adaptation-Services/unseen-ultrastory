@@ -5,7 +5,7 @@
 </script>
 
 <div class='title {$started ? 'title-started' : ''}' on:click={() => document.getElementById('heat').play()}>
-	{#if currentStepName === 'huis'}
+	{#if currentStepName === 'thuis'}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat'/> 
 	{/if}
 

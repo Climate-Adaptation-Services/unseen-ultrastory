@@ -1,7 +1,8 @@
 <script>
-  import { browser } from "$app/environment";
   import { showImages } from "$lib/noncomponents/fadeOutIn";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
   import { afterUpdate, onMount } from "svelte";
+  import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
 
   export let offset;
   export let index;
@@ -11,8 +12,7 @@
 
   let stepSize;
   onMount(() => {
-    let stepRect = document.getElementsByClassName('step_ziekenhuis')[0].getBoundingClientRect()
-    stepSize = stepRect.bottom - stepRect.top;
+    stepSize = getStepSize(stepName);
   })
 
   const scenes = [
@@ -38,22 +38,14 @@
 
   let currentScene;
   afterUpdate(() => {
-    if(stepName === currentStepName){
-      currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
-    }else{
-      currentScene = undefined
-    }
+    currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
   })
 
 </script>
 
 <div class='stepdiv'>
-  {#each scenes as scene,i}
-    <div class='scroll-text-block' style='top:{`${(scene['time']+0.1)*stepSize}px`}'>
-      <p class='scroll-text'>{@html scene['text']}</p>
-    </div>
-  {/each}
-
+  <TextAndImagesScenes {scenes} {stepSize} />
+  
   {#if stepName === currentStepName}
     <audio src="sounds/ziekenhuis.mp3" autoplay loop /> 
   {/if}

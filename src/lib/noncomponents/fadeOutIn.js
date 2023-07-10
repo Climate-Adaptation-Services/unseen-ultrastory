@@ -19,24 +19,28 @@ function fadeOut(){
 }
 
 export function showImages(stepName, currentStepName, scenes, currentScene, offset){
-  // console.log(stepName, currentStepName, scenes, currentScene, offset)
-  let newScene;
-  scenes.forEach(scene => {
-    if(offset > scene.time){
-      newScene = scene
-    }     
-  });
-  if(newScene !== currentScene && newScene !== undefined){
-    currentScene = newScene
-    if(currentScene.name === ''){
-      fadeOut()
-    }else{
-      fadeOutIn('/images/' + currentScene.name + '.' + currentScene.image)
+  
+  if(stepName === currentStepName){
+    let newScene;
+    scenes.forEach(scene => {
+      if(offset > scene.time){
+        newScene = scene
+      }     
+    });
+    if(newScene !== currentScene && newScene !== undefined){
+      currentScene = newScene
+      if(currentScene.name === ''){
+        fadeOut()
+      }else{
+        fadeOutIn('/images/' + currentScene.name + '.' + currentScene.image)
+      }
     }
+    if(offset > 0.98 || offset < 0.05){
+      fadeOut()
+      currentScene = undefined
+    }
+    return currentScene;
+  }else{
+    return(undefined)
   }
-  if(offset > 0.98 || offset < 0.05){
-    fadeOut()
-    currentScene = undefined
-  }
-  return currentScene;
 }

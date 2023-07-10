@@ -39,10 +39,10 @@
 	$: console.log(data.datatest)
 
 	const stepNames = [
-		"huis", 
+		"thuis", 
 		"ziekenhuis", 
-		"scatter", 
-		"kansen", 
+		"temperatuurstijging", 
+		"kansgrafiek", 
 		"wandeling", 
 		"unseen", 
 		"autoritje",
@@ -107,11 +107,11 @@
 			<img class='fixed-image' src='' style='opacity:0'/>
 
 			{#each stepNames as stepName, i}
-				{#if ['scatter', 'kansen', 'unseen', 'aftiteling'].includes(stepName)}
+				{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling'].includes(stepName)}
 					<section class='widestep step_{stepName}'>
-						{#if stepName === 'scatter'}
+						{#if stepName === 'temperatuurstijging'}
 							<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
-						{:else if stepName === 'kansen'}
+						{:else if stepName === 'kansgrafiek'}
 							<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 						{:else if stepName === 'unseen'}
 							<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
@@ -121,7 +121,7 @@
 					</section>
 				{:else}
 					<section class='step step_{stepName}'>		
-						{#if stepName === 'huis'}
+						{#if stepName === 'thuis'}
 							<Introductie {offset} {index} {currentStepName} {stepName} />
 						{:else if stepName === 'ziekenhuis'}
 							<Ziekenhuis {offset} {index} {currentStepName} {stepName} />

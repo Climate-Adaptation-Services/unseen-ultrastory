@@ -4,7 +4,7 @@
   import * as d3 from 'd3'
   import * as _ from 'lodash'
   import { afterUpdate, onMount } from 'svelte'
-  import { browser } from "$app/environment";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
 
   export let index
   export let middellijnData
@@ -12,9 +12,9 @@
   export let offset
   export let confidenceData
   export let currentStepName
+  export let stepName
 
   let stepSize;
-  let stepWidth
   let screenHeight
   let screenWidth
 
@@ -22,11 +22,9 @@
   $: ratioOfCsvDataConfidence = Math.round((offset*6)*confidenceData.length)
   
   onMount(() => {
-    let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
-    stepSize = stepRect.bottom - stepRect.top;
+    stepSize = getStepSize(stepName);
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
-    stepWidth = stepRect.width;
   })
 
   $: console.log()
@@ -139,13 +137,7 @@
     }
   }
   )
-      
-    
-    
-
-    
-  
-
+ 
 </script>
 
 <div class='divkansgrafiek grafiek'>

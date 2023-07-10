@@ -14,12 +14,12 @@
 
 </script>
 
-{#if offset > 0.1 || currentStepName !== 'huis'}
+{#if offset > 0.1 || currentStepName !== 'thuis'}
   <svg class='navigation-svg'>
     {#each stepNames as stepName,i}
       <g class='chapterg' transform='translate(170,{yOffset + (innerHeight/stepNames.length)*i})'>
-        <text class='chapter-text' dy='0.26em' dx='-25' opacity={(stepName === currentStepName) ? '1' : '0'}>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
-        <circle class='chapter-circle' r={(stepName === currentStepName) ? '10' : '2'} stroke-width={(stepName === currentStepName) ? '5px' : '10px'} opacity='1' fill='cyan' />
+        <text class='chapter-text' fill={currentStepName !== 'wandeling' ? 'rgb(130, 130, 130)' : 'white'} dy='0.26em' dx='-25' opacity={(stepName === currentStepName) ? '1' : '0'}>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
+        <circle class='chapter-circle' r={(stepName === currentStepName) ? '8' : '1'} stroke-width={(stepName === currentStepName) ? '7px' : '10px'} opacity='1' fill='cyan' />
         <rect width='130' height={innerHeight/stepNames.length} opacity='0' x='-110' y={-(innerHeight/stepNames.length)/2} on:click={() => click(stepName)} pointer-events={(currentStepName === stepName) ? 'none' : 'default'}/>
       </g>
 
@@ -27,17 +27,19 @@
   </svg>
 {/if}
 
+
 <style>
 
   .navigation-svg{
 		width:100%;
 		height:100%;
+    color:rgb(104, 104, 104);
 	}
 
   .chapter-circle{
     fill:white;
     fill-opacity: 0.01;
-    stroke:rgb(122, 38, 38);
+    stroke:#FDB813;
     stroke-width: 10px;
     transition: all 0.5s;
     opacity:0.7;
@@ -46,7 +48,7 @@
 
   .chapter-text{
     text-anchor: end;
-    fill:rgb(81, 81, 81);
+    font-size: 16px;
   }
 
   .chapterg:hover .chapter-text{
@@ -54,8 +56,8 @@
   }
 
   .chapterg:hover .chapter-circle{
-    r:10;
-    stroke-width: 5px;
+    r:8;
+    stroke-width: 7px;
   }
 
   .chapterg{

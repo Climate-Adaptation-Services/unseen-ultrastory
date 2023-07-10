@@ -3,31 +3,29 @@
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import * as _ from 'lodash'
-  import { browser } from "$app/environment";
   import { fade } from 'svelte/transition';
   import { fly } from 'svelte/transition'
   import { onMount } from "svelte";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
 
   export let index
   export let maxTempData
   export let offset
   export let currentStepName
+  export let stepName;
 
   let visible = true;
 
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
 
   let stepSize;
-  let stepWidth
   let screenHeight
   let screenWidth
   
   onMount(() => {
-    let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
+    stepSize = getStepSize(stepName);
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
-    stepSize = stepRect.bottom - stepRect.top;
-    stepWidth = stepRect.width;
   })
 
 
@@ -48,11 +46,11 @@
 
 <div class='divscatter grafiek'>
   <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
-    {#if (ratioOfCsvData < 63 && currentStepName === 'scatter') || currentStepName === 'ziekenhuis'}
+    {#if (ratioOfCsvData < 63 && currentStepName === 'temperatuurstijging') || currentStepName === 'ziekenhuis'}
     <p class='scroll-text'> Bij klimaatverandering gaat het meestal over trends, of veranderingen van gemiddelden. Omdat juist de extremen ontwrichtend zijn, focussen we hier op extreme temperaturen. Zo zie je hier de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
     </p> 
     {/if} 
-    {#if ratioOfCsvData > 63 && currentStepName === 'scatter'}
+    {#if ratioOfCsvData > 63 && currentStepName === 'temperatuurstijging'}
     <div class= 'fade-in'>
       <p class='scroll-text' > Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het vorige hitterecord werd verpulverd! 
     </p> 
@@ -67,7 +65,7 @@
       <YAxis {yScale} height={screenHeight * 0.7}/>
       <text x={xScale(1990)} y={yScale(26)} font-size = "2vh">Jaar</text>  
       <text x={xScale(1920)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "2vh">Maximum temperatuur (°C)</text>
-      {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
+      {#if ratioOfCsvData > 68 && currentStepName === 'temperatuurstijging'}
         <text x={xScale(2000)} y={yScale(40.5)} class="recordyear" opacity = {1}>De eerste keer</text>
         <text x={xScale(2000)} y={yScale(40.5)+15} class="recordyear" opacity = {1}>40+ °C in 2019</text>
         <path
@@ -80,7 +78,7 @@
           d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
         />
       {/if}
-      {#if currentStepName === 'scatter'}
+      {#if currentStepName === 'temperatuurstijging'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
             cx = {xScale(+d.year)} 
@@ -90,7 +88,7 @@
           />
         {/each}
       {/if}
-      {#if currentStepName === 'scatter'}
+      {#if currentStepName === 'temperatuurstijging'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle 
             class= 'fade-in dot'
