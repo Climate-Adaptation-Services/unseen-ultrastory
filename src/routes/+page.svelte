@@ -57,6 +57,16 @@
 
 	$: currentStepName = stepNames[index];
 
+	$: if($started){
+		function scroll(){
+			setTimeout(() => {  
+				window.scrollBy(0, 1) 
+				scroll()
+			}, 5);
+		}
+		scroll()
+	}
+
 	// onMount(() => {
 	// 	const cloud = select('.cloud')
 	// 	function moveCloud(){
