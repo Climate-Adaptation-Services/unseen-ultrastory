@@ -5,6 +5,7 @@
 	import Titlepage from "$lib/components/Titlepage.svelte";
 	import Introductie from "$lib/components/Introductie.svelte";
 	import Ziekenhuis from "$lib/components/Ziekenhuis.svelte";
+	import Gesprek from "$lib/components/Gesprek.svelte";
 	import Wandeling from "$lib/components/Wandeling.svelte";
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
@@ -41,6 +42,7 @@
 	const stepNames = [
 		"thuis",
 		"ziekenhuis",
+		"gesprek",
 		"temperatuurstijging",
 		"kansgrafiek",
 		"wandeling",
@@ -133,6 +135,8 @@
 					<section class='step step_{stepName}'>
 						{#if stepName === 'thuis'}
 							<Introductie {offset} {index} {currentStepName} {stepName} />
+						{:else if stepName === 'gesprek'}
+							<Gesprek {offset} {index} {currentStepName} {stepName} />
 						{:else if stepName === 'ziekenhuis'}
 							<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
 						{:else if stepName === 'wandeling'}

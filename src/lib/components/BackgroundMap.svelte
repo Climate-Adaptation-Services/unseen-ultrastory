@@ -67,7 +67,7 @@
   }
   $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'huis'){
     zoomedIn = false
-    leafletMap.flyTo([51.437061, 5.478283], 7, {duration: 1})
+    leafletMap.flyTo([51.4380, 5.4782], 7, {duration: 1})
     showingWandelRoute = false
   }
   $: if(leafletMap && currentStepName === 'ziekenhuis'){
@@ -77,6 +77,12 @@
     ziekenhuis
       .setContent("Catharina ziekenhuis")
       .addTo(leafletMap);
+  }
+
+  $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'gesprek'){
+    zoomedIn = false
+    leafletMap.flyTo([51.4380, 5.4782], 7, {duration: 1})
+    showingWandelRoute = false
   }
 
   $: if(leafletMap && currentStepName === 'wandeling'){
