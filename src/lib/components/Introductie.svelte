@@ -1,7 +1,8 @@
 <script>
-  import { browser } from "$app/environment";
   import { showImages } from "$lib/noncomponents/fadeOutIn";
-  import { afterUpdate } from "svelte";
+  import { afterUpdate, onMount } from "svelte";
+  import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
 
   export let offset;
   export let index;
@@ -9,10 +10,9 @@
   export let currentStepName;
 
   let stepSize;
-  $: if(browser){
-    let stepRect = document.getElementsByClassName('step_huis')[0].getBoundingClientRect()
-    stepSize = stepRect.bottom - stepRect.top;
-  }
+  onMount(() => {
+    stepSize = getStepSize(stepName);
+  })
 
   const scenes = [
     {
@@ -31,25 +31,14 @@
 
   let currentScene;
   afterUpdate(() => {
-    if(stepName === currentStepName){
-      currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
-    }else{
-      currentScene = undefined
-    }
+    currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset)
   })
-
-  
-
 
 </script>
 
 <div class='stepdiv'>
 
-  {#each scenes as scene,i}
-    <div class='scroll-text-block' style='top:{`${(scene['time']+0.1)*stepSize}px`}'>
-      <p class='scroll-text'>{@html scene['text']}</p>
-    </div>
-  {/each}
+  <TextAndImagesScenes {scenes} {stepSize}/>
 
   {#if offset > 0.35 && offset < 0.5 && currentStepName === stepName}
     <img class='tempmeter' src={'/images/tempmeter.png'} />

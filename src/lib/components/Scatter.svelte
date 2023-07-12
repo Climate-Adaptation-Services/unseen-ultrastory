@@ -3,32 +3,30 @@
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import * as _ from 'lodash'
-  import { browser } from "$app/environment";
   import { fade } from 'svelte/transition';
   import { fly } from 'svelte/transition'
-  
+  import { onMount } from "svelte";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
 
   export let index
   export let maxTempData
   export let offset
   export let currentStepName
+  export let stepName;
 
   let visible = true;
 
   $: ratioOfCsvData = Math.round((offset * 1.4)*maxTempData.length)
 
   let stepSize;
-  let stepWidth
   let screenHeight
   let screenWidth
-  
-  $: if(browser){
-    let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
+
+  onMount(() => {
+    stepSize = getStepSize(stepName);
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
-    stepSize = stepRect.bottom - stepRect.top;
-    stepWidth = stepRect.width;
-  }
+  })
 
 
   $: xScale = d3.scaleLinear()
@@ -49,18 +47,18 @@
 <div class='divscatter grafiek'>
   <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
     {#if (currentStepName === 'scatter') || currentStepName === 'ziekenhuis'}
-    <p class='scroll-text'> Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het vorige hitterecord werd verpulverd!  
-    </p> 
-    {/if} 
+    <p class='scroll-text'> Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het vorige hitterecord werd verpulverd!
+    </p>
+    {/if}
   </div>
- 
+
   <div class='sticky-div'>
     <svg>
       <g transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
-      <XAxis {xScale} height={screenHeight * 0.7}/> 
+      <XAxis {xScale} height={screenHeight * 0.7}/>
       <YAxis {yScale} height={screenHeight * 0.7}/>
       <text x={xScale(1990)} y={yScale(26)} font-size = "2.5vh">Jaar</text>  
-      <text x={xScale(1950)} y={yScale(41)} font-size = "3vh">Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text> 
+      <text x={xScale(1950)} y={yScale(41)} font-size = "3vh">Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
       <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2.5vh">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
         <text x={xScale(2000)} y={yScale(40.5)} class="recordyear" opacity = {1}>De eerste keer</text>
@@ -70,27 +68,27 @@
           id='arrow-line'
           marker-end='url(#head)'
           stroke-width='1'
-          fill='none' 
-          stroke='darkred'  
+          fill='none'
+          stroke='darkred'
           d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
         />
       {/if}
-      {#if currentStepName === 'scatter'}
+      {#if currentStepName === 'temperatuurstijging'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
-          <circle 
-            cx = {xScale(+d.year)} 
-            cy = {yScale(+d.T)} 
+          <circle
+            cx = {xScale(+d.year)}
+            cy = {yScale(+d.T)}
             r = {2}
             fill = {colorScale(+d.T)}
           />
         {/each}
       {/if}
-      {#if currentStepName === 'scatter'}
+      {#if currentStepName === 'temperatuurstijging'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
-          <circle 
+          <circle
             class= 'fade-in dot'
-            cx = {xScale(+d.year)} 
-            cy = {yScale(+d.T)} 
+            cx = {xScale(+d.year)}
+            cy = {yScale(+d.T)}
             r = {5}
             fill = {colorScale(+d.T)}
           />

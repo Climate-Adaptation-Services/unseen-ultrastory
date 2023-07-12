@@ -1,5 +1,6 @@
 <script>
-  import { browser } from "$app/environment";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { onMount } from "svelte";
 
   export let offset;
   export let index;
@@ -7,10 +8,9 @@
   export let stepName;
 
   let stepSize;
-  $: if(browser){
-    let stepRect = document.getElementsByClassName('step_wandeling')[0].getBoundingClientRect()
-    stepSize = stepRect.bottom - stepRect.top;
-  }
+  onMount(() => {
+    stepSize = getStepSize(stepName);
+  })
 
 </script>
 

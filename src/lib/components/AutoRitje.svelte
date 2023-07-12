@@ -1,7 +1,9 @@
 <script>
   import { browser } from "$app/environment";
   import { showImages } from "$lib/noncomponents/fadeOutIn";
-  import { afterUpdate } from "svelte";
+    import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { afterUpdate, onMount } from "svelte";
+    import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
 
   export let offset;
   export let index;
@@ -9,10 +11,9 @@
   export let currentStepName;
 
   let stepSize;
-  $: if(browser){
-    let stepRect = document.getElementsByClassName('step_autoritje')[0].getBoundingClientRect()
-    stepSize = stepRect.bottom - stepRect.top;
-  }
+  onMount(() => {
+    stepSize = getStepSize(stepName);
+  })
 
   const scenes = [
     {
@@ -55,22 +56,14 @@
 
   let currentScene;
   afterUpdate(() => {
-    if(stepName === currentStepName){
-      currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
-    }else{
-      currentScene = undefined
-    }
+    currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
   })
 
 </script>
 
 <div class='stepdiv'>
 
-  {#each scenes as scene,i}
-    <div class='scroll-text-block' style='top:{`${(scene['time']+0.05)*stepSize}px`}'>
-      <p class='scroll-text'>{scene['text']}</p>
-    </div>
-  {/each}
+  <TextAndImagesScenes {scenes} {stepSize} />
 
 </div>
 

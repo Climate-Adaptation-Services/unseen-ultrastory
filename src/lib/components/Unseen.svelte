@@ -3,14 +3,15 @@
   import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import _ from 'lodash';
-  import { browser } from "$app/environment";
-  import { scaleLinear, axisBottom, select, selectAll, format } from "d3";
+  import { onMount } from "svelte";
+  import { getStepSize } from "$lib/noncomponents/stepFunctions";
 
   export let index
   export let maxTempData
   export let offset
   export let currentStepName
   export let unseenData
+  export let stepName
 
   $: unseenDataYear = unseenData.filter(d => d.year === '2019');
 
@@ -21,10 +22,9 @@
   $: ratioOfCsvData = Math.round((offset * 2)*unseenDataYear.length)
 
   let stepSize;
-  $: if(browser){
-    let stepRect = document.getElementsByClassName('step_scatter')[0].getBoundingClientRect()
-    stepSize = stepRect.bottom - stepRect.top;
-  }
+  onMount(() => {
+    stepSize = getStepSize(stepName);
+  })
 
   $:console.log(unseenDataExtreme)
 
