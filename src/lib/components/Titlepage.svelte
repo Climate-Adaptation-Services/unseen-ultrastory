@@ -12,7 +12,7 @@
   {#if $started}
     <div>
       <h1>Ongekend heet</h1>
-      <h3>Een verhaal over extreme hitte in Nederland</h3>
+      <h3>Een verhaal over exceptionele hitte in Nederland</h3>
       <!-- <h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3> -->
     </div>
     <div class = 'scrolldown'>
