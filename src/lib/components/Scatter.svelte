@@ -37,7 +37,7 @@
 
   $: yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
-    .range([ screenHeight * 0.7, 0 ]);
+    .range([ screenHeight * 0.7, screenHeight * 0.05 ]);
 
   let colorScale = d3
   .scaleLinear()
@@ -48,15 +48,9 @@
 
 <div class='divscatter grafiek'>
   <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
-    {#if (ratioOfCsvData < 63 && currentStepName === 'scatter') || currentStepName === 'ziekenhuis'}
-    <p class='scroll-text'> Bij klimaatverandering gaat het meestal over trends, of veranderingen van gemiddelden. Omdat juist de extremen ontwrichtend zijn, focussen we hier op extreme temperaturen. Zo zie je hier de jaarlijkse maximum temperatuur van 1951 tot en met 2022.  
+    {#if (currentStepName === 'scatter') || currentStepName === 'ziekenhuis'}
+    <p class='scroll-text'> Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het vorige hitterecord werd verpulverd!  
     </p> 
-    {/if} 
-    {#if ratioOfCsvData > 63 && currentStepName === 'scatter'}
-    <div class= 'fade-in'>
-      <p class='scroll-text' > Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het vorige hitterecord werd verpulverd! 
-    </p> 
-    </div>   
     {/if} 
   </div>
  
@@ -66,7 +60,8 @@
       <XAxis {xScale} height={screenHeight * 0.7}/> 
       <YAxis {yScale} height={screenHeight * 0.7}/>
       <text x={xScale(1990)} y={yScale(26)} font-size = "2.5vh">Jaar</text>  
-      <text x={xScale(1920)} y={yScale(41.7)}  transform="rotate(-90)" font-size = "2.5vh">Maximum temperatuur (°C)</text>
+      <text x={xScale(1950)} y={yScale(41)} font-size = "3vh">Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text> 
+      <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2.5vh">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'scatter'}
         <text x={xScale(2000)} y={yScale(40.5)} class="recordyear" opacity = {1}>De eerste keer</text>
         <text x={xScale(2000)} y={yScale(40.5)+15} class="recordyear" opacity = {1}>40+ °C in 2019</text>

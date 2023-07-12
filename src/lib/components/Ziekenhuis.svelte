@@ -20,7 +20,7 @@
       name:'ziekenhuischaos',
       image:'png',
       time:0.01,
-      text:'Leonie voelt zich gefrustreerd. Het was vandaag op de spoedeisende hulp van het Catharina Ziekenhuis heel erg druk vanwege massale gezondheidsproblemen als gevolg van hittestress. Een collega had zich ziekgemeld vanwege een hitteberoerte. En morgen moet ze weer…'
+      text:'Leonie heeft het zwaar. Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En morgen moet ze weer. Het zal opnieuw druk worden op de spoedeisende hulp van het Catharina Ziekenhuis vanwege massale gezondheidsproblemen als gevolg van hittestress.'
     },
     {
       name:'hitteproblemen',
@@ -32,7 +32,7 @@
       name:'gesprek',
       image:'jpg',
       time:0.7,
-      text:'Thuis probeert Niels Leonie te ontlasten door Sem in slaap te helpen met natte washandjes en een ventilator. Terwijl hij hier mee bezig is vraagt Sem: “ik hoorde op school dat het vroeger nooit zo heet werd. Klopt dat? <br/> <br/> Ja, dat klopt. Toen ik jouw leeftijd had kwam dit nooit voor. Als je mij toen had verteld dat het zó heet zou kunnen worden in Nederland, had ik je voor gek verklaard.​'
+      text:'Thuis probeert Niels Leonie te ontlasten door Sem in slaap te helpen met natte washandjes en een ventilator. Terwijl hij hier mee bezig is vraagt Sem: <q>Oma zei een keer dat het vroeger nooit zo heet werd. Klopt dat?</q> <br/> <br/> <q>Ja, dat klopt. Toen ik jouw leeftijd had kwam dit nooit voor. Als je mij toen had verteld dat het dagen achter elkaar meer dan veertig graden zou kunnen worden in Nederland, had ik je niet geloofd.</q>​'
     }
   ]
 
