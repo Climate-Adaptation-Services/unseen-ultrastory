@@ -28,7 +28,6 @@
     screenWidth = document.documentElement.clientWidth
   })
 
-
   $: xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
       .range([ 0,screenWidth * 0.45]);

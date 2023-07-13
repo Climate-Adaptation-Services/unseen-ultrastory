@@ -79,10 +79,11 @@
       .addTo(leafletMap);
   }
 
-  $: if(leafletMap && offset < 0.1 && zoomedIn && currentStepName === 'gesprek'){
+  $: if(leafletMap && offset < 0.1 && currentStepName === 'gesprek'){
     zoomedIn = false
-    leafletMap.flyTo([51.4380, 5.4782], 7, {duration: 1})
+    leafletMap.flyTo([51.4380, 5.4782], 15, {duration: 1})
     showingWandelRoute = false
+    tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
   }
 
   $: if(leafletMap && currentStepName === 'wandeling'){

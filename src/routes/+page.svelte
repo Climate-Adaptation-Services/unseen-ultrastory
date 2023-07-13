@@ -46,7 +46,6 @@
 		"temperatuurstijging",
 		"kansgrafiek",
 		"wandeling",
-		"unseen",
 		"autoritje",
 		"aftiteling"
 	];
@@ -115,8 +114,9 @@
 			<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
 				<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
 			</div>
-
-			<img class='fixed-image' src='' style='opacity:0'/>
+			<div class="box">
+				<img class='fixed-image' src='' style='opacity:0'/>
+			</div>
 
 			{#each stepNames as stepName, i}
 				{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling'].includes(stepName)}
@@ -125,8 +125,6 @@
 							<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
 						{:else if stepName === 'kansgrafiek'}
 							<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
-						{:else if stepName === 'unseen'}
-							<Unseen {maxTempData} {offset} {index} {stepName} {currentStepName} {unseenData}/>
 						{:else if stepName === 'aftiteling'}
 							<Aftiteling {offset} {index} {stepName} {currentStepName} />
 						{/if}

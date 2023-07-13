@@ -22,7 +22,7 @@
   
   <div class='scroll-text-block night' style='top:{`${0.15*stepSize}px`}'>
     <img class='nielsgaatwandelen' style='width:300px' src={'/images/nielsgaatwandelen.jpg'} />
-    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, wil Niels niet weer in bed gaan liggen dus besluit een rondje te lopen buiten. Het is buiten nog steeds heel warm. De stenen op straat stralen nog steeds warmte uit. ​​</p>
+    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, wil Niels graag naar buiten dus besluit een rondje te lopen. Het is buiten nog steeds heel heet. De stenen op straat stralen een gloeiende warmte uit. ​​</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.1 && offset < 0.6}
@@ -49,7 +49,7 @@
 
   <div class='scroll-text-block night' style='top:{`${0.68*stepSize}px`}'>
     <img class='politie' style='width:250px' src={'/images/politie.jpg'} />
-    <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden.</p>
+    <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden. De sfeer wordt onaangenaam. Niels maakt zich uit de voeten.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.5 && offset < 0.8}
@@ -58,10 +58,8 @@
 
   <div class='scroll-text-block night' style='right:100; top:{`${0.84*stepSize}px`}'>
     <img class='rustigplekje' style='width:250px' src={'/images/rustigplekje.jpg'} />
-    <p class='scroll-text nighttext'>Hij vindt eindelijk een rustig plekje bij een boom. Terwijl hij terugdenkt aan de vraag over hitte van Sem, mijmert hij over een zorgwekkende vraag: <em>“Hoe heet kan het eigenlijk worden?” ​</em></p>
+    <p class='scroll-text nighttext'>Na een poosje vindt Niels een rustige plek bij een boom. Hij moet denken aan het gesprek met Sem en begint te piekeren over de hitte. Hij checkt het laatste nieuws op zijn telefoon.</p>
   </div>
-
-
 </div>
 
 <style>

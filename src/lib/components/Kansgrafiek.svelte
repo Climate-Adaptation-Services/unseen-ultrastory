@@ -177,6 +177,7 @@
         <text x={xScale(5000)} y={yScale(54.5)} transform="rotate(-90)" font-size = "2vh">Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
         <text x={xScale(100)} y={yScale(21)} font-size = "1.5vh" text-color = 'grey'>bron: KNMI</text>
+        <text x={xScale(1)} y={yScale(52)} font-size = "2.5vh" text-anchor="middle">De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
           <line x1={xScale(2.1)}  y1={yScale(25)} x2={xScale(2.1)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
         {/if}

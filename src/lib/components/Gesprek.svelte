@@ -25,6 +25,7 @@
   ]
 
   let currentScene;
+ 
   afterUpdate(() => {
     currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset);
   })
@@ -32,7 +33,9 @@
 </script>
 
 <div class='stepdiv'>
-  <TextAndImagesScenes {scenes} {stepSize} />
+  {#if currentStepName === 'gesprek'}
+    <TextAndImagesScenes {scenes} {stepSize} />
+  {/if}
   
   {#if stepName === currentStepName}
     <audio src="" autoplay loop /> 
