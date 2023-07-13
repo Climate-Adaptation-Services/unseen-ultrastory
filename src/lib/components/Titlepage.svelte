@@ -51,9 +51,9 @@
 	}
 
   .title-started{
-    animation: blurry-animation 8s infinite alternate;
-		-webkit-animation: blurry-animation 8s infinite alternate;
-		-moz-animation: blurry-animation 8s infinite alternate;
+    animation: blurry-animation 5s infinite alternate;
+		-webkit-animation: blurry-animation 5s infinite alternate;
+		-moz-animation: blurry-animation 5s infinite alternate;
   }
 
   .scrolldown{

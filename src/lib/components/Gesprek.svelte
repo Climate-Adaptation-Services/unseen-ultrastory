@@ -19,7 +19,7 @@
     {
       name:'gesprek',
       image:'jpg',
-      time:0.1,
+      time:0.2,
       text:'Thuis probeert Niels Leonie te ontlasten door Sem in slaap te helpen met natte washandjes en een ventilator. Terwijl hij hier mee bezig is vraagt Sem: <q>Oma zei een keer dat het vroeger nooit zo heet werd. Klopt dat?</q> <br/> <br/> <q>Ja, dat klopt. Toen ik jouw leeftijd had kwam dit nooit voor. Als je mij toen had verteld dat het dagen achter elkaar meer dan veertig graden zou kunnen worden in Nederland, had ik je niet geloofd.</q>​'
     }
   ]
@@ -35,7 +35,7 @@
   <TextAndImagesScenes {scenes} {stepSize} />
   
   {#if stepName === currentStepName}
-    <audio src="sounds/ziekenhuis.mp3" autoplay loop /> 
+    <audio src="" autoplay loop /> 
   {/if}
 
 

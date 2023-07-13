@@ -26,7 +26,7 @@
       name:'oudevrouwziekenhuis',
       image:'png',
       time:0.25,
-      text:'Er waren veel ouderen die met uitdrogingsverschijnselen op de eerstehulp belandden.'
+      text:'Er zijn veel ouderen die met uitdrogingsverschijnselen op de eerstehulp belandden.'
     },
     {
       name:'hardloper',
