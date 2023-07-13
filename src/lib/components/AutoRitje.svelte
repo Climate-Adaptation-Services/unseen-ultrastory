@@ -20,13 +20,13 @@
       name:'weeralarm',
       image:'jpg',
       time:0.1,
-      text:'De volgende dag is het opnieuw extreem heet. Op zijn smartphone stromen de waarschuwingen voorbij om zoveel mogelijk binnen te blijven.​'
+      text:'De volgende dag is het opnieuw extreem heet. Het advies is al dagen om binnen te blijven, maar Niels besluit met Sem naar het zwembad te gaan.​'
     },
     {
       name:'ritje',
       image:'jpg',
       time:0.25,
-      text:'Aan het eind van de ochtend besluit Niels toch maar om samen een ritje te maken in de stad. Het binnen zitten met de gordijnen dicht wordt saai en de auto met airco is een stuk minder warm dan thuis.'
+      text:'Ze nemen de auto. Even wat koelte van de airco. Ze hebben allebei zo veel zin om te zwemmen! Maar het zwembad blijkt dicht. Het is voor badpersoneel niet veilig om bij deze temperaturen te werken.  '
     },
     {
       name:'smeltend-asfalt',
