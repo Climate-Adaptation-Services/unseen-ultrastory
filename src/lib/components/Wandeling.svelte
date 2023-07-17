@@ -21,7 +21,7 @@
 <div class='stepdiv'>
   
   <div class='scroll-text-block night' style='top:{`${0.15*stepSize}px`}'>
-    <img class='nielsgaatwandelen' style='width:300px' src={'/images/nielsgaatwandelen.jpg'} />
+    <img class='nielsgaatwandelen' style='width:300px' src={'/images/nielsgaatwandelen.png'} />
     <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, wil Niels graag naar buiten dus besluit een rondje te lopen. Het is buiten nog steeds heel heet. De stenen op straat stralen een gloeiende warmte uit. ​​</p>
   </div>
 
