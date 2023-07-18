@@ -19,13 +19,15 @@
       name:'bank1',
       image:'png',
       time:0.2,
-      text:'Het is begin juli en al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet.<br/><br/> We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is leraar Nederlands. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis. <br/><br/>Leonie en Niels liggen uitgeput op de bank. Ze slapen al nachten slecht omdat hun slaapkamer zo warm is. Niels luistert naar het gezoem van de ventilator. Leonie denkt aan haar moeder die slecht ter been is en in een appartement woont waar het niet uit te houden is.​'
+      text:'Het is begin juli en al drie dagen boven de 40°C in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25°C. Iedereen heeft het snikheet.<br/><br/> We volgen het stel Leonie en Niels en hun zevenjarige zoon Sem. Niels is leraar Nederlands. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis. <br/><br/>Leonie en Niels liggen uitgeput op de bank. Ze slapen al nachten slecht omdat hun slaapkamer zo warm is. Niels luistert naar het gezoem van de ventilator. Leonie denkt aan haar moeder die slecht ter been is en in een appartement woont waar het niet uit te houden is.​',
+      class: 'scroll-text'
     },
     {
       name:'seminbed',
       image:'png',
       time:0.5,
-      text:'Sem kan niet slapen en is al dagen moe. De scholen zijn dicht vanwege de exceptionele hitte. Het is een geluk bij een ongeluk dat Niels leraar is: hij kan overdag voor Sem zorgen terwijl Leonie aan de slag moet op de spoedeisende hulp.  '
+      text:'Sem kan niet slapen en is al dagen moe. De scholen zijn dicht vanwege de exceptionele hitte. Het is een geluk bij een ongeluk dat Niels leraar is: hij kan overdag voor Sem zorgen terwijl Leonie aan de slag moet op de spoedeisende hulp.  ',
+      class: 'scroll-text'
     }
   ]
 
@@ -41,7 +43,6 @@
   <TextAndImagesScenes {scenes} {stepSize}/>
 
   {#if offset > 0.3 && offset < 0.5 && currentStepName === stepName}
-    <img class='tempmeter' src={'/images/tempmeter.png'} />
     <p class='temp-text'>{Math.max(25.0, Math.min(30.5, Math.round(offset*670)/10))}</p>
   {/if}
 

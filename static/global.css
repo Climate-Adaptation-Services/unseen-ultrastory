@@ -13,6 +13,17 @@ body::-webkit-scrollbar {
   src: url(digital.ttf);
 }
 
+@font-face {
+  font-family: Steelfish;
+  src: url(steelfish.otf);
+}
+
+@font-face {
+  font-family: Chunk;
+  src: url(Chunk.ttf);
+}
+
+
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
   -ms-overflow-style: none;  /* IE and Edge */
@@ -96,5 +107,18 @@ body {
   margin-top: 10px;
   text-align: left;   
   padding-left:3vw;
+}
+
+.night{
+  background-color: rgba(81, 71, 71, 0.5);
+}
+
+.nighttext{
+  color:white !important;
+}
+
+.krant{
+  font-family: Chunk;
+  font-size: 5vh
 }
 
