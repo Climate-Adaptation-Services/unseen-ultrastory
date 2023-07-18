@@ -1,10 +1,12 @@
 <script>
   import { started } from "$lib/stores";
+  import { clamp } from "$lib/noncomponents/helperFunctions";
 
   export let currentStepName;
   export let offset
 
-  $: cricketvolume = Math.max(0, Math.min(1, 1 - offset*2.5));
+  $: cricketvolume = clamp(1 - offset**4, 0, 1);
+  $: console.log(cricketvolume)
 
 </script>
 

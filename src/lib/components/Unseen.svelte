@@ -4,7 +4,7 @@
   import * as d3 from 'd3'
   import _ from 'lodash';
   import { onMount } from "svelte";
-  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
 
   export let index
   export let maxTempData

@@ -2,25 +2,20 @@
   import { showImages } from "$lib/noncomponents/fadeOutIn";
   import { afterUpdate, onMount } from "svelte";
   import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
-  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
+  import { clamp } from "$lib/noncomponents/helperFunctions";
 
   export let offset;
   export let index;
   export let stepName;
   export let currentStepName;
 
+  $: fanvolume = clamp(-4*Math.pow(offset-0.7,2)+1, 0, 1)
+
   let stepSize;
-  let audio; 
   onMount(() => {
     stepSize = getStepSize(stepName);
-    audio = document.getElementById("fansound");
-    audio.volume = 0.2;
   })
-
-  $: if(stepName === currentStepName && offset > 0.38 && audio.src === ""){
-    audio.src = "sounds/fan.mp3"
-    document.getElementById("heat").volume = 0.2
-  }
 
   const scenes = [
     {
@@ -48,7 +43,9 @@
 
   <TextAndImagesScenes {scenes} {stepSize}/>
 
-  <audio id='fansound' autoplay loop/> 
+  {#if stepName === currentStepName}
+    <audio id='fansound' autoplay loop src="sounds/fan.mp3" bind:volume={fanvolume}/> 
+  {/if}
 
   {#if offset > 0.3 && offset < 0.5 && currentStepName === stepName}
     <img class='tempmeter' src={'/images/tempmeter.png'} />

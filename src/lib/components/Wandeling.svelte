@@ -1,5 +1,5 @@
 <script>
-  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
   import { onMount } from "svelte";
 
   export let offset;

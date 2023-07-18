@@ -1,6 +1,6 @@
 <script>
   import { showImages } from "$lib/noncomponents/fadeOutIn";
-  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
   import { afterUpdate, onMount } from "svelte";
   import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
 
