@@ -1,12 +1,16 @@
 <script>
-  export let currentStepName;
   import { started } from "$lib/stores";
+
+  export let currentStepName;
+  export let offset
+
+  $: cricketvolume = Math.max(0, Math.min(1, 1 - offset*2.5));
 
 </script>
 
 <div class='title {$started ? 'title-started' : ''}' on:click={() => document.getElementById('heat').play()}>
 	{#if currentStepName === 'thuis'}
-		<audio src="sounds/heat.mp3" autoplay loop id='heat'/> 
+		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
 
   {#if $started}
@@ -51,9 +55,9 @@
 	}
 
   .title-started{
-    animation: blurry-animation 5s infinite alternate;
-		-webkit-animation: blurry-animation 5s infinite alternate;
-		-moz-animation: blurry-animation 5s infinite alternate;
+    animation: blurry-animation 4s infinite alternate;
+		-webkit-animation: blurry-animation 4s infinite alternate;
+		-moz-animation: blurry-animation 4s infinite alternate;
   }
 
   .scrolldown{
