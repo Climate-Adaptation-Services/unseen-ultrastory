@@ -56,13 +56,13 @@
       <g transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/>
       <YAxis {yScale} height={screenHeight * 0.7}/>
-      <text x={xScale(1990)} y={yScale(26)} font-size = "2vh">Jaar</text>  
-      <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle">Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
-      <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh">Maximum temperatuur (°C)</text>
-      <text x={xScale(1950)} y={yScale(25)} font-size = "1.5vh" text-color = 'grey'>bron: KNMI</text>
+      <text x={xScale(1985)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Jaar</text>  
+      <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
+      <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Maximum temperatuur (°C)</text>
+      <text x={xScale(1950)} y={yScale(25)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text>
       {#if ratioOfCsvData > 68 && currentStepName === 'temperatuurstijging'}
-        <text x={xScale(2010)} y={yScale(39)} class="recordyear" opacity = {1}>De eerste keer</text>
-        <text x={xScale(2010)} y={yScale(39)+15} class="recordyear" opacity = {1}>40+ °C in 2019</text>
+        <text x={xScale(2010)} y={yScale(39)} class="recordyear" opacity = {1} fill = '#4e4e4e'>De eerste keer</text>
+        <text x={xScale(2010)} y={yScale(39)+15} class="recordyear" opacity = {1} fill = '#4e4e4e'>40+ °C in 2019</text>
         <path
           transform="translate( {xScale(2019)-40} {yScale(39)-30} ) rotate(-45)"
           id='arrow-line'

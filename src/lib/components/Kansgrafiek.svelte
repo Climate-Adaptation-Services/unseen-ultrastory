@@ -173,13 +173,13 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
-        <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh">Kans (%)</text>  
-        <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh">Temperatuur (°C)</text>  
+        <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
+        <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-        <text x={xScale(100)} y={yScale(21)} font-size = "1.5vh" text-color = 'grey'>bron: KNMI</text>
-        <text x={xScale(1)} y={yScale(52)} font-size = "2.5vh" text-anchor="middle">De kans op hitte per generatie</text>
+        <text x={xScale(100)} y={yScale(24)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text>
+        <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
-          <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.65)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
+          <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
         {/if}
         {#if ratioOfCsvData > 360}
           <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
