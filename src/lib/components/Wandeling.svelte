@@ -64,13 +64,7 @@
 
 <style>
 
-  .night{
-    background-color: rgba(81, 71, 71, 0.5);
-  }
 
-  .nighttext{
-    color:white !important;
-  }
   
 </style>
 

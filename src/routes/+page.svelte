@@ -9,7 +9,7 @@
 	import Wandeling from "$lib/components/Wandeling.svelte";
 	import Scatter from "$lib/components/Scatter.svelte";
 	import Kansgrafiek from "$lib/components/Kansgrafiek.svelte";
-	import Unseen from "$lib/components/Unseen.svelte";
+	import Krantenkoppen from "$lib/components/Krantenkoppen.svelte";
 	import AutoRitje from "$lib/components/AutoRitje.svelte";
 	import Aftiteling from "$lib/components/Aftiteling.svelte";
 	import NavigationPanel from "$lib/components/NavigationPanel.svelte";
@@ -35,7 +35,6 @@
 	const middellijnData = data.datamiddellijn
 	const middellijnData2050 = data.datamiddellijn2050
 	const confidenceData = data.dataconfidence
-	const unseenData = data.unseen
 
 	$: console.log(data.datatest)
 
@@ -46,6 +45,7 @@
 		"temperatuurstijging",
 		"kansgrafiek",
 		"wandeling",
+		"krantenkoppen",
 		"autoritje",
 		"aftiteling"
 	];
@@ -137,6 +137,8 @@
 							<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
 						{:else if stepName === 'wandeling'}
 							<Wandeling {offset} {index} {currentStepName} {stepName} />
+						{:else if stepName === 'krantenkoppen'}
+							<Krantenkoppen {offset} {index} {currentStepName} {stepName} />
 						{:else if stepName === 'autoritje'}
 							<AutoRitje {offset} {index} {stepName} {currentStepName} />
 						{/if}

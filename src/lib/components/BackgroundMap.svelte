@@ -92,6 +92,12 @@
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   }
 
+  $: if(leafletMap && currentStepName === 'krantenkoppen'){
+    showingWandelRoute = false
+    leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
+    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+  }
+
   $: if(leafletMap && currentStepName === 'unseen'){
     leafletMap.flyTo([51.426437, 5.470482], 16, {duration: 2})
     tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
