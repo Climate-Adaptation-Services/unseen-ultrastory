@@ -170,7 +170,7 @@
   
     <div class='sticky-div'>
       <svg >
-        <g class='svgkansgrafiek' transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
+        <g class='svgkansgrafiek' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
         <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
