@@ -10,7 +10,7 @@
   export let stepName;
   export let currentStepName;
 
-  $: fanvolume = clamp(-4*Math.pow(offset-0.7,2)+1, 0, 1)
+  $: fanvolume = clamp(-4*Math.pow(offset-0.5,2)+0.3, 0, 1)
 
   let stepSize;
   onMount(() => {
