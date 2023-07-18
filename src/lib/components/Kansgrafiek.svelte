@@ -34,7 +34,7 @@
       .range([ 0,screenWidth * 0.4]);
 
   $: yScale = d3.scaleLinear()
-    .domain([25, 52])
+    .domain([28, 49])
     .range([ screenHeight * 0.7, 0 ]);
 
   const areaZonder = d3
@@ -73,7 +73,7 @@
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { return xScale(d.Kans) })
-        .y(function(d) { return yScale(d.Zonder) })
+        .y(function(d) { return yScale(d.vroeger) })
         )
 
       d3.select('.kansgraphpathconfidencezonder').remove() 
@@ -97,7 +97,7 @@
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
           .x(function(d) { return xScale(d.Kans) })
-          .y(function(d) { return yScale(d.Klimaatverandering) })
+          .y(function(d) { return yScale(d.nu) })
           )
       }   
     
@@ -173,26 +173,26 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
-        <text x={xScale(1.5)} y={yScale(22.5)} font-size = "2vh">Kans (%)</text>  
-        <text x={xScale(5000)} y={yScale(54.5)} transform="rotate(-90)" font-size = "2vh">Temperatuur (°C)</text>  
+        <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
+        <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-        <text x={xScale(100)} y={yScale(21)} font-size = "1.5vh" text-color = 'grey'>bron: KNMI</text>
-        <text x={xScale(1)} y={yScale(52)} font-size = "2.5vh" text-anchor="middle">De kans op hitte per generatie</text>
+        <text x={xScale(100)} y={yScale(24)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text>
+        <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
-          <line x1={xScale(2.1)}  y1={yScale(25)} x2={xScale(2.1)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
+          <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
         {/if}
         {#if ratioOfCsvData > 360}
-          <line x1={xScale(7.8)}  y1={yScale(25)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
+          <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
         {/if}
         <!-- {#if ratioOfCsvData > 180 && currentStepName === 'kansgrafiek'}
             <text x={xScale(0.1)} y={yScale(34)} class="recordyear" fill="green" font-size = "1.5vh">Zonder klimaatverandering</text>
             <text x={xScale(0.1)} y={yScale(34) + 15} class="recordyear" font-size = "1.5vh">kon 40°C niet voorkomen</text>
         {/if} -->
-        {#if ratioOfCsvData > 120 && currentStepName === 'kansgrafiek'}
-          <line x1={xScale(0.008)}  y1={yScale(35.4371)} x2={xScale(0.008)} y2={yScale(42.2131)} stroke="grey"/>
-          <line x1={xScale(0.0075)}  y1={yScale(35.4371)} x2={xScale(0.0085)} y2={yScale(35.4371)} stroke="grey"/>
-          <line x1={xScale(0.0075)}  y1={yScale(42.2131)} x2={xScale(0.0085)} y2={yScale(42.2131)} stroke="grey"/>
-          <text x={xScale(0.0075)} y={yScale(38.5)} fill="grey" font-size = "10px" marker-end="url(#triangle)">Bandbreedte</text>
+        {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'}
+          <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
+          <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
+          <line x1={xScale(0.0075)}  y1={yScale(44.0244)} x2={xScale(0.0085)} y2={yScale(44.0244)} stroke="grey"/>
+          <text x={xScale(0.0075)} y={yScale(40.5)} fill="grey" font-size = "10px" marker-end="url(#triangle)">Bandbreedte</text>
         {/if}
         <!-- {#if ratioOfCsvData > 280 && currentStepName === 'kansgrafiek'}
             <text x={xScale(29)} y={yScale(43)} class="recordyear" fill="red" font-size = "1.5vh">Met klimaatverandering</text>
