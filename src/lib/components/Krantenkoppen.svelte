@@ -2,7 +2,7 @@
   import { showImages } from "$lib/noncomponents/fadeOutIn";
   import { afterUpdate, onMount } from "svelte";
   import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
-  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
 
   export let offset;
   export let index;
