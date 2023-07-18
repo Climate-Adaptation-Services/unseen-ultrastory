@@ -92,7 +92,7 @@
 	{/each}
 </svelte:head>
 
-<Titlepage {currentStepName} />
+<Titlepage {currentStepName} {offset}/>
 
 {#if $started}
 	<Scroller bind:index bind:offset bind:progress>
@@ -105,18 +105,16 @@
 		</div>
 
 		<div slot='foreground'>
-			<!-- <div class="info">
+			<div class="info">
 				<p>Step: {index}</p>
 				<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 				<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
-			</div> -->
+			</div>
 
 			<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
 				<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
 			</div>
-			<div class="box">
-				<img class='fixed-image' src='' style='opacity:0'/>
-			</div>
+			<img class='fixed-image' src='' style='opacity:0'/>
 
 			{#each stepNames as stepName, i}
 				{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling'].includes(stepName)}
@@ -207,6 +205,10 @@
 
   .step {
 		width:90%;
+  }
+
+	.step_gesprek{
+    height:1000px !important;
   }
 
   .widestep {

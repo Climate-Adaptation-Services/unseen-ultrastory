@@ -6,7 +6,7 @@
   import { fade } from 'svelte/transition';
   import { fly } from 'svelte/transition'
   import { onMount } from "svelte";
-  import { getStepSize } from "$lib/noncomponents/stepFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
 
   export let index
   export let maxTempData

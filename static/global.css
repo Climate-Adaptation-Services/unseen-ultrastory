@@ -40,25 +40,23 @@ body {
   position: absolute;
   background-color: rgb(255, 255, 255, 0.2);
   border: solid;
-  width:30%;
+  width:33%;
   padding:20px;
 }
 
 .fixed-image{
   position: fixed;
-  width:400px;
-  padding:20px;
+  width:30vw;
+  /* padding:20px; */
   top: 50%;
   right: 10%;
   transform: translate(0%, -50%);
   transition: src 2s;
   stroke:none;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1) inset;
-  border-radius: 1%     1%     1%     1% /     1%     1%     1%     1%;
-  /* box-shadow: 0 8px 6px -6px black;
-  clip-path: inset(0px 0px -2px 0px); */
-}
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* The box shadow with a slight cloudiness effect */
+  border-radius: 8px;
 
+}
 
 .tempmeter{
   position: fixed;
