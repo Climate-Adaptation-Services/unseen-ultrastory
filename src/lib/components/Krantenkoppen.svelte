@@ -19,7 +19,7 @@
       name:'bank1',
       image:'png',
       time:0.1,
-      text:'Vooral s nachts is het raak: afgelopen nacht opnieuw tien hittedoden in Eindhoven.​',
+      text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw tenminste tien hittedoden in Eindhoven.​",
       class:'scroll-text nighttext krant'
     },
     {
@@ -33,7 +33,7 @@
       name:'seminbed',
       image:'png',
       time:0.7,
-      text:'Temperatuur drinkwater dreigt boven wettelijk maximum van 25 ˚C te komen',
+      text:'Temperatuur drinkwater dreigt boven het wettelijk maximum van 25 &degC te komen',
       class: 'scroll-text nighttext krant'
     }
   ]
