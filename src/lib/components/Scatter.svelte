@@ -30,7 +30,7 @@
 
   $: xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
-      .range([ 0,screenWidth * 0.45]);
+      .range([ 0,screenWidth * 0.4]);
 
   $: yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
@@ -53,10 +53,10 @@
 
   <div class='sticky-div'>
     <svg>
-      <g transform="translate({screenWidth * 0.5},{screenHeight * 0.05})">
+      <g transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/>
       <YAxis {yScale} height={screenHeight * 0.7}/>
-      <text x={xScale(1985)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Jaar</text>  
+      <text x={xScale(1988)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Jaar</text>  
       <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
       <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Maximum temperatuur (°C)</text>
       <text x={xScale(1950)} y={yScale(25)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text>
