@@ -14,11 +14,6 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-  font-family: Steelfish;
-  src: url(steelfish.otf);
-}
-
-@font-face {
   font-family: Chunk;
   src: url(Chunk.ttf);
 }
@@ -88,7 +83,11 @@ body {
 }
 
 .grafiek{
-  background-color: rgba(255, 255, 255, 1)
+  background-color: rgba(255, 255, 255, 1);
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
 }
 
 .aftiteling{
