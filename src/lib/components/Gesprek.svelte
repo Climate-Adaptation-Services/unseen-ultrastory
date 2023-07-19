@@ -34,7 +34,7 @@
 </script>
 
 <div class='stepdiv'>
-  {#if currentStepName === 'gesprek'}
+  {#if stepName === currentStepName}
     <TextAndImagesScenes {scenes} {stepSize} />
   {/if}
   

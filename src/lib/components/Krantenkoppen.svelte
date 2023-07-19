@@ -23,7 +23,7 @@
       class:'scroll-text nighttext krant'
     },
     {
-      name:'seminbed',
+      name:'dwerg',
       image:'png',
       time:0.4,
       text:'Efteling sluit deuren: hitte zorgt voor personeelstekort',
