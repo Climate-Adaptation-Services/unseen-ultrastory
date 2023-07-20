@@ -51,7 +51,10 @@
 
   {#if offset > 0.3 && offset < 0.5 && currentStepName === stepName}
     <p class='temp-text'>{Math.max(25.0, Math.min(30.5, Math.round(offset*670)/10))}</p>
+    <img class='tempmeter' src={'/images/tempmeter.png'} />
   {/if}
+
+  
 
 
 </div>
