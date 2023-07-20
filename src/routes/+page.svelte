@@ -12,6 +12,7 @@
 	import Krantenkoppen from "$lib/components/Krantenkoppen.svelte";
 	import AutoRitje from "$lib/components/AutoRitje.svelte";
 	import Aftiteling from "$lib/components/Aftiteling.svelte";
+	import Leeslijst from "$lib/components/Leeslijst.svelte";
 	import NavigationPanel from "$lib/components/NavigationPanel.svelte";
 
 	import { timeParse } from 'd3'
@@ -47,7 +48,8 @@
 		"wandeling",
 		"krantenkoppen",
 		"autoritje",
-		"aftiteling"
+		"aftiteling",
+		"leeslijst"
 	];
 
 	let index = 0;
@@ -117,7 +119,7 @@
 			<img class='fixed-image' src='' style='opacity:0'/>
 
 			{#each stepNames as stepName, i}
-				{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling'].includes(stepName)}
+				{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling', 'leeslijst'].includes(stepName)}
 					<section class='widestep step_{stepName}'>
 						{#if stepName === 'temperatuurstijging'}
 							<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
@@ -125,6 +127,8 @@
 							<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 						{:else if stepName === 'aftiteling'}
 							<Aftiteling {offset} {index} {stepName} {currentStepName} />
+						{:else if stepName === 'leeslijst'}
+							<Leeslijst {offset} {index} {stepName} {currentStepName} />
 						{/if}
 					</section>
 				{:else}

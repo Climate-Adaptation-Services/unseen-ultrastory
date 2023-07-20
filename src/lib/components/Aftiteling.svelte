@@ -57,21 +57,6 @@
   .stepdiv{
     height:100%;
   }
-
-  .outro{
-    /* background-color: rgba(81, 71, 71, 0.5); */
-    background-color: black;
-    border: none;
-    width:60%;
-    padding:20px;
-    margin:0 auto;
-    left:20%;
-  }
-
-  .outro-text{
-    color:rgb(188, 188, 188) !important;
-    text-align: center;
-  }
   
 </style>
 
