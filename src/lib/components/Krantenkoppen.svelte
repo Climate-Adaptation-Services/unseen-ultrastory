@@ -49,6 +49,10 @@
   <TextAndImagesScenes {scenes} {stepSize}/>
 </div>
 
+{#if stepName === currentStepName}
+  <audio src="sounds/night.mp3" autoplay loop /> 
+{/if}
+
 <style>
 
   .stepdiv{

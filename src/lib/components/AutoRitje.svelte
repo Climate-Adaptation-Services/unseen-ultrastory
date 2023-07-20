@@ -99,6 +99,14 @@
 
   <TextAndImagesScenes {scenes} {stepSize} />
 
+  {#if stepName === currentStepName && offset < 0.6}
+    <audio src="sounds/carstart.mp3" autoplay  /> 
+  {/if}
+
+  {#if stepName === currentStepName && offset > 0.3}
+    <audio src="sounds/cardriving.mp3" autoplay loop /> 
+  {/if}
+
 </div>
 
 <style>
