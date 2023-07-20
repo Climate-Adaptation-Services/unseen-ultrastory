@@ -6,7 +6,6 @@
   export let offset
 
   $: cricketvolume = clamp(1 - Math.pow(offset, 1/4), 0, 1);
-  $: console.log(cricketvolume)
 
 </script>
 
