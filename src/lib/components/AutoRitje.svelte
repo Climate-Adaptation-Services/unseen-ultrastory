@@ -38,8 +38,8 @@
       class: 'scroll-text'
     },
     {
-      name:'koelkerk',
-      image:'jpg',
+      name:'file',
+      image:'png',
       time:0.24,
       text:'Niels en Sem stappen opnieuw de auto in. Het is heel druk op de weg.  Veel mensen proberen de stad uit te komen. Niels maakt zich zorgen. Hoe lang gaat deze black-out duren? Het begint aan te voelen als een oorlogssituatie. ​',
       class: 'scroll-text'
