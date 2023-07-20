@@ -176,7 +176,7 @@
         <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
         <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-        <text x={xScale(100)} y={yScale(24)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text>
+        <!-- <text x={xScale(100)} y={yScale(24)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text> -->
         <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
           <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
@@ -200,6 +200,9 @@
         {/if} -->
       </g>
       </svg>
+      <p class='graph-description'>Hittestatistieken voor Eindhoven in het klimaat van 1980, 2023 en 2050. Deze zijn bepaald met de gemeten temperaturen in Eindhoven en het hoge (WH) scenario van het KNMI voor 2050. Bron: Eindhovense waarnemingen; Tools: 
+        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> en het <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">knmi'14 transformatieprogramma</a>.  
+      </p>
     </div>
   </div>
 <style>
@@ -218,7 +221,7 @@
   }
   svg{
     width:100%;
-    height:100%;
+    height: 90%;
     float:right;
   }
 
@@ -228,6 +231,16 @@
 
   .fade-in {
     animation: fadeIn 2s;
+  }
+
+  .graph-description{
+    color:#4e4e4e;
+    font-size:1.5vh;
+    text-align: left;
+    top: 90%;
+    position: absolute;
+    left: 50%;
+
   }
 
   @keyframes fadeIn {
