@@ -15,6 +15,8 @@
     stepSize = getStepSize(stepName);
   })
 
+  console.log(stepSize)
+
   const scenes = [
     {
       name:'weeralarm',
