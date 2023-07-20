@@ -219,6 +219,10 @@
 	height:7000px !important;
   }
 
+  .step_leeslijst{
+	margin-top: 1em !important;
+  }
+
   .widestep {
 		width:100%;
   }
