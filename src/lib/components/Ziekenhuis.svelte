@@ -17,7 +17,7 @@
 
   const scenes = [
     {
-      name:'ziekenhuischaos',
+      name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
       text:'Leonie heeft het zwaar. Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En morgen moet ze weer. Het zal opnieuw druk worden op de spoedeisende hulp van het Catharina Ziekenhuis vanwege massale gezondheidsproblemen als gevolg van hittestress.',
