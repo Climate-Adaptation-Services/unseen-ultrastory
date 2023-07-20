@@ -211,6 +211,10 @@
     height:1000px !important;
   }
 
+  .step_autoritje{
+	height:7000px !important;
+  }
+
   .widestep {
 		width:100%;
   }

@@ -38,7 +38,7 @@
       class: 'scroll-text'
     },
     {
-      name:'ziekenhuischaos',
+      name:'boer',
       image:'png',
       time:0.75,
       text:'En er was een boer die ondanks de hitte aan het werk moest op zijn land en daardoor een zware zonnesteek opliep.',
