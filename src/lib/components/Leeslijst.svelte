@@ -43,13 +43,27 @@
 </script>
 
 <div class='stepdiv aftiteling'>
-
-  {#each scenes as scene,i}
+  <!-- {#each scenes as scene,i}
     <div class='scroll-text-block outro' style='top:{`${(scene['time']+0.05)*stepSize}px`}'>
       <p class='scroll-text outro-text'>{scene['text']}</p>
     </div>
-  {/each}
-
+  {/each} -->
+  <div class = 'leeslijst'>
+    <h1>Meer lezen?</h1>
+    <ul class="myUL">
+      <li><a href="https://www.nature.com/articles/s41558-021-01092-9">Wetenschappelijk Artikel </a> over de toenemende kans op recordbrekende klimaatextremen</li>
+      <li>KNMI berichten:</li>
+        <ol style="list-style-type: circle;">
+          <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/ieder-jaar-een-verpletterend-hitterecord ">Ieder jaar een verpletterend hitterecord?</a></li>
+          <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/absolute-temperatuurrecords-door-saharahitte ">Absolute temperatuurrecords door Saharahitte</a></li>
+          <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/toename-hittegolven-in-europa-gelinkt-aan-veranderende-straalstroom">Toename hittegolven in Europa gelinkt aan veranderende straalstroom</a></li>
+        </ol>
+      <li><a href="https://www.ad.nl/binnenland/50-graden-in-nederland-moeten-rekening-houden-met-extreme-temperaturen~a9038ba2">50 graden in Nederland? </a></li>
+      <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs">Filmpje: Krijgt Nederland steeds vaker te maken met hittegolven?</a></li>
+      <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8">Filmpje: Temperatuur voor het eerst boven de 40 graden</a></li>
+      <li>Poster EGU</li>
+    </ul> 
+  </div>
 </div>
 
 <style>
@@ -57,6 +71,37 @@
   .stepdiv{
     height:100%;
   }
+  .leeslijst{
+    width:50%;
+    left:25%;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    /* text-align: left; */
+    font-size: 4vh !important;
+    top:13%;
+  }
+
+  
+  ul.myUL {
+    display: inline-block;
+    text-align: left;
+  }
+
+a:link {    /* unvisited link */
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a:visited {    /* visited link */
+    color: #ffffff;
+}
+a:hover {    /* mouse over link */
+    color: #ffffff;
+    border-bottom: none;
+}
+a:active {    /* active link */
+    color: #ffffff;
+}
   
 </style>
 
