@@ -30,7 +30,7 @@
   {/if}
 
   <div class='scroll-text-block night' style='top:{`${0.315*stepSize}px`}'>
-    <img class='dommelplantsoen' style='width:300px' src={'/images/dommelplantsoen.jpg'} />
+    <img class='dommelplantsoen' style='width:300px' src={'/images/dommelplantsoen.png'} />
     <p class='scroll-text nighttext'>Gelukkig is het in het Dommelplantsoen een stukje koeler. Het is hier wel ontzettend druk.​</p>
   </div>
 
@@ -48,7 +48,7 @@
   {/if}
 
   <div class='scroll-text-block night' style='top:{`${0.68*stepSize}px`}'>
-    <img class='politie' style='width:250px' src={'/images/politie.jpg'} />
+    <img class='politie' style='width:250px' src={'/images/politie.png'} />
     <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden. De sfeer wordt onaangenaam. Niels maakt zich uit de voeten.</p>
   </div>
 

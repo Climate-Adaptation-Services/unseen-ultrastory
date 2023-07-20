@@ -19,7 +19,7 @@
       name:'bank1',
       image:'png',
       time:0.1,
-      text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw tenminste tien hittedoden in Eindhoven.​",
+      text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw minstens tien hittedoden in Eindhoven.​",
       class:'scroll-text nighttext krant'
     },
     {
