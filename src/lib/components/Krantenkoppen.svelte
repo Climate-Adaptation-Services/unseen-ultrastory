@@ -30,7 +30,7 @@
       class: 'scroll-text nighttext krant'
     },
     {
-      name:'seminbed',
+      name:'drinken',
       image:'png',
       time:0.7,
       text:'Temperatuur drinkwater dreigt boven het wettelijk maximum van 25 &degC te komen',
