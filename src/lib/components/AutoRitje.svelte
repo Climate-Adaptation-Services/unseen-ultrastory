@@ -31,8 +31,8 @@
       class: 'scroll-text'
     },
     {
-      name:'smeltend-asfalt',
-      image:'jpg',
+      name:'nielstel',
+      image:'png',
       time:0.18,
       text:"Dan ontvangt hij een appje van Leonie: de hele stad zit zonder stroom. Het ziekenhuis draait op het noodaggregaat. 'Wil je alsjeblieft even langs mijn moeder om te checken hoe het met haar gaat?' Ook dat nog...",
       class: 'scroll-text'
