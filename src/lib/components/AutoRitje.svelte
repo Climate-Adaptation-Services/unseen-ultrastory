@@ -61,8 +61,8 @@
       class: 'scroll-text'
     },
     {
-      name:'verneveling',
-      image:'jpg',
+      name:'pomp',
+      image:'png',
       time:0.42,
       text:"Voor tankstations staan enorme rijen auto's. Zat benzine, maar niemand die zijn tank kan volgooien omdat de pinautomaten niet meer werken.",
       class: 'scroll-text'
