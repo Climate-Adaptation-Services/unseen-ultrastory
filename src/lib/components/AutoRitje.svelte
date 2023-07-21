@@ -54,8 +54,8 @@
       class: 'scroll-text'
     },
     {
-      name:'verneveling',
-      image:'jpg',
+      name:'evacuatie',
+      image:'png',
       time:0.36,
       text:'Bewoners van verpleeg- en verzorgingshuizen worden geëvacueerd. ​',
       class: 'scroll-text'
