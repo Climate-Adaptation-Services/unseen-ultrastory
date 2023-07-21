@@ -39,7 +39,7 @@
   {/if}
 
   <div class='scroll-text-block night' style='top:{`${0.49*stepSize}px`}'>
-    <img class='festival' style='width:300px' src={'/images/dronkenmans.jpg'} />
+    <img class='festival' style='width:300px' src={'/images/gasten.png'} />
     <p class='scroll-text nighttext'>Ook al is het festival afgelast, wordt er alsnog veel lawaai gemaakt en gedronken. <strong>Ondanks het lawaai slapen sommige mensen buiten.​</strong></p>
   </div>
 
@@ -57,7 +57,7 @@
   {/if}
 
   <div class='scroll-text-block night' style='right:100; top:{`${0.84*stepSize}px`}'>
-    <img class='rustigplekje' style='width:250px' src={'/images/rustigplekje.jpg'} />
+    <img class='rustigplekje' style='width:250px' src={'/images/nielsboom.png'} />
     <p class='scroll-text nighttext'>Na een poosje vindt Niels een rustige plek bij een boom. Hij moet denken aan het gesprek met Sem en begint te piekeren over de hitte. Hij checkt het laatste nieuws op zijn telefoon.</p>
   </div>
 </div>

@@ -15,7 +15,7 @@
     stepSize = getStepSize(stepName);
   })
 
-  console.log(stepSize)
+  $: console.log('hi', stepSize)
 
   const scenes = [
     {
@@ -47,8 +47,8 @@
       class: 'scroll-text'
     },
     {
-      name:'koelkerk',
-      image:'jpg',
+      name:'kerk',
+      image:'png',
       time:0.30,
       text:'Kerken, sporthallen, supermarkten en buurthuizen worden spontaan als schuilplekken ingericht.​​',
       class: 'scroll-text'

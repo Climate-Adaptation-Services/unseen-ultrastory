@@ -26,7 +26,7 @@
     stepSize = getStepSize(stepName);
   })
 
-  $:console.log(unseenDataExtreme)
+
 
   let yScale = d3.scaleLinear()
     .domain([28, 42])
