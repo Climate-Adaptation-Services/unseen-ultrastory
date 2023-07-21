@@ -26,8 +26,8 @@
       class: 'scroll-text'
     },
     {
-      name:'ritje',
-      image:'jpg',
+      name:'zwembad',
+      image:'png',
       time:0.12,
       text:"Ze nemen de auto. Even wat koelte van de airco. Ze hebben allebei zo'n zin om te zwemmen! Maar het zwembad blijkt dicht. Het is voor badpersoneel niet veilig om bij deze temperaturen te werken.",
       class: 'scroll-text'

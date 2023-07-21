@@ -16,7 +16,7 @@
 
   const scenes = [
     {
-      name:'bank1',
+      name:'heatwave',
       image:'png',
       time:0.1,
       text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw minstens tien hittedoden in Eindhoven.​",

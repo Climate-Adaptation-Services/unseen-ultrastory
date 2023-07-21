@@ -220,7 +220,7 @@
   }
 
   .step_leeslijst{
-	margin-top: 1em !important;
+	margin-top: 0em !important;
   }
 
   .widestep {
