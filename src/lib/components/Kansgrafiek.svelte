@@ -27,7 +27,8 @@
     screenWidth = document.documentElement.clientWidth
   })
 
-  $: console.log()
+ 
+  
 
   $: xScale = d3.scaleLog()
       .domain([100,0.01])
@@ -173,21 +174,23 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
+        <text x={screenWidth * 0.375} y={yScale(32)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">1980</text>  
+        <line x1={screenWidth * 0.35}  y1={yScale(32)} x2={screenWidth * 0.37} y2={yScale(32)} stroke="grey"/>
         <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
         <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-        <!-- <text x={xScale(100)} y={yScale(24)} font-size = "1.5vh" text-color = 'grey' fill = '#4e4e4e'>bron: KNMI</text> -->
         <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
-          <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
+          <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
+          <text x={screenWidth * 0.375} y={yScale(32)+20} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2023</text>  
+          <line x1={screenWidth * 0.35}  y1={yScale(32)+20} x2={screenWidth * 0.37} y2={yScale(32)+20} stroke="grey"/>    
         {/if}
         {#if ratioOfCsvData > 360}
-          <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>       
+          <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
+          <text x={screenWidth * 0.375} y={yScale(32)+40} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2050</text>  
+          <line x1={screenWidth * 0.35}  y1={yScale(32)+40} x2={screenWidth * 0.37} y2={yScale(32)+40} stroke="grey"/> 
+              
         {/if}
-        <!-- {#if ratioOfCsvData > 180 && currentStepName === 'kansgrafiek'}
-            <text x={xScale(0.1)} y={yScale(34)} class="recordyear" fill="green" font-size = "1.5vh">Zonder klimaatverandering</text>
-            <text x={xScale(0.1)} y={yScale(34) + 15} class="recordyear" font-size = "1.5vh">kon 40°C niet voorkomen</text>
-        {/if} -->
         {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'}
           <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
           <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
