@@ -14,39 +14,44 @@
     stepSize = getStepSize(stepName);
   })
 
-  const scenes = [
-    {
-      name:'heatwave',
-      image:'png',
-      time:0.1,
-      text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw minstens tien hittedoden in Eindhoven.​",
-      class:'scroll-text nighttext krant'
-    },
-    {
-      name:'dwerg',
-      image:'png',
-      time:0.4,
-      text:'Efteling sluit deuren: hitte zorgt voor personeelstekort',
-      class: 'scroll-text nighttext krant'
-    },
-    {
-      name:'drinken',
-      image:'png',
-      time:0.7,
-      text:'Temperatuur drinkwater dreigt boven het wettelijk maximum van 25 &degC te komen',
-      class: 'scroll-text nighttext krant'
-    }
-  ]
+  // const scenes = [
+  //   {
+  //     name:'heatwave',
+  //     image:'png',
+  //     time:0.1,
+  //     text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw minstens tien hittedoden in Eindhoven.​",
+  //     class:'scroll-text nighttext krant'
+  //   },
+  //   {
+  //     name:'dwerg',
+  //     image:'png',
+  //     time:0.4,
+  //     text:'Efteling sluit deuren: hitte zorgt voor personeelstekort',
+  //     class: 'scroll-text nighttext krant'
+  //   },
+  //   {
+  //     name:'drinken',
+  //     image:'png',
+  //     time:0.7,
+  //     text:'Temperatuur drinkwater dreigt boven het wettelijk maximum van 25 &degC te komen',
+  //     class: 'scroll-text nighttext krant'
+  //   }
+  // ]
 
-  let currentScene;
-  afterUpdate(() => {
-    currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset)
-  })
+  // let currentScene;
+  // afterUpdate(() => {
+  //   currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset)
+  // })
 
 </script>
 
 <div class='stepdiv'>
-  <TextAndImagesScenes {scenes} {stepSize}/>
+  <!-- <TextAndImagesScenes {scenes} {stepSize}/> -->
+  
+  <div class='scroll-text-block night' style='top:{`${0.125*stepSize}px`}; width:80%; left:10%; border: none;'>
+    <img class='nielsgaatwandelen' style='height:140vh' src={'/images/holdingphone.png'} />
+  </div>
+
 </div>
 
 {#if stepName === currentStepName}
