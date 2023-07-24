@@ -1,9 +1,8 @@
 <script>
-  import { browser } from "$app/environment";
   import { showImages } from "$lib/noncomponents/fadeOutIn";
-    import { getStepSize } from "$lib/noncomponents/helperFunctions";
+  import { getStepSize } from "$lib/noncomponents/helperFunctions";
   import { afterUpdate, onMount } from "svelte";
-    import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
+  import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
 
   export let offset;
   export let index;
@@ -105,7 +104,7 @@
     <audio src="sounds/carstart.mp3" autoplay  /> 
   {/if}
 
-  {#if stepName === currentStepName && offset > 0.2}
+  {#if stepName === currentStepName && offset > 0.1}
     <audio src="sounds/cardriving.mp3" autoplay loop /> 
   {/if}
 
