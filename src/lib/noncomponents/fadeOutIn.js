@@ -12,7 +12,7 @@ function fadeOutIn(src){
     })
 }
 
-function fadeOut(){
+export function fadeOut(){
   select('.fixed-image')
   .transition('out').duration(500)
   .style('opacity', 0)
@@ -35,7 +35,7 @@ export function showImages(stepName, currentStepName, scenes, currentScene, offs
         fadeOutIn('/images/' + currentScene.name + '.' + currentScene.image)
       }
     }
-    if(offset > 0.98 || offset < 0.05){
+    if(offset > 0.9 || offset < 0.05){
       fadeOut()
       currentScene = undefined
     }

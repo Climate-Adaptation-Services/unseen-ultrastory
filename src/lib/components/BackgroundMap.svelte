@@ -80,6 +80,9 @@
         {#if currentStepName === 'wandeling'}
           <Polyline latLngs={wandelRoute.slice(0, Math.max(0, Math.round(offset*1.2*wandelRoute.length - 5)))} color="#00bcd4" weight='5'/>
         {/if}
+        {#if currentStepName === 'krantenkoppen'}
+          <Polyline latLngs={wandelRoute} color="#00bcd4" weight='5'/>
+        {/if}
         {#if currentStepName === 'ziekenhuis'}
           <Marker latLng={[51.466143, 5.472363]}/>
         {/if}

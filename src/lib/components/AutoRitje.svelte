@@ -105,7 +105,7 @@
     <audio src="sounds/carstart.mp3" autoplay  /> 
   {/if}
 
-  {#if stepName === currentStepName && offset > 0.3}
+  {#if stepName === currentStepName && offset > 0.2}
     <audio src="sounds/cardriving.mp3" autoplay loop /> 
   {/if}
 

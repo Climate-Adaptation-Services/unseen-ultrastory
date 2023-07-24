@@ -1,4 +1,5 @@
 <script>
+  import { fadeOut } from "$lib/noncomponents/fadeOutIn";
   import { getStepSize } from "$lib/noncomponents/helperFunctions";
   import { onMount } from "svelte";
 
@@ -11,6 +12,10 @@
   onMount(() => {
     stepSize = getStepSize(stepName);
   })
+
+  $: if(currentStepName === stepName){
+    fadeOut()
+  }
 
 </script>
 
