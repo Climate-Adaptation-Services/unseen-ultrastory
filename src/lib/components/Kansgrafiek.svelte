@@ -70,7 +70,7 @@
       .attr('class', 'kansgraphpathzonder')
       .datum((currentStepName === 'kansgrafiek') ? _.slice(middellijnData, 0, ratioOfCsvData) : [])
       .attr("fill", "none")
-      .attr("stroke", "green")
+      .attr("stroke", "#648fff")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { return xScale(d.Kans) })
@@ -83,7 +83,7 @@
           .append("path")
           .attr('class', 'kansgraphpathconfidencezonder')
           .attr("d", areaZonder(_.slice(confidenceData, 0, Math.max(0, ratioOfCsvDataConfidence - 4))))
-          .attr("fill", "lightgreen")
+          .attr("fill", "#648fff")
           .attr("stroke", "none")
           .attr("fill-opacity", "0.2")
 
@@ -94,7 +94,7 @@
         .attr('class', 'kansgraphpathmet')
         .datum(_.slice(middellijnData, 0, Math.max(0, ratioOfCsvData-190)))
         .attr("fill", "none")
-        .attr("stroke", "red")
+        .attr("stroke", "#ffb000")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
           .x(function(d) { return xScale(d.Kans) })
@@ -107,7 +107,7 @@
           .append("path")
           .attr('class', 'kansgraphpathconfidencemet')
           .attr("d", areaMet(_.slice(confidenceData, 0, Math.max(0, ratioOfCsvDataConfidence - 16))))
-          .attr("fill", "red")
+          .attr("fill", "#ffb000")
           .attr("stroke", "none")
           .attr("fill-opacity", "0.2");
       }
@@ -118,7 +118,7 @@
         .attr('class', 'kansgraphpath2050')
         .datum(_.slice(middellijnData2050, 0, Math.max(0, ratioOfCsvData-330)))
         .attr("fill", "none")
-        .attr("stroke", "#5c3765")
+        .attr("stroke", "#93003a")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
           .x(function(d) { return xScale(d.Kans)})
@@ -131,7 +131,7 @@
           .append("path")
           .attr('class', 'kansgraphpathconfidence2050')
           .attr("d", area2050(_.slice(confidenceData, 0, Math.max(0, ratioOfCsvDataConfidence - 26))))
-          .attr("fill", "#5c3765")
+          .attr("fill", "#93003a")
           .attr("stroke", "none")
           .attr("fill-opacity", "0.2");
       }
@@ -150,19 +150,19 @@
       </p>
       {#if ratioOfCsvData > 100}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Toen Niels klein was, <mark style="background: #bcf5bc !important"> rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
+          <p class='scroll-text'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
           </p> 
         </div>   
       {/if}
       {#if ratioOfCsvData > 250}
         <div class= 'fade-in'>
-          <p class='scroll-text'> Inmiddels, <mark style="background: #ff9194 !important">in 2023</mark>, nu Sem jong is, is de kans op 40 °C ongeveer 2%. 
+          <p class='scroll-text'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, nu Sem jong is, is de kans op 40 °C ongeveer 2%. 
           </p> 
         </div>   
       {/if}   
       {#if ratioOfCsvData > 360}
         <div class= 'fade-in'>
-          <p class='scroll-text'> <mark style="background: #b49eb8 !important">In 2050</mark>, als Sem inmiddels volwassen is, is de kans op 40 °C toegenomen tot ongeveer 7%. 
+          <p class='scroll-text'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem inmiddels volwassen is, is de kans op 40 °C toegenomen tot ongeveer 7%. 
           </p> 
         </div>   
       {/if}      
@@ -175,7 +175,7 @@
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
         <text x={screenWidth * 0.375} y={yScale(32)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">1980</text>  
-        <line x1={screenWidth * 0.35}  y1={yScale(32)} x2={screenWidth * 0.37} y2={yScale(32)} stroke="grey"/>
+        <line x1={screenWidth * 0.35}  y1={yScale(32)} x2={screenWidth * 0.37} y2={yScale(32)} stroke='#648fff' stroke-width="0.3vh"/>
         <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
         <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
@@ -183,13 +183,12 @@
         {#if ratioOfCsvData > 270}
           <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
           <text x={screenWidth * 0.375} y={yScale(32)+20} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2023</text>  
-          <line x1={screenWidth * 0.35}  y1={yScale(32)+20} x2={screenWidth * 0.37} y2={yScale(32)+20} stroke="grey"/>    
+          <line x1={screenWidth * 0.35}  y1={yScale(32)+20} x2={screenWidth * 0.37} y2={yScale(32)+20} stroke="#ffb000" stroke-width="0.3vh"/>    
         {/if}
         {#if ratioOfCsvData > 360}
           <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
           <text x={screenWidth * 0.375} y={yScale(32)+40} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2050</text>  
-          <line x1={screenWidth * 0.35}  y1={yScale(32)+40} x2={screenWidth * 0.37} y2={yScale(32)+40} stroke="grey"/> 
-              
+          <line x1={screenWidth * 0.35}  y1={yScale(32)+40} x2={screenWidth * 0.37} y2={yScale(32)+40} stroke="#93003a" stroke-width="0.3vh"/>     
         {/if}
         {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'}
           <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
@@ -197,10 +196,6 @@
           <line x1={xScale(0.0075)}  y1={yScale(44.0244)} x2={xScale(0.0085)} y2={yScale(44.0244)} stroke="grey"/>
           <text x={xScale(0.0075)} y={yScale(40.5)} fill="grey" font-size = "10px" marker-end="url(#triangle)">Bandbreedte</text>
         {/if}
-        <!-- {#if ratioOfCsvData > 280 && currentStepName === 'kansgrafiek'}
-            <text x={xScale(29)} y={yScale(43)} class="recordyear" fill="red" font-size = "1.5vh">Met klimaatverandering</text>
-            <text x={xScale(29)} y={yScale(43  )+ 15} class="recordyear" font-size = "1.5vh">wel!</text>
-        {/if} -->
       </g>
       </svg>
       <p class='graph-description'>Hittestatistieken voor Eindhoven voor het klimaat van 1980, 2023 en 2050. Deze zijn berekend op basis van metingen van KNMI-station Eindhoven en het KNMI'14 WH scenario voor 2050. Gebruikte tools:  
