@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  import { wandelRoute, autoRoute } from '$lib/noncomponents/routes.js';
+  import { wandelRoute, autoRoute1, autoRoute2, autoRoute3 } from '$lib/noncomponents/routes.js';
 
   // modules loaded from the client
   let LeafletMap;
@@ -57,8 +57,9 @@
   };
 
   $: if(leafletMap && !['ziekenhuis'].includes(currentStepName)){
-    const zoom = (currentStepName === 'autoritje') ? 12 : 16;
-    leafletMap.flyTo(coordsHuis, zoom, {duration: 3})
+    const zoom = (currentStepName === 'autoritje') ? 13 : 16;
+    const centerCoords = (currentStepName === 'autoritje') ? [parseFloat(coordsHuis[0])+0.02, parseFloat(coordsHuis[1])+0.02] : coordsHuis
+    leafletMap.flyTo(centerCoords, zoom, {duration: 3})
   }
 
   $: if(leafletMap && ['ziekenhuis'].includes(currentStepName)){
@@ -86,8 +87,16 @@
         {#if currentStepName === 'ziekenhuis'}
           <Marker latLng={[51.466143, 5.472363]}/>
         {/if}
-        {#if currentStepName === 'autoritje' && offset > 0.1}
-          <Polyline latLngs={autoRoute.slice(0, Math.max(0, Math.round(offset*1.2*autoRoute.length - 50)))} color="#00bcd4" weight='5'/>
+        {#if currentStepName === 'autoritje'}
+          {#if offset > 0.05}
+            <Polyline latLngs={autoRoute1.slice(0, Math.max(0, Math.round(offset*10*autoRoute1.length-100)))} color="#00bcd4" weight='5'/>
+          {/if}
+          {#if offset > 0.24}
+            <Polyline latLngs={autoRoute2.slice(0, Math.max(0, Math.round(offset*3*autoRoute2.length-20)))} color="#00bcd4" weight='5'/>
+          {/if}
+          {#if offset > 0.43}
+            <Polyline latLngs={autoRoute3.slice(0, Math.max(0, Math.round(offset*21*autoRoute3.length-2900)))} color="#00bcd4" weight='5'/>
+          {/if}
         {/if}
       </LeafletMap>
     </div>

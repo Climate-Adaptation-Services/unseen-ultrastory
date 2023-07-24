@@ -96,17 +96,17 @@
   @keyframes blurry-animation {
     0% {
       filter: blur(0);
-      opacity: 0.8;
+      opacity: 0.9;
       transform: scale(1);
     }
     50% {
-      filter: blur(8px);
+      filter: blur(2px);
       opacity: 0.7  ;
-      transform: scale(1.02);
+      transform: scale(1.01);
     }
     100% {
       filter: blur(0);
-      opacity: 0.8;
+      opacity: 0.9;
       transform: scale(1);
     }
   }
