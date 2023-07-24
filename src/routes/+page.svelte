@@ -103,7 +103,6 @@
 			{#if data}
 				<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 			{/if}
-			<!-- <img class='cloud' src='images/cloud.png' width='400px'/> -->
 			<img class='logo' src='/images/logokleur.png' width='10%'/>	
 		</div>
 
