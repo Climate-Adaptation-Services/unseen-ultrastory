@@ -13,12 +13,12 @@
 	{#if currentStepName === 'thuis'}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
-
+  <img class='logo' src='/images/logokleur.png' width='10%'/>
   {#if $started}
+    
     <div>
       <h1>Ongekend heet</h1>
       <h3>Een verhaal over exceptionele hitte in Nederland</h3>
-      <!-- <h3>In dit beeldverhaal volg je de consequenties van ongeziene hitte door de ogen van een jong gezin in Eindhoven</h3> -->
     </div>
     <div class = 'scrolldown'>
       <h4>Scroll naar beneden</h4>
@@ -37,7 +37,7 @@
 <style>
 	h1{
 		margin-bottom:1.5em;
-		font-size: 40px;
+		font-size: 5vh;
 	}
 
   .headphones{

@@ -134,3 +134,9 @@ body {
   text-align: center;
 }
 
+.logo{
+  position:absolute;
+  right:1%;
+  top:2%
+}
+

@@ -98,12 +98,13 @@
 
 {#if $started}
 	<Scroller bind:index bind:offset bind:progress>
+		
 		<div slot='background' top='0' bottom='0'>
 			{#if data}
 				<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 			{/if}
 			<!-- <img class='cloud' src='images/cloud.png' width='400px'/> -->
-
+			<img class='logo' src='/images/logokleur.png' width='10%'/>	
 		</div>
 
 		<div slot='foreground'>
@@ -111,8 +112,9 @@
 				<p>Step: {index}</p>
 				<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 				<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
+				
 			</div>
-
+			
 			<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
 				<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
 			</div>
@@ -220,7 +222,7 @@
   }
 
   .step_leeslijst{
-	margin-top: 0em !important;
+	margin-top: 1em !important;
   }
 
   .widestep {
