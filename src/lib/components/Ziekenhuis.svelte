@@ -54,7 +54,7 @@
 </script>
 
 <div class='stepdiv'>
-  <TextAndImagesScenes {scenes} {stepSize} />
+  <TextAndImagesScenes {scenes} {stepSize}/>
   
   {#if stepName === currentStepName}
     <audio src="sounds/ziekenhuis.mp3" autoplay loop /> 

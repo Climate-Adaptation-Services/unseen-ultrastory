@@ -35,7 +35,7 @@
 
 <div class='stepdiv'>
   {#if stepName === currentStepName}
-    <TextAndImagesScenes {scenes} {stepSize} />
+    <TextAndImagesScenes {scenes} {stepSize}/>
   {/if}
   
   {#if stepName === currentStepName}

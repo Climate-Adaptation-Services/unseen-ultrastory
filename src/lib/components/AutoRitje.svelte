@@ -99,7 +99,7 @@
 
 <div class='stepdiv'>
 
-  <TextAndImagesScenes {scenes} {stepSize} />
+  <TextAndImagesScenes {scenes} {stepSize} imageOffset={0}/>
 
   {#if stepName === currentStepName && offset < 0.6}
     <audio src="sounds/carstart.mp3" autoplay  /> 
