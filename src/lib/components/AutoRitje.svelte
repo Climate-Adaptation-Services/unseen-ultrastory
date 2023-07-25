@@ -67,8 +67,8 @@
       class: 'scroll-text'
     },
     {
-      name:'verneveling',
-      image:'jpg',
+      name:'manonwel',
+      image:'png',
       time:0.72,
       text:"Als Sem een man op straat ziet die een beroerte krijgt, aarzelt Niels geen moment en neemt de man mee naar het ziekenhuis. Sem geeft de man wat water uit zijn bidon. Bij de eerste hulp is ontzettend druk. Gelukkig zien ze al snel Leonie! Zij wikkelt gauw een natte doek om het hoofd van de man. ",
       class: 'scroll-text'
