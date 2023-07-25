@@ -28,6 +28,7 @@ body {
   margin:0 !important;
   text-align: center;
   font-family: Belanosima, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width:100%;
 }
 
 svg text {
@@ -155,6 +156,36 @@ svg text {
   background-color: rgba(0, 0, 0, 1);
 	background-repeat: no-repeat;
 }
+
+
+/* **************************************************
+** Mobile version ***********************************
+****************************************************/
+
+@media only screen and (max-width: 600px) {
+  .fixed-image {
+    width:90%;
+    /* padding:20px; */
+    top: 10px;
+    right: 5%;
+    transform: translate(0%, 0%);
+    z-index: 10000;
+  }
+
+  .tempmeter, .temp-text{
+    opacity:0;
+  }
+
+  .scroll-text-block{
+    width:90%;
+    left:2%;
+    padding:2.5%;
+  }
+  .step, .widestep {
+		width:100%;
+  }
+}
+
 
 
 

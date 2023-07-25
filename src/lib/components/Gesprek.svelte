@@ -9,6 +9,8 @@
   export let currentStepName;
   export let stepName
 
+  let volume = 0.3
+
 
   let stepSize;
   onMount(() => {
@@ -39,7 +41,7 @@
   {/if}
   
   {#if stepName === currentStepName}
-    <audio src="" autoplay loop /> 
+    <audio src="sounds/fan.mp3" autoplay loop bind:volume/> 
   {/if}
 
 
