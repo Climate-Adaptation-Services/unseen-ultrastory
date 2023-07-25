@@ -87,21 +87,19 @@ svg text {
 }
 
 .grafiek{
+  height:100%;
+  position:relative;
   background-color: rgba(255, 255, 255, 1);
   width: 90%;
-  height: 90%;
+  height: 100%;
   left: 5%;
-  top: 5%;
+  fill: #4e4e4e;
+  text-anchor: center;
 }
 
 .aftiteling{
   background-color: rgba(0, 0, 0, 1);
 	background-repeat: no-repeat;
-}
-
-.grafiek {
-  fill: #4e4e4e;
-  text-anchor: center;
 }
 
 .graphtext{
@@ -114,6 +112,15 @@ svg text {
   margin-top: 10px;
   text-align: left;   
   padding-left:3vw;
+}
+
+.sticky-div{
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top:0px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 .tick{
@@ -157,5 +164,33 @@ svg text {
   z-index: 10000000;
 }
 
+.fade-in {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 

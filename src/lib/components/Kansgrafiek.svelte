@@ -64,6 +64,7 @@
       d3.select('.kansgraphpathconfidence2050').remove()
       d3.select('.kansgraphpathmet').remove()
       d3.select('.kansgraphpath2050').remove()
+      d3.select('.kansgraphpathconfidencezonder').remove() 
       
       d3.select('.svgkansgrafiek')
       .append("path")
@@ -76,9 +77,7 @@
         .x(function(d) { return xScale(d.Kans) })
         .y(function(d) { return yScale(d.vroeger) })
         )
-
-      d3.select('.kansgraphpathconfidencezonder').remove() 
-      
+       
       d3.select(".svgkansgrafiek")
           .append("path")
           .attr('class', 'kansgraphpathconfidencezonder')
@@ -141,8 +140,7 @@
  
 </script>
 
-<div class='divkansgrafiek grafiek'>
-
+<div class='grafiek'>
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
       <p class='scroll-text'>
@@ -169,7 +167,7 @@
     </div>
   {/if}
   
-    <div class='sticky-div grafiek' >
+    <div class='sticky-div' >
       <svg >
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
@@ -204,22 +202,9 @@
       </p>
     </div>
   </div>
+
+
 <style>
-
-  
-
-.divkansgrafiek{
-    height:100%;
-    position:relative;
-  }
-
-  .sticky-div{
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    top:0px;
-    width: 100%;
-    height: 100vh;
-  }
   svg{
     width:100%;
     height: 90%;
@@ -230,10 +215,6 @@
     opacity:0.15;
   }
 
-  .fade-in {
-    animation: fadeIn 2s;
-  }
-
   .graph-description{
     color:#4e4e4e;
     font-size:1.5vh;
@@ -242,30 +223,4 @@
     position: absolute;
     left: 50%;
   }
-
-  @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
 </style>

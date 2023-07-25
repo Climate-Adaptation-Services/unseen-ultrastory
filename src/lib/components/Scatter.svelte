@@ -3,8 +3,6 @@
 	import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
   import * as _ from 'lodash'
-  import { fade } from 'svelte/transition';
-  import { fly } from 'svelte/transition'
   import { onMount } from "svelte";
   import { getStepSize } from "$lib/noncomponents/helperFunctions";
 
@@ -43,7 +41,7 @@
 
 </script>
 
-<div class='divscatter grafiek'>
+<div class='grafiek'>
   <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'ziekenhuis'}
     <p class='scroll-text'> Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het hitterecord uit 2018 werd verpulverd met 3.7°C!
@@ -99,59 +97,11 @@
 
 
 <style>
-
-.divscatter{
-    height:100%;
-    position:relative;
-  }
-
-  .sticky-div{
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    top:0px;
-    width: 100%;
-    height: 100vh;
-    /* align-self: flex-end; */
-    margin: 0 auto;
-  }
-
+  
   svg{
     width:100%;
     height:100%;
     margin-top:0%;
-  }
-
-  .fade-in {
-    animation: fadeIn 2s;
-  }
-
-  .fade-in {
-    animation: fadeIn 1s;
-  }
-
-  @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
   }
 
 </style>
