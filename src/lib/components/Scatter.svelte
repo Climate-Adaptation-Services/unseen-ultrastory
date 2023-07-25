@@ -66,7 +66,7 @@
           <path
             fill='none'
             stroke='darkred'
-            d="M0 0, L-15 15, L0 0, L-10 0, L0 0, L0 10"
+            d="M0 0 L-15 15 L0 0 L-10 0 L0 0 L0 10"
             stroke-width="2"
           />
         </g>
