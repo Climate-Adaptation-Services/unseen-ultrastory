@@ -60,17 +60,16 @@
       <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
       <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
-        <text x={xScale(2010)} y={yScale(39)} class="recordyear" opacity = {1} fill = '#4e4e4e'>De eerste keer</text>
-        <text x={xScale(2010)} y={yScale(39)+15} class="recordyear" opacity = {1} fill = '#4e4e4e'>40+ °C in 2019</text>
-        <path
-          transform="translate( {xScale(2019)-40} {yScale(39)-30} ) rotate(-45)"
-          id='arrow-line'
-          marker-end='url(#head)'
-          stroke-width='1'
-          fill='none'
-          stroke='darkred'
-          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-        />
+        <g transform='translate({xScale(2017)},{yScale(40)})'>
+          <text x={-95} y={32} class="recordyear" fill = '#4e4e4e'>De eerste keer</text>
+          <text x={-95} y={52} class="recordyear" fill = '#4e4e4e'>40+ °C in 2019</text>
+          <path
+            fill='none'
+            stroke='darkred'
+            d="M0 0, L-15 15, L0 0, L-10 0, L0 0, L0 10"
+            stroke-width="2"
+          />
+        </g>
       {/if}
       {#if currentStepName === 'temperatuurstijging'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
