@@ -24,6 +24,7 @@
   let zoomedIn = false
   let ziekenhuis;
   let huis;
+  let zwembad;
 
   $: if(leafletMap){
     leafletMap = leafletMap.getMap()
@@ -34,6 +35,7 @@
       .addTo(leafletMap);
 
     ziekenhuis = L.tooltip([51.466143, 5.472363], {direction:'top', offset:[0,-40]})
+    zwembad = L.tooltip(autoRoute2[0], {direction:'top', offset:[0,-40]})
   }
   
   const mapOptions = {
@@ -62,11 +64,17 @@
     leafletMap.flyTo(centerCoords, zoom, {duration: 3})
   }
 
-  $: if(leafletMap && ['ziekenhuis'].includes(currentStepName)){
+  $: if(leafletMap && 'ziekenhuis' === currentStepName){
     leafletMap.flyTo(coordsZiekenhuis, 16, {duration: 3})
     
     ziekenhuis
       .setContent("Catharina ziekenhuis")
+      .addTo(leafletMap);
+  }
+
+  $: if(leafletMap && 'autoritje' === currentStepName){
+    zwembad
+      .setContent("Zwembad")
       .addTo(leafletMap);
   }
 
@@ -84,10 +92,11 @@
         {#if currentStepName === 'krantenkoppen'}
           <Polyline latLngs={wandelRoute} color="#00bcd4" weight='5'/>
         {/if}
-        {#if currentStepName === 'ziekenhuis'}
+        {#if currentStepName !== 'thuis'}
           <Marker latLng={[51.466143, 5.472363]}/>
         {/if}
         {#if currentStepName === 'autoritje'}
+          <Marker latLng={autoRoute2[0]}/>
           {#if offset > 0.05}
             <Polyline latLngs={autoRoute1.slice(0, Math.max(0, Math.round(offset*10*autoRoute1.length-100)))} color="#00bcd4" weight='5'/>
           {/if}

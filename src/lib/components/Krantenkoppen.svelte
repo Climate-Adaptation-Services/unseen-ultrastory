@@ -14,42 +14,11 @@
     stepSize = getStepSize(stepName);
   })
 
-  // const scenes = [
-  //   {
-  //     name:'heatwave',
-  //     image:'png',
-  //     time:0.1,
-  //     text:"Vooral 's nachts is het raak: afgelopen nacht opnieuw minstens tien hittedoden in Eindhoven.​",
-  //     class:'scroll-text nighttext krant'
-  //   },
-  //   {
-  //     name:'dwerg',
-  //     image:'png',
-  //     time:0.4,
-  //     text:'Efteling sluit deuren: hitte zorgt voor personeelstekort',
-  //     class: 'scroll-text nighttext krant'
-  //   },
-  //   {
-  //     name:'drinken',
-  //     image:'png',
-  //     time:0.7,
-  //     text:'Temperatuur drinkwater dreigt boven het wettelijk maximum van 25 &degC te komen',
-  //     class: 'scroll-text nighttext krant'
-  //   }
-  // ]
-
-  // let currentScene;
-  // afterUpdate(() => {
-  //   currentScene = showImages(stepName, currentStepName, scenes, currentScene, offset)
-  // })
-
 </script>
 
-<div class='stepdiv'>
-  <!-- <TextAndImagesScenes {scenes} {stepSize}/> -->
-  
-  <div class='scroll-text-block night' style='top:{`${0.125*stepSize}px`}; width:80%; left:10%; border: none;'>
-    <img class='nielsgaatwandelen' style='height:140vh' src={'/images/holdingphone.png'} />
+<div class='stepdiv'>  
+  <div class='telefoon' style='top:{`${0.05*stepSize}px`}'>
+    <img class='telefoonimg' style='width:100%;' src={'/images/holdingphone.png'} />
   </div>
 
 </div>
@@ -75,6 +44,17 @@
   border-radius: 50%;
   background-color: rgba(0,0,0,0.2);
   filter: blur(20px);
+}
+
+.telefoon{
+  position:absolute;
+  width:80%;
+  left:10%;
+  border: none;
+  box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+
+
 }
   
 </style>
