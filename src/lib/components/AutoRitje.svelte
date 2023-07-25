@@ -93,12 +93,20 @@
 
   <TextAndImagesScenes {scenes} {stepSize} imageOffset={0}/>
 
-  {#if stepName === currentStepName && offset < 0.6}
+  {#if stepName === currentStepName && offset < 0.6 && offset < 0.27}
     <audio src="sounds/carstart.mp3" autoplay  /> 
   {/if}
 
-  {#if stepName === currentStepName && offset > 0.1}
+  {#if stepName === currentStepName && ((offset > 0.1 && offset < 0.27) || offset > 0.36) && offset < 0.74}
     <audio src="sounds/cardriving.mp3" autoplay loop /> 
+  {/if}
+
+  {#if stepName === currentStepName && (offset > 0.27 || offset > 0.72)}
+    <audio src="sounds/gettingoutcar.mp4" autoplay /> 
+  {/if}
+
+  {#if stepName === currentStepName && offset > 0.36 && offset < 0.74}
+    <audio src="sounds/trafficjam.mp3" autoplay /> 
   {/if}
 
 </div>
