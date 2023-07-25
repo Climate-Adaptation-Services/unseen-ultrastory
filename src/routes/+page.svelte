@@ -106,12 +106,12 @@
 			</div>
 
 			<div slot='foreground'>
-				<div class="info">
+				<!-- <div class="info">
 					<p>Step: {index}</p>
 					<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
 					<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
 					
-				</div>
+				</div> -->
 				
 				<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
 					<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
