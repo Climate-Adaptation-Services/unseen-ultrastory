@@ -12,7 +12,6 @@
 	import Krantenkoppen from "$lib/components/Krantenkoppen.svelte";
 	import AutoRitje from "$lib/components/AutoRitje.svelte";
 	import Aftiteling from "$lib/components/Aftiteling.svelte";
-	import Leeslijst from "$lib/components/Leeslijst.svelte";
 	import NavigationPanel from "$lib/components/NavigationPanel.svelte";
 
 	import { timeParse } from 'd3'
@@ -49,7 +48,6 @@
 		"krantenkoppen",
 		"autoritje",
 		"aftiteling",
-		"leeslijst"
 	];
 
 	let index = 0;
@@ -95,7 +93,6 @@
 </svelte:head>
 
 <div>
-
 	<Titlepage {currentStepName} {offset}/>
 	<img class='logo' src='/images/logokleur.png' width='10%'/>
 	{#if $started}
@@ -130,8 +127,6 @@
 								<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
 							{:else if stepName === 'aftiteling'}
 								<Aftiteling {offset} {index} {stepName} {currentStepName} />
-							{:else if stepName === 'leeslijst'}
-								<Leeslijst {offset} {index} {stepName} {currentStepName} />
 							{/if}
 						</section>
 					{:else}
@@ -154,7 +149,7 @@
 				{/each}
 			</div>
 		</Scroller>
-	{/if}
+	{/if}	
 </div>
 
 <style>
@@ -222,11 +217,9 @@
 	height:7000px !important;
   }
 
-  .step_leeslijst{
-	margin-top: 1em !important;
+  .step_aftiteling{
+	height:4000px !important;
   }
-
-
 
   .widestep {
 		width:100%;

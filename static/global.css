@@ -102,7 +102,7 @@ svg text {
 }
 
 .aftiteling{
-  background-image: url('$lib/heatwave.png');
+  background-color: rgba(0, 0, 0, 1);
 	background-repeat: no-repeat;
 }
 
@@ -133,6 +133,7 @@ svg text {
 
 .outro{
   /* background-color: rgba(81, 71, 71, 0.5); */
+  background-color: black;
   border: none;
   width:60%;
   padding:20px;
