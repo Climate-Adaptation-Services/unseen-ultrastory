@@ -94,66 +94,68 @@
 	{/each}
 </svelte:head>
 
-<Titlepage {currentStepName} {offset}/>
+<div>
 
-{#if $started}
-	<Scroller bind:index bind:offset bind:progress>
-		
-		<div slot='background' top='0' bottom='0'>
-			{#if data}
-				<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
-			{/if}
-			<img class='logo' src='/images/logokleur.png' width='10%'/>	
-		</div>
-
-		<div slot='foreground'>
-			<div class="info">
-				<p>Step: {index}</p>
-				<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
-				<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
-				
-			</div>
+	<Titlepage {currentStepName} {offset}/>
+	<img class='logo' src='/images/logokleur.png' width='10%'/>
+	{#if $started}
+		<Scroller bind:index bind:offset bind:progress>
 			
-			<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
-				<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
-			</div>
-			<img class='fixed-image' src='' style='opacity:0'/>
-
-			{#each stepNames as stepName, i}
-				{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling', 'leeslijst'].includes(stepName)}
-					<section class='widestep step_{stepName}'>
-						{#if stepName === 'temperatuurstijging'}
-							<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
-						{:else if stepName === 'kansgrafiek'}
-							<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
-						{:else if stepName === 'aftiteling'}
-							<Aftiteling {offset} {index} {stepName} {currentStepName} />
-						{:else if stepName === 'leeslijst'}
-							<Leeslijst {offset} {index} {stepName} {currentStepName} />
-						{/if}
-					</section>
-				{:else}
-					<section class='step step_{stepName}'>
-						{#if stepName === 'thuis'}
-							<Introductie {offset} {index} {currentStepName} {stepName} />
-						{:else if stepName === 'gesprek'}
-							<Gesprek {offset} {index} {currentStepName} {stepName} />
-						{:else if stepName === 'ziekenhuis'}
-							<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
-						{:else if stepName === 'wandeling'}
-							<Wandeling {offset} {index} {currentStepName} {stepName} />
-						{:else if stepName === 'krantenkoppen'}
-							<Krantenkoppen {offset} {index} {currentStepName} {stepName} />
-						{:else if stepName === 'autoritje'}
-							<AutoRitje {offset} {index} {stepName} {currentStepName} />
-						{/if}
-					</section>
+			<div slot='background' top='0' bottom='0'>
+				{#if data}
+					<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 				{/if}
-			{/each}
-		</div>
-	</Scroller>
-{/if}
+					
+			</div>
 
+			<div slot='foreground'>
+				<div class="info">
+					<p>Step: {index}</p>
+					<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
+					<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
+					
+				</div>
+				
+				<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
+					<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
+				</div>
+				<img class='fixed-image' src='' style='opacity:0'/>
+
+				{#each stepNames as stepName, i}
+					{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling', 'leeslijst'].includes(stepName)}
+						<section class='widestep step_{stepName}'>
+							{#if stepName === 'temperatuurstijging'}
+								<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
+							{:else if stepName === 'kansgrafiek'}
+								<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
+							{:else if stepName === 'aftiteling'}
+								<Aftiteling {offset} {index} {stepName} {currentStepName} />
+							{:else if stepName === 'leeslijst'}
+								<Leeslijst {offset} {index} {stepName} {currentStepName} />
+							{/if}
+						</section>
+					{:else}
+						<section class='step step_{stepName}'>
+							{#if stepName === 'thuis'}
+								<Introductie {offset} {index} {currentStepName} {stepName} />
+							{:else if stepName === 'gesprek'}
+								<Gesprek {offset} {index} {currentStepName} {stepName} />
+							{:else if stepName === 'ziekenhuis'}
+								<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
+							{:else if stepName === 'wandeling'}
+								<Wandeling {offset} {index} {currentStepName} {stepName} />
+							{:else if stepName === 'krantenkoppen'}
+								<Krantenkoppen {offset} {index} {currentStepName} {stepName} />
+							{:else if stepName === 'autoritje'}
+								<AutoRitje {offset} {index} {stepName} {currentStepName} />
+							{/if}
+						</section>
+					{/if}
+				{/each}
+			</div>
+		</Scroller>
+	{/if}
+</div>
 
 <style>
 	.cloud{
@@ -223,6 +225,8 @@
   .step_leeslijst{
 	margin-top: 1em !important;
   }
+
+
 
   .widestep {
 		width:100%;
