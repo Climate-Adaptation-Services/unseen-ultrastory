@@ -176,7 +176,7 @@
         <YAxis {yScale} height={screenHeight * 0.7}/>
         <text x={screenWidth * 0.33} y={yScale(31.8)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">Statistiek voor:</text> 
         <text x={screenWidth * 0.355} y={yScale(31)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">1980</text>  
-        <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke='#648fff' stroke-width="0.3vh"/>
+        <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
         <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
         <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
