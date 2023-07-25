@@ -137,30 +137,29 @@
     }
   }
   )
- 
 </script>
 
 <div class='grafiek'>
   {#if index > 1}
     <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
-      {#if currentStepName !== 'wandeling'}
+      {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
         <p class='scroll-text'>
           De kans dat 40°C wordt gehaald in een jaar is sterk toegenomen door klimaatverandering. Statistische berekeningen aan temperatuurreeksen van Eindhoven laten zien hoe groot de kans is dat een temperatuur in een jaar voorkomt.   
-        </p>
-        {/if}
-      {#if ratioOfCsvData > 100 && currentStepName !== 'wandeling'}
+        </p>   
+      {/if}
+      {#if ratioOfCsvData > 100 && currentStepName ==='kansgrafiek'}
         <div class= 'fade-in'>
           <p class='scroll-text'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
           </p> 
         </div>   
       {/if}
-      {#if ratioOfCsvData > 250 && currentStepName !== 'wandeling'}
+      {#if ratioOfCsvData > 250 && currentStepName ==='kansgrafiek'}
         <div class= 'fade-in'>
           <p class='scroll-text'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, nu Sem jong is, is de kans op 40 °C ongeveer 2%. 
           </p> 
         </div>   
       {/if}   
-      {#if ratioOfCsvData > 360 && currentStepName !== 'wandeling'}
+      {#if ratioOfCsvData > 360 && currentStepName ==='kansgrafiek' }
         <div class= 'fade-in'>
           <p class='scroll-text'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem inmiddels volwassen is, is de kans op 40 °C toegenomen tot ongeveer 7%. 
           </p> 
