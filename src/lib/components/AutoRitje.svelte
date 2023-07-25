@@ -97,7 +97,7 @@
     <audio src="sounds/carstart.mp3" autoplay  /> 
   {/if}
 
-  {#if stepName === currentStepName && ((offset > 0.1 && offset < 0.27) || offset > 0.36) && offset < 0.74}
+  {#if stepName === currentStepName && ((offset > 0.1 && offset < 0.27) || offset > 0.36) && offset < 0.84}
     <audio src="sounds/cardriving.mp3" autoplay loop /> 
   {/if}
 
@@ -107,6 +107,10 @@
 
   {#if stepName === currentStepName && offset > 0.36 && offset < 0.74}
     <audio src="sounds/trafficjam.mp3" autoplay /> 
+  {/if}
+
+  {#if stepName === currentStepName && offset > 0.84}
+    <audio src="sounds/ziekenhuis.mp3" autoplay /> 
   {/if}
 
 </div>

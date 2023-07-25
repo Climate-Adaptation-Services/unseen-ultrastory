@@ -98,13 +98,13 @@
         {#if currentStepName === 'autoritje'}
           <Marker latLng={autoRoute2[0]}/>
           {#if offset > 0.05}
-            <Polyline latLngs={autoRoute1.slice(0, Math.max(0, Math.round(offset*10*autoRoute1.length-100)))} color="#00bcd4" weight='5'/>
+            <Polyline latLngs={autoRoute1.slice(0, Math.max(0, Math.round(offset*6*autoRoute1.length-100)))} color="#00bcd4" weight='5'/>
           {/if}
           {#if offset > 0.24}
-            <Polyline latLngs={autoRoute2.slice(0, Math.max(0, Math.round(offset*3*autoRoute2.length-20)))} color="#00bcd4" weight='5'/>
+            <Polyline latLngs={autoRoute2.slice(0, Math.max(0, Math.round(offset*2.5*autoRoute2.length-40)))} color="#00bcd4" weight='5'/>
           {/if}
           {#if offset > 0.43}
-            <Polyline latLngs={autoRoute3.slice(0, Math.max(0, Math.round(offset*21*autoRoute3.length-2900)))} color="#00bcd4" weight='5'/>
+            <Polyline latLngs={autoRoute3.slice(0, Math.max(0, Math.round(offset*16*autoRoute3.length-3500)))} color="#00bcd4" weight='5'/>
           {/if}
         {/if}
       </LeafletMap>
