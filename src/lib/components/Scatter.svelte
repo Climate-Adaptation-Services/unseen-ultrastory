@@ -56,13 +56,13 @@
       <g transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/>
       <YAxis {yScale} height={screenHeight * 0.7}/>
-      <text x={xScale(1988)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Jaar</text>  
-      <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
-      <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Maximum temperatuur (°C)</text>
+      <text x={xScale(1988)} y={yScale(26)} font-size = "2vh" >Jaar</text>  
+      <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle">Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
+      <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
-          <text x={-95} y={32} class="recordyear" fill = '#4e4e4e'>De eerste keer</text>
-          <text x={-95} y={52} class="recordyear" fill = '#4e4e4e'>40+ °C in 2019</text>
+          <text x={-95} y={32} class="recordyear">De eerste keer</text>
+          <text x={-95} y={52} class="recordyear">40+ °C in 2019</text>
           <path
             fill='none'
             stroke='darkred'
@@ -118,7 +118,7 @@
   svg{
     width:100%;
     height:100%;
-    margin-top:0%
+    margin-top:0%;
   }
 
   .fade-in {

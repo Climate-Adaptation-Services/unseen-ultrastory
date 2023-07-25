@@ -169,33 +169,33 @@
     </div>
   {/if}
   
-    <div class='sticky-div'>
+    <div class='sticky-div grafiek' >
       <svg >
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 
         <YAxis {yScale} height={screenHeight * 0.7}/>
-        <text x={screenWidth * 0.33} y={yScale(31.8)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">Statistiek voor:</text> 
-        <text x={screenWidth * 0.355} y={yScale(31)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">1980</text>  
+        <text x={screenWidth * 0.33} y={yScale(31.8)} font-size = "2vh" dominant-baseline  = "middle">Statistiek voor:</text> 
+        <text x={screenWidth * 0.355} y={yScale(31)} font-size = "2vh" dominant-baseline  = "middle">1980</text>  
         <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
-        <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh" fill = '#4e4e4e'>Kans (%)</text>  
-        <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh" fill = '#4e4e4e'>Temperatuur (°C)</text>  
+        <text x={xScale(1.5)} y={yScale(26)} font-size = "2vh">Kans (%)</text>  
+        <text x={xScale(9000)} y={yScale(50.5)} transform="rotate(-90)" font-size = "2vh">Temperatuur (°C)</text>  
         <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-        <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>De kans op hitte per generatie</text>
+        <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle">De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
           <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
-          <text x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.02)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2023</text>  
+          <text x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.02)} font-size = "2vh" dominant-baseline  = "middle">2023</text>  
           <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
         {/if}
         {#if ratioOfCsvData > 360}
           <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
-          <text x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.04)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2050</text>  
+          <text x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.04)} font-size = "2vh" dominant-baseline  = "middle">2050</text>  
           <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
         {/if}
         {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'}
           <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
           <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
           <line x1={xScale(0.0075)}  y1={yScale(44.0244)} x2={xScale(0.0085)} y2={yScale(44.0244)} stroke="grey"/>
-          <text x={xScale(0.0075)} y={yScale(40.5)} fill="grey" font-size = "1.3vh" marker-end="url(#triangle)">Bandbreedte</text>
+          <text x={xScale(0.0075)} y={yScale(40.5)} font-size = "1.3vh" marker-end="url(#triangle)">Bandbreedte</text>
         {/if}
       </g>
       </svg>
@@ -241,7 +241,6 @@
     top: 92%;
     position: absolute;
     left: 50%;
-
   }
 
   @keyframes fadeIn {

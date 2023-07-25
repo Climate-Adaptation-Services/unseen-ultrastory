@@ -28,14 +28,11 @@ body {
   margin:0 !important;
   text-align: center;
   font-family: Belanosima, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width:100%;
 }
 
 svg text {
   font-family: Belanosima;
 }
-
-
 
 .scroll-text{
   color:#4e4e4e;
@@ -89,6 +86,24 @@ svg text {
   z-index: 10000;
 }
 
+.grafiek{
+  background-color: rgba(255, 255, 255, 1);
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+}
+
+.aftiteling{
+  background-color: rgba(0, 0, 0, 1);
+	background-repeat: no-repeat;
+}
+
+.grafiek {
+  fill: #4e4e4e;
+  text-anchor: center;
+}
+
 .graphtext{
   float:left;
   position: sticky;
@@ -101,21 +116,11 @@ svg text {
   padding-left:3vw;
 }
 
-.grafiek{
-  background-color: rgba(255, 255, 255, 1);
-  width: 90%;
-  height: 90%;
-  left: 5%;
-  top: 5%;
-}
-
 .tick{
   font-size: 1.7vh;
   font-weight:normal;
-  fill: #4e4e4e;
-  text-anchor: center;
+  fill: #4e4e4e !important;
 }
-
 
 .night{
   background-color: rgba(81, 71, 71, 0.5);
@@ -131,7 +136,7 @@ svg text {
 }
 
 .outro{
-  /* background-color: rgba(81, 71, 71, 0.5); */
+  background-color: rgba(81, 71, 71, 0.5);
   background-color: black;
   border: none;
   width:60%;
@@ -151,41 +156,6 @@ svg text {
   top:2%;
   z-index: 10000000;
 }
-
-.aftiteling{
-  background-color: rgba(0, 0, 0, 1);
-	background-repeat: no-repeat;
-}
-
-
-/* **************************************************
-** Mobile version ***********************************
-****************************************************/
-
-@media only screen and (max-width: 600px) {
-  .fixed-image {
-    width:90%;
-    /* padding:20px; */
-    top: 10px;
-    right: 5%;
-    transform: translate(0%, 0%);
-    z-index: 10000;
-  }
-
-  .tempmeter, .temp-text{
-    opacity:0;
-  }
-
-  .scroll-text-block{
-    width:90%;
-    left:2%;
-    padding:2.5%;
-  }
-  .step, .widestep {
-		width:100%;
-  }
-}
-
 
 
 
