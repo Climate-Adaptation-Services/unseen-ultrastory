@@ -183,13 +183,13 @@
         <text class = 'graphtitel' x={xScale(1)} y={yScale(48)} font-size = "2.5vh" text-anchor="middle" fill = '#4e4e4e'>De kans op hitte per generatie</text>
         {#if ratioOfCsvData > 270}
           <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
-          <text x={screenWidth * 0.355} y={yScale(31)+20} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2023</text>  
-          <line x1={screenWidth * 0.33}  y1={yScale(31)+20} x2={screenWidth * 0.35} y2={yScale(31)+20} stroke="#ffb000" stroke-width="0.3vh"/>    
+          <text x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.02)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2023</text>  
+          <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
         {/if}
         {#if ratioOfCsvData > 360}
           <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
-          <text x={screenWidth * 0.355} y={yScale(31)+40} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2050</text>  
-          <line x1={screenWidth * 0.33}  y1={yScale(31)+40} x2={screenWidth * 0.35} y2={yScale(31)+40} stroke="#93003a" stroke-width="0.3vh"/>     
+          <text x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.04)} font-size = "2vh" fill = '#4e4e4e' dominant-baseline  = "middle">2050</text>  
+          <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
         {/if}
         {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'}
           <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
@@ -238,7 +238,7 @@
     color:#4e4e4e;
     font-size:1.5vh;
     text-align: left;
-    top: 90%;
+    top: 92%;
     position: absolute;
     left: 50%;
 

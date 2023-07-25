@@ -13,7 +13,6 @@
 	{#if currentStepName === 'thuis'}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
-  <!-- <img class='logo' src='/images/logokleur.png' width='10%'/> -->
   {#if $started}
     
     <div>
