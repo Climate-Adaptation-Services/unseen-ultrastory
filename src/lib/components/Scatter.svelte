@@ -43,7 +43,7 @@
 
 <div class='grafiek'>
   <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
-    {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'ziekenhuis'}
+    {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <p class='scroll-text'> Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het hitterecord uit 2018 werd verpulverd met 3.7°C!
     </p>
     {/if}
@@ -54,9 +54,9 @@
       <g transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/>
       <YAxis {yScale} height={screenHeight * 0.7}/>
-      <text x={xScale(1988)} y={yScale(26)} font-size = "2vh" >Jaar</text>  
-      <text x={xScale(1985)} y={yScale(41)} font-size = "2.5vh" text-anchor="middle">Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
-      <text x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)" font-size = "2vh">Maximum temperatuur (°C)</text>
+      <text class='axistitle'x={xScale(1988)} y={yScale(26)}>Jaar</text>  
+      <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
+      <text class='axistitle' x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
           <text x={-95} y={32} class="recordyear">De eerste keer</text>
