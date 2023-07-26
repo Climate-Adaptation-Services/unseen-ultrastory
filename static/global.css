@@ -110,7 +110,7 @@ svg text {
   height:1.5%;
   bottom: 0;
   margin-top: 10px;
-  text-align: left;   
+  text-align: left;
   padding-left:3vw;
 }
 
@@ -231,31 +231,11 @@ svg text {
   .step, .widestep {
 		width:100%;
   }
-
-  .logo{
-   width:70px !important
+  .step, .widestep {
+		width:100%;
   }
-
-  .sticky-div{
-    width:90%;
-    right: 5%;
-    transform: translate(-45%, 0%);
-  }
-
-  .graphtext{
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    width: 90%;
-    height:1.5%;
-    bottom: 0;
-    margin-top: 100px;
-    text-align: left;   
-    padding-left:3vw;
-    
-  }
-
-  .graphsvg{
-    transform: translate(0%, -15%)
+  .navigation-svg{
+    opacity:0;
+    pointer-events: none;
   }
 }
-
