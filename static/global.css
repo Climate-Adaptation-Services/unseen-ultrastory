@@ -231,5 +231,12 @@ svg text {
   .step, .widestep {
 		width:100%;
   }
+  .step, .widestep {
+		width:100%;
+  }
+  .navigation-svg{
+    opacity:0;
+    pointer-events: none;
+  }
 }
 
