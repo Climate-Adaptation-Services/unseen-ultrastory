@@ -43,8 +43,6 @@
 </script>
 
 <div class='stepdiv aftiteling'>
-  <!-- <img class='sticky-div' src='/images/heatwave1.png' width='100%'/> -->
-
   {#each scenes as scene,i}
     <div class='scroll-text-block outro' style='top:{`${(scene['time']+0.05)*stepSize}px`}'>
       <p class='scroll-text outro-text'>{scene['text']}</p>

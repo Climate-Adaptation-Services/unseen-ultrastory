@@ -165,7 +165,7 @@
     </div>
   {/if}
   
-    <div class='sticky-div' >
+    <div class='sticky-div graphdiv' >
       <svg >
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
         <XAxis {xScale} height={screenHeight * 0.7}/> 

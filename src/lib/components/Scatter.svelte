@@ -49,8 +49,8 @@
     {/if}
   </div>
 
-  <div class='sticky-div'>
-    <svg>
+  <div class='sticky-div graphdiv'>
+    <svg class= 'graphsvg'>
       <g transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * 0.7}/>
       <YAxis {yScale} height={screenHeight * 0.7}/>
