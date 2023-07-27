@@ -242,6 +242,9 @@ svg text {
   .graphsvg{
     transform: translate(15%, 0%);
   }
+  .svgkansgrafiek{
+    transform: translate(15%, 0%);
+  }
 
   .logo{
     width: 100px;
@@ -250,6 +253,6 @@ svg text {
   .graphtext{
     width:90%;
     top:50%;
-    
   }
+
 }

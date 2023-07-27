@@ -36,13 +36,28 @@
       xAxisScale = 0.4
     }
 
+  let xAxisScaleKans
+  let yAxisScaleKans
+  let textPaddingKans
+  
+  $: if(screenWidth < 600){
+      xAxisScaleKans = 0.7
+      yAxisScaleKans = 0.4
+      textPaddingKans = 0.55    
+    }
+     else {
+      xAxisScaleKans = 0.4
+      yAxisScaleKans = 0.7
+      textPaddingKans = 0.15
+    }
+
   $: xScale = d3.scaleLog()
       .domain([100,0.01])
-      .range([ 0,screenWidth * 0.4]);
+      .range([ 0,screenWidth * xAxisScale]);
 
   $: yScale = d3.scaleLinear()
     .domain([28, 49])
-    .range([ screenHeight * 0.7, 0 ]);
+    .range([ screenHeight * yAxisScaleKans, 0 ]);
 
   const areaZonder = d3
     .area()
@@ -149,7 +164,7 @@
 
 <div class='grafiek'>
   {#if index > 1}
-    <div class='graphtext' style='top:{`${0.15*screenHeight}px`}'>
+    <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
         <p class='scroll-text'>
           De kans dat 40°C wordt gehaald in een jaar is sterk toegenomen door klimaatverandering. Statistische berekeningen aan temperatuurreeksen van Eindhoven laten zien hoe groot de kans is dat een temperatuur in een jaar voorkomt.   
@@ -179,8 +194,8 @@
     <div class='sticky-div graphdiv' >
       <svg >
         <g class='svgkansgrafiek' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
-        <XAxis {xScale} height={screenHeight * 0.7}/> 
-        <YAxis {yScale} height={screenHeight * 0.7}/>
+        <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
+        <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
         <text class = 'legendtext' x={screenWidth * 0.33} y={yScale(31.8)}>Statistiek voor:</text> 
         <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)}>1980</text>  
         <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
