@@ -241,6 +241,6 @@ svg text {
 
   .graphsvg{
     width:90%;
-    transform: translate(-45, 0%);
+    transform: translate(-45%, 0%);
   }
 }
