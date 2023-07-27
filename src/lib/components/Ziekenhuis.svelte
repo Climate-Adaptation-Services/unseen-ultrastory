@@ -3,6 +3,7 @@
   import { getStepSize } from "$lib/noncomponents/helperFunctions";
   import { afterUpdate, onMount } from "svelte";
   import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
+	import { sound } from "$lib/stores.js";
 
   export let offset;
   export let index;
@@ -56,7 +57,7 @@
 <div class='stepdiv'>
   <TextAndImagesScenes {scenes} {stepSize}/>
   
-  {#if stepName === currentStepName}
+  {#if stepName === currentStepName && $sound}
     <audio src="sounds/ziekenhuis.mp3" autoplay loop /> 
   {/if}
 
