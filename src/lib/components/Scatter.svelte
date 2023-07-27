@@ -27,10 +27,18 @@
   })
 
   let xAxisScale
+  let yAxisScale
+  let textPadding
   $: if(screenWidth < 600){
-      xAxisScale = 0.8}
+      xAxisScale = 0.7
+      yAxisScale = 0.5
+      textPadding = 0.7
+    
+    }
      else {
       xAxisScale = 0.4
+      yAxisScale = 0.7
+      textPadding = 0.25
     }
       
 
@@ -40,7 +48,7 @@
 
   $: yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
-    .range([ screenHeight * 0.7, screenHeight * 0.05 ]);
+    .range([ screenHeight * yAxisScale, screenHeight * 0.05 ]);
 
   let colorScale = d3
   .scaleLinear()
@@ -50,7 +58,7 @@
 </script>
 
 <div class='grafiek'>
-  <div class='graphtext' style='top:{`${0.25*screenHeight}px`}'>
+  <div class='graphtext' style='top:{`${textPadding*screenHeight}px`}'>
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <p class='scroll-text'> Je ziet dat de jaarlijkse maximum temperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 40°C nog nooit gemeten. Maar op 24 juli 2019 werd het 40.4°C in Eindhoven. Het hitterecord uit 2018 werd verpulverd met 3.7°C!
     </p>
@@ -58,17 +66,17 @@
   </div>
 
   <div class='sticky-div graphdiv'>
-    <svg class= 'graphsvg'>
-      <g transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
-      <XAxis {xScale} height={screenHeight * 0.7}/>
-      <YAxis {yScale} height={screenHeight * 0.7}/>
+    <svg>
+      <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
+      <XAxis {xScale} height={screenHeight * yAxisScale}/>
+      <YAxis {yScale} height={screenHeight * yAxisScale}/>
       <text class='axistitle'x={xScale(1988)} y={yScale(26)}>Jaar</text>  
       <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
       <text class='axistitle' x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
-          <text x={-95} y={32} class="recordyear">De eerste keer</text>
-          <text x={-95} y={52} class="recordyear">40+ °C in 2019</text>
+          <text x={-95} y={32} class="recordyear" font-size = "2vh">De eerste keer</text>
+          <text x={-95} y={52} class="recordyear"font-size = "2vh"> 40+ °C in 2019</text>
           <path
             fill='none'
             stroke='darkred'
@@ -82,7 +90,7 @@
           <circle
             cx = {xScale(+d.year)}
             cy = {yScale(+d.T)}
-            r = {2}
+            r = {0.003 * screenHeight}
             fill = {colorScale(+d.T)}
           />
         {/each}
@@ -93,7 +101,7 @@
             class= 'fade-in dot'
             cx = {xScale(+d.year)}
             cy = {yScale(+d.T)}
-            r = {5}
+            r = {0.007 * screenHeight}
             fill = {colorScale(+d.T)}
           />
         {/each}

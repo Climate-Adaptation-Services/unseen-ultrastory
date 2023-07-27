@@ -240,7 +240,12 @@ svg text {
   }
 
   .graphsvg{
+    transform: translate(15%, 0%);
+  }
+
+  .graphtext{
     width:90%;
-    transform: translate(-45%, 0%);
+    top:50%;
+    
   }
 }
