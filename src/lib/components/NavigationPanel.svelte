@@ -18,7 +18,7 @@
   <svg class='navigation-svg'>
     {#each stepNames as stepName,i}
       <g class='chapterg' transform='translate(170,{yOffset + (innerHeight/stepNames.length)*i})'>
-        <text class='chapter-text {(currentStepName === stepName) ? 'chapter-text-active' : ''}' fill={'white'} dy='0.26em' dx='-25' opacity='0'>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
+        <text class='chapter-text {(currentStepName === stepName) ? 'chapter-text-active' : ''}' fill={(['wandeling', 'krantenkoppen', 'aftiteling'].includes(currentStepName)) ? 'white' : 'rgb(130, 130, 130)'} dy='0.26em' dx='-25' opacity='0'>{stepName.charAt(0).toUpperCase() + stepName.slice(1)}</text>
         <circle class='chapter-circle' r={(stepName === currentStepName) ? '8' : '1'} stroke-width={(stepName === currentStepName) ? '7px' : '10px'} opacity='1' fill='cyan' />
         <rect width='130' height={innerHeight/stepNames.length} opacity='0' x='-110' y={-(innerHeight/stepNames.length)/2} on:click={() => click(stepName)} pointer-events={(currentStepName === stepName) ? 'none' : 'default'}/>
       </g>
