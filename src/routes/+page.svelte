@@ -18,7 +18,7 @@
 
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { onMount } from "svelte";
-	import { started } from "$lib/stores.js";
+	import { started, sound } from "$lib/stores.js";
 
 	// for preloading images
 	let imageModules = import.meta.glob("/static/images/*");
@@ -58,30 +58,21 @@
 
 	$: currentStepName = stepNames[index];
 
-	// $: if($started){
-	// 	function scroll(){
-	// 		setTimeout(() => {
-	// 			window.scrollBy(0, 1)
-	// 			scroll()
-	// 		}, 7);
-	// 	}
-	// 	scroll()
-	// }
-
-	// onMount(() => {
-	// 	const cloud = select('.cloud')
-	// 	function moveCloud(){
-	// 		cloud
-	// 			.style('left', '-900px')
-
-	// 		cloud
-	// 			.transition().ease(easeLinear).duration(200000)
-	// 			.style('left', '4000px')
-	// 			.on('end', moveCloud)
-	// 	}
-	// 	moveCloud();
-
-	// })
+	function soundToggle(){
+		if($sound){
+			document.querySelectorAll("audio").forEach((elem) => {
+				elem.muted = true;
+    		elem.pause();
+			});
+			sound.set(false)
+		}else{
+			document.querySelectorAll("audio").forEach((elem) => {
+				elem.muted = false;
+				elem.play();
+			});
+			sound.set(true);
+		}
+	}
 
 </script>
 
@@ -106,6 +97,8 @@
 			</div>
 
 			<div slot='foreground'>
+				<img class='sound' src='/images/{(($sound) ? 'volume' : 'mute')}.png' width='30px' on:click={() => soundToggle()}
+					style={(['wandeling', 'krantenkoppen'].includes(currentStepName)) ? 'filter:invert(1)' : ''}/>
 				<!-- <div class="info">
 					<p>Step: {index}</p>
 					<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
@@ -167,6 +160,13 @@
 		left: 0;
 		color: black !important;
 		z-index: 1000;
+	}
+
+	.sound{
+		position: fixed;
+		bottom: 10px;
+		left: 10px;
+		z-index: 2000;
 	}
 
 	.navigation-panel{

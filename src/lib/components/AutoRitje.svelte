@@ -3,6 +3,7 @@
   import { getStepSize } from "$lib/noncomponents/helperFunctions";
   import { afterUpdate, onMount } from "svelte";
   import TextAndImagesScenes from "./TextAndImagesScenes.svelte";
+	import { sound } from "$lib/stores.js";
 
   export let offset;
   export let index;
@@ -93,23 +94,23 @@
 
   <TextAndImagesScenes {scenes} {stepSize} imageOffset={0.03}/>
 
-  {#if stepName === currentStepName && offset < 0.6 && offset < 0.27}
+  {#if $sound && stepName === currentStepName && offset < 0.6 && offset < 0.27}
     <audio src="sounds/carstart.mp3" autoplay  /> 
   {/if}
 
-  {#if stepName === currentStepName && ((offset > 0.1 && offset < 0.27) || offset > 0.36) && offset < 0.84}
+  {#if $sound && stepName === currentStepName && ((offset > 0.1 && offset < 0.27) || offset > 0.36) && offset < 0.84}
     <audio src="sounds/cardriving.mp3" autoplay loop /> 
   {/if}
 
-  {#if stepName === currentStepName && (offset > 0.27 || offset > 0.72)}
+  {#if $sound && stepName === currentStepName && (offset > 0.27 || offset > 0.72)}
     <audio src="sounds/gettingoutcar.mp4" autoplay /> 
   {/if}
 
-  {#if stepName === currentStepName && offset > 0.36 && offset < 0.74}
+  {#if $sound && stepName === currentStepName && offset > 0.36 && offset < 0.74}
     <audio src="sounds/trafficjam.mp3" autoplay /> 
   {/if}
 
-  {#if stepName === currentStepName && offset > 0.84}
+  {#if $sound && stepName === currentStepName && offset > 0.84}
     <audio src="sounds/ziekenhuis.mp3" autoplay /> 
   {/if}
 
