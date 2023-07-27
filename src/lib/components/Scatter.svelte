@@ -29,16 +29,19 @@
   let xAxisScale
   let yAxisScale
   let textPadding
+  let title
   $: if(screenWidth < 600){
       xAxisScale = 0.7
       yAxisScale = 0.5
       textPadding = 0.7
+      title = 'Maximum temperatuur KNMI-station Eindhoven'
     
     }
      else {
       xAxisScale = 0.4
       yAxisScale = 0.7
       textPadding = 0.25
+      title = 'Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven'
     }
       
 
@@ -71,7 +74,7 @@
       <XAxis {xScale} height={screenHeight * yAxisScale}/>
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
       <text class='axistitle'x={xScale(1988)} y={yScale(26)}>Jaar</text>  
-      <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven</text>
+      <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>{title}</text>
       <text class='axistitle' x={xScale(1915)} y={yScale(42.3)}  transform="rotate(-90)">Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
