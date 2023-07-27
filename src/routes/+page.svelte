@@ -164,8 +164,8 @@
 
 	.sound{
 		position: fixed;
-		bottom: 10px;
-		left: 10px;
+		bottom: 20px;
+		left: 20px;
 		z-index: 2000;
 	}
 
