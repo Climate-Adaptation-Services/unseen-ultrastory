@@ -238,4 +238,9 @@ svg text {
     opacity:0;
     pointer-events: none;
   }
+
+  .graphsvg{
+    width:90%;
+    transform: translate(-45, 0%);
+  }
 }

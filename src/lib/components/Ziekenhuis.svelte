@@ -31,7 +31,7 @@
       class: 'scroll-text'
     },
     {
-      name:'hardloper',
+      name:'hardloper1',
       image:'png',
       time:0.5,
       text:'Er waren ook een paar jonge sporters die onwel zijn geworden omdat ze ondanks waarschuwingen toch waren hard gaan lopen.',
