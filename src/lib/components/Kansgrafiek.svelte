@@ -27,6 +27,15 @@
     screenWidth = document.documentElement.clientWidth
   })
 
+  let xAxisScale
+  $: if(screenWidth < 600){
+      xAxisScale = 0.6
+      console.log('hoi', xAxisScale)
+    }
+     else {
+      xAxisScale = 0.4
+    }
+
   $: xScale = d3.scaleLog()
       .domain([100,0.01])
       .range([ 0,screenWidth * 0.4]);
@@ -52,6 +61,8 @@
     .x(d => xScale(d.Kans))
     .y0(d => yScale(d.Lower_2050))
     .y1(d => yScale(d.Upper_2050))
+  
+  
     
   afterUpdate(() => {
   

@@ -26,9 +26,17 @@
     screenWidth = document.documentElement.clientWidth
   })
 
+  let xAxisScale
+  $: if(screenWidth < 600){
+      xAxisScale = 0.8}
+     else {
+      xAxisScale = 0.4
+    }
+      
+
   $: xScale = d3.scaleLinear()
       .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
-      .range([ 0,screenWidth * 0.4]);
+      .range([ 0,screenWidth * xAxisScale]);
 
   $: yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
