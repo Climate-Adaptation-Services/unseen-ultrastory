@@ -23,7 +23,7 @@
       name:'gesprek',
       image:'png',
       time:0.2,
-      text:'Thuis probeert Niels Sem in slaap te helpen met natte washandjes en een ventilator. Terwijl hij hier mee bezig is vraagt Sem: <q>Oma zei een keer dat het vroeger nooit zo heet werd. Klopt dat?</q> <br/> <br/> <q>Ja, dat klopt. Toen ik jouw leeftijd had kwam dit nooit voor. Als je mij toen had verteld dat het dagen achter elkaar meer dan veertig graden zou kunnen worden in Nederland, had ik je niet geloofd.</q>​',
+      text:'Niels probeert Sem in slaap te helpen met natte washandjes. De ventilator zet hij op de hoogste stand. Terwijl hij hiermee bezig is zegt Sem: “Oma zei een keer dat het vroeger nooit zo heet werd.”  <br/> <br/> “Nee, toen ik zo oud was als jij, kwam dit nooit voor. Als je mij toen had verteld dat het dagen achter elkaar meer dan veertig graden zou kunnen worden in Nederland, had ik je niet geloofd.​”​',
       class: 'scroll-text'
     }
   ]

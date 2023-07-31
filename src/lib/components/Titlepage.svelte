@@ -17,7 +17,8 @@
     
     <div>
       <h1>Ongekend heet</h1>
-      <h3>Een verhaal over exceptionele hitte in Nederland</h3>
+      <h3>Een klimaatverhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten
+      </h3>
     </div>
     <div class = 'scrolldown'>
       <h4>Scroll naar beneden</h4>
