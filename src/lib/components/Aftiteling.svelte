@@ -58,7 +58,7 @@
         </li>
         <li><a href="https://www.worldweatherattribution.org/reporting-extreme-weather-and-climate-change-a-guide-for-journalists/" target="_blank">Wetenschappelijke studie:</a> ‘Extreme hitte in Noord-Amerika, Europa en China in juli 2023 veel waarschijnlijker door klimaatverandering’ 
         </li>
-        <li><a href="" target="_blank">Poster over gevolgen van exceptionele hitte</a>  
+        <li><a href="/PosterEGU.pdf" target="_blank">Poster over gevolgen van exceptionele hitte</a>  
         </li>
       </ul>
       
