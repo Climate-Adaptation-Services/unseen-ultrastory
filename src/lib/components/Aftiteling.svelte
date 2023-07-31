@@ -103,6 +103,7 @@
     left:20%;
     width:60%;
     padding:20px;
+    color: black !important;
   }
 
   .leeslijst{
@@ -112,7 +113,8 @@
     left:20%;
     width:60%;
     padding:20px;
-    background-color: rgba(81, 71, 71, 0.5);
+    background-color: rgba(81, 71, 71, 0);
+    color: black !important;
   }
 
   .imgaftiteling{
@@ -132,7 +134,7 @@
     border-bottom: 1px solid;
   }
   a:visited {    /* visited link */
-      color: #ffffff;
+      color: black;
   }
   a:hover {    /* mouse over link */
       color: #ffffff;

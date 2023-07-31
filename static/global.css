@@ -154,7 +154,7 @@ svg text {
 }
 
 .outro{
-  background-color: rgba(81, 71, 71, 0.5);
+  background-color: rgba(81, 71, 71, 0);
   border: none;
   width:60%;
   padding:20px;
@@ -163,8 +163,9 @@ svg text {
 }
 
 .outro-text{
-  color:white !important;
+  /* color:white !important; */
   text-align: center;
+  color: black !important;
 }
 
 .logo{
