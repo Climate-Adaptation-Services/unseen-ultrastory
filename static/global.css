@@ -97,8 +97,11 @@ svg text {
   text-anchor: center;
 }
 
+.step_aftiteling{
+	height:5000px !important;
+}
+
 .aftiteling{
-  background-color: rgba(0, 0, 0, 1);
 	background-repeat: no-repeat;
 }
 
@@ -152,7 +155,6 @@ svg text {
 
 .outro{
   background-color: rgba(81, 71, 71, 0.5);
-  background-color: black;
   border: none;
   width:60%;
   padding:20px;
