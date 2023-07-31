@@ -172,19 +172,20 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
+        <h1 class='scroll-text'>Statistische berekeningen</h1>
         <p class='scroll-text'>
-          De kans dat 40°C wordt gehaald in een jaar is sterk toegenomen door klimaatverandering. Statistische berekeningen aan temperatuurreeksen van Eindhoven laten zien hoe groot de kans is dat een temperatuur in een jaar voorkomt.   
+          De kans op veertig graden is door klimaatverandering sterk toegenomen. Statistische berekeningen aan temperatuurreeksen van Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> zie je dat 40°C bijna onmogelijk was.  
+          <p class='scroll-text'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het veertig graden zou worden.  
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, nu Sem jong is, is de kans op 40 °C ongeveer 2%. 
+          <p class='scroll-text'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op veertig graden ongeveer 2% per jaar.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem inmiddels volwassen is, is de kans op 40 °C toegenomen tot ongeveer 7%. 
+          <p class='scroll-text'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op veertig graden zijn toegenomen tot ongeveer 7% per jaar.
           </p> 
         </div>   
       {/if}      
