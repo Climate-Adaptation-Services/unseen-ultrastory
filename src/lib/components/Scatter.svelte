@@ -67,7 +67,7 @@
       <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * yAxisScale}/>
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
-      <text class='axistitle'x={xScale(1988)} y={yScale(26)}>Jaar</text>  
+      <text class='axistitle' x={xScale(1988)} y={yScale(26)}>Jaar</text>  
       <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>{title}</text>
       <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Maximum temperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}

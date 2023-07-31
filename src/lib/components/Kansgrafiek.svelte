@@ -192,7 +192,7 @@
           <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)}>1980</text>  
           <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
           <text x={xScale(1.5)} class='axistitle' y={yScale(26)}>Kans (%)</text>  
-          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)">Temperatuur (°C)</text>  
+          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatuur (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
           <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>De kans op hitte per generatie</text>
           {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 
