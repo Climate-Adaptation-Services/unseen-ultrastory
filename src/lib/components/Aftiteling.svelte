@@ -77,8 +77,11 @@
       <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs" target="_blank">Mini-college van Universiteit van Nederland: Krijgt Nederland steeds vaker te maken met hittegolven?</a></li>
       <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8" target="_blank">KNMI filmpje: Temperatuur voor het eerst boven de 40 graden</a></li>
       <li><a href="https://klimaatverbond.nl/actueel/terugblik-op-het-webinar-de-hittelessen-van-portland-en-het-code-rood-scenario-in-nederland/" target="_blank">Webinar van het Klimaatverbond Nederland over de (hitte)lessen van Portland en het Code Rood-scenario in Nederland</a></li>
-    </ul> 
-   
+    </ul>    
+  </div>
+
+  <div class = 'copyright'>
+    <p >© 2023 Climate Adaptation Services (CAS).</p>
   </div>
 </div>
 
@@ -91,6 +94,15 @@
   .leeslijstcat{
     text-align: left;
     font-size: 2.5vh;
+  }
+
+  .copyright{
+    font-size: 2.5vh !important;
+    top:40%; 
+    position:relative;
+    left:20%;
+    width:60%;
+    padding:20px;
   }
 
   .leeslijst{
@@ -111,7 +123,6 @@
   }
   
   ul.myUL {
-    display: inline-block;
     text-align: left;
   }
 
