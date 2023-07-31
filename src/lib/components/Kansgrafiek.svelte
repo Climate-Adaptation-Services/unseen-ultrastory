@@ -27,30 +27,21 @@
     screenWidth = document.documentElement.clientWidth
   })
 
-  let xAxisScale
-  $: if(screenWidth < 600){
-      xAxisScale = 0.6
-      console.log('hoi', xAxisScale)
-    }
-     else {
-      xAxisScale = 0.4
-    }
-
-  let xAxisScaleKans
+  let xAxisWidthRatio
   let yAxisScaleKans
   let textPaddingKans
   let grafiekPositionY
   let grafiekPositionX
   
   $: if(screenWidth < 600){
-      xAxisScaleKans = 0.7
+      xAxisWidthRatio  = 0.7
       yAxisScaleKans = 0.4
       textPaddingKans = 0.55   
       grafiekPositionY = -0.1
       grafiekPositionX = 0.1
     }
      else {
-      xAxisScaleKans = 0.4
+      xAxisWidthRatio = 0.38
       yAxisScaleKans = 0.7
       textPaddingKans = 0.15
       grafiekPositionY = 0.0
@@ -59,7 +50,7 @@
 
   $: xScale = d3.scaleLog()
       .domain([100,0.01])
-      .range([ 0,screenWidth * xAxisScale]);
+      .range([ 0,screenWidth * xAxisWidthRatio]);
 
   $: yScale = d3.scaleLinear()
     .domain([28, 49])
@@ -193,15 +184,15 @@
   {/if}
   
     <div class='sticky-div' >
-      <svg transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})">
-        <g class='svgkansgrafiek' >
+      <svg>
+        <g class='svgkansgrafiek' transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})" >
           <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
           <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
           <text class = 'legendtext' x={screenWidth * 0.33} y={yScale(31.8)}>Statistiek voor:</text> 
           <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)}>1980</text>  
           <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
           <text x={xScale(1.5)} class='axistitle' y={yScale(26)}>Kans (%)</text>  
-          <text x={xScale(9000)} class='axistitle' y={yScale(50.5)} transform="rotate(-90)">Temperatuur (°C)</text>  
+          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)">Temperatuur (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
           <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>De kans op hitte per generatie</text>
           {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 

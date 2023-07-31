@@ -62,8 +62,6 @@
 
 <div class='grafiek'>
 
-  
-
   <div class='sticky-div'>
     <svg>
       <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
