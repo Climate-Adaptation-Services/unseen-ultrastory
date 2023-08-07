@@ -37,8 +37,8 @@
       xAxisWidthRatio  = 0.7
       yAxisScaleKans = 0.4
       textPaddingKans = 0.55   
-      grafiekPositionY = -0.1
-      grafiekPositionX = 0.1
+      grafiekPositionY = 0
+      grafiekPositionX = 0.15
     }
      else {
       xAxisWidthRatio = 0.38
@@ -163,20 +163,20 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
-        <h1 class='scroll-text'>Statistische berekeningen</h1>
-        <p class='scroll-text'>
+        <h1 class='scroll-text-kansgraph'>Statistische berekeningen</h1>
+        <p class='scroll-text-kansgraph'>
           De kans op veertig graden is door klimaatverandering sterk toegenomen. Statistische berekeningen aan temperatuurreeksen van Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het veertig graden zou worden.  
+          <p class='scroll-text-kansgraph'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het veertig graden zou worden.  
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op veertig graden ongeveer 2% per jaar.
+          <p class='scroll-text-kansgraph'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op veertig graden ongeveer 2% per jaar.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op veertig graden zijn toegenomen tot ongeveer 7% per jaar.
+          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op veertig graden zijn toegenomen tot ongeveer 7% per jaar.
           </p> 
         </div>   
       {/if}      
@@ -191,7 +191,7 @@
           <text class = 'legendtext' x={screenWidth * 0.33} y={yScale(31.8)}>Statistiek voor:</text> 
           <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)}>1980</text>  
           <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
-          <text x={xScale(1.5)} class='axistitle' y={yScale(26)}>Kans (%)</text>  
+          <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Kans (%)</text>  
           <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatuur (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
           <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>De kans op hitte per generatie</text>

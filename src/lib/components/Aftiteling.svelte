@@ -17,25 +17,25 @@
     {
       name:'',
       image:'',
-      time:0.08,
+      time:0.1,
       text:'De laatste jaren zijn er overal in de wereld enorme uitschieters geweest aan extreme hitte, uitschieters die ook klimaatwetenschappers hebben verrast. Ook Nederland krijgt hier mogelijk mee te maken.'
     },
     {
       name:'',
       image:'',
-      time:0.23,
+      time:0.27,
       text:'Daarom hebben we dit klimaatverhaal gemaakt: om te bedenken en te verbeelden wat er zou kunnen gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat we ons bewust zijn van de gevaren en ons op tijd gaan voorbereiden.'
     },
     {
       name:'',
       image:'',
-      time:0.38,
+      time:0.44,
       text:'Dit verhaal is gebaseerd op de laatste wetenschappelijke inzichten over exceptionele weergebeurtenissen in Nederland en op talloze gesprekken met deskundigen op het gebied van klimaatadaptatie, hitte en crisismanagement. De beelden zijn gemaakt met AI.'
     },
     {
       name:'',
       image:'',
-      time:0.53,
+      time:0.61,
       text:'Onze dank gaat uit naar Marije Bakker (NIPV), Annelies Balkema (Waterschap De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Edwin Kok (NIPV), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), Brian Verhoeven (NIPV) en Karin van der Wiel (KNMI). '
     }
   ]
@@ -98,8 +98,8 @@
 
   .copyright{
     font-size: 2.5vh !important;
-    top:40%; 
-    position:relative;
+    bottom:10px; 
+    position:absolute;
     left:20%;
     width:60%;
     padding:20px;
@@ -108,8 +108,8 @@
 
   .leeslijst{
     font-size: 2.5vh !important;
-    top:40%; 
-    position:relative;
+    bottom:100px; 
+    position:absolute;
     left:20%;
     width:60%;
     padding:20px;
