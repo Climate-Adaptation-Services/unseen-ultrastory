@@ -121,7 +121,8 @@
     position: sticky;
     position: -webkit-sticky; /* Safari */
     top: 0px;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
   
   ul.myUL {

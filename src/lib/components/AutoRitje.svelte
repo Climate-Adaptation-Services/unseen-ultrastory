@@ -36,7 +36,7 @@
       name:'nielstel',
       image:'png',
       time:0.27,
-      text:'Dan ontvangt Niels een appje van Leonie: de hele stad zit zonder stroom. Het ziekenhuis draait op het noodaggregaat. “Wil je alsjeblieft even langs mijn moeder om te checken hoe het met haar gaat?',
+      text:'Dan ontvangt Niels een appje van Leonie: de hele stad zit zonder stroom. Het ziekenhuis draait op het noodaggregaat. “Wil je alsjeblieft even langs mijn moeder om te checken hoe het met haar gaat?”',
       class: 'scroll-text'
     },
     {

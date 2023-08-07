@@ -43,7 +43,7 @@
      else {
       xAxisWidthRatio = 0.38
       yAxisScaleKans = 0.7
-      textPaddingKans = 0.15
+      textPaddingKans = 0.25
       grafiekPositionY = 0.0
       grafiekPositionX = 0.45
     }
