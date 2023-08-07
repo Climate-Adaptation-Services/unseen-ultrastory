@@ -258,7 +258,8 @@ svg text {
   .graphtext{
     width:96%;
     order:2;
-    height:8%
+    height:8%;
+    margin-top: 0px;
     
   }
 
@@ -292,7 +293,11 @@ svg text {
   }
 
   .graphtitle{
-    font-size: 2.3vh;
+    font-size: 2.2vh;
+  }
+
+  .axistitle{
+    font-size: 1.8vh
   }
 
 }
