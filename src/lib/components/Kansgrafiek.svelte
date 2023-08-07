@@ -36,7 +36,7 @@
   $: if(screenWidth < 600){
       xAxisWidthRatio  = 0.7
       yAxisScaleKans = 0.4
-      textPaddingKans = 0.55   
+      textPaddingKans = 0.5   
       grafiekPositionY = 0
       grafiekPositionX = 0.15
     }
