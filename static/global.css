@@ -291,4 +291,8 @@ svg text {
     top: 40px;
   }
 
+  .graphtitle{
+    font-size: 2.3vh;
+  }
+
 }
