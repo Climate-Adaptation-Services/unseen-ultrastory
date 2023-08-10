@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import { wandelRoute, autoRoute1, autoRoute2, autoRoute3 } from '$lib/noncomponents/routes.js';
+  import { browser } from '$app/environment';
 
   // modules loaded from the client
   let LeafletMap;
@@ -21,7 +22,6 @@
   export let index;
   export let currentStepName;
 
-  let zoomedIn = false
   let ziekenhuis;
   let huis;
   let zwembad;
@@ -48,8 +48,16 @@
   const nightTileURL = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
   const dayTileURL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
 
-  const coordsHuis = wandelRoute[0]
+  const coordsHuis = [parseFloat(wandelRoute[0][0]), parseFloat(wandelRoute[0][1])] 
   const coordsZiekenhuis = [51.466143, 5.472363]
+  $: flyToCoordsHuis = (browser && window.innerWidth < 600)
+    ? [coordsHuis[0]+0.002, coordsHuis[1]]
+    : coordsHuis
+  $: flyToCoordsZiekenhuis = (browser && window.innerWidth < 600)
+    ? [coordsZiekenhuis[0]+0.002, coordsZiekenhuis[1]]
+    : coordsZiekenhuis
+  
+  $: console.log(flyToCoordsHuis, flyToCoordsZiekenhuis)
 
   const tileLayerOptions = {
       minZoom: 2,
@@ -60,12 +68,12 @@
 
   $: if(leafletMap && !['ziekenhuis'].includes(currentStepName)){
     const zoom = (currentStepName === 'autoritje') ? 13 : 16;
-    const centerCoords = (currentStepName === 'autoritje') ? [parseFloat(coordsHuis[0])+0.02, parseFloat(coordsHuis[1])+0.02] : coordsHuis
+    const centerCoords = (currentStepName === 'autoritje') ? [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02] : flyToCoordsHuis
     leafletMap.flyTo(centerCoords, zoom, {duration: 3})
   }
 
   $: if(leafletMap && 'ziekenhuis' === currentStepName){
-    leafletMap.flyTo(coordsZiekenhuis, 16, {duration: 3})
+    leafletMap.flyTo(flyToCoordsZiekenhuis, 16, {duration: 3})
     
     ziekenhuis
       .setContent("Catharina ziekenhuis")

@@ -143,6 +143,12 @@ svg text {
   background-color: rgba(81, 71, 71, 0.5);
 }
 
+.night-image{
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* The box shadow with a slight cloudiness effect */
+  width:70%;
+}
+
 .nighttext{
   color:white !important;
 }
@@ -209,7 +215,7 @@ svg text {
 ** Mobile version ***********************************
 ****************************************************/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (orientation:portrait){
   .fixed-image {
     width:90%;
     /* padding:20px; */
@@ -253,6 +259,10 @@ svg text {
   .graphtext{
     width:90%;
     top:50%;
+  }
+
+  .sound{
+    visibility: hidden;
   }
 
 }

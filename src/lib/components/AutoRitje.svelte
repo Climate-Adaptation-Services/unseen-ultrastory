@@ -15,7 +15,8 @@
     stepSize = getStepSize(stepName);
   })
 
-  $: console.log('hi', stepSize)
+  let trafficjam = 0.3
+
 
   const scenes = [
     {
@@ -107,7 +108,7 @@
   {/if}
 
   {#if $sound && stepName === currentStepName && offset > 0.36 && offset < 0.74}
-    <audio src="sounds/trafficjam.mp3" autoplay /> 
+    <audio src="sounds/trafficjam.mp3" autoplay bind:volume={trafficjam}/> 
   {/if}
 
   {#if $sound && stepName === currentStepName && offset > 0.84}

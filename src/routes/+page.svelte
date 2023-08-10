@@ -14,10 +14,9 @@
 	import Aftiteling from "$lib/components/Aftiteling.svelte";
 	import NavigationPanel from "$lib/components/NavigationPanel.svelte";
 
-	import { timeParse } from 'd3'
+	// import { timeParse } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
-	import { onMount } from "svelte";
 	import { started, sound } from "$lib/stores.js";
 
 	// for preloading images
@@ -27,9 +26,9 @@
 
 	let leafletMap;
 
-	const csvData = data['data'].map(d => {
-		return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
-	})
+	// const csvData = data['data'].map(d => {
+	// 	return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
+	// })
 
 	const maxTempData = data.datatest
 	const middellijnData = data.datamiddellijn
