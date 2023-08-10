@@ -67,7 +67,7 @@
   };
 
   $: if(leafletMap && !['ziekenhuis'].includes(currentStepName)){
-    const zoom = (currentStepName === 'autoritje') ? 13 : 16;
+    const zoom = (currentStepName === 'autoritje' || (currentStepName === 'wandeling' && window.innerWidth < 600)) ? 13 : 16;
     const centerCoords = (currentStepName === 'autoritje') ? [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02] : flyToCoordsHuis
     leafletMap.flyTo(centerCoords, zoom, {duration: 3})
   }

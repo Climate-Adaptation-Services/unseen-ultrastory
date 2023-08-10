@@ -39,21 +39,21 @@
     <audio src="sounds/crowd.mp3" autoplay loop /> 
   {/if}
 
-  <div class='scroll-text-block night' style='top:{`${0.49*stepSize}px`}'>
+  <div class='scroll-text-block night' style='top:{`${0.36*stepSize}px`}'>
     <img class='festival night-image' src={'/images/gasten.png'} />
     <p class='scroll-text nighttext'>Gelukkig voelt het in het Dommelplantsoen een stukje koeler aan.​ Het festival dat oorspronkelijk gepland stond is afgelast, maar het is toch heel druk. Er wordt  veel lawaai gemaakt en gedronken. Ondanks de herrie slapen sommige mensen buiten.​</p>
   </div>
 
-  {#if stepName === currentStepName && offset > 0.5 && offset < 0.8 && $sound}
+  {#if stepName === currentStepName && offset > 0.4 && offset < 0.85 && $sound}
     <audio src="sounds/drunk.mp3" autoplay loop /> 
   {/if}
 
-  <div class='scroll-text-block night' style='top:{`${0.68*stepSize}px`}'>
+  <div class='scroll-text-block night' style='top:{`${0.63*stepSize}px`}'>
     <img class='politie night-image' src={'/images/politie.png'} />
     <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden. De sfeer wordt onaangenaam. Niels maakt zich uit de voeten.</p>
   </div>
 
-  {#if stepName === currentStepName && offset > 0.5 && offset < 0.8 && $sound}
+  {#if stepName === currentStepName && offset > 0.65 && offset < 0.85 && $sound}
     <audio src="sounds/politie.mp3" autoplay loop /> 
   {/if}
 
