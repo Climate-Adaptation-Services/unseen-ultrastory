@@ -1,7 +1,8 @@
 <script>
   import { started } from "$lib/stores";
   import { clamp } from "$lib/noncomponents/helperFunctions";
-
+  import { browser } from "$app/environment";
+  
   export let currentStepName;
   export let offset
 
@@ -10,7 +11,7 @@
 </script>
 
 <div class='title {$started ? 'title-started' : ''}' on:click={() => document.getElementById('heat').play()}>
-	{#if currentStepName === 'thuis' && window.innerWidth > 600}
+	{#if currentStepName === 'thuis' && browser && window.innerWidth > 600}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
   {#if $started}
