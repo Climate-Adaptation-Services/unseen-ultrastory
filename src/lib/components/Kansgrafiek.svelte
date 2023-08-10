@@ -213,7 +213,7 @@
           {/if}
         </g>
       </svg>
-      <p class='graph-description'>Hittestatistieken voor Eindhoven voor het klimaat van 1980, 2023 en 2050. Deze zijn berekend op basis van metingen van KNMI-station Eindhoven en het KNMI'14 WH scenario voor 2050. Gebruikte tools:  
+      <p class='graph-description'>Hittestatistieken voor Eindhoven voor het klimaat van 1980, 2023 en 2050. Deze zijn berekend op basis van metingen van KNMI-station Eindhoven en het KNMI'14 hoge &#40;WH&#41; scenario voor 2050. Gebruikte tools:  
         <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> en het <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 transformatieprogramma</a>.  
       </p>
     </div>
