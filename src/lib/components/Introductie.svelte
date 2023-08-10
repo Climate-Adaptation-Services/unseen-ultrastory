@@ -45,7 +45,7 @@
 
   <TextAndImagesScenes {scenes} {stepSize}/>
 
-  {#if stepName === currentStepName}
+  {#if stepName === currentStepName && window.innerWidth > 600}
     <audio id='fansound' autoplay loop src="sounds/fan.mp3" bind:volume={fanvolume}/> 
   {/if}
 

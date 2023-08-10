@@ -10,7 +10,7 @@
 </script>
 
 <div class='title {$started ? 'title-started' : ''}' on:click={() => document.getElementById('heat').play()}>
-	{#if currentStepName === 'thuis'}
+	{#if currentStepName === 'thuis' && window.innerWidth > 600}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
   {#if $started}
