@@ -19,7 +19,7 @@
   class="xAxis"
   bind:this={pinXAxis}
   transform="translate({0},{height})"
-  stroke='#404040'
+  
 />
 
 <style>

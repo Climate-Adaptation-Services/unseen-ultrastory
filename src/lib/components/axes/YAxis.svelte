@@ -20,5 +20,4 @@
 <g
   class="yAxis"
   bind:this={pinYAxis}
-  stroke='#404040'
 />

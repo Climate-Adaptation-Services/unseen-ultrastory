@@ -98,7 +98,6 @@ svg text {
 }
 
 .aftiteling{
-  background-color: rgba(0, 0, 0, 1);
 	background-repeat: no-repeat;
 }
 
@@ -108,7 +107,6 @@ svg text {
   position: -webkit-sticky; /* Safari */
   width: 40%;
   height:1.5%;
-  bottom: 0;
   margin-top: 10px;
   text-align: left;
   padding-left:3vw;
@@ -126,17 +124,18 @@ svg text {
 .sticky-div{
   position: sticky;
   position: -webkit-sticky; /* Safari */
-  top:0px;
+  top: 20px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  bottom: 0px;
 }
 
 .tick{
   font-size: 1.7vh;
   font-weight:normal;
-  color: #4e4e4e !important
+  color: #4e4e4e !important;
+  
+  
 }
 
 .night{
@@ -159,8 +158,7 @@ svg text {
 }
 
 .outro{
-  background-color: rgba(81, 71, 71, 0.5);
-  background-color: black;
+  background-color: rgba(81, 71, 71, 0);
   border: none;
   width:60%;
   padding:20px;
@@ -168,9 +166,16 @@ svg text {
   left:20%;
 }
 
+.scroll-text-kansgraph{
+  color:#4e4e4e;
+  font-size:2.5vh !important;
+  text-align: left;
+}
+
 .outro-text{
-  color:white !important;
+  /* color:white !important; */
   text-align: center;
+  color: white !important;
 }
 
 .logo{
@@ -241,24 +246,64 @@ svg text {
 		width:100%;
   }
   .navigation-svg{
-    opacity:0;
-    pointer-events: none;
+    visibility:hidden
   }
 
   .graphsvg{
     transform: translate(15%, 0%);
-  }
-  .svgkansgrafiek{
-    transform: translate(15%, 0%);
-  }
+    order:1;
 
+  }
+  
   .logo{
-    width: 100px;
+    width: 80px;
+    top: 3px;
+    right: 1px;
   }
 
   .graphtext{
-    width:90%;
-    top:50%;
+    width:96%;
+    order:2;
+    height:8%;
+    margin-top: 0px;
+    
+  }
+
+  .scroll-text-kansgraph{
+    font-size:2.3vh !important
+  }
+
+  .graph-description{
+    visibility:hidden;
+  }
+
+  .grafiek{
+    width: 100%;
+    left: 0%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .imgaftiteling{
+    height:100%;
+    object-fit: cover;
+    visibility:hidden;
+  }
+
+  .aftitelingdiv{
+    background-image: url('$lib/heatwave.png');
+  }
+
+  .sticky-div{
+    top: 40px;
+  }
+
+  .graphtitle{
+    font-size: 2.2vh;
+  }
+
+  .axistitle{
+    font-size: 1.8vh
   }
 
   .sound{
