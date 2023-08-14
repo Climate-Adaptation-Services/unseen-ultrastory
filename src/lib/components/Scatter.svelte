@@ -35,14 +35,14 @@
       xAxisScale = 0.7
       yAxisScale = 0.5
       textPadding = 0.65
-      title = 'Maximum temperatuur KNMI-station Eindhoven'
+      title = 'Maximumtemperatuur KNMI-station Eindhoven'
     
     }
      else {
       xAxisScale = 0.4
       yAxisScale = 0.7
       textPadding = 0.15
-      title = 'Jaarlijks gemeten maximum temperatuur op KNMI-station Eindhoven'
+      title = 'Jaarlijks gemeten maximumtemperatuur op KNMI-station Eindhoven'
     }
       
 
@@ -82,7 +82,7 @@
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
       <text class='axistitle' x={xScale(1988)} y={yScale(26)+2}>Jaar</text>  
       <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>{title}</text>
-      <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Maximum temperatuur (°C)</text>
+      <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Maximumtemperatuur (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
           <text x={-90} y={32} class="recordyear" font-size = "2vh">De eerste keer</text>
