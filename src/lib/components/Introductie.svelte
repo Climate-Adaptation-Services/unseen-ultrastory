@@ -29,7 +29,7 @@
       name:'seminbed1',
       image:'png',
       time:0.5,
-      text:'Sem kan niet slapen en is al dagen moe. De scholen zijn dicht vanwege de enorme hitte. Een geluk bij een ongeluk dat Niels leraar is: hij kan overdag voor Sem zorgen terwijl Leonie aan de slag moet in het ziekenhuis.',
+      text:'Sem kan niet slapen en is al dagen moe. De scholen zijn dicht vanwege de enorme hitte. Een geluk bij een ongeluk dat Niels leraar is: hij kan overdag voor Sem zorgen, terwijl Leonie in het ziekenhuis werkt.',
       class: 'scroll-text'
     }
   ]

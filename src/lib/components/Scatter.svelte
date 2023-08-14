@@ -66,7 +66,7 @@
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <h1 class='scroll-text'>Temperatuurmetingen</h1>
     <p class='scroll-text'> 
-      Metingen laten zien dat de jaarlijkse maximumtemperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 37 graden  nog nooit gemeten.  
+      Metingen laten zien dat de jaarlijkse maximumtemperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 37 graden nog nooit gemeten.  
     </p>
     <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 60 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
       <p class='scroll-text'> Maar op 24 juli 2019 werd het 40,4 graden in Eindhoven. Het hitterecord van 2018 werd verpulverd met 3,7 graden!  
