@@ -165,7 +165,7 @@
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
         <h1 class='scroll-text-kansgraph'>Statistische berekeningen</h1>
         <p class='scroll-text-kansgraph'>
-          De kans op 40 graden Celcius is door klimaatverandering sterk toegenomen. Hittestatistieken voor Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
+          De kans op 40 graden Celsius is door klimaatverandering sterk toegenomen. Hittestatistieken voor Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
           <p class='scroll-text-kansgraph'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het 40 graden zou worden.  
@@ -205,13 +205,13 @@
             <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
             <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.02)}>2023</text>  
             <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
-            <text  x={xScale(1.65)} y={yScale(28)+14} text-anchor = 'middle' fill= "#ffb000" font-size= '2vh'>1.7%</text> 
+            <text  x={xScale(1.65)} y={yScale(28)+(screenHeight * 0.018)} text-anchor = 'middle' fill= "#ffb000" font-size= '2vh'>2%</text> 
           {/if}
           {#if ratioOfCsvData > 360}
             <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
             <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.04)}>2050</text>  
             <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
-            <text  x={xScale(7.8)} y={yScale(28)+14} text-anchor = 'middle' fill="#93003a" font-size= '2vh'>7.8%</text> 
+            <text  x={xScale(7.8)} y={yScale(28)+(screenHeight * 0.018)} text-anchor = 'middle' fill="#93003a" font-size= '2vh'>8%</text> 
            {/if}
         </g>
       </svg>
