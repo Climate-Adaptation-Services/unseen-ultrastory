@@ -155,7 +155,21 @@
 
   /* .aftitelingdiv{
     background-image: url('$lib/heatwave.png');
+    background-repeat: no-repeat;
   } */
+
+  .imgaftiteling{
+    height:100%;
+    object-fit: cover;
+    visibility:visible;
+  }
+
+  .leeslijst{
+    width:90%;
+    left:2%;
+    padding:0;
+    
+  }
 
 
 }
