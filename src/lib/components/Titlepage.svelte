@@ -46,7 +46,7 @@
 <style>
 	h1{
 		margin-bottom:1.5em;
-		font-size: 5vh;
+		font-size: 3.7vh;
 	}
 
   .headphones{
@@ -85,7 +85,7 @@
   }
 
   .title-huge{
-    font-size: 10vw;
+    font-size: 12vh;
     margin:100px;
     transform: translate(0%,-50%);
 
@@ -130,7 +130,7 @@
       transform: scale(1);
     }
     50% {
-      filter: blur(6px);
+      filter: blur(8px);
       opacity: 0.7  ;
       transform: scale(1.02);
     }
