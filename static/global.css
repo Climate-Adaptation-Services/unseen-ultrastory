@@ -284,11 +284,7 @@ svg text {
     flex-direction: column;
   }
 
-  .imgaftiteling{
-    height:100%;
-    object-fit: cover;
-    visibility:hidden;
-  }
+  
 
 
   .sticky-div{
@@ -307,10 +303,14 @@ svg text {
     visibility: hidden;
   }
 
+  .telefoon{
+    height:15%;
+  }
+
   .telefoonimg{
-    width:250% !important;
-    margin: -200px 0 0 -200px !important;
-    object-fit: cover !important;
+    height: 100vh; /* Set the image height to 100% of viewport height */
+    object-fit: cover;
+    
   }
 
 }
