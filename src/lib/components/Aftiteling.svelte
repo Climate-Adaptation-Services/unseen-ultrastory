@@ -18,13 +18,13 @@
       name:'',
       image:'',
       time:0.1,
-      text:'De laatste jaren zijn er overal in de wereld enorme uitschieters geweest aan extreme hitte, uitschieters die ook klimaatwetenschappers hebben verrast. Ook Nederland krijgt hier mogelijk mee te maken.'
+      text:'De laatste jaren zijn er overal in de wereld enorme uitschieters geweest van extreme hitte, uitschieters die ook klimaatwetenschappers hebben verrast. Ook Nederland krijgt hier mogelijk mee te maken.'
     },
     {
       name:'',
       image:'',
       time:0.27,
-      text:'Daarom hebben we dit klimaatverhaal gemaakt: om te bedenken en te verbeelden wat er zou kunnen gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat we ons bewust zijn van de gevaren en ons op tijd gaan voorbereiden.'
+      text:'Daarom hebben we dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zichs bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
     },
     {
       name:'',

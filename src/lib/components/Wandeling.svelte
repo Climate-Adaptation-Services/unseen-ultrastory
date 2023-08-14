@@ -28,7 +28,7 @@
   
   <div class='scroll-text-block night' style='top:{`${0.125*stepSize}px`}'>
     <img class='nielsgaatwandelen night-image' src={'/images/nielsgaatwandelen.png'} />
-    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, besluit Niels een ommetje te maken. Het is buiten nog steeds heel heet. Hij merkt dat de stenen op straat nog steeds warmte uitstralen. ​​</p>
+    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, besluit Niels een ommetje te maken. Het is buiten nog steeds heel heet. Hij merkt dat de stenen op straat veel warmte uitstralen. ​​</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.1 && offset < 0.6 && $sound}
@@ -41,7 +41,7 @@
 
   <div class='scroll-text-block night' style='top:{`${0.36*stepSize}px`}'>
     <img class='festival night-image' src={'/images/gasten.png'} />
-    <p class='scroll-text nighttext'>Gelukkig voelt het in het Dommelplantsoen een stukje koeler aan.​ Het festival dat oorspronkelijk gepland stond is afgelast, maar het is toch heel druk. Er wordt  veel lawaai gemaakt en gedronken. Ondanks de herrie slapen sommige mensen buiten.​</p>
+    <p class='scroll-text nighttext'>Gelukkig voelt het Dommelplantsoen wat koeler aan.​ Het festival dat hier gepland stond is afgelast, maar toch is het heel druk in het park. Er wordt  veel lawaai gemaakt en gedronken. Ondanks de herrie slapen sommige mensen buiten.​</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.4 && offset < 0.85 && $sound}
@@ -50,7 +50,7 @@
 
   <div class='scroll-text-block night' style='top:{`${0.63*stepSize}px`}'>
     <img class='politie night-image' src={'/images/politie.png'} />
-    <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden. De sfeer wordt onaangenaam. Niels maakt zich uit de voeten.</p>
+    <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden. De sfeer wordt onaangenaam. Niels loopt snel verder.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.65 && offset < 0.85 && $sound}

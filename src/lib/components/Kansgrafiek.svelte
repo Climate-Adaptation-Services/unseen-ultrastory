@@ -165,18 +165,18 @@
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
         <h1 class='scroll-text-kansgraph'>Statistische berekeningen</h1>
         <p class='scroll-text-kansgraph'>
-          De kans op veertig graden is door klimaatverandering sterk toegenomen. Statistische berekeningen aan temperatuurreeksen van Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
+          De kans op 40 graden Celsius is door klimaatverandering sterk toegenomen. Hittestatistieken voor Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het veertig graden zou worden.  
+          <p class='scroll-text-kansgraph'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het 40 graden zou worden.  
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op veertig graden ongeveer 2% per jaar.
+          <p class='scroll-text-kansgraph'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op 40 graden ongeveer 2%.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op veertig graden zijn toegenomen tot ongeveer 7% per jaar.
+          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op 40 graden zijn toegenomen tot ongeveer 8%.
           </p> 
         </div>   
       {/if}      
@@ -205,12 +205,14 @@
             <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
             <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.02)}>2023</text>  
             <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
+            <text  x={xScale(1.65)} y={yScale(28)+(screenHeight * 0.018)} text-anchor = 'middle' fill= "#ffb000" font-size= '2vh'>2%</text> 
           {/if}
           {#if ratioOfCsvData > 360}
             <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
             <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.04)}>2050</text>  
             <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
-          {/if}
+            <text  x={xScale(7.8)} y={yScale(28)+(screenHeight * 0.018)} text-anchor = 'middle' fill="#93003a" font-size= '2vh'>8%</text> 
+           {/if}
         </g>
       </svg>
       <p class='graph-description'>Hittestatistieken voor Eindhoven voor het klimaat van 1980, 2023 en 2050. Deze zijn berekend op basis van metingen van KNMI-station Eindhoven en het KNMI'14 hoge &#40;WH&#41; scenario voor 2050. Gebruikte tools:  
