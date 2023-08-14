@@ -290,9 +290,6 @@ svg text {
     visibility:hidden;
   }
 
-  .aftitelingdiv{
-    background-image: url('$lib/heatwave.png');
-  }
 
   .sticky-div{
     top: 40px;
@@ -308,6 +305,12 @@ svg text {
 
   .sound{
     visibility: hidden;
+  }
+
+  .telefoonimg{
+    width:250% !important;
+    margin: -200px 0 0 -200px !important;
+    object-fit: cover !important;
   }
 
 }
