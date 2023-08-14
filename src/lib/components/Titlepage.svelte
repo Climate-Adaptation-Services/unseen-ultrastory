@@ -71,7 +71,7 @@
 
   .subtitle{
     position:absolute;
-    top:65%;
+    top:60%;
     width:50% !important;
     left:25%;
   }
@@ -80,7 +80,7 @@
     position:absolute;
     width: 80%;
     left: 50%;
-    top: 65%;
+    top: 62%;
     transform: translate(-50%,0%);
   }
 
