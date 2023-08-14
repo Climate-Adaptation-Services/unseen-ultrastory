@@ -310,6 +310,7 @@ svg text {
   .telefoonimg{
     width:250% !important;
     margin: -200px 0 0 -200px !important;
+    object-fit: cover !important;
   }
 
 }
