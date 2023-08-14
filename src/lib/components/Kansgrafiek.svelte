@@ -32,6 +32,8 @@
   let textPaddingKans
   let grafiekPositionY
   let grafiekPositionX
+  let legendPositionX1
+  let legendPositionX2
   
   $: if(screenWidth < 600){
       xAxisWidthRatio  = 0.7
@@ -39,6 +41,8 @@
       textPaddingKans = 0.52   
       grafiekPositionY = 0
       grafiekPositionX = 0.15
+      legendPositionX1 = 0.5
+      legendPositionX2 = 0.55
     }
      else {
       xAxisWidthRatio = 0.38
@@ -46,6 +50,8 @@
       textPaddingKans = 0.25
       grafiekPositionY = 0.0
       grafiekPositionX = 0.45
+      legendPositionX1 = 0.33
+      legendPositionX2 = 0.35
     }
 
   $: xScale = d3.scaleLog()
@@ -188,9 +194,9 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})" >
           <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
           <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
-          <text class = 'legendtext' x={screenWidth * 0.33} y={yScale(31.8)}>Statistiek voor:</text> 
-          <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)}>1980</text>  
-          <line x1={screenWidth * 0.33}  y1={yScale(31)} x2={screenWidth * 0.35} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
+          <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistiek voor:</text> 
+          <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)}>1980</text>  
+          <line x1={screenWidth * legendPositionX1}  y1={yScale(31)} x2={screenWidth * legendPositionX2} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
           <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Kans (%)</text>  
           <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatuur (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
@@ -203,15 +209,15 @@
           {/if}
           {#if ratioOfCsvData > 270}
             <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
-            <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.02)}>2023</text>  
-            <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
-            <text  x={xScale(1.65)} y={yScale(28)+(screenHeight * 0.018)} text-anchor = 'middle' fill= "#ffb000" font-size= '2vh'>2%</text> 
+            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.02)}>2023</text>  
+            <line x1={screenWidth * legendPositionX1}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * legendPositionX2} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
+            <text  x={xScale(1.65)+(screenWidth * 0.003)} y={yScale(28)-(screenHeight * 0.005)} fill= "#ffb000" font-size= '2vh'>2%</text> 
           {/if}
           {#if ratioOfCsvData > 360}
             <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
-            <text class = 'legendtext' x={screenWidth * 0.355} y={yScale(31)+(screenHeight * 0.04)}>2050</text>  
-            <line x1={screenWidth * 0.33}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * 0.35} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
-            <text  x={xScale(7.8)} y={yScale(28)+(screenHeight * 0.018)} text-anchor = 'middle' fill="#93003a" font-size= '2vh'>8%</text> 
+            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.04)}>2050</text>  
+            <line x1={screenWidth * legendPositionX1}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * legendPositionX2} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
+            <text  x={xScale(7.8)+ (screenWidth * 0.003)} y={yScale(28)-(screenHeight * 0.005)} fill="#93003a" font-size= '2vh'>8%</text> 
            {/if}
         </g>
       </svg>
