@@ -2,7 +2,7 @@
   import { started } from "$lib/stores";
   import { clamp } from "$lib/noncomponents/helperFunctions";
   import { browser } from "$app/environment";
-  
+
   export let currentStepName;
   export let offset
 

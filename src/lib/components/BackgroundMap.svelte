@@ -57,8 +57,6 @@
     ? [coordsZiekenhuis[0]+0.002, coordsZiekenhuis[1]]
     : coordsZiekenhuis
   
-  $: console.log(flyToCoordsHuis, flyToCoordsZiekenhuis)
-
   const tileLayerOptions = {
       minZoom: 2,
       maxZoom: 20,
@@ -68,7 +66,12 @@
 
   $: if(leafletMap && !['ziekenhuis'].includes(currentStepName)){
     const zoom = (currentStepName === 'autoritje' || (currentStepName === 'wandeling' && window.innerWidth < 600)) ? 13 : 16;
-    const centerCoords = (currentStepName === 'autoritje') ? [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02] : flyToCoordsHuis
+    let centerCoords = flyToCoordsHuis
+    if(currentStepName === 'autoritje'){
+      centerCoords = [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02]
+    }else if(currentStepName === 'wandeling'){
+      centerCoords = [parseFloat(flyToCoordsHuis[0]), parseFloat(flyToCoordsHuis[1])-0.002]
+    }
     leafletMap.flyTo(centerCoords, zoom, {duration: 3})
   }
 
