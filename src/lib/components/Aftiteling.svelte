@@ -144,6 +144,21 @@
   a:active {    /* active link */
       color: #ffffff;
   }
+
+  @media only screen and (max-width: 600px) and (orientation:portrait){
+  
+  /* .imgaftiteling{
+    height:100%;
+    object-fit: cover;
+    visibility:hidden;
+  } */
+
+  /* .aftitelingdiv{
+    background-image: url('$lib/heatwave.png');
+  } */
+
+
+}
     
 </style>
 

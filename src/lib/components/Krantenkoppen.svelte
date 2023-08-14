@@ -54,8 +54,10 @@
   border: none;
   box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
+}
 
-
+.telefoonimg{
+  width:100%;
 }
   
 </style>
