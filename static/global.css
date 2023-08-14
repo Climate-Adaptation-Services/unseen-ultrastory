@@ -310,6 +310,8 @@ svg text {
   .telefoonimg{
     height: 100vh; /* Set the image height to 100% of viewport height */
     object-fit: cover;
+    margin-top: -30%;
+    margin-bottom: -15%
     
   }
 
