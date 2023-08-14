@@ -29,7 +29,7 @@
 </div>
 <div on:click={() => document.getElementById('heat').play()}>
   {#if !$started}
-    <div class="subtitle" style='cursor:pointer' on:click={() => {started.set(true)}>
+    <div class="subtitle" style='cursor:pointer' on:click={() => {started.set(true)}}>
       <em><h3>KLIK OM TE STARTEN</h3>
       <h3>Dit beeldverhaal bevat geluid. Het verhaal komt het beste over als je een koptelefoon gebruikt.</h3></em>
       <img class='headphones' src='/images/headphones.png' width='60px'/>
