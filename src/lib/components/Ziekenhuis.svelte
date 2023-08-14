@@ -21,7 +21,7 @@
       name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
-      text:'Leonie heeft het zwaar. Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En morgen moet ze weer. Het zal opnieuw druk worden op de spoedeisende hulp vanwege de massale gezondheidsproblemen die de hitte veroorzaakt.',
+      text:'In het ziekenhuis werkt Leonie zo hard als ze kan . Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En het is verschrikkelijk druk op de spoedeisende hulp: de hitte veroorzaakt massale gezondheidsproblemen. Het is zwaar werk, en morgen moet ze ook weer.',
       class: 'scroll-text'
     },
     {
@@ -35,14 +35,14 @@
       name:'hardloper1',
       image:'png',
       time:0.5,
-      text:'Een paar jonge sporters werden onwel toen ze ondanks waarschuwingen toch hard gingen lopen.',
+      text:'Een paar jonge sporters werden onwel toen ze ondanks waarschuwingen toch gingen hardlopen.',
       class: 'scroll-text'
     },
     {
       name:'boer1',
       image:'png',
       time:0.75,
-      text:'En er was een boer die in de hitte aan het werk moest en een zware zonnesteek opliep.',
+      text:'En een boer had tijdens het hooien een zware zonnesteek gekregen.',
       class: 'scroll-text'
     },
   ]

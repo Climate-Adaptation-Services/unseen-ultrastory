@@ -28,7 +28,7 @@
   {:else}
     <div style='cursor:pointer' on:click={() => {started.set(true)}}>
       <em><h3>KLIK OM TE STARTEN</h3><br/>
-      <h3>Dit beeldverhaal bevat audio. Het is aanbevolen om een koptelefoon op te doen.</h3></em>
+      <h3>Dit beeldverhaal bevat geluid. Het verhaal komt het beste over als je een koptelefoon gebruikt.</h3></em>
       <img class='headphones' src='/images/headphones.png' width='60px'/>
     </div>
   {/if}
