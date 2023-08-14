@@ -10,29 +10,37 @@
 
 </script>
 
-<div class='title {$started ? 'title-started' : ''}' on:click={() => document.getElementById('heat').play()}>
-	{#if currentStepName === 'thuis' && browser && window.innerWidth > 600}
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class='title {($started) ? "started" : ""}' on:click={() => document.getElementById('heat').play()}>
+	
+  {#if currentStepName === 'thuis' && browser && window.innerWidth > 600 && $started}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
+
   {#if $started}
-    
-    <div>
-      <h1>Ongekend heet</h1>
-      <h3>Een klimaatverhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten
-      </h3>
-    </div>
-    <div class = 'scrolldown'>
+    <div class='scrolldown'>
       <h4>Scroll naar beneden</h4>
       <img  width='7%' src={'/images/arrowdown.png'} />
     </div>
-  {:else}
-    <div style='cursor:pointer' on:click={() => {started.set(true)}}>
-      <em><h3>KLIK OM TE STARTEN</h3><br/>
+  {/if}
+  <div style='cursor:pointer' on:click={() => {started.set(true)}}>
+    <h1 class='title-huge'>Ongekend heet</h1>
+  </div>
+</div>
+<div on:click={() => document.getElementById('heat').play()}>
+  {#if !$started}
+    <div class="subtitle" style='cursor:pointer'>
+      <em><h3>KLIK OM TE STARTEN</h3>
       <h3>Dit beeldverhaal bevat geluid. Het verhaal komt het beste over als je een koptelefoon gebruikt.</h3></em>
       <img class='headphones' src='/images/headphones.png' width='60px'/>
     </div>
+  {:else}
+    <div class='introtekst'>
+      <h1>Een klimaatverhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten</h1>
+    </div>
   {/if}
-</div>
+  
+ </div>
 
 
 <style>
@@ -54,12 +62,33 @@
 		background-image: url('$lib/heatwave.png');
 		background-repeat: no-repeat;
 		background-size: cover;
+  }
+  .started{
+    animation: blurry-animation 7s infinite;
+		-webkit-animation: blurry-animation 7s infinite;
+		-moz-animation: blurry-animation 7s infinite;
 	}
 
-  .title-started{
-    animation: blurry-animation 7s;
-		-webkit-animation: blurry-animation 7s;
-		-moz-animation: blurry-animation 7s;
+  .subtitle{
+    position:absolute;
+    top:65%;
+    width:50% !important;
+    left:25%;
+  }
+
+  .introtekst{
+    position:absolute;
+    width: 80%;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%,0%);
+  }
+
+  .title-huge{
+    font-size: 10vw;
+    margin:100px;
+    transform: translate(0%,-50%);
+
   }
 
   .scrolldown{
@@ -97,17 +126,17 @@
   @keyframes blurry-animation {
     0% {
       filter: blur(0);
-      opacity: 0.9;
+      opacity: 1;
       transform: scale(1);
     }
     50% {
-      filter: blur(2px);
+      filter: blur(6px);
       opacity: 0.7  ;
-      transform: scale(1.01);
+      transform: scale(1.02);
     }
     100% {
       filter: blur(0);
-      opacity: 0.9;
+      opacity: 1;
       transform: scale(1);
     }
   }
