@@ -27,6 +27,8 @@
     <h1 class='title-huge'>Ongekend heet</h1>
   </div>
 </div>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div on:click={() => document.getElementById('heat').play()}>
   {#if !$started}
     <div class="subtitle" style='cursor:pointer' on:click={() => {started.set(true)}}>
@@ -72,8 +74,8 @@
   .subtitle{
     position:absolute;
     top:60%;
-    width:50% !important;
-    left:25%;
+    width:70%;
+    left:15%;
   }
 
   .introtekst{
@@ -88,7 +90,6 @@
     font-size: 12vh;
     margin:100px;
     transform: translate(0%,-50%);
-
   }
 
   .scrolldown{
