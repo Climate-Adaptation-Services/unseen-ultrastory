@@ -23,13 +23,13 @@
       <img  width='7%' src={'/images/arrowdown.png'} />
     </div>
   {/if}
-  <div style='cursor:pointer' on:click={() => {started.set(true)}}>
+  <div style='{(!$started) ? "cursor:pointer" : "pointer-events:none"}' on:click={() => {started.set(true)}}>
     <h1 class='title-huge'>Ongekend heet</h1>
   </div>
 </div>
 <div on:click={() => document.getElementById('heat').play()}>
   {#if !$started}
-    <div class="subtitle" style='cursor:pointer'>
+    <div class="subtitle" style='cursor:pointer' on:click={() => {started.set(true)}}>
       <em><h3>KLIK OM TE STARTEN</h3>
       <h3>Dit beeldverhaal bevat geluid. Het verhaal komt het beste over als je een koptelefoon gebruikt.</h3></em>
       <img class='headphones' src='/images/headphones.png' width='60px'/>
@@ -71,7 +71,7 @@
 
   .subtitle{
     position:absolute;
-    top:65%;
+    top:60%;
     width:50% !important;
     left:25%;
   }
@@ -80,7 +80,7 @@
     position:absolute;
     width: 80%;
     left: 50%;
-    top: 65%;
+    top: 62%;
     transform: translate(-50%,0%);
   }
 
