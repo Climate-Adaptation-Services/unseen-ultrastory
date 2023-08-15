@@ -47,7 +47,7 @@
   filter: blur(20px);
 }
 
-.telefoon{
+/* .telefoon{
   position:absolute;
   width:80%;
   left:10%;
@@ -58,7 +58,7 @@
 
 .telefoonimg{
   width:100%;
-}
+} */
   
 </style>
 

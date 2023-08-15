@@ -297,17 +297,17 @@ svg text {
   .sound{
     visibility: hidden;
   }
-
+/* 
   .telefoon{
     height:15%;
   }
 
   .telefoonimg{
-    height: 100vh; /* Set the image height to 100% of viewport height */
+    height: 100vh; 
     object-fit: cover;
     margin-top: -30%;
     margin-bottom: -15%
-  }
+  } */
 
   .subtitle{
     width: 100% !important;

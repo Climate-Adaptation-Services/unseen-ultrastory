@@ -158,7 +158,7 @@
     background-repeat: no-repeat;
   } */
 
-  .imgaftiteling{
+  /* .imgaftiteling{
     height:100%;
     object-fit: cover;
     visibility:visible;
@@ -169,7 +169,7 @@
     left:2%;
     padding:0;
     
-  }
+  } */
 
 
 }
