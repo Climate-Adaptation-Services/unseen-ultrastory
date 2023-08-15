@@ -23,7 +23,7 @@
       name:'weeralarm',
       image:'jpg',
       time:0.09,
-      text:'De volgende dag is het opnieuw extreem heet. Het advies is al dagen om binnen te blijven, maar Niels besluit met Sem naar het zwembad te gaan.​',
+      text:'De volgende dag is het opnieuw extreem heet. Het advies is al dagen om binnen te blijven, maar Niels heeft een idee. Hij besluit om met Sem naar het zwembad te gaan.​',
       class: 'scroll-text'
     },
     {
@@ -44,7 +44,7 @@
       name:'file',
       image:'png',
       time:0.36,
-      text:'Niels en Sem stappen opnieuw de auto in. Het is heel druk op de weg. Veel mensen proberen de stad uit te komen. Niels maakt zich zorgen. Hoe lang gaat deze black-out duren?​',
+      text:'Niels en Sem stappen opnieuw de auto in. Het is heel druk op de weg. Veel mensen proberen de stad uit te komen door de stroomuitval. Niels maakt zich zorgen. Hoe lang gaat deze black-out duren?​',
       class: 'scroll-text'
     },
     {
@@ -65,7 +65,7 @@
       name:'manonwel',
       image:'png',
       time:0.72,
-      text:"Als Niels een man uitgeput op de grond ziet zitten, aarzelt hij geen moment. Hij stapt uit de auto en loopt naar de man toe. Hij lijkt last te hebben van uitdroging. Snel geeft Niels hem wat water en helpt de man op de achterbank van de auto. Samen rijden ze naar het ziekenhuis. Daar zien ze al snel Leonie.",
+      text:"Als Niels een man uitgeput op de grond ziet zitten, aarzelt hij geen moment. Hij stapt uit de auto en loopt naar hem toe. De man lijkt last te hebben van uitdroging. Snel geeft Niels hem wat water en helpt hem op de achterbank van de auto. Samen rijden ze naar het ziekenhuis. Daar zien ze al snel Leonie. ",
       class: 'scroll-text'
     },
     {
