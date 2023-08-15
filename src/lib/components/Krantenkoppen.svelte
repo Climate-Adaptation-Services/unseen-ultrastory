@@ -18,7 +18,7 @@
 </script>
 
 <div class='stepdiv'>  
-  <div class='telefoon' style='top:{`${0.08*stepSize}px`}'>
+  <div class='telefoon' style='top:{`${0.12*stepSize}px`}'>
     <img class='telefoonimg' style='width:100%;' src={'/images/holdingphone.png'} />
   </div>
 
@@ -49,8 +49,8 @@
 
 .telefoon{
   position:absolute;
-  width:80%;
-  left:10%;
+  width:60%;
+  left:20%;
   border: none;
   box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
