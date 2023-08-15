@@ -18,24 +18,24 @@
       name:'',
       image:'',
       time:0.1,
-      text:'De laatste jaren zijn er overal in de wereld enorme uitschieters geweest van extreme hitte, uitschieters die ook klimaatwetenschappers hebben verrast. Ook Nederland krijgt hier mogelijk mee te maken.'
+      text:'De laatste jaren zijn er overal in de wereld enorme uitschieters geweest van extreme hitte, uitschieters die ook klimaatwetenschappers hebben verrast. Ook in Nederland zou het een keer extreem heet kunnen worden.'
     },
     {
       name:'',
       image:'',
-      time:0.27,
-      text:'Daarom hebben we dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zichs bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
+      time:0.25,
+      text:'Daarom hebben we dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
     },
     {
       name:'',
       image:'',
-      time:0.44,
+      time:0.4,
       text:'Dit verhaal is gebaseerd op de laatste wetenschappelijke inzichten over exceptionele weergebeurtenissen in Nederland en op talloze gesprekken met deskundigen op het gebied van klimaatadaptatie, hitte en crisismanagement. De beelden zijn gemaakt met AI.'
     },
     {
       name:'',
       image:'',
-      time:0.61,
+      time:0.55,
       text:'Onze dank gaat uit naar Marije Bakker (NIPV), Annelies Balkema (Waterschap De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Edwin Kok (NIPV), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), Brian Verhoeven (NIPV) en Karin van der Wiel (KNMI). '
     }
   ]
@@ -77,7 +77,12 @@
       <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs" target="_blank">Mini-college van Universiteit van Nederland: Krijgt Nederland steeds vaker te maken met hittegolven?</a></li>
       <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8" target="_blank">KNMI filmpje: Temperatuur voor het eerst boven de 40 graden</a></li>
       <li><a href="https://klimaatverbond.nl/actueel/terugblik-op-het-webinar-de-hittelessen-van-portland-en-het-code-rood-scenario-in-nederland/" target="_blank">Webinar van het Klimaatverbond Nederland over de (hitte)lessen van Portland en het Code Rood-scenario in Nederland</a></li>
-    </ul>    
+    </ul>  
+    
+    <h3 class = 'leeslijstcat'>Fictie</h3>
+    <ul class="myUL">
+      <li><a href="https://www.npo3.nl/hitte/POMS_S_EO_16238783" target="_blank">Rampsenserie hitte</a></li>
+    </ul> 
   </div>
 
   <div class = 'copyright'>
@@ -93,11 +98,11 @@
 
   .leeslijstcat{
     text-align: left;
-    font-size: 2.5vh;
+    font-size: 2.3vh;
   }
 
   .copyright{
-    font-size: 2.5vh !important;
+    font-size: 2.3vh !important;
     bottom:10px; 
     position:absolute;
     left:20%;
@@ -107,7 +112,7 @@
   }
 
   .leeslijst{
-    font-size: 2.5vh !important;
+    font-size: 2.3vh !important;
     bottom:100px; 
     position:absolute;
     left:20%;
