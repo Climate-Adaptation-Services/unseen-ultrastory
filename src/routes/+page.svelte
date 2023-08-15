@@ -217,7 +217,7 @@
   }
 
   .step_aftiteling{
-	height:3000px !important;
+	height:4000px !important;
   }
 
   .widestep {
