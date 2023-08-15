@@ -316,6 +316,10 @@ svg text {
     margin-bottom: -15%
   }
 
+  .night-image{
+    max-width: 75vw
+  }
+
 
 
 }
