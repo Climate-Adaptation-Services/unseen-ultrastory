@@ -145,34 +145,6 @@
       color: #ffffff;
   }
 
-  @media only screen and (max-width: 600px) and (orientation:portrait){
-  
-  /* .imgaftiteling{
-    height:100%;
-    object-fit: cover;
-    visibility:hidden;
-  } */
-
-  /* .aftitelingdiv{
-    background-image: url('$lib/heatwave.png');
-    background-repeat: no-repeat;
-  } */
-
-  /* .imgaftiteling{
-    height:100%;
-    object-fit: cover;
-    visibility:visible;
-  }
-
-  .leeslijst{
-    width:90%;
-    left:2%;
-    padding:0;
-    
-  } */
-
-
-}
     
 </style>
 

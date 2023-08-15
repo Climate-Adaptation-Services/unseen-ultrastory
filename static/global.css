@@ -275,6 +275,10 @@ svg text {
     visibility:hidden;
   }
 
+  .aftitelingdiv{
+    background-image: url('$lib/heatwave.png');
+  }
+
   .grafiek{
     width: 100%;
     left: 0%;
@@ -297,17 +301,6 @@ svg text {
   .sound{
     visibility: hidden;
   }
-/* 
-  .telefoon{
-    height:15%;
-  }
-
-  .telefoonimg{
-    height: 100vh; 
-    object-fit: cover;
-    margin-top: -30%;
-    margin-bottom: -15%
-  } */
 
   .subtitle{
     width: 100% !important;
