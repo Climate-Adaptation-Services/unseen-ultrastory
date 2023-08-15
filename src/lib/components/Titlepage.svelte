@@ -87,8 +87,8 @@
   }
 
   .title-huge{
-    font-size: 12vh;
-    margin:100px;
+    font-size: 10vh;
+    /* margin:100px; */
     transform: translate(0%,-50%);
   }
 
