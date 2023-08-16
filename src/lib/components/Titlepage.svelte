@@ -24,7 +24,8 @@
     </div>
   {/if}
   <div style='{(!$started) ? "cursor:pointer" : "pointer-events:none"}' on:click={() => {started.set(true)}}>
-    <h1 class='title-huge'>Ongekend heet</h1>
+    <h1 class='title-huge'>Ongekend heet</h1> 
+    <h1 class='sub-start'>Een verhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten</h1>
   </div>
 </div>
 
@@ -37,9 +38,9 @@
       <img class='headphones' src='/images/headphones.png' width='60px'/>
     </div>
   {:else}
-    <div class='introtekst'>
-      <h1>Een klimaatverhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten</h1>
-    </div>
+    <!-- <div class='introtekst'>
+      <h1>Een verhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten</h1>
+    </div> -->
   {/if}
   
  </div>
@@ -71,9 +72,16 @@
 		-moz-animation: blurry-animation 7s infinite;
 	}
 
+  .sub-start{
+    top:50%;
+    position:absolute;
+    width:80%;
+    left:10%;
+  }
+
   .subtitle{
     position:absolute;
-    top:60%;
+    top:70%;
     width:70%;
     left:15%;
   }
