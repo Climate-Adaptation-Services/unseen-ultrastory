@@ -139,7 +139,7 @@
       transform: scale(1);
     }
     50% {
-      filter: blur(8px);
+      filter: blur(1px);
       opacity: 0.7  ;
       transform: scale(1.02);
     }
