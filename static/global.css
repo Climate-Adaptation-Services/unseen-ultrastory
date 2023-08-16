@@ -321,6 +321,34 @@ svg text {
     max-width: 75vw
   }
 
+  .title-huge{
+    font-size:8vh;
+    /* margin:100px; */
+    position: absolute;
+    width:96%;
+    left:2%;
+    top:20%;
+  }
 
+  .sub-start{
+    top:40% !important;
+    width:96% !important;
+    left:2% !important;
+    position: absolute;
+    font-size:3.4vh !important;
+}
 
+.subtitle{
+  position:absolute;
+  top:62% !important;
+  width:70%;
+  left:15%;
+}
+
+.geluid-info{
+  font-size:2.5vh;
+}
+
+.klik-start{
+  font-size:3vh;
 }
