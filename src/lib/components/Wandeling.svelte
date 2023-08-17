@@ -10,6 +10,10 @@
   export let stepName;
 
   let stepSize;
+  let screenWidth;
+
+  $: console.log(stepSize)
+
   onMount(() => {
     stepSize = getStepSize(stepName);
   })
