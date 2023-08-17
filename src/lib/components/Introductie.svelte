@@ -22,7 +22,7 @@
       name:'bank1',
       image:'png',
       time:0.2,
-      text:'Het is begin juli en al drie dagen boven de veertig graden in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25 graden. Iedereen heeft het snikheet.<br/><br/> We volgen Leonie en Niels en hun zevenjarige zoon Sem. Niels is leraar Nederlands. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis. <br/><br/>Leonie en Niels liggen uitgeput op de bank. Ze slapen al nachten slecht omdat hun slaapkamer zo warm is. Niels luistert naar het gezoem van de ventilator. Leonie denkt aan haar moeder die slecht ter been is en in een appartement woont waar het niet uit te houden is.​',
+      text:'Het is begin juli en al drie dagen boven de veertig graden in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25 graden. Iedereen heeft het snikheet.<br/><br/> We volgen Leonie en Niels en hun zevenjarige zoon Sem. Niels is leraar Nederlands. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis. <br/><br/>Leonie en Niels liggen uitgeput op de bank. Ze slapen al nachten slecht omdat hun slaapkamer zo warm is. Niels luistert naar het gezoem van de ventilator. Leonie denkt aan haar moeder die slecht ter been is en in een appartement woont zonder airco of zonwering.​',
       class: 'scroll-text'
     },
     {
