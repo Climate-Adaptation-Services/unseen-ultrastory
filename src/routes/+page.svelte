@@ -84,7 +84,9 @@
 
 <div>
 	<Titlepage {currentStepName} {offset}/>
-	<img class='logo' src='/images/logokleur.png' width='10%'/>
+	<a href="https://climateadaptationservices.com" target="_blank">
+		<img class='logo' src='/images/logokleur.png' width='10%'/>
+	</a>	
 	{#if $started}
 		<Scroller bind:index bind:offset bind:progress>
 			

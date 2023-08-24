@@ -24,7 +24,7 @@
       name:'',
       image:'',
       time:0.25,
-      text:'Daarom hebben we dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
+      text:'Daarom hebben we met Stichting CAS dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
     },
     {
       name:'',
@@ -86,7 +86,7 @@
   </div>
 
   <div class = 'copyright'>
-    <p >© 2023 Climate Adaptation Services (CAS).</p>
+    <p >© 2023 <a href="http://www.climateadaptationservices.com" target="_blank">Climate Adaptation Services (CAS)</a></p>
   </div>
 </div>
 
