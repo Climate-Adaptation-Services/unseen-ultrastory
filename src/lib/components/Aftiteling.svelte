@@ -24,7 +24,7 @@
       name:'',
       image:'',
       time:0.25,
-      text:'Daarom hebben we met Stichting CAS dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
+      text:'Daarom hebben we met <a style= "color:white" href="https://www.climateadaptationservices.com" target="_blank">Stichting CAS</a>  dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
     },
     {
       name:'',
@@ -47,7 +47,7 @@
   
   {#each scenes as scene,i}
     <div class='scroll-text-block outro' style='top:{`${(scene['time']+0.05)*stepSize}px`}'>
-      <p class='scroll-text outro-text'>{scene['text']}</p>
+      <p class='scroll-text outro-text'>{@html scene['text']}</p>
     </div>
   {/each}
 
