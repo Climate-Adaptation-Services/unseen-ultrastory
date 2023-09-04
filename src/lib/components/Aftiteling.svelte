@@ -24,7 +24,7 @@
       name:'',
       image:'',
       time:0.25,
-      text:'Daarom hebben we met <a style= "color:white" href="https://www.climateadaptationservices.com" target="_blank">Stichting CAS</a>  dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden.'
+      text:'Daarom hebben we met <a style= "color:white" href="https://www.climateadaptationservices.com" target="_blank">Stichting CAS</a>  dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden. Door het gesprek met elkaar aan te gaan, kunnen we ook beginnen na te denken over handelingsperspectieven.'
     },
     {
       name:'',
@@ -36,7 +36,7 @@
       name:'',
       image:'',
       time:0.55,
-      text:'Onze dank gaat uit naar Marije Bakker (NIPV), Annelies Balkema (Waterschap De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), en Karin van der Wiel (KNMI). '
+      text:'Onze dank gaat uit naar Marije Bakker (NIPV), Annelies Balkema (Waterschap De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), en Karin van der Wiel (KNMI). Uiteraard is alleen CAS verantwoordelijk voor het eindresultaat.'
     }
   ]
 
