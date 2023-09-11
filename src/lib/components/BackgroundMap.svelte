@@ -85,7 +85,7 @@
 
   $: if(leafletMap && 'autoritje' === currentStepName){
     zwembad
-      .setContent("Zwembad")
+      .setContent("Swimming pool")
       .addTo(leafletMap);
   }
 
