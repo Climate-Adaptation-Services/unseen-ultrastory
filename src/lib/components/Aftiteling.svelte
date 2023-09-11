@@ -24,7 +24,7 @@
       name:'',
       image:'',
       time:0.25,
-      text:'That is why <a style= "color:white" href="https://www.climateadaptationservices.com" target="_blank">Stichting CAS</a> made this climate story. We want to depict what could happen if we face an unprecedented heat crisis, so that everyone becomes aware of the dangers and we start preparing in time. By starting the conversation with each other, we can also start thinking about courses of action.'
+      text:'That is why <a style= "color:white" href="https://www.climateadaptationservices.com/en/" target="_blank">Stichting CAS</a> made this climate story. We want to depict what could happen if we face an unprecedented heat crisis, so that everyone becomes aware of the dangers and we start preparing in time. By starting the conversation with each other, we can also start thinking about courses of action.'
     },
     {
       name:'',
@@ -86,7 +86,7 @@
   </div>
 
   <div class = 'copyright'>
-    <p >© 2023 <a href="http://www.climateadaptationservices.com" target="_blank">Climate Adaptation Services (CAS)</a></p>
+    <p >© 2023 <a href="http://www.climateadaptationservices.com/en/" target="_blank">Climate Adaptation Services (CAS)</a></p>
   </div>
 </div>
 
