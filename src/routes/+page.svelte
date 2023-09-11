@@ -87,6 +87,9 @@
 	<a href="https://climateadaptationservices.com/en/" target="_blank">
 		<img class='logo' src='/images/logokleur.png' width='10%'/>
 	</a>	
+	<a href="https://climateadaptationservices.com/en/" target="_blank">
+		<img class='vlag' src='/images/nlflag.jpg' width='3%'/>
+	</a>
 	{#if $started}
 		<Scroller bind:index bind:offset bind:progress>
 			
@@ -147,6 +150,14 @@
 </div>
 
 <style>
+
+	.vlag{
+		position:absolute;
+		top:5%;
+		left:5%;
+	}
+
+
 	.cloud{
 		position: fixed;
 		z-index: 1000;

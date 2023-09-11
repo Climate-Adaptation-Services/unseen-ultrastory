@@ -27,6 +27,7 @@
     <h1 class='title-huge'>Unprecedented heat</h1> 
     <h1 class='sub-start'>A story about potential heat extremes in the Netherlands based on scientific insights</h1>
   </div>
+  
 </div>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
