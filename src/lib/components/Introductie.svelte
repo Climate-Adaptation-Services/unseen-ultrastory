@@ -22,14 +22,14 @@
       name:'bank1',
       image:'png',
       time:0.2,
-      text:'Het is begin juli en al drie dagen boven de veertig graden in Eindhoven. De nachttemperatuur zakt ook niet meer onder de 25 graden. Iedereen heeft het snikheet.<br/><br/> We volgen Leonie en Niels en hun zevenjarige zoon Sem. Niels is leraar Nederlands. Leonie werkt op de spoedeisende hulp van het Catharina Ziekenhuis. <br/><br/>Leonie en Niels liggen uitgeput op de bank. Ze slapen al nachten slecht omdat hun slaapkamer zo warm is. Niels luistert naar het gezoem van de ventilator. Leonie denkt aan haar moeder die slecht ter been is en in een appartement woont zonder airco of zonwering.​',
+      text:"It is early July and already three days above 40 degrees Celsius in Eindhoven. The night temperature doesn't drop below 25 degrees either. It is sweltering. <br/><br/> We follow Lisa and Mark and their seven-year-old son Mike. Mark is a teacher Dutch at a secondary school. Lisa works in the emergency room of the Catharina Hospital. <br/><br/>Lisa and Mark lie exhausted on the sofa. They have been sleeping badly for nights because their bedroom is so hot. Mark listens to the hum of the ventilator. Lisa thinks of her mother who has difficulty walking and lives in a poorly maintained and hot apartment.​",
       class: 'scroll-text'
     },
     {
       name:'seminbed1',
       image:'png',
       time:0.5,
-      text:'Sem kan niet slapen en is al dagen moe. De scholen zijn dicht vanwege de enorme hitte. Een geluk bij een ongeluk dat Niels leraar is: hij kan overdag voor Sem zorgen, terwijl Leonie in het ziekenhuis werkt.',
+      text:'Mike cannot sleep and has been tired for days. The summer school vacation started early because of the enormous heat. A stroke of luck that Mark is a teacher: he can take care of Mike during the day while Lisa works at the hospital.',
       class: 'scroll-text'
     }
   ]
