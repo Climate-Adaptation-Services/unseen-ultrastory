@@ -24,8 +24,8 @@
     </div>
   {/if}
   <div style='{(!$started) ? "cursor:pointer" : "pointer-events:none"}' on:click={() => {started.set(true)}}>
-    <h1 class='title-huge'>Ongekend heet</h1> 
-    <h1 class='sub-start'>Een verhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten</h1>
+    <h1 class='title-huge'>Unprecedented heat</h1> 
+    <h1 class='sub-start'>A story about potential heat extremes in the Netherlands based on scientific insights</h1>
   </div>
 </div>
 
@@ -33,8 +33,8 @@
 <div on:click={() => document.getElementById('heat').play()}>
   {#if !$started}
     <div class="subtitle" style='cursor:pointer' on:click={() => {started.set(true)}}>
-      <em><h3 class="klik-start">KLIK OM TE STARTEN</h3>
-      <h3 class="geluid-info">Dit beeldverhaal bevat geluid. Het verhaal komt het beste over als je een koptelefoon gebruikt.</h3></em>
+      <em><h3 class="klik-start">CLICK TO START</h3>
+      <h3 class="geluid-info">This visual climate story contains audio. The story comes across best if you use headphones.</h3></em>
       <img class='headphones' src='/images/headphones.png' width='60px'/>
     </div>
   {:else}
