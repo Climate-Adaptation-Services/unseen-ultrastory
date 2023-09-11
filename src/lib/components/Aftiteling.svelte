@@ -53,35 +53,35 @@
 
   
   <div class = 'leeslijst'>
-    <h1>Meer lezen?</h1>
-    <h3 class = 'leeslijstcat '>Wetenschappelijke publicaties</h3>
+    <h1>Further reading</h1>
+    <h3 class = 'leeslijstcat '>Scientific publications </h3>
     <ul class="myUL">
-      <li><a href="https://www.nature.com/articles/s41558-021-01092-9" target="_blank">Artikel in Nature:</a> ‘Toenemende kans op recordbrekende klimaatextremen’
+      <li><a href="https://www.nature.com/articles/s41558-021-01092-9" target="_blank">Article in Nature:</a> ‘Increasing probability of record-shattering climate extremes’
       </li>
-      <li><a href="https://www.worldweatherattribution.org/reporting-extreme-weather-and-climate-change-a-guide-for-journalists/" target="_blank">Wetenschappelijke studie:</a> ‘Extreme hitte in Noord-Amerika, Europa en China in juli 2023 veel waarschijnlijker door klimaatverandering’ 
+      <li><a href="https://mcusercontent.com/854a9a3e09405d4ab19a4a9d5/files/95512c98-67bc-9849-c006-5fe389b776ed/WWA_scientific_report_Northern_Hemisphere_heat.pdf" target="_blank">Scientific study:</a> ‘Extreme heat in North America, Europe and China in July 2023 made much more likely by climate change’ 
       </li>
-      <li><a href="/PosterEGU.pdf" target="_blank">Poster over gevolgen van exceptionele hitte</a>  
+      <li><a href="/PosterEGU.pdf" target="_blank">Poster about the impacts of extreme heat</a>  
       </li>
     </ul>
     
-    <h3 class = 'leeslijstcat'>KNMI berichten</h3>
+    <h3 class = 'leeslijstcat'>KNMI articles [in Dutch] </h3>
     <ul class="myUL">  
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/ieder-jaar-een-verpletterend-hitterecord " target="_blank">Ieder jaar een verpletterend hitterecord?</a></li>
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/absolute-temperatuurrecords-door-saharahitte " target="_blank">Absolute temperatuurrecords door Saharahitte</a></li>
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/toename-hittegolven-in-europa-gelinkt-aan-veranderende-straalstroom" target="_blank">Toename hittegolven in Europa gelinkt aan veranderende straalstroom</a></li>
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/extreme-hitte-in-april-in-middellandse-zeegebied-waarschijnlijker-door-klimaatverandering" target="_blank">Extreme hitte in april in Middellandse Zeegebied waarschijnlijker door klimaatverandering</a></li>
+      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/ieder-jaar-een-verpletterend-hitterecord " target="_blank">A crushing heat record every year? </a></li>
+      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/absolute-temperatuurrecords-door-saharahitte " target="_blank">Absolute temperature records due to Sahara heat </a></li>
+      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/toename-hittegolven-in-europa-gelinkt-aan-veranderende-straalstroom" target="_blank">Increase in heat waves in Europe linked to changing jet stream </a></li>
+      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/extreme-hitte-in-april-in-middellandse-zeegebied-waarschijnlijker-door-klimaatverandering" target="_blank">Extreme April heat in Mediterranean more likely due to climate change </a></li>
     </ul>
     
-    <h3 class = 'leeslijstcat'>Video's en webinars</h3>
+    <h3 class = 'leeslijstcat'>Videos and webinars</h3>
     <ul class="myUL">
-      <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs" target="_blank">Mini-college van Universiteit van Nederland: Krijgt Nederland steeds vaker te maken met hittegolven?</a></li>
-      <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8" target="_blank">KNMI filmpje: Temperatuur voor het eerst boven de 40 graden</a></li>
-      <li><a href="https://klimaatverbond.nl/actueel/terugblik-op-het-webinar-de-hittelessen-van-portland-en-het-code-rood-scenario-in-nederland/" target="_blank">Webinar van het Klimaatverbond Nederland over de (hitte)lessen van Portland en het Code Rood-scenario in Nederland</a></li>
+      <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs" target="_blank">Universiteit van Nederland mini lecture: Is the Netherlands experiencing more and more heat waves? </a> [in Dutch]</li> 
+      <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8" target="_blank">KNMI video: Temperature above 40 degrees for the first time</a> [in Dutch]</li>
+      <li><a href="https://klimaatverbond.nl/actueel/terugblik-op-het-webinar-de-hittelessen-van-portland-en-het-code-rood-scenario-in-nederland/" target="_blank">    Klimaatverbond Nederland webinar on Portland's (heat) lessons and the Code Red scenario in the Netherlands </a> [in Dutch]</li>
     </ul>  
     
-    <h3 class = 'leeslijstcat'>Fictie</h3>
+    <h3 class = 'leeslijstcat'>Fiction</h3>
     <ul class="myUL">
-      <li><a href="https://www.npo3.nl/hitte/POMS_S_EO_16238783" target="_blank">Rampsenserie hitte</a></li>
+      <li><a href="https://www.npo3.nl/hitte/POMS_S_EO_16238783" target="_blank"> Disaster series Heat </a>[in Dutch]</li>
     </ul> 
   </div>
 
