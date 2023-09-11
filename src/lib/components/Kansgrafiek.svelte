@@ -169,20 +169,20 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
-        <h1 class='scroll-text-kansgraph'>Statistische berekeningen</h1>
+        <h1 class='scroll-text-kansgraph'>Statistical calculations</h1>
         <p class='scroll-text-kansgraph'>
-          De kans op 40 graden Celsius is door klimaatverandering sterk toegenomen. Hittestatistieken voor Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
+          The probability of 40 degrees Celsius has increased significantly due to climate change. Heat statistics for Eindhoven show the probability of a certain temperature occurring in a year.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het 40 graden zou worden.  
+          <p class='scroll-text-kansgraph'> When Daniel was small, <mark style="background: #648fff50 !important"> around 1980,</mark> it was virtually impossible that it would reach 40 degrees.   
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op 40 graden ongeveer 2%.
+          <p class='scroll-text-kansgraph'> Meanwhile, <mark style="background: #ffb00050 !important">in 2023</mark>, when Mike is young, the probability of 40 degrees is about 2%.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op 40 graden zijn toegenomen tot ongeveer 8%.
+          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">By 2050</mark>, when Mike is an adult, the probability of 40 degrees will have increased to about 7%.
           </p> 
         </div>   
       {/if}      

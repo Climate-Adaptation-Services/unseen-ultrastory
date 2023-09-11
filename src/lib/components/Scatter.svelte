@@ -64,12 +64,12 @@
 <div class='grafiek'>
   <div class='graphtext' style='top:{`${textPadding*screenHeight}px`}'>
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
-    <h1 class='scroll-text'>Temperatuurmetingen</h1>
+    <h1 class='scroll-text'>Temperature measurements</h1>
     <p class='scroll-text'> 
-      Metingen laten zien dat de jaarlijkse maximumtemperatuur in Eindhoven al behoorlijk is toegenomen. Tot 2019 was een temperatuur van boven de 37 graden nog nooit gemeten.  
+      Measurements show that the annual maximum temperature in Eindhoven has already increased considerably. Until 2019, a temperature above 37 degrees had never been measured.  
     </p>
     <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 60 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
-      <p class='scroll-text'> Maar op 24 juli 2019 werd het 40,4 graden in Eindhoven. Het hitterecord van 2018 werd verpulverd met 3,7 graden!  
+      <p class='scroll-text'> But on 24 July 2019, it reached 40.4 degrees Celsius in Eindhoven. The 2018 heat record was pulverised by 3.7 degrees! 
       </p> 
     </div>  
     {/if}

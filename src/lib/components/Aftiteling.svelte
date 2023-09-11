@@ -18,25 +18,25 @@
       name:'',
       image:'',
       time:0.1,
-      text:'De laatste jaren zijn er overal in de wereld enorme uitschieters geweest van extreme hitte, uitschieters die ook klimaatwetenschappers hebben verrast. Ook in Nederland zou het een keer extreem heet kunnen worden.'
+      text:'Recent years have seen huge outliers of extreme heat all over the world, outliers that have also surprised climate scientists. In the Netherlands, too, it could get extremely hot one day. '
     },
     {
       name:'',
       image:'',
       time:0.25,
-      text:'Daarom hebben we met <a style= "color:white" href="https://www.climateadaptationservices.com" target="_blank">Stichting CAS</a>  dit klimaatverhaal gemaakt. We willen vertellen en verbeelden wat er kan gebeuren als we te maken krijgen met een hittecrisis die zijn weerga niet kent. Zodat iedereen zich bewust wordt van de gevaren en we ons op tijd gaan voorbereiden. Door het gesprek met elkaar aan te gaan, kunnen we ook beginnen na te denken over handelingsperspectieven.'
+      text:'That is why <a style= "color:white" href="https://www.climateadaptationservices.com" target="_blank">Stichting CAS</a> made this climate story. We want to tell and depict what could happen if we face an unprecedented heat crisis. So that everyone becomes aware of the dangers and we start preparing in time. By starting the conversation with each other, we can also start thinking about courses of action.'
     },
     {
       name:'',
       image:'',
       time:0.4,
-      text:'Dit verhaal is gebaseerd op de laatste wetenschappelijke inzichten over exceptionele weergebeurtenissen in Nederland en op talloze gesprekken met deskundigen op het gebied van klimaatadaptatie, hitte en crisismanagement. De beelden zijn gemaakt met AI.'
+      text:'This story is based on the latest scientific insights on exceptional weather events in the Netherlands and numerous interviews with experts in climate adaptation, heat and crisis management. The images were created with AI. '
     },
     {
       name:'',
       image:'',
       time:0.55,
-      text:'Onze dank gaat uit naar Marije Bakker (NIPV), Annelies Balkema (Waterschap De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), en Karin van der Wiel (KNMI). Uiteraard is alleen CAS verantwoordelijk voor het eindresultaat.'
+      text:'Our thanks go to Marije Bakker (NIPV), Annelies Balkema (Waterboard De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant) and Karin van der Wiel (KNMI). Of course, CAS alone is responsible for the final result.'
     }
   ]
 

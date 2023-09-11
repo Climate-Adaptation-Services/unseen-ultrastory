@@ -21,28 +21,28 @@
       name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
-      text:'In het ziekenhuis werkt Leonie zo hard als ze kan . Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En het is verschrikkelijk druk op de spoedeisende hulp: de hitte veroorzaakt massale gezondheidsproblemen. Het is zwaar werk, en morgen moet ze ook weer.',
+      text:"At the hospital, Lisa works as hard as she can. A colleague has called in sick because of heatstroke. And the emergency room is terribly busy: the heat is causing massive health problems. It's hard work, and tomorrow she has to do it again.",
       class: 'scroll-text'
     },
     {
       name:'oudevrouwziekenhuis',
       image:'png',
       time:0.25,
-      text:'Vandaag zat de wachtkamer vol met mensen. Er waren veel ouderen die met uitdrogingsverschijnselen op de spoedeisende hulp belandden.',
+      text:'Today, the waiting room was full of people. There were many elderly people who ended up in the emergency room with dehydration symptoms.',
       class: 'scroll-text'
     },
     {
       name:'hardloper1',
       image:'png',
       time:0.5,
-      text:'Een paar jonge sporters werden onwel toen ze ondanks waarschuwingen toch gingen hardlopen.',
+      text:'A couple of young athletes became unwell when they went running despite warnings.',
       class: 'scroll-text'
     },
     {
       name:'boer1',
       image:'png',
       time:0.75,
-      text:'En een boer had tijdens het hooien een zware zonnesteek gekregen.',
+      text:'And a farmer had suffered severe sunstroke while haying.',
       class: 'scroll-text'
     },
   ]

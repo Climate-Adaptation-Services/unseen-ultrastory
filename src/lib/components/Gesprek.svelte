@@ -23,7 +23,7 @@
       name:'gesprek',
       image:'png',
       time:0.2,
-      text:'Sem kan niet slapen door de warmte en denkt aan wat oma zei toen ze vanmiddag belde. Niels probeert Sem in slaap te helpen met natte washandjes. De ventilator zet hij op de hoogste stand. Terwijl hij hiermee bezig is, zegt Sem: “Volgens oma werd het vroeger nooit zo heet.”   <br/> <br/> Niels: “Klopt. Toen ik zo oud was als jij, kwam dit soort hitte nooit voor. Als je mij toen had verteld dat het dagen achter elkaar boven de 40 graden zou kunnen worden, had ik dat nooit geloofd.​”​',
+      text:'Mike can’t sleep because of the heat and thinks about what grandma said when she called this afternoon. Mark tries to help him fall asleep with damp washcloths. He sets the fan to maximum. As he is doing this, Mike says: "According to grandma, it never used to get this hot.”   <br/> <br/> Daniel: "True. When I was your age, this kind of heat never occurred. If you had told me then that it could get above 40 degrees for days in a row, I would never have believed it."​”​',
       class: 'scroll-text'
     }
   ]
