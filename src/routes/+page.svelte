@@ -87,7 +87,7 @@
 	<a href="https://climateadaptationservices.com/en/" target="_blank">
 		<img class='logo' src='/images/logokleur.png' width='10%'/>
 	</a>	
-	<a href="https://climateadaptationservices.com/en/" target="_blank">
+	<a href="https://ongekendheet.nl" target="_blank">
 		<img class='vlag' src='/images/nlflag.jpg' width='3%'/>
 	</a>
 	{#if $started}
