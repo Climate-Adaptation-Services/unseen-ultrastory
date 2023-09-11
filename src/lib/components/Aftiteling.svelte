@@ -76,12 +76,12 @@
     <ul class="myUL">
       <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs" target="_blank">Universiteit van Nederland mini lecture: Is the Netherlands experiencing more and more heat waves? </a> [in Dutch]</li> 
       <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8" target="_blank">KNMI video: Temperature above 40 degrees for the first time</a> [in Dutch]</li>
-      <li><a href="https://klimaatverbond.nl/actueel/terugblik-op-het-webinar-de-hittelessen-van-portland-en-het-code-rood-scenario-in-nederland/" target="_blank">    Klimaatverbond Nederland webinar on Portland's (heat) lessons and the Code Red scenario in the Netherlands </a> [in Dutch]</li>
+      <li><a href="https://www.youtube.com/watch?v=SiZCZG7sPoQ&t=3s" target="_blank">Klimaatverbond Nederland webinar on Portland's (heat) lessons and the Code Red scenario in the Netherlands </a></li>
     </ul>  
     
-    <h3 class = 'leeslijstcat'>Fiction</h3>
+    <h3 class = 'leeslijstcat'>Fiction [in Dutch]</h3>
     <ul class="myUL">
-      <li><a href="https://www.npo3.nl/hitte/POMS_S_EO_16238783" target="_blank"> Disaster series Heat </a>[in Dutch]</li>
+      <li><a href="https://www.npo3.nl/hitte/POMS_S_EO_16238783" target="_blank"> Disaster series Heat </a></li>
     </ul> 
   </div>
 
