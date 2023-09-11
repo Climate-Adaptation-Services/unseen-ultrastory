@@ -66,7 +66,7 @@
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <h1 class='scroll-text'>Temperature measurements</h1>
     <p class='scroll-text'> 
-      Measurements show that the annual maximum temperature in Eindhoven has already increased considerably. Until 2019, a temperature above 37 degrees had never been measured.   
+      Measurements show that the annual maximum temperature in Eindhoven has already increased considerably. Until 2019, a temperature above 37 degrees had never been recorded.   
     </p>
     <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 60 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
       <p class='scroll-text'> But on 24 July 2019, it reached 40.4 degrees Celsius in Eindhoven. The 2018 heat record was smashed by 3.7 degrees!
