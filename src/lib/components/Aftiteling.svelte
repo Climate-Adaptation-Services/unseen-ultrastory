@@ -58,7 +58,7 @@
     <ul class="myUL">
       <li><a href="https://www.nature.com/articles/s41558-021-01092-9" target="_blank">Artikel in Nature:</a> ‘Toenemende kans op recordbrekende klimaatextremen’
       </li>
-      <li><a href="https://www.worldweatherattribution.org/reporting-extreme-weather-and-climate-change-a-guide-for-journalists/" target="_blank">Wetenschappelijke studie:</a> ‘Extreme hitte in Noord-Amerika, Europa en China in juli 2023 veel waarschijnlijker door klimaatverandering’ 
+      <li><a href="https://mcusercontent.com/854a9a3e09405d4ab19a4a9d5/files/95512c98-67bc-9849-c006-5fe389b776ed/WWA_scientific_report_Northern_Hemisphere_heat.pdf" target="_blank">Wetenschappelijke studie:</a> ‘Extreme hitte in Noord-Amerika, Europa en China in juli 2023 veel waarschijnlijker door klimaatverandering’ 
       </li>
       <li><a href="/PosterEGU.pdf" target="_blank">Poster over gevolgen van exceptionele hitte</a>  
       </li>
