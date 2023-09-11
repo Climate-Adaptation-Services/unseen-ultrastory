@@ -31,7 +31,7 @@
     
     huis = L.tooltip(wandelRoute[0], {direction:'top', offset:[0,-40]})
     huis
-      .setContent("Huis van Niels en Leonie")
+      .setContent("Lisa and Mark's home")
       .addTo(leafletMap);
 
     ziekenhuis = L.tooltip([51.466143, 5.472363], {direction:'top', offset:[0,-40]})
@@ -79,7 +79,7 @@
     leafletMap.flyTo(flyToCoordsZiekenhuis, 16, {duration: 3})
     
     ziekenhuis
-      .setContent("Catharina ziekenhuis")
+      .setContent("Catharina hospital")
       .addTo(leafletMap);
   }
 

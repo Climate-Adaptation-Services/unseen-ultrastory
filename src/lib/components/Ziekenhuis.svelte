@@ -21,14 +21,14 @@
       name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
-      text:"At the hospital, Lisa works as hard as she can. A colleague has called in sick because of heatstroke. And the emergency room is terribly busy: the heat is causing massive health problems. It's hard work, and tomorrow she has to do it again.",
+      text:"At the hospital, Lisa works as hard as she can. A colleague has called in sick because of heatstroke. The emergency room is terribly busy: the heat is causing massive health problems. It's hard work, and tomorrow she has to do it again.",
       class: 'scroll-text'
     },
     {
       name:'oudevrouwziekenhuis',
       image:'png',
       time:0.25,
-      text:'Today, the waiting room was full of people. There were many elderly people who ended up in the emergency room with dehydration symptoms.',
+      text:'Today, the waiting room was full of people. Many elderly people who ended up in the emergency room with dehydration symptoms.',
       class: 'scroll-text'
     },
     {
@@ -42,7 +42,7 @@
       name:'boer1',
       image:'png',
       time:0.75,
-      text:'And a farmer had suffered severe sunstroke while haying.',
+      text:'And a farmer had suffered severe sunstroke while harvesting.',
       class: 'scroll-text'
     },
   ]

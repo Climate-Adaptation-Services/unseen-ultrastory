@@ -174,15 +174,15 @@
           The probability of 40 degrees Celsius has increased significantly due to climate change. Heat statistics for Eindhoven show the probability of a certain temperature occurring in a year.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> When Daniel was small, <mark style="background: #648fff50 !important"> around 1980,</mark> it was virtually impossible that it would reach 40 degrees.   
+          <p class='scroll-text-kansgraph'> When Mark was small, <mark style="background: #648fff50 !important"> around 1980,</mark> it was virtually impossible that it would reach 40 degrees.   
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Meanwhile, <mark style="background: #ffb00050 !important">in 2023</mark>, when Mike is young, the probability of 40 degrees is about 2%.
+          <p class='scroll-text-kansgraph'> Meanwhile, <mark style="background: #ffb00050 !important">in 2023</mark>, while Tom is young, the probability of 40 degrees is about 2%.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">By 2050</mark>, when Mike is an adult, the probability of 40 degrees will have increased to about 7%.
+          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">By 2050</mark>, when Tom will be an adult, the probability of 40 degrees will have increased to about 7%.
           </p> 
         </div>   
       {/if}      
@@ -194,18 +194,18 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})" >
           <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
           <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
-          <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistiek voor:</text> 
+          <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistics for:</text> 
           <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)}>1980</text>  
           <line x1={screenWidth * legendPositionX1}  y1={yScale(31)} x2={screenWidth * legendPositionX2} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
-          <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Kans (%)</text>  
-          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatuur (°C)</text>  
+          <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Chance (%)</text>  
+          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperature (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>De kans op hitte per generatie</text>
+          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>The chance of heat per generation</text>
           {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 
             <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
             <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
             <line x1={xScale(0.0075)}  y1={yScale(44.0244)} x2={xScale(0.0085)} y2={yScale(44.0244)} stroke="grey"/>
-            <text x={xScale(0.0075)} y={yScale(40.5)} font-size = "1.3vh" marker-end="url(#triangle)">Bandbreedte</text>
+            <text x={xScale(0.0075)} y={yScale(40.5)} font-size = "1.3vh" marker-end="url(#triangle)">Bandwidth</text>
           {/if}
           {#if ratioOfCsvData > 270}
             <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
@@ -221,8 +221,8 @@
            {/if}
         </g>
       </svg>
-      <p class='graph-description'>Hittestatistieken voor Eindhoven voor het klimaat van 1980, 2023 en 2050. Deze zijn berekend op basis van metingen van KNMI-station Eindhoven en het KNMI'14 hoge &#40;WH&#41; scenario voor 2050. Gebruikte tools:  
-        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> en het <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 transformatieprogramma</a>.  
+      <p class='graph-description'>Heat statistics for Eindhoven for the climate of 1980, 2023 and 2050. These have been calculated based on measurements from KNMI station Eindhoven and the KNMI'14 high (WH) scenario for 2050. Tools used:  
+        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> and the <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 transformation program</a>.  
       </p>
     </div>
   </div>

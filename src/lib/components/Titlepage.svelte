@@ -19,7 +19,7 @@
 
   {#if $started}
     <div class='scrolldown'>
-      <h4>Scroll naar beneden</h4>
+      <h4>Scroll down</h4>
       <img  width='7%' src={'/images/arrowdown.png'} />
     </div>
   {/if}

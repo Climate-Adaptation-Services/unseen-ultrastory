@@ -35,14 +35,14 @@
       xAxisScale = 0.7
       yAxisScale = 0.5
       textPadding = 0.65
-      title = 'Maximumtemperatuur KNMI-station Eindhoven'
+      title = 'Maximum temperature KNMI-station Eindhoven'
     
     }
      else {
       xAxisScale = 0.4
       yAxisScale = 0.7
       textPadding = 0.15
-      title = 'Jaarlijks gemeten maximumtemperatuur op KNMI-station Eindhoven'
+      title = 'Yearly measured maximum temperature at KNMI-station Eindhoven'
     }
       
 
@@ -66,10 +66,10 @@
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <h1 class='scroll-text'>Temperature measurements</h1>
     <p class='scroll-text'> 
-      Measurements show that the annual maximum temperature in Eindhoven has already increased considerably. Until 2019, a temperature above 37 degrees had never been measured.  
+      Measurements show that the annual maximum temperature in Eindhoven has already increased considerably. Until 2019, a temperature above 37 degrees had never been measured.   
     </p>
     <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 60 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
-      <p class='scroll-text'> But on 24 July 2019, it reached 40.4 degrees Celsius in Eindhoven. The 2018 heat record was pulverised by 3.7 degrees! 
+      <p class='scroll-text'> But on 24 July 2019, it reached 40.4 degrees Celsius in Eindhoven. The 2018 heat record was smashed by 3.7 degrees!
       </p> 
     </div>  
     {/if}
@@ -80,12 +80,12 @@
       <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0})">
       <XAxis {xScale} height={screenHeight * yAxisScale}/>
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
-      <text class='axistitle' x={xScale(1988)} y={yScale(26)+2}>Jaar</text>  
+      <text class='axistitle' x={xScale(1988)} y={yScale(26)+2}>Year</text>  
       <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>{title}</text>
-      <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Maximumtemperatuur (°C)</text>
+      <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Maximum temperature (°C)</text>
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
-          <text x={-90} y={32} class="recordyear" font-size = "2vh">De eerste keer</text>
+          <text x={-90} y={32} class="recordyear" font-size = "2vh">The first time</text>
           <text x={-90} y={32 + (0.02*innerHeight)} class="recordyear"font-size = "2vh"> 40+ °C in 2019</text>
           <path
             fill='none'

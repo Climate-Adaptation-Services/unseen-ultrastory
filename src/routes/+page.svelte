@@ -84,7 +84,7 @@
 
 <div>
 	<Titlepage {currentStepName} {offset}/>
-	<a href="https://climateadaptationservices.com" target="_blank">
+	<a href="https://climateadaptationservices.com/en/" target="_blank">
 		<img class='logo' src='/images/logokleur.png' width='10%'/>
 	</a>	
 	{#if $started}
