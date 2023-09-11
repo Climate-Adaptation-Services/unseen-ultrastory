@@ -174,7 +174,7 @@
           The probability of 40 degrees Celsius has increased significantly due to climate change. Heat statistics for Eindhoven show the probability of a certain temperature occurring in a year.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> When Mark was small, <mark style="background: #648fff50 !important"> around 1980,</mark> it was virtually impossible that it would reach 40 degrees.   
+          <p class='scroll-text-kansgraph'> When Mark was a child, <mark style="background: #648fff50 !important"> around 1980,</mark> it was virtually impossible that it would reach 40 degrees.   
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
@@ -200,7 +200,7 @@
           <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Probability (%)</text>  
           <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperature (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>The probability of heat per generation</text>
+          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>Heat probability by generation</text>
           {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 
             <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
             <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>

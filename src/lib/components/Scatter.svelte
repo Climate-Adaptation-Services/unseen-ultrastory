@@ -42,7 +42,7 @@
       xAxisScale = 0.4
       yAxisScale = 0.7
       textPadding = 0.15
-      title = 'Yearly measured maximum temperature at KNMI-station Eindhoven'
+      title = 'Yearly recorded maximum temperature at KNMI-station Eindhoven'
     }
       
 
