@@ -29,7 +29,7 @@
       name:'seminbed1',
       image:'png',
       time:0.5,
-      text:'Mike cannot sleep and has been tired for days. The summer school vacation started early because of the exceptional heat. A stroke of luck that Mark is a teacher: he can take care of Tom during the day while Lisa works at the hospital.',
+      text:'Tom cannot sleep and has been tired for days. The summer school vacation started early because of the exceptional heat. A stroke of luck that Mark is a teacher: he can take care of Tom during the day while Lisa works at the hospital.',
       class: 'scroll-text'
     }
   ]
