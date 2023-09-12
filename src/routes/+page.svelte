@@ -14,10 +14,11 @@
 	import Aftiteling from "$lib/components/Aftiteling.svelte";
 	import NavigationPanel from "$lib/components/NavigationPanel.svelte";
 
-	// import { timeParse } from 'd3'
+	import { select } from 'd3'
 
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { started, sound } from "$lib/stores.js";
+    import { onMount } from "svelte";
 
 	// for preloading images
 	let imageModules = import.meta.glob("/static/images/*");
@@ -73,6 +74,14 @@
 		}
 	}
 
+	onMount(() => {
+		const logo = document.getElementsByClassName('logo')[0].getBoundingClientRect();
+		console.log(logo)
+		select('.vlag')
+			.style('top', (logo.bottom+logo.top)/2-12.5+'px')
+			.style('left', logo.left-60+'px')
+	})
+
 </script>
 
 <!-- preload images -->
@@ -88,8 +97,9 @@
 		<img class='logo' src='/images/logokleur.png' width='10%'/>
 	</a>	
 	<a href="https://ongekendheet.nl">
-		<img class='vlag' src='/images/nlflag.jpg' width='2%'/>
+		<img class='vlag' src='/images/nlflag.jpg' width='40px' height='25px'/>
 	</a>
+
 	{#if $started}
 		<Scroller bind:index bind:offset bind:progress>
 			
@@ -150,19 +160,22 @@
 </div>
 
 <style>
-
-	.vlag{
-		position:absolute;
-		top:2%;
-		right:12%;
-	}
-
-
-	.cloud{
+	/* .cloud{
 		position: fixed;
 		z-index: 1000;
 		top:300px;
 		filter: contrast(0) sepia(100%) hue-rotate(116deg) brightness(1.3) saturate(0.28) grayscale(100%) opacity(60%);
+	} */
+
+	.vlag{
+		position:absolute;
+	}
+
+	.logo{
+		position:fixed;
+		right:1%;
+		top:2%;
+		z-index: 10000000;
 	}
 
 	.info {
