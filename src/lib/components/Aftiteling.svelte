@@ -36,7 +36,7 @@
       name:'',
       image:'',
       time:0.55,
-      text:'Our thanks go to Marije Bakker (NIPV), Annelies Balkema (Waterboard De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), Vikkie Thompson (KNMI), and Karin van der Wiel (KNMI). Of course, CAS alone is responsible for the final result.'
+      text:'Our thanks go to Marije Bakker (NIPV), Annelies Balkema (Waterboard De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provincie Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provincie Brabant), Vikki Thompson (KNMI), and Karin van der Wiel (KNMI). Of course, CAS alone is responsible for the final result.'
     }
   ]
 
