@@ -88,7 +88,7 @@
 		<img class='logo' src='/images/logokleur.png' width='10%'/>
 	</a>	
 	<a href="https://ongekendheet.nl" target="_blank">
-		<img class='vlag' src='/images/nlflag.jpg' width='3%'/>
+		<img class='vlag' src='/images/nlflag.jpg' width='2%'/>
 	</a>
 	{#if $started}
 		<Scroller bind:index bind:offset bind:progress>
