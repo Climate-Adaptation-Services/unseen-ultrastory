@@ -177,13 +177,6 @@ svg text {
   color: white !important;
 }
 
-.logo{
-  position:fixed;
-  right:1%;
-  top:2%;
-  z-index: 10000000;
-}
-
 .fade-in {
   animation: fadeIn 2s;
 }
