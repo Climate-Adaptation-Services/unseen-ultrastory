@@ -153,8 +153,8 @@
 
 	.vlag{
 		position:absolute;
-		top:5%;
-		left:5%;
+		top:2%;
+		right:12%;
 	}
 
 
