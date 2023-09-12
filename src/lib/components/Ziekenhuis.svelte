@@ -21,7 +21,7 @@
       name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
-      text:'In het ziekenhuis werkt Leonie zo hard als ze kan . Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En het is verschrikkelijk druk op de spoedeisende hulp: de hitte veroorzaakt massale gezondheidsproblemen. Het is zwaar werk, en morgen moet ze ook weer.',
+      text:'In het ziekenhuis werkt Leonie zo hard als ze kan. Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En het is verschrikkelijk druk op de spoedeisende hulp: de hitte veroorzaakt massale gezondheidsproblemen. Het is zwaar werk, en morgen moet ze ook weer.',
       class: 'scroll-text'
     },
     {
