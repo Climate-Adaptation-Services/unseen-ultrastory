@@ -18,7 +18,8 @@
 
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { started, sound } from "$lib/stores.js";
-    import { onMount } from "svelte";
+	import { onMount } from "svelte";
+	import { browser } from "$app/environment";
 
 	// for preloading images
 	let imageModules = import.meta.glob("/static/images/*");
@@ -76,11 +77,11 @@
 
 	onMount(() => {
 		const logo = document.getElementsByClassName('logo')[0].getBoundingClientRect();
-		console.log(logo)
 		select('.vlag')
 			.style('top', (logo.bottom+logo.top)/2-12.5+'px')
 			.style('left', logo.left-60+'px')
 	})
+
 
 </script>
 
@@ -94,7 +95,9 @@
 <div>
 	<Titlepage {currentStepName} {offset}/>
 	<a href="https://climateadaptationservices.com/en/" target="_blank">
-		<img class='logo' src='/images/logokleur.png' width='10%'/>
+		<div class='logo' style="width:130px; height:60px">
+			<img src='/images/logokleur.png' style="width:100%"/>
+		</div>
 	</a>	
 	<a href="https://ongekendheet.nl">
 		<img class='vlag' src='/images/nlflag.jpg' width='40px' height='25px'/>
