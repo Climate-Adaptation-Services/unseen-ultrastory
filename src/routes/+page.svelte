@@ -26,7 +26,7 @@
 
 	export let data;
 
-	let leafletMap;
+	let leafletMap; 
 
 	// const csvData = data['data'].map(d => {
 	// 	return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
