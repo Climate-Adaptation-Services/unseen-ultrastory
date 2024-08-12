@@ -36,7 +36,6 @@
       yAxisScale = 0.5
       textPadding = 0.65
       title = 'Maximumtemperatuur KNMI-station Eindhoven'
-    
     }
      else {
       xAxisScale = 0.4
@@ -44,11 +43,10 @@
       textPadding = 0.15
       title = 'Jaarlijks gemeten maximumtemperatuur op KNMI-station Eindhoven'
     }
-      
-
-  $: xScale = d3.scaleLinear()
-      .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
-      .range([ 0,screenWidth * xAxisScale]);
+  
+  $: xScale = d3.scaleLinear() 
+    .domain(d3.extent(maxTempData, function(d) { return +d.year; }))
+    .range([ 0,screenWidth * xAxisScale]);
 
   $: yScale = d3.scaleLinear()
     .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])

@@ -23,7 +23,6 @@
 	let imageModules = import.meta.glob("/static/images/*");
 
 	export let data;
-	let leafletMap;
 
 	console.log(data)
 
@@ -39,6 +38,8 @@
 		confidenceData = values[2]
 		middellijnData2050 = values[3]
 	})
+
+	let leafletMap;
 
 	const stepNames = [
 		"thuis",
@@ -85,69 +86,71 @@
 	{/each}
 </svelte:head>
 
-<div>
-	<Titlepage {currentStepName} {offset}/>
-	<a href="https://climateadaptationservices.com" target="_blank">
-		<img class='logo' src='/images/logokleur.png' width='10%'/>
-	</a>	
-	{#if $started}
-		<Scroller bind:index bind:offset bind:progress>
-			
-			<div slot='background' top='0' bottom='0'>
-				{#if data}
-					<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
-				{/if}
-					
-			</div>
-
-			<div slot='foreground'>
-				<img class='sound' src='/images/{(($sound) ? 'volume' : 'mute')}.png' width='30px' on:click={() => soundToggle()}
-					style={(['wandeling', 'krantenkoppen'].includes(currentStepName)) ? 'filter:invert(1)' : ''}/>
-				<!-- <div class="info">
-					<p>Step: {index}</p>
-					<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
-					<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
-					
-				</div> -->
+{#if maxTempData && middellijnData && middellijnData2050 && confidenceData}
+	<div>
+		<Titlepage {currentStepName} {offset}/>
+		<a href="https://climateadaptationservices.com" target="_blank">
+			<img class='logo' src='/images/logokleur.png' width='10%'/>
+		</a>	
+		{#if $started}
+			<Scroller bind:index bind:offset bind:progress>
 				
-				<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
-					<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
-				</div>
-				<img class='fixed-image' src='' style='opacity:0'/>
-
-				{#each stepNames as stepName, i}
-					{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling', 'leeslijst'].includes(stepName)}
-						<section class='widestep step_{stepName}'>
-							{#if stepName === 'temperatuurstijging'}
-								<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
-							{:else if stepName === 'kansgrafiek'}
-								<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
-							{:else if stepName === 'aftiteling'}
-								<Aftiteling {offset} {index} {stepName} {currentStepName} />
-							{/if}
-						</section>
-					{:else}
-						<section class='step step_{stepName}'>
-							{#if stepName === 'thuis'}
-								<Introductie {offset} {index} {currentStepName} {stepName} />
-							{:else if stepName === 'gesprek'}
-								<Gesprek {offset} {index} {currentStepName} {stepName} />
-							{:else if stepName === 'ziekenhuis'}
-								<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
-							{:else if stepName === 'wandeling'}
-								<Wandeling {offset} {index} {currentStepName} {stepName} />
-							{:else if stepName === 'krantenkoppen'}
-								<Krantenkoppen {offset} {index} {currentStepName} {stepName} />
-							{:else if stepName === 'autoritje'}
-								<AutoRitje {offset} {index} {stepName} {currentStepName} />
-							{/if}
-						</section>
+				<div slot='background' top='0' bottom='0'>
+					{#if data}
+						<BackgroundMap {leafletMap} {offset} {index} {currentStepName}/>
 					{/if}
-				{/each}
-			</div>
-		</Scroller>
-	{/if}	
-</div>
+						
+				</div>
+
+				<div slot='foreground'>
+					<img class='sound' src='/images/{(($sound) ? 'volume' : 'mute')}.png' width='30px' on:click={() => soundToggle()}
+						style={(['wandeling', 'krantenkoppen'].includes(currentStepName)) ? 'filter:invert(1)' : ''}/>
+					<!-- <div class="info">
+						<p>Step: {index}</p>
+						<p>Step progress: {offset>0 ? Math.round(offset*100) : 0}%</p>
+						<p>Total progress: {progress>0 ? Math.round(progress*100) : 0}%</p>
+						
+					</div> -->
+					
+					<div class='navigation-panel' bind:clientHeight={navigationPanelHeight}>
+						<NavigationPanel {stepNames} {currentStepName} height={navigationPanelHeight} {offset}/>
+					</div>
+					<img class='fixed-image' src='' style='opacity:0'/>
+
+					{#each stepNames as stepName, i}
+						{#if ['temperatuurstijging', 'kansgrafiek', 'unseen', 'aftiteling', 'leeslijst'].includes(stepName)}
+							<section class='widestep step_{stepName}'>
+								{#if stepName === 'temperatuurstijging'}
+									<Scatter {maxTempData} {offset} {index} {stepName} {currentStepName}/>
+								{:else if stepName === 'kansgrafiek'}
+									<Kansgrafiek {middellijnData} {middellijnData2050} {offset} {index} {stepName} {confidenceData} {currentStepName}/>
+								{:else if stepName === 'aftiteling'}
+									<Aftiteling {offset} {index} {stepName} {currentStepName} />
+								{/if}
+							</section>
+						{:else}
+							<section class='step step_{stepName}'>
+								{#if stepName === 'thuis'}
+									<Introductie {offset} {index} {currentStepName} {stepName} />
+								{:else if stepName === 'gesprek'}
+									<Gesprek {offset} {index} {currentStepName} {stepName} />
+								{:else if stepName === 'ziekenhuis'}
+									<Ziekenhuis {offset} {index} {currentStepName} {stepName} />
+								{:else if stepName === 'wandeling'}
+									<Wandeling {offset} {index} {currentStepName} {stepName} />
+								{:else if stepName === 'krantenkoppen'}
+									<Krantenkoppen {offset} {index} {currentStepName} {stepName} />
+								{:else if stepName === 'autoritje'}
+									<AutoRitje {offset} {index} {stepName} {currentStepName} />
+								{/if}
+							</section>
+						{/if}
+					{/each}
+				</div>
+			</Scroller>
+		{/if}	
+	</div>
+{/if}
 
 <style>
 	.cloud{
