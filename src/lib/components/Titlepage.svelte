@@ -7,14 +7,14 @@
   export let offset
 
   $: cricketvolume = clamp(1 - Math.pow(offset, 1/4), 0, 1);
-
+  
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class='title {($started) ? "started" : ""}' on:click={() => document.getElementById('heat').play()}>
 	
-  {#if currentStepName === 'thuis' && browser && window.innerWidth > 600 && $started}
-		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
+  {#if currentStepName === 'thuis' && browser && window.innerWidth > 600}
+		<audio src="sounds/heat.mp3" loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
 
   {#if $started}
