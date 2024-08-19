@@ -13,7 +13,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class='title {($started) ? "started" : ""}' on:click={() => document.getElementById('heat').play()}>
 	
-  {#if currentStepName === 'thuis' && browser && window.innerWidth > 600 && $started}
+  {#if currentStepName === 'thuis' && browser && window.innerWidth > 600}
 		<audio src="sounds/heat.mp3" autoplay loop id='heat' bind:volume={cricketvolume} /> 
 	{/if}
 
