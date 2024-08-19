@@ -28,15 +28,18 @@
 
 	let leafletMap; 
 
+	let maxTempData
+	let middellijnData
+	let middellijnData2050
+	let confidenceData
 
-	// const csvData = data['data'].map(d => {
-	// 	return { date : timeParse("%Y-%m-%d")(d.date), value : d.value }
-	// })
-
-	const maxTempData = data.datatest
-	const middellijnData = data.datamiddellijn
-	const middellijnData2050 = data.datamiddellijn2050
-	const confidenceData = data.dataconfidence
+	// datatest, datamiddellijn, dataconfidence, datamiddellijn2050
+	Promise.all(data.data).then(values => {
+		maxTempData = values[0]
+		middellijnData = values[1]
+		confidenceData = values[2]
+		middellijnData2050 = values[3]
+	})
 
 	$: console.log(data.datatest)
 
