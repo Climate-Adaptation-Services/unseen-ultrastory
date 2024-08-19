@@ -7,5 +7,6 @@ export function load(){
   const datamiddellijn2050 = dsv(',', "https://raw.githubusercontent.com/sophievanderhorst/data/main/Observatie_Eindhoven_statistieken_Middellijn_2050.csv")
   const dataconfidence = dsv(',', "https://raw.githubusercontent.com/sophievanderhorst/data/main/confidence_intervals.csv")
   const unseen = dsv(',', "https://raw.githubusercontent.com/sophievanderhorst/data/main/SEAS5_JJA_Txx_Noord-Brabant_corrected.csv")
-  return { data, datatest, datamiddellijn, dataconfidence, unseen, datamiddellijn2050 }
+  
+  return {data:[datatest, datamiddellijn, dataconfidence, datamiddellijn2050]}
 }
