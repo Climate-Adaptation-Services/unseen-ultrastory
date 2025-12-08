@@ -357,6 +357,23 @@ Schwimmbad
 
 ---
 
+## NavigationPanel.svelte (Navigation Labels)
+
+### Step name translations
+| Dutch (internal) | German (display) |
+|------------------|------------------|
+| thuis | Zuhause |
+| ziekenhuis | Krankenhaus |
+| gesprek | Gespräch |
+| temperatuurstijging | Temperaturanstieg |
+| kansgrafiek | Wahrscheinlichkeit |
+| wandeling | Spaziergang |
+| krantenkoppen | Schlagzeilen |
+| autoritje | Autofahrt |
+| aftiteling | Abspann |
+
+---
+
 ## Notes for Editor
 
 - Keep text lengths similar to maintain proper layout
