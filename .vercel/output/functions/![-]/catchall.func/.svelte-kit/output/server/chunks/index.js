@@ -1,4 +1,5 @@
-import { n as noop, f as safe_not_equal } from "./ssr.js";
+import { n as noop, w as safe_not_equal } from "./context.js";
+import "clsx";
 const subscriber_queue = [];
 function readable(value, start) {
   return {
@@ -6,7 +7,7 @@ function readable(value, start) {
   };
 }
 function writable(value, start = noop) {
-  let stop;
+  let stop = null;
   const subscribers = /* @__PURE__ */ new Set();
   function set(new_value) {
     if (safe_not_equal(value, new_value)) {
@@ -27,7 +28,10 @@ function writable(value, start = noop) {
     }
   }
   function update(fn) {
-    set(fn(value));
+    set(fn(
+      /** @type {T} */
+      value
+    ));
   }
   function subscribe(run, invalidate = noop) {
     const subscriber = [run, invalidate];
@@ -35,7 +39,10 @@ function writable(value, start = noop) {
     if (subscribers.size === 1) {
       stop = start(set, update) || noop;
     }
-    run(value);
+    run(
+      /** @type {T} */
+      value
+    );
     return () => {
       subscribers.delete(subscriber);
       if (subscribers.size === 0 && stop) {
