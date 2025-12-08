@@ -24,7 +24,7 @@
     </div>
   {/if}
   <div style='{(!$started) ? "cursor:pointer" : "pointer-events:none"}' on:click={() => {started.set(true)}}>
-    <h1 class='title-huge'>Beispiellos hei&szlig;</h1>
+    <h1 class='title-huge'>Ungekannt hei&szlig;</h1>
     <h1 class='sub-start'>Eine Geschichte &uuml;ber m&ouml;gliche extreme Hitze in den Niederlanden auf Basis wissenschaftlicher Erkenntnisse</h1>
   </div>
 </div>
