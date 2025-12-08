@@ -1,4 +1,6 @@
 {
   "framework": "sveltekit",
-  "installCommand": "npm install --legacy-peer-deps"
+  "installCommand": "npm install --legacy-peer-deps",
+  "devCommand": "vite dev --port $PORT",
+  "buildCommand": "vite build"
 }
