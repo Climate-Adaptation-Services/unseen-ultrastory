@@ -19,13 +19,13 @@
 
   {#if $started}
     <div class='scrolldown'>
-      <h4>Scroll naar beneden</h4>
+      <h4>Nach unten scrollen</h4>
       <img  width='7%' src={'/images/arrowdown.png'} />
     </div>
   {/if}
   <div style='{(!$started) ? "cursor:pointer" : "pointer-events:none"}' on:click={() => {started.set(true)}}>
-    <h1 class='title-huge'>Ongekend heet</h1> 
-    <h1 class='sub-start'>Een verhaal over mogelijke exceptionele hitte in Nederland op basis van wetenschappelijke inzichten</h1>
+    <h1 class='title-huge'>Beispiellos hei&szlig;</h1>
+    <h1 class='sub-start'>Eine Geschichte &uuml;ber m&ouml;gliche extreme Hitze in den Niederlanden auf Basis wissenschaftlicher Erkenntnisse</h1>
   </div>
 </div>
 
@@ -33,8 +33,8 @@
 <div on:click={() => document.getElementById('heat').play()}>
   {#if !$started}
     <div class="subtitle" style='cursor:pointer' on:click={() => {started.set(true)}}>
-      <em><h3 class="klik-start">KLIK OM TE STARTEN</h3>
-      <h3 class="geluid-info">Dit beeldverhaal bevat geluid. Het verhaal komt het beste over als je een koptelefoon gebruikt.</h3></em>
+      <em><h3 class="klik-start">KLICKEN ZUM STARTEN</h3>
+      <h3 class="geluid-info">Diese Bildgeschichte enth&auml;lt Ton. Die Geschichte wirkt am besten mit Kopfh&ouml;rern.</h3></em>
       <img class='headphones' src='/images/headphones.png' width='60px'/>
     </div>
   {:else}

@@ -23,7 +23,7 @@
       name:'gesprek',
       image:'png',
       time:0.2,
-      text:'Sem kan niet slapen door de warmte en denkt aan wat oma zei toen ze vanmiddag belde. Niels probeert Sem in slaap te helpen met natte washandjes. De ventilator zet hij op de hoogste stand. Terwijl hij hiermee bezig is, zegt Sem: “Volgens oma werd het vroeger nooit zo heet.”   <br/> <br/> Niels: “Klopt. Toen ik zo oud was als jij, kwam dit soort hitte nooit voor. Als je mij toen had verteld dat het dagen achter elkaar boven de 40 graden zou kunnen worden, had ik dat nooit geloofd.​”​',
+      text:'Sem kann wegen der Wärme nicht schlafen und denkt an das, was Oma heute Nachmittag am Telefon sagte. Niels versucht, Sem mit nassen Waschlappen beim Einschlafen zu helfen. Den Ventilator stellt er auf die höchste Stufe. Während er damit beschäftigt ist, sagt Sem: "Laut Oma war es früher nie so heiß."   <br/> <br/> Niels: "Stimmt. Als ich so alt war wie du, gab es diese Art von Hitze nie. Wenn mir damals jemand gesagt hätte, dass es tagelang über 40 Grad werden könnte, hätte ich das nie geglaubt."',
       class: 'scroll-text'
     }
   ]
