@@ -1,0 +1,364 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: Belanosima;
+  src: url(Belanosima-Regular.ttf);
+}
+
+@font-face {
+  font-family: Digital;
+  src: url(digital.ttf);
+}
+
+@font-face {
+  font-family: Chunk;
+  src: url(Chunk.ttf);
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  /* background-image: linear-gradient(rgba(82, 82, 17, 0.504), rgb(255, 0, 0)); */
+  color:white;
+  margin:0 !important;
+  text-align: center;
+  font-family: Belanosima, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+svg text {
+  font-family: Belanosima;
+}
+
+.scroll-text{
+  color:#4e4e4e;
+  font-size:2.5vh;
+  text-align: left;
+}
+
+.scroll-text-block{
+  position: absolute;
+  background-color: rgb(255, 255, 255, 0.2);
+  border: solid;
+  width:33%;
+  padding:20px;
+}
+
+.fixed-image{
+  position: fixed;
+  width:30vw;
+  /* padding:20px; */
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  transition: src 2s;
+  stroke:none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* The box shadow with a slight cloudiness effect */
+  border-radius: 8px;
+
+}
+
+.tempmeter{
+  position: fixed;
+  width:250px;
+  padding:20px;
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  margin-top:-210px;
+  margin-right:-110px;
+}
+
+.temp-text{
+  color:black;
+  font-size:42px;
+  font-family: Digital;
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  margin-top:-210px;
+  margin-right:8px;
+  z-index: 10000;
+}
+
+.grafiek{
+  height:100%;
+  position:relative;
+  background-color: rgba(255, 255, 255, 1);
+  width: 90%;
+  height: 100%;
+  left: 5%;
+  fill: #4e4e4e;
+  text-anchor: center;
+}
+
+.aftiteling{
+	background-repeat: no-repeat;
+}
+
+.graphtext{
+  float:left;
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  width: 40%;
+  height:1.5%;
+  margin-top: 10px;
+  text-align: left;
+  padding-left:3vw;
+}
+
+.graphtitle{
+  font-size: 2.5vh;
+  text-anchor:middle;
+}
+
+.axistitle{
+  font-size: 2vh
+}
+
+.sticky-div{
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top: 20px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.tick{
+  font-size: 1.7vh;
+  font-weight:normal;
+  color: #4e4e4e !important;
+}
+
+.night{
+  background-color: rgba(81, 71, 71, 0.5);
+}
+
+.night-image{
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* The box shadow with a slight cloudiness effect */
+  /* width:100%; */
+  max-width: 25vw
+}
+
+.nighttext{
+  color:white !important;
+}
+
+.krant{
+  font-family: Chunk;
+  font-size: 5vh
+}
+
+.outro{
+  background-color: rgba(81, 71, 71, 0);
+  border: none;
+  width:60%;
+  padding:20px;
+  margin:0 auto;
+  left:20%;
+}
+
+.scroll-text-kansgraph{
+  color:#4e4e4e;
+  font-size:2.5vh !important;
+  text-align: left;
+}
+
+.outro-text{
+  /* color:white !important; */
+  text-align: center;
+  color: white !important;
+}
+
+.logo{
+  position:fixed;
+  right:1%;
+  top:2%;
+  z-index: 10000000;
+}
+
+.fade-in {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* **************************************************
+** Largescreen ***********************************
+****************************************************/
+
+@media only screen and (min-width: 2000px){
+
+  .night-image{
+    max-width: 500px
+  }
+
+}
+
+/* **************************************************
+** Mobile version ***********************************
+****************************************************/
+
+@media only screen and (max-width: 600px) and (orientation:portrait){
+  .fixed-image {
+    width:90%;
+    /* padding:20px; */
+    top: 10px;
+    right: 5%;
+    transform: translate(0%, 0%);
+    z-index: 10000;
+  }
+
+  .tempmeter, .temp-text{
+    opacity:0;
+  }
+
+  .scroll-text-block{
+    width:90%;
+    left:2%;
+    padding:2.5%;
+  }
+  .step, .widestep {
+		width:100%;
+  }
+  .step, .widestep {
+		width:100%;
+  }
+  .navigation-svg{
+    visibility:hidden
+  }
+
+  .graphsvg{
+    transform: translate(15%, 0%);
+    order:1;
+
+  }
+  
+  .logo{
+    width: 80px;
+    top: 3px;
+    right: 1px;
+  }
+
+  .graphtext{
+    width:96%;
+    order:2;
+    height:8%;
+    margin-top: 0px;
+    
+  }
+
+  .scroll-text-kansgraph{
+    font-size:2.3vh !important
+  }
+
+  .graph-description{
+    visibility:hidden;
+  }
+
+  .grafiek{
+    width: 100%;
+    left: 0%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .sticky-div{
+    top: 40px;
+  }
+
+  .graphtitle{
+    font-size: 2.2vh;
+  }
+
+  .axistitle{
+    font-size: 1.8vh
+  }
+
+  .sound{
+    visibility: hidden;
+  }
+
+  .subtitle{
+    width: 100% !important;
+    left:0% !important;
+  }
+
+  
+  .telefoon{
+    height: 100vh !important;
+    width: 90% !important;
+    left:5% !important;
+  }
+
+  .telefoonimg{
+    height: 100vh; 
+    object-fit: cover;
+    
+  }
+
+  .night-image{
+    max-width: 75vw
+  }
+
+  .title-huge{
+    font-size:8vh;
+    /* margin:100px; */
+    position: absolute;
+    width:96%;
+    left:2%;
+    top:20%;
+  }
+
+  .sub-start{
+    top:40% !important;
+    width:96% !important;
+    left:2% !important;
+    position: absolute;
+    font-size:3.4vh !important;
+}
+
+.subtitle{
+  position:absolute;
+  top:62% !important;
+  width:70%;
+  left:15%;
+}
+
+.geluid-info{
+  font-size:2.5vh;
+}
+
+.klik-start{
+  font-size:3vh;
+}
