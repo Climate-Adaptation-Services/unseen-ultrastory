@@ -23,56 +23,56 @@
       name:'weeralarm',
       image:'jpg',
       time:0.09,
-      text:'De volgende dag is het opnieuw extreem heet. Het advies is al dagen om binnen te blijven, maar Niels heeft een idee. Hij besluit om met Sem naar het zwembad te gaan.​',
+      text:'Am nächsten Tag ist es wieder extrem heiß. Der Rat lautet seit Tagen, drinnen zu bleiben, aber Niels hat eine Idee. Er beschließt, mit Sem ins Schwimmbad zu gehen.',
       class: 'scroll-text'
     },
     {
       name:'zwembad',
       image:'png',
       time:0.18,
-      text:"Ze nemen de auto. Even wat koelte van de airco. Ze hebben allebei zo'n zin om te zwemmen! Maar het zwembad blijkt dicht. Het is voor badpersoneel niet verantwoord om bij deze temperaturen te werken.",
+      text:"Sie nehmen das Auto. Kurz etwas Kühlung von der Klimaanlage genießen. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.",
       class: 'scroll-text'
     },
     {
       name:'nielstel',
       image:'png',
       time:0.27,
-      text:'Dan ontvangt Niels een appje van Leonie: de hele stad zit zonder stroom. Het ziekenhuis draait op het noodaggregaat. “Wil je alsjeblieft even langs mijn moeder om te checken hoe het met haar gaat?”',
+      text:'Dann erhält Niels eine Nachricht von Leonie: Die ganze Stadt ist ohne Strom. Das Krankenhaus läuft auf Notstromaggregat. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"',
       class: 'scroll-text'
     },
     {
       name:'file',
       image:'png',
       time:0.36,
-      text:'Niels en Sem stappen opnieuw de auto in. Het is heel druk op de weg. Veel mensen proberen de stad uit te komen door de stroomuitval. Niels maakt zich zorgen. Hoe lang gaat deze black-out duren?​',
+      text:'Niels und Sem steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Niels macht sich Sorgen. Wie lange wird dieser Blackout dauern?',
       class: 'scroll-text'
     },
     {
       name:'kerk',
       image:'png',
       time:0.45,
-      text:'Kerken, sporthallen, supermarkten en buurthuizen worden spontaan als koele schuilplekken ingericht.​​​​',
+      text:'Kirchen, Sporthallen, Supermärkte und Gemeindezentren werden spontan als kühle Zufluchtsorte eingerichtet.',
       class: 'scroll-text'
     },
     {
       name:'pomp',
       image:'png',
       time:0.63,
-      text:"Voor tankstations staan enorme rijen auto's. Zat benzine, maar niemand die zijn tank kan volgooien omdat de pinautomaten niet meer werken.",
+      text:"Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.",
       class: 'scroll-text'
     },
     {
       name:'manonwel',
       image:'png',
       time:0.72,
-      text:"Als Niels een man uitgeput op de grond ziet zitten, aarzelt hij geen moment. Hij stapt uit de auto en loopt naar hem toe. De man lijkt last te hebben van uitdroging. Snel geeft Niels hem wat water en helpt hem op de achterbank van de auto. Samen rijden ze naar het ziekenhuis. Daar zien ze al snel Leonie. ",
+      text:"Als Niels einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Niels ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Leonie.",
       class: 'scroll-text'
     },
     {
       name:'leonieradeloos',
       image:'png',
       time:0.81,
-      text:'Niels legt uit dat ze nog niet bij haar moeder zijn geweest. “Maar we gaan nu poolshoogte nemen!” Niels en Leonie geven elkaar een haastige kus. “Kom Sem, wij gaan naar oma toe.”<br/><br/> Leonie kijkt om zich heen. Al die mensen die hulp nodig hebben. Ze veegt het zweet van haar voorhoofd. Hoe gaat dit verder?',
+      text:'Niels erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Niels und Leonie geben sich einen hastigen Kuss. "Komm Sem, wir fahren zu Oma."<br/><br/> Leonie schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?',
       class: 'scroll-text'
     }
   ]

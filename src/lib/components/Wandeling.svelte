@@ -32,7 +32,7 @@
   
   <div class='scroll-text-block night' style='top:{`${0.125*stepSize}px`}'>
     <img class='nielsgaatwandelen night-image' src={'/images/nielsgaatwandelen.png'} />
-    <p class='scroll-text nighttext'>Als Sem eindelijk slaapt, besluit Niels een ommetje te maken. Het is buiten nog steeds heel heet. Hij merkt dat de stenen op straat veel warmte uitstralen. ​​</p>
+    <p class='scroll-text nighttext'>Als Sem endlich schläft, beschließt Niels, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass die Steine auf der Straße viel Wärme abstrahlen.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.1 && offset < 0.6 && $sound}
@@ -45,7 +45,7 @@
 
   <div class='scroll-text-block night' style='top:{`${0.36*stepSize}px`}'>
     <img class='festival night-image' src={'/images/gasten.png'} />
-    <p class='scroll-text nighttext'>Gelukkig voelt het Dommelplantsoen wat koeler aan.​ Het festival dat hier gepland stond is afgelast, maar toch is het heel druk in het park. Er wordt  veel lawaai gemaakt en gedronken. Ondanks de herrie slapen sommige mensen buiten.​</p>
+    <p class='scroll-text nighttext'>Glücklicherweise fühlt sich der Dommelplantsoen etwas kühler an. Das Festival, das hier geplant war, wurde abgesagt, aber trotzdem ist es sehr voll im Park. Es wird viel Lärm gemacht und getrunken. Trotz des Lärms schlafen manche Menschen draußen.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.4 && offset < 0.85 && $sound}
@@ -54,7 +54,7 @@
 
   <div class='scroll-text-block night' style='top:{`${0.63*stepSize}px`}'>
     <img class='politie night-image' src={'/images/politie.png'} />
-    <p class='scroll-text nighttext'>Er is politie in de buurt om de situatie in de gaten te houden. De sfeer wordt onaangenaam. Niels loopt snel verder.</p>
+    <p class='scroll-text nighttext'>In der Nähe ist Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Niels geht schnell weiter.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.65 && offset < 0.85 && $sound}
@@ -63,7 +63,7 @@
 
   <div class='scroll-text-block night' style='right:100; top:{`${0.87*stepSize}px`}'>
     <img class='rustigplekje night-image' src={'/images/nielsboom.png'} />
-    <p class='scroll-text nighttext'>Verderop vindt Niels een rustige plek bij een boom. Hij moet denken aan het gesprek met Sem over de hitte en checkt het laatste nieuws op zijn telefoon.  
+    <p class='scroll-text nighttext'>Weiter vorne findet Niels einen ruhigen Platz bei einem Baum. Er muss an das Gespräch mit Sem über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.  
   </div>
 </div>
 

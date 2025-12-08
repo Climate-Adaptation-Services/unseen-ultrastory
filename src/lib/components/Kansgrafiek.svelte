@@ -169,20 +169,20 @@
   {#if index > 1}
     <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
-        <h1 class='scroll-text-kansgraph'>Statistische berekeningen</h1>
+        <h1 class='scroll-text-kansgraph'>Statistische Berechnungen</h1>
         <p class='scroll-text-kansgraph'>
-          De kans op 40 graden Celsius is door klimaatverandering sterk toegenomen. Hittestatistieken voor Eindhoven laten zien hoe groot de kans is dat een bepaalde temperatuur in een jaar voorkomt.    
+          Die Wahrscheinlichkeit von 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Eindhoven zeigen, wie hoch die Wahrscheinlichkeit ist, dass eine bestimmte Temperatur in einem Jahr auftritt.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Toen Niels klein was, <mark style="background: #648fff50 !important"> rond 1980,</mark> was het nagenoeg onmogelijk dat het 40 graden zou worden.  
+          <p class='scroll-text-kansgraph'> Als Niels klein war, <mark style="background: #648fff50 !important"> um 1980,</mark> war es nahezu unmöglich, dass es 40 Grad werden würde.  
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Inmiddels, <mark style="background: #ffb00050 !important">in 2023</mark>, is de kans op 40 graden ongeveer 2%.
+          <p class='scroll-text-kansgraph'> Mittlerweile, <mark style="background: #ffb00050 !important">im Jahr 2023</mark>, liegt die Wahrscheinlichkeit für 40 Grad bei etwa 2%.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">In 2050</mark>, als Sem volwassen is, zal de kans op 40 graden zijn toegenomen tot ongeveer 8%.
+          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">Im Jahr 2050</mark>, wenn Sem erwachsen ist, wird die Wahrscheinlichkeit für 40 Grad auf etwa 8% gestiegen sein.
           </p> 
         </div>   
       {/if}      
@@ -194,18 +194,18 @@
         <g class='svgkansgrafiek' transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})" >
           <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
           <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
-          <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistiek voor:</text> 
+          <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistik für:</text> 
           <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)}>1980</text>  
           <line x1={screenWidth * legendPositionX1}  y1={yScale(31)} x2={screenWidth * legendPositionX2} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
-          <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Kans (%)</text>  
-          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatuur (°C)</text>  
+          <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Wahrscheinlichkeit (%)</text>  
+          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatur (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>De kans op hitte per generatie</text>
+          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>Die Wahrscheinlichkeit von Hitze pro Generation</text>
           {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 
             <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
             <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
             <line x1={xScale(0.0075)}  y1={yScale(44.0244)} x2={xScale(0.0085)} y2={yScale(44.0244)} stroke="grey"/>
-            <text x={xScale(0.0075)} y={yScale(40.5)} font-size = "1.3vh" marker-end="url(#triangle)">Bandbreedte</text>
+            <text x={xScale(0.0075)} y={yScale(40.5)} font-size = "1.3vh" marker-end="url(#triangle)">Bandbreite</text>
           {/if}
           {#if ratioOfCsvData > 270}
             <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
@@ -221,8 +221,8 @@
            {/if}
         </g>
       </svg>
-      <p class='graph-description'>Hittestatistieken voor Eindhoven voor het klimaat van 1980, 2023 en 2050. Deze zijn berekend op basis van metingen van KNMI-station Eindhoven en het KNMI'14 hoge &#40;WH&#41; scenario voor 2050. Gebruikte tools:  
-        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> en het <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 transformatieprogramma</a>.  
+      <p class='graph-description'>Hitzestatistiken für Eindhoven für das Klima von 1980, 2023 und 2050. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-&#40;WH&#41;-Szenario für 2050 berechnet. Verwendete Tools:  
+        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> und das <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 Transformationsprogramm</a>.  
       </p>
     </div>
   </div>
