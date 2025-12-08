@@ -60,7 +60,7 @@
 
   $: yScale = d3
     .scaleLinear()
-    .domain([10, 52])
+    .domain([15, 36])
     .range([screenHeight * yAxisScaleKans, 0])
 
   const areaZonder = d3
@@ -216,13 +216,13 @@
       <g class="svgkansgrafiek" transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})">
         <XAxis {xScale} height={screenHeight * yAxisScaleKans} />
         <YAxis {yScale} height={screenHeight * yAxisScaleKans} />
-        <text class="legendtext" x={screenWidth * legendPositionX1} y={yScale(17)}>Statistiek voor:</text>
-        <text class="legendtext" x={screenWidth * legendPositionX2 + screenWidth * 0.005} y={yScale(15.5)}>2000</text>
+        <text class="legendtext" x={screenWidth * legendPositionX1} y={yScale(19)}>Statistiek voor:</text>
+        <text class="legendtext" x={screenWidth * legendPositionX2 + screenWidth * 0.005} y={yScale(18)}>2000</text>
         <line
           x1={screenWidth * legendPositionX1}
-          y1={yScale(15.5)}
+          y1={yScale(18)}
           x2={screenWidth * legendPositionX2}
-          y2={yScale(15.5)}
+          y2={yScale(18)}
           stroke="#648fff"
           stroke-width="0.3vh"
         />
@@ -241,32 +241,32 @@
           <text x={xScale(0.0075)} y={yScale(24.6)} font-size="1.3vh" marker-end="url(#triangle)">Bandbreedte</text>
         {/if}
         {#if ratioOfCsvData > 270}
-          <line x1={xScale(50)} y1={yScale(10)} x2={xScale(50)} y2={yScale(22)} stroke="grey" stroke-dasharray="5,5" />
-          <text class="legendtext" x={screenWidth * legendPositionX2 + screenWidth * 0.005} y={yScale(15.5) + screenHeight * 0.02}>2025</text>
+          <line x1={xScale(50)} y1={yScale(15)} x2={xScale(50)} y2={yScale(22)} stroke="grey" stroke-dasharray="5,5" />
+          <text class="legendtext" x={screenWidth * legendPositionX2 + screenWidth * 0.005} y={yScale(18) + screenHeight * 0.02}>2025</text>
           <line
             x1={screenWidth * legendPositionX1}
-            y1={yScale(15.5) + screenHeight * 0.02}
+            y1={yScale(18) + screenHeight * 0.02}
             x2={screenWidth * legendPositionX2}
-            y2={yScale(15.5) + screenHeight * 0.02}
+            y2={yScale(18) + screenHeight * 0.02}
             stroke="#ffb000"
             stroke-width="0.3vh"
           />
-          <text x={xScale(20) + screenWidth * 0.003} y={yScale(10) - screenHeight * 0.005} fill="#ffb000" font-size="2vh">20%</text>
+          <text x={xScale(20) + screenWidth * 0.003} y={yScale(15) - screenHeight * 0.005} fill="#ffb000" font-size="2vh">20%</text>
         {/if}
         {#if ratioOfCsvData > 360}
-          <line x1={xScale(20)} y1={yScale(10)} x2={xScale(20)} y2={yScale(22)} stroke="grey" stroke-dasharray="5,5" />
-          <text class="legendtext" x={screenWidth * legendPositionX2 + screenWidth * 0.005} y={yScale(15.5) + screenHeight * 0.04}>2050</text>
+          <line x1={xScale(20)} y1={yScale(15)} x2={xScale(20)} y2={yScale(22)} stroke="grey" stroke-dasharray="5,5" />
+          <text class="legendtext" x={screenWidth * legendPositionX2 + screenWidth * 0.005} y={yScale(18) + screenHeight * 0.04}>2050</text>
           <line
             x1={screenWidth * legendPositionX1}
-            y1={yScale(15.5) + screenHeight * 0.04}
+            y1={yScale(18) + screenHeight * 0.04}
             x2={screenWidth * legendPositionX2}
-            y2={yScale(15.5) + screenHeight * 0.04}
+            y2={yScale(18) + screenHeight * 0.04}
             stroke="#93003a"
             stroke-width="0.3vh"
           />
-          <text x={xScale(50) + screenWidth * 0.003} y={yScale(10) - screenHeight * 0.005} fill="#93003a" font-size="2vh">50%</text>
-          <line x1={xScale(0.5)} y1={yScale(10)} x2={xScale(0.5)} y2={yScale(22)} stroke="grey" stroke-dasharray="5,5" />
-          <text x={xScale(0.5) + screenWidth * 0.003} y={yScale(10) - screenHeight * 0.005} fill="#648fff" font-size="2vh">0.5%</text>
+          <text x={xScale(50) + screenWidth * 0.003} y={yScale(15) - screenHeight * 0.005} fill="#93003a" font-size="2vh">50%</text>
+          <line x1={xScale(0.5)} y1={yScale(15)} x2={xScale(0.5)} y2={yScale(22)} stroke="grey" stroke-dasharray="5,5" />
+          <text x={xScale(0.5) + screenWidth * 0.003} y={yScale(15) - screenHeight * 0.005} fill="#648fff" font-size="2vh">0.5%</text>
         {/if}
       </g>
     </svg>
