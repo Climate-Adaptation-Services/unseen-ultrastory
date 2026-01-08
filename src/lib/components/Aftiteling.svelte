@@ -83,7 +83,7 @@
   </div>
 
   <div class = 'copyright'>
-    <p >© 2023 <a href="http://www.climateadaptationservices.com" target="_blank">Climate Adaptation Services (CAS)</a></p>
+    <p >© 2026 <a href="http://www.climateadaptationservices.com" target="_blank">Climate Adaptation Services (CAS)</a></p>
   </div>
 </div>
 

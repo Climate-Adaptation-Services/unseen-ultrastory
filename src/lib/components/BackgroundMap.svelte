@@ -34,7 +34,7 @@
       .setContent("Haus von Lisa und Max")
       .addTo(leafletMap);
 
-    ziekenhuis = L.tooltip([49.010817, 12.0864894], {direction:'top', offset:[0,-40]})
+    ziekenhuis = L.tooltip([49.0161882, 12.0645621], {direction:'top', offset:[0,-40]})
     zwembad = L.tooltip(autoRoute2[0], {direction:'top', offset:[0,-40]})
   }
   
@@ -49,7 +49,7 @@
   const dayTileURL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
 
   const coordsHuis = [parseFloat(wandelRoute[0][0]), parseFloat(wandelRoute[0][1])]
-  const coordsZiekenhuis = [49.0170, 12.0647]
+  const coordsZiekenhuis = [49.0161882, 12.0645621]
   $: flyToCoordsHuis = (browser && window.innerWidth < 600)
     ? [coordsHuis[0]+0.002, coordsHuis[1]]
     : coordsHuis
@@ -104,7 +104,7 @@
           <Polyline latLngs={wandelRoute} color="#00bcd4" weight='5'/>
         {/if}
         {#if currentStepName !== 'thuis'}
-          <Marker latLng={[49.0170, 12.0647]}/>
+          <Marker latLng={[49.0161882, 12.0645621]}/>
         {/if}
         {#if currentStepName === 'autoritje'}
           <Marker latLng={autoRoute2[0]}/>
