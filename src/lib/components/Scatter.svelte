@@ -49,7 +49,7 @@
     .range([ 0,screenWidth * xAxisScale]);
 
   $: yScale = d3.scaleLinear()
-    .domain([27, d3.max(maxTempData, function(d) { return +d.T; })])
+    .domain([27, 40])
     .range([ screenHeight * yAxisScale, screenHeight * 0.05 ]);
 
   let colorScale = d3
@@ -75,12 +75,13 @@
 
   <div class='sticky-div'>
     <svg>
-      <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0})">
+      <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
       <XAxis {xScale} height={screenHeight * yAxisScale}/>
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
       <text class='axistitle' x={xScale(1988)} y={yScale(26)+2}>Jahr</text>  
       <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>{title}</text>
       <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Höchsttemperatur (°C)</text>
+      <!-- Record annotation hidden for Regensburg version
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
         <g transform='translate({xScale(2017)},{yScale(40)})'>
           <text x={-90} y={32} class="recordyear" font-size = "2vh">Das erste Mal</text>
@@ -93,6 +94,7 @@
           />
         </g>
       {/if}
+      -->
       {#if currentStepName === 'temperatuurstijging'}
         {#each _.slice(maxTempData, 0, ratioOfCsvData) as d}
           <circle

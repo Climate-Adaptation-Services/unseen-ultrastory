@@ -174,7 +174,7 @@
           Die Wahrscheinlichkeit von 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Eindhoven zeigen, wie hoch die Wahrscheinlichkeit ist, dass eine bestimmte Temperatur in einem Jahr auftritt.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Als Niels klein war, <mark style="background: #648fff50 !important"> um 1980,</mark> war es nahezu unmöglich, dass es 40 Grad werden würde.  
+          <p class='scroll-text-kansgraph'> Als Max klein war, <mark style="background: #648fff50 !important"> um 1980,</mark> war es nahezu unmöglich, dass es 40 Grad werden würde.  
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>

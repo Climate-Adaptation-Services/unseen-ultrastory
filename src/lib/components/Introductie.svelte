@@ -22,14 +22,14 @@
       name:'bank1',
       image:'png',
       time:0.2,
-      text:'Es ist Anfang Juli und in Eindhoven herrschen bereits seit drei Tagen Temperaturen über vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.<br/><br/> Wir begleiten Leonie und Niels sowie ihren siebenjährigen Sohn Sem. Niels ist Niederländischlehrer. Leonie arbeitet in der Notaufnahme des Catharina-Krankenhauses. <br/><br/>Leonie und Niels liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Niels lauscht dem Summen des Ventilators. Leonie denkt an ihre Mutter, die schlecht zu Fuß ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.​',
+      text:'Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen über vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.<br/><br/> Wir begleiten Lisa und Max sowie ihren siebenjährigen Sohn Sem. Max ist Lehrer. Lisa arbeitet in der Notaufnahme des Krankenhauses Barmherzige Brüder. <br/><br/>Lisa und Max liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Max lauscht dem Summen des Ventilators. Lisa denkt an ihre Mutter, die schlecht zu Fuß ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.​',
       class: 'scroll-text'
     },
     {
       name:'seminbed1',
       image:'png',
       time:0.5,
-      text:'Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Niels Lehrer ist: Er kann tagsüber auf Sem aufpassen, während Leonie im Krankenhaus arbeitet.',
+      text:'Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Max Lehrer ist: Er kann tagsüber auf Sem aufpassen, während Lisa im Krankenhaus arbeitet.',
       class: 'scroll-text'
     }
   ]

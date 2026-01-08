@@ -1,4 +1,4 @@
-# German Translations - Ungekannt heiß
+# German Translations - Unsichtbare Hitzegefahr
 
 This file contains all German texts used in the story. Edit the texts below and provide the file back for implementation.
 
@@ -8,7 +8,7 @@ This file contains all German texts used in the story. Edit the texts below and 
 
 ### Title
 ```
-Ungekannt heiß
+Unsichtbare Hitzegefahr
 ```
 
 ### Subtitle
@@ -37,16 +37,16 @@ Nach unten scrollen
 
 ### Scene 1 (bank1)
 ```
-Es ist Anfang Juli und in Eindhoven herrschen bereits seit drei Tagen Temperaturen über vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.
+Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen über vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.
 
-Wir begleiten Leonie und Niels sowie ihren siebenjährigen Sohn Sem. Niels ist Niederländischlehrer. Leonie arbeitet in der Notaufnahme des Catharina-Krankenhauses.
+Wir begleiten Lisa und Max sowie ihren siebenjährigen Sohn Sem. Max ist Lehrer. Lisa arbeitet in der Notaufnahme des Krankenhauses Barmherzige Brüder.
 
-Leonie und Niels liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Niels lauscht dem Summen des Ventilators. Leonie denkt an ihre Mutter, die schlecht zu Fuß ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.
+Lisa und Max liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Max lauscht dem Summen des Ventilators. Lisa denkt an ihre Mutter, die schlecht zu Fuß ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.
 ```
 
 ### Scene 2 (seminbed1)
 ```
-Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Niels Lehrer ist: Er kann tagsüber auf Sem aufpassen, während Leonie im Krankenhaus arbeitet.
+Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Max Lehrer ist: Er kann tagsüber auf Sem aufpassen, während Lisa im Krankenhaus arbeitet.
 ```
 
 ---
@@ -55,7 +55,7 @@ Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der ext
 
 ### Scene 1 (ziekenhuischaos2)
 ```
-Im Krankenhaus arbeitet Leonie so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist harte Arbeit, und morgen geht es wieder weiter.
+Im Krankenhaus arbeitet Lisa so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist harte Arbeit, und morgen geht es wieder weiter.
 ```
 
 ### Scene 2 (oudevrouwziekenhuis)
@@ -79,9 +79,9 @@ Und ein Bauer hatte beim Heumachen einen schweren Sonnenstich bekommen.
 
 ### Scene 1 (gesprek)
 ```
-Sem kann wegen der Wärme nicht schlafen und denkt an das, was Oma heute Nachmittag am Telefon sagte. Niels versucht, Sem mit nassen Waschlappen beim Einschlafen zu helfen. Den Ventilator stellt er auf die höchste Stufe. Während er damit beschäftigt ist, sagt Sem: "Laut Oma war es früher nie so heiß."
+Sem kann wegen der Wärme nicht schlafen und denkt an das, was Oma heute Nachmittag am Telefon sagte. Max versucht, Sem mit nassen Waschlappen beim Einschlafen zu helfen. Den Ventilator stellt er auf die höchste Stufe. Während er damit beschäftigt ist, sagt Sem: "Laut Oma war es früher nie so heiß."
 
-Niels: "Stimmt. Als ich so alt war wie du, gab es diese Art von Hitze nie. Wenn mir damals jemand gesagt hätte, dass es tagelang über 40 Grad werden könnte, hätte ich das nie geglaubt."
+Max: "Stimmt. Als ich so alt war wie du, gab es diese Art von Hitze nie. Wenn mir damals jemand gesagt hätte, dass es tagelang über 40 Grad werden könnte, hätte ich das nie geglaubt."
 ```
 
 ---
@@ -141,7 +141,7 @@ Die Wahrscheinlichkeit von 40 Grad Celsius ist durch den Klimawandel stark gesti
 
 ### 1980 text
 ```
-Als Niels klein war, um 1980, war es nahezu unmöglich, dass es 40 Grad werden würde.
+Als Max klein war, um 1980, war es nahezu unmöglich, dass es 40 Grad werden würde.
 ```
 
 ### 2023 text
@@ -187,9 +187,9 @@ Hitzestatistiken für Eindhoven für das Klima von 1980, 2023 und 2050. Diese wu
 
 ## Wandeling.svelte (Night Walk)
 
-### Scene 1 (nielsgaatwandelen)
+### Scene 1 (maxgaatwandelen)
 ```
-Als Sem endlich schläft, beschließt Niels, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass die Steine auf der Straße viel Wärme abstrahlen.
+Als Sem endlich schläft, beschließt Max, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass die Steine auf der Straße viel Wärme abstrahlen.
 ```
 
 ### Scene 2 (gasten)
@@ -199,12 +199,12 @@ Glücklicherweise fühlt sich der Dommelplantsoen etwas kühler an. Das Festival
 
 ### Scene 3 (politie)
 ```
-In der Nähe ist Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Niels geht schnell weiter.
+In der Nähe ist Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Max geht schnell weiter.
 ```
 
-### Scene 4 (nielsboom)
+### Scene 4 (maxboom)
 ```
-Weiter vorne findet Niels einen ruhigen Platz bei einem Baum. Er muss an das Gespräch mit Sem über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.
+Weiter vorne findet Max einen ruhigen Platz bei einem Baum. Er muss an das Gespräch mit Sem über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.
 ```
 
 ---
@@ -213,7 +213,7 @@ Weiter vorne findet Niels einen ruhigen Platz bei einem Baum. Er muss an das Ges
 
 ### Scene 1 (weeralarm)
 ```
-Am nächsten Tag ist es wieder extrem heiß. Der Rat lautet seit Tagen, drinnen zu bleiben, aber Niels hat eine Idee. Er beschließt, mit Sem ins Schwimmbad zu gehen.
+Am nächsten Tag ist es wieder extrem heiß. Der Rat lautet seit Tagen, drinnen zu bleiben, aber Max hat eine Idee. Er beschließt, mit Sem ins Schwimmbad zu gehen.
 ```
 
 ### Scene 2 (zwembad)
@@ -221,14 +221,14 @@ Am nächsten Tag ist es wieder extrem heiß. Der Rat lautet seit Tagen, drinnen 
 Sie nehmen das Auto. Kurz etwas Kühlung von der Klimaanlage genießen. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.
 ```
 
-### Scene 3 (nielstel)
+### Scene 3 (maxtel)
 ```
-Dann erhält Niels eine Nachricht von Leonie: Die ganze Stadt ist ohne Strom. Das Krankenhaus läuft auf Notstromaggregat. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"
+Dann erhält Max eine Nachricht von Lisa: Die ganze Stadt ist ohne Strom. Das Krankenhaus läuft auf Notstromaggregat. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"
 ```
 
 ### Scene 4 (file)
 ```
-Niels und Sem steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Niels macht sich Sorgen. Wie lange wird dieser Blackout dauern?
+Max und Sem steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Max macht sich Sorgen. Wie lange wird dieser Blackout dauern?
 ```
 
 ### Scene 5 (kerk)
@@ -243,14 +243,14 @@ Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin vorhanden, aber n
 
 ### Scene 7 (manonwel)
 ```
-Als Niels einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Niels ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Leonie.
+Als Max einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Max ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Lisa.
 ```
 
-### Scene 8 (leonieradeloos)
+### Scene 8 (lisaradeloos)
 ```
-Niels erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Niels und Leonie geben sich einen hastigen Kuss. "Komm Sem, wir fahren zu Oma."
+Max erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Max und Lisa geben sich einen hastigen Kuss. "Komm Sem, wir fahren zu Oma."
 
-Leonie schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?
+Lisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?
 ```
 
 ---
@@ -342,17 +342,17 @@ Katastrophenserie Hitze
 
 ### House label
 ```
-Haus von Niels und Leonie
+Haus von Lisa und Max
 ```
 
 ### Hospital label
 ```
-Catharina Krankenhaus
+Krankenhaus Barmherzige Brüder
 ```
 
 ### Swimming pool label
 ```
-Schwimmbad
+Westbad
 ```
 
 ---
@@ -379,4 +379,4 @@ Schwimmbad
 - Keep text lengths similar to maintain proper layout
 - HTML tags like `<br/>` should remain unchanged
 - Special characters (ä, ö, ü, ß) are correctly encoded
-- The story is set in Eindhoven, Netherlands - location names should stay in Dutch (e.g., "Dommelplantsoen", "Catharina")
+- The story is set in Regensburg, Germany

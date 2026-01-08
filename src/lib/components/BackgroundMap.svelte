@@ -31,15 +31,15 @@
     
     huis = L.tooltip(wandelRoute[0], {direction:'top', offset:[0,-40]})
     huis
-      .setContent("Haus von Niels und Leonie")
+      .setContent("Haus von Lisa und Max")
       .addTo(leafletMap);
 
-    ziekenhuis = L.tooltip([51.466143, 5.472363], {direction:'top', offset:[0,-40]})
+    ziekenhuis = L.tooltip([49.010817, 12.0864894], {direction:'top', offset:[0,-40]})
     zwembad = L.tooltip(autoRoute2[0], {direction:'top', offset:[0,-40]})
   }
   
   const mapOptions = {
-    center: [51.426437, 5.470482],
+    center: [48.99776, 12.12817],
     zoom: 7,
     preferCanvas: true,
     zoomControl: false,
@@ -48,8 +48,8 @@
   const nightTileURL = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
   const dayTileURL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
 
-  const coordsHuis = [parseFloat(wandelRoute[0][0]), parseFloat(wandelRoute[0][1])] 
-  const coordsZiekenhuis = [51.466143, 5.472363]
+  const coordsHuis = [parseFloat(wandelRoute[0][0]), parseFloat(wandelRoute[0][1])]
+  const coordsZiekenhuis = [49.0170, 12.0647]
   $: flyToCoordsHuis = (browser && window.innerWidth < 600)
     ? [coordsHuis[0]+0.002, coordsHuis[1]]
     : coordsHuis
@@ -70,22 +70,22 @@
     if(currentStepName === 'autoritje'){
       centerCoords = [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02]
     }else if(currentStepName === 'wandeling'){
-      centerCoords = [parseFloat(flyToCoordsHuis[0]), parseFloat(flyToCoordsHuis[1])-0.002]
+      centerCoords = [parseFloat(flyToCoordsHuis[0])+0.003, parseFloat(flyToCoordsHuis[1])]
     }
     leafletMap.flyTo(centerCoords, zoom, {duration: 3})
   }
 
   $: if(leafletMap && 'ziekenhuis' === currentStepName){
     leafletMap.flyTo(flyToCoordsZiekenhuis, 16, {duration: 3})
-    
+
     ziekenhuis
-      .setContent("Catharina Krankenhaus")
+      .setContent("Krankenhaus Barmherzige Brüder")
       .addTo(leafletMap);
   }
 
   $: if(leafletMap && 'autoritje' === currentStepName){
     zwembad
-      .setContent("Schwimmbad")
+      .setContent("Westbad")
       .addTo(leafletMap);
   }
 
@@ -104,7 +104,7 @@
           <Polyline latLngs={wandelRoute} color="#00bcd4" weight='5'/>
         {/if}
         {#if currentStepName !== 'thuis'}
-          <Marker latLng={[51.466143, 5.472363]}/>
+          <Marker latLng={[49.0170, 12.0647]}/>
         {/if}
         {#if currentStepName === 'autoritje'}
           <Marker latLng={autoRoute2[0]}/>

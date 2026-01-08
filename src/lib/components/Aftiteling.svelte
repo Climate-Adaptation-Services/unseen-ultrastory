@@ -18,7 +18,7 @@
       name:'',
       image:'',
       time:0.1,
-      text:'In den letzten Jahren gab es weltweit extreme Hitzeausreißer, die selbst Klimawissenschaftler überrascht haben. Auch in den Niederlanden könnte es einmal extrem heiß werden.'
+      text:'In den letzten Jahren gab es weltweit extreme Hitzeausreißer, die selbst Klimawissenschaftler überrascht haben. Auch in Deutschland könnte es einmal extrem heiß werden.'
     },
     {
       name:'',
@@ -30,13 +30,13 @@
       name:'',
       image:'',
       time:0.4,
-      text:'Diese Geschichte basiert auf den neuesten wissenschaftlichen Erkenntnissen über außergewöhnliche Wetterereignisse in den Niederlanden und auf zahlreichen Gesprächen mit Experten auf dem Gebiet der Klimaanpassung, Hitze und Krisenmanagement. Die Bilder wurden mit KI erstellt.'
+      text:'Diese Geschichte basiert auf den neuesten wissenschaftlichen Erkenntnissen über außergewöhnliche Wetterereignisse und auf zahlreichen Gesprächen mit Experten auf dem Gebiet der Klimaanpassung, Hitze und Krisenmanagement. Die Bilder wurden mit KI erstellt.'
     },
     {
       name:'',
       image:'',
       time:0.55,
-      text:'Unser Dank gilt Marije Bakker (NIPV), Annelies Balkema (Waterschap De Dommel), Janette Bessembinder (KNMI), Lana Garrels (Veiligheidsregio Amsterdam Amstelland), Madeleen Helmer (Klimaatverbond Nederland), Frank van Lamoen (Provinz Noord-Brabant), Renee Linck (NIPV), Karla Niggebrugge (Provinz Brabant) und Karin van der Wiel (KNMI). Selbstverständlich ist nur CAS für das Endergebnis verantwortlich.'
+      text:'Selbstverständlich ist nur CAS für das Endergebnis verantwortlich.'
     }
   ]
 
@@ -44,45 +44,42 @@
 
 <div class = 'aftitelingdiv'>
   <img class='imgaftiteling' src='/images/heatwave1.png' width='100%'/>
-  
+
   {#each scenes as scene,i}
     <div class='scroll-text-block outro' style='top:{`${(scene['time']+0.05)*stepSize}px`}'>
       <p class='scroll-text outro-text'>{@html scene['text']}</p>
     </div>
   {/each}
 
-  
+
   <div class = 'leeslijst'>
     <h1>Weiterlesen?</h1>
-    <h3 class = 'leeslijstcat '>Wissenschaftliche Publikationen</h3>
+    <h3 class = 'leeslijstcat '>Regensburg</h3>
     <ul class="myUL">
-      <li><a href="https://www.nature.com/articles/s41558-021-01092-9" target="_blank">Artikel in Nature:</a> 'Zunehmende Wahrscheinlichkeit von rekordbrechenden Klimaextremen'
-      </li>
-      <li><a href="https://mcusercontent.com/854a9a3e09405d4ab19a4a9d5/files/95512c98-67bc-9849-c006-5fe389b776ed/WWA_scientific_report_Northern_Hemisphere_heat.pdf" target="_blank">Wissenschaftliche Studie:</a> 'Extreme Hitze in Nordamerika, Europa und China im Juli 2023 durch Klimawandel viel wahrscheinlicher' 
-      </li>
-      <li><a href="/PosterEGU.pdf" target="_blank">Poster über die Folgen extremer Hitze</a>  
-      </li>
+      <li><a href="https://www.dwd.de/DE/klimaumwelt/klimaforschung/klimawirk/stadtpl/projekt_waermeinseln/sksm/sksm_node.html" target="_blank">Wetter und Klima - Deutscher Wetterdienst - Wärmeinsel - Stadtklimastationen</a></li>
+      <li><a href="https://www.dwd.de/DE/wetter/wetterundklima_vorort/bayern/regensburg/_node.html" target="_blank">Wetter und Klima - Deutscher Wetterdienst - Regensburg (Umlandstation)</a></li>
+      <li><a href="https://cdc.dwd.de/portal/shortlink/65e09639-c6ca-4e52-9fca-5066f313998c" target="_blank">DWD Climate Data Center - Regensburg</a></li>
     </ul>
-    
-    <h3 class = 'leeslijstcat'>KNMI-Meldungen</h3>
-    <ul class="myUL">  
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/ieder-jaar-een-verpletterend-hitterecord " target="_blank">Jedes Jahr ein vernichtender Hitzerekord?</a></li>
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/absolute-temperatuurrecords-door-saharahitte " target="_blank">Absolute Temperaturrekorde durch Sahara-Hitze</a></li>
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/toename-hittegolven-in-europa-gelinkt-aan-veranderende-straalstroom" target="_blank">Zunahme von Hitzewellen in Europa mit verändertem Jetstream verbunden</a></li>
-      <li><a href="https://www.knmi.nl/over-het-knmi/nieuws/extreme-hitte-in-april-in-middellandse-zeegebied-waarschijnlijker-door-klimaatverandering" target="_blank">Extreme Hitze im April im Mittelmeerraum durch Klimawandel wahrscheinlicher</a></li>
+
+    <h3 class = 'leeslijstcat'>Regional</h3>
+    <ul class="myUL">
+      <li><a href="https://klimainformationssystem.bayern.de/" target="_blank">BayKIS - Bayerisches Klimainformationssystem</a></li>
+      <li><a href="https://www.dwd.de/DE/leistungen/zeitreihen/zeitreihen.html" target="_blank">Wetter und Klima - Deutscher Wetterdienst - Zeitreihen und Trends</a></li>
+      <li><a href="https://era-explorer.climate.copernicus.eu/?lat=49.02&lng=12.10&plot=5" target="_blank">ERA Explorer (nur auf Englisch verfügbar)</a></li>
     </ul>
-    
-    <h3 class = 'leeslijstcat'>Videos und Webinare</h3>
+
+    <h3 class = 'leeslijstcat'>National</h3>
     <ul class="myUL">
-      <li><a href="https://www.youtube.com/watch?v=lhHbjdhAqxs" target="_blank">Mini-Vorlesung der Universität der Niederlande: Werden die Niederlande immer häufiger mit Hitzewellen konfrontiert?</a></li>
-      <li><a href="https://www.youtube.com/watch?v=2NZYAkmqPr8" target="_blank">KNMI-Video: Temperatur zum ersten Mal über 40 Grad</a></li>
-      <li><a href="https://klimaatverbond.nl/actueel/terugblik-op-het-webinar-de-hittelessen-van-portland-en-het-code-rood-scenario-in-nederland/" target="_blank">Webinar des Klimaatverbond Nederland über die (Hitze-)Lektionen von Portland und das Code-Rot-Szenario in den Niederlanden</a></li>
-    </ul>  
-    
-    <h3 class = 'leeslijstcat'>Fiktion</h3>
+      <li><a href="https://www.dwd.de/DE/klimaumwelt/klimaatlas/klimaatlas_node.html" target="_blank">Wetter und Klima - Deutscher Wetterdienst - Deutscher Klimaatlas</a></li>
+    </ul>
+
+    <h3 class = 'leeslijstcat'>International</h3>
     <ul class="myUL">
-      <li><a href="https://www.npo3.nl/hitte/POMS_S_EO_16238783" target="_blank">Katastrophenserie Hitze</a></li>
-    </ul> 
+      <li><a href="https://myclimatefuture.info/de" target="_blank">MyClimateFuture - Wie werde ich den Klimawandel erleben?</a></li>
+      <li><a href="https://thermaltrace.climate.copernicus.eu/?agg=daily&anomaly=false&date=2025-12-13&heat=true&lat=50.86&lng=4.35&variable=utci_daily_max_cat" target="_blank">Thermal Trace (nur auf Englisch verfügbar)</a></li>
+      <li><a href="https://amocscenarios.org/?lat=49&lon=12.25&model=cc_RCP85&is_amoc_on=false&is_delta=false&metric=temp_1_in_10_yr_max" target="_blank">AMOC Scenarios (nur auf Englisch verfügbar)</a></li>
+      <li><a href="https://en.vedur.is/media/ads_in_header/AMOC-letter_Final.pdf" target="_blank">AMOC-letter_Final.pdf (nur auf Englisch verfügbar)</a></li>
+    </ul>
   </div>
 
   <div class = 'copyright'>
@@ -103,7 +100,7 @@
 
   .copyright{
     font-size: 2.3vh !important;
-    bottom:10px; 
+    bottom:10px;
     position:absolute;
     left:20%;
     width:60%;
@@ -113,7 +110,7 @@
 
   .leeslijst{
     font-size: 2.3vh !important;
-    bottom:100px; 
+    bottom:100px;
     position:absolute;
     left:20%;
     width:60%;
@@ -129,7 +126,7 @@
     max-width: 100%;
     max-height: 100%;
   }
-  
+
   ul.myUL {
     text-align: left;
   }
@@ -162,13 +159,11 @@
     width:90%;
     left:2%;
     padding:0;
-    
+
   }
 
 
 }
 
-    
+
 </style>
-
-

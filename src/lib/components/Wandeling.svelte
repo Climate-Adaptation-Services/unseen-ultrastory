@@ -31,8 +31,8 @@
 <div class='stepdiv'>
   
   <div class='scroll-text-block night' style='top:{`${0.125*stepSize}px`}'>
-    <img class='nielsgaatwandelen night-image' src={'/images/nielsgaatwandelen.png'} />
-    <p class='scroll-text nighttext'>Als Sem endlich schläft, beschließt Niels, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass die Steine auf der Straße viel Wärme abstrahlen.</p>
+    <img class='nielsgaatwandelen night-image' src={'/images/maxgaatwandelen.png'} />
+    <p class='scroll-text nighttext'>Als Sem endlich schläft, beschließt Max, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass die Steine auf der Straße viel Wärme abstrahlen.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.1 && offset < 0.6 && $sound}
@@ -54,7 +54,7 @@
 
   <div class='scroll-text-block night' style='top:{`${0.63*stepSize}px`}'>
     <img class='politie night-image' src={'/images/politie.png'} />
-    <p class='scroll-text nighttext'>In der Nähe ist Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Niels geht schnell weiter.</p>
+    <p class='scroll-text nighttext'>In der Nähe ist Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Max geht schnell weiter.</p>
   </div>
 
   {#if stepName === currentStepName && offset > 0.65 && offset < 0.85 && $sound}
@@ -62,8 +62,8 @@
   {/if}
 
   <div class='scroll-text-block night' style='right:100; top:{`${0.87*stepSize}px`}'>
-    <img class='rustigplekje night-image' src={'/images/nielsboom.png'} />
-    <p class='scroll-text nighttext'>Weiter vorne findet Niels einen ruhigen Platz bei einem Baum. Er muss an das Gespräch mit Sem über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.  
+    <img class='rustigplekje night-image' src={'/images/maxboom.png'} />
+    <p class='scroll-text nighttext'>Weiter vorne findet Max einen ruhigen Platz bei einem Baum. Er muss an das Gespräch mit Sem über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.  
   </div>
 </div>
 
