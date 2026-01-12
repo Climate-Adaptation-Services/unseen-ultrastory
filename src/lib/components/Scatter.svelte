@@ -64,10 +64,10 @@
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <h1 class='scroll-text'>Temperaturmessungen</h1>
     <p class='scroll-text'> 
-      Messungen zeigen, dass die jährliche Höchsttemperatur in Eindhoven bereits erheblich gestiegen ist. Bis 2019 wurde eine Temperatur über 37 Grad noch nie gemessen.  
+      Die Messungen zeigen, dass die jährliche Höchsttemperatur in Regensburg bereits erheblich gestiegen ist und mittlerweile deutlich öfter vorkommt. Bis 2015 wurde eine Temperatur über 37 Grad sehr selten gemessen.  
     </p>
     <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 60 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
-      <p class='scroll-text'> Aber am 24. Juli 2019 wurden in Eindhoven 40,4 Grad erreicht. Der Hitzerekord von 2018 wurde um 3,7 Grad pulverisiert!  
+      <p class='scroll-text'> Aber am 26. Juli 2019 wurden in Regensburg 38,9 Grad erreicht. Die zweit höchste Temperatur jemals. Sieben der 10 heißesten Tage traten ab 2015 auf.  
       </p> 
     </div>  
     {/if}

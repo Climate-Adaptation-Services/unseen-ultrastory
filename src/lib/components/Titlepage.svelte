@@ -19,13 +19,13 @@
 
   {#if $started}
     <div class='scrolldown'>
-      <h4>Nach unten scrollen</h4>
+      <h4>Nach unten scrollen.</h4>
       <img  width='7%' src={'/images/arrowdown.png'} />
     </div>
   {/if}
   <div style='{(!$started) ? "cursor:pointer" : "pointer-events:none"}' on:click={() => {started.set(true)}}>
     <h1 class='title-huge'>Unsichtbare Hitzegefahr</h1>
-    <h1 class='sub-start'>Eine Geschichte &uuml;ber m&ouml;gliche extreme Hitze in den Niederlanden auf Basis wissenschaftlicher Erkenntnisse</h1>
+    <h1 class='sub-start'>Eine Geschichte &uuml;ber m&ouml;gliche extreme Hitze in Deutschland auf Basis wissenschaftlicher Erkenntnisse</h1>
   </div>
 </div>
 

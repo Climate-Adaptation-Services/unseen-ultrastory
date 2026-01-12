@@ -21,14 +21,14 @@
       name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
-      text:'Im Krankenhaus arbeitet Lisa so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist harte Arbeit, und morgen geht es wieder weiter.',
+      text:'Im Krankenhaus arbeitet Alisa so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist eine körperlich sehr anstrengende Arbeit, und morgen geht es genau so wieder weiter.',
       class: 'scroll-text'
     },
     {
       name:'oudevrouwziekenhuis',
       image:'png',
       time:0.25,
-      text:'Heute war das Wartezimmer voll mit Menschen. Viele ältere Menschen landeten mit Dehydrierungserscheinungen in der Notaufnahme.',
+      text:'Heute war das Wartezimmer voll mit Patienten. Viele ältere Menschen landeten mit Dehydrierungserscheinungen in der Notaufnahme.',
       class: 'scroll-text'
     },
     {
@@ -42,7 +42,7 @@
       name:'boer1',
       image:'png',
       time:0.75,
-      text:'Und ein Bauer hatte beim Heumachen einen schweren Sonnenstich bekommen.',
+      text:'Und ein Landwirt hatte beim Heumachen einen schweren Sonnenstich bekommen.',
       class: 'scroll-text'
     },
   ]

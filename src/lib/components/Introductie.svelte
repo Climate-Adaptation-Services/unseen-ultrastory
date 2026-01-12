@@ -22,14 +22,14 @@
       name:'bank1',
       image:'png',
       time:0.2,
-      text:'Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen über vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.<br/><br/> Wir begleiten Lisa und Max sowie ihren siebenjährigen Sohn Sem. Max ist Lehrer. Lisa arbeitet in der Notaufnahme des Krankenhauses Barmherzige Brüder. <br/><br/>Lisa und Max liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Max lauscht dem Summen des Ventilators. Lisa denkt an ihre Mutter, die schlecht zu Fuß ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.​',
+      text:'Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen von fast vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.<br/><br/>Wir begleiten Alisa und Daniel sowie ihren siebenjährigen Sohn Paul. Daniel ist Deutschlehrer. Alisa arbeitet in der Notaufnahme des Krankenhauses der Barmherzigen Brüder.<br/><br/>Alisa und Daniel liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Daniel lauscht dem Summen des Ventilators. Alisa denkt an ihre Mutter, die nicht mehr so mobil ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.',
       class: 'scroll-text'
     },
     {
       name:'seminbed1',
       image:'png',
       time:0.5,
-      text:'Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Max Lehrer ist: Er kann tagsüber auf Sem aufpassen, während Lisa im Krankenhaus arbeitet.',
+      text:'Paul kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Daniel Lehrer ist: Er kann tagsüber auf Paul aufpassen, während Alisa im Krankenhaus arbeitet.',
       class: 'scroll-text'
     }
   ]
@@ -46,7 +46,7 @@
   <TextAndImagesScenes {scenes} {stepSize}/>
 
   {#if stepName === currentStepName && window.innerWidth > 600}
-    <audio id='fansound' autoplay loop src="sounds/fan.mp3" bind:volume={fanvolume}/> 
+    <audio id='fansound' autoplay loop src="sounds/fan.mp3" bind:volume={fanvolume}/>
   {/if}
 
   {#if offset > 0.3 && offset < 0.5 && currentStepName === stepName}
@@ -54,7 +54,7 @@
     <img class='tempmeter' src={'/images/tempmeter.png'} />
   {/if}
 
-  
+
 
 
 </div>
@@ -77,7 +77,7 @@
   background-color: rgba(0,0,0,0.2);
   filter: blur(20px);
 }
-  
+
 </style>
 
 

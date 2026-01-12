@@ -171,18 +171,18 @@
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
         <h1 class='scroll-text-kansgraph'>Statistische Berechnungen</h1>
         <p class='scroll-text-kansgraph'>
-          Die Wahrscheinlichkeit von 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Eindhoven zeigen, wie hoch die Wahrscheinlichkeit ist, dass eine bestimmte Temperatur in einem Jahr auftritt.    
+          Die Häufigkeit von fast 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Regensburg zeigen, wie häufig heiße Tage in den Sommermonaten auftreten.    
         </p>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Als Max klein war, <mark style="background: #648fff50 !important"> um 1980,</mark> war es nahezu unmöglich, dass es 40 Grad werden würde.  
+          <p class='scroll-text-kansgraph'> Als Pauls Großmutter klein war, <mark style="background: #648fff50 !important"> um 1960,</mark> war die Wahrscheinlichkeit Hitzewellen zu erleben sehr gering.  
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Mittlerweile, <mark style="background: #ffb00050 !important">im Jahr 2023</mark>, liegt die Wahrscheinlichkeit für 40 Grad bei etwa 2%.
+          <p class='scroll-text-kansgraph'> Als Daniel klein war, <mark style="background: #ffb00050 !important">im Jahr 1980</mark>, war die Wahrscheinlichkeit Hitzewellen zu erleben schon fast doppelt so hoch.
           </p> 
         </div>   
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> <mark style="background: #93003a50 !important">Im Jahr 2050</mark>, wenn Sem erwachsen ist, wird die Wahrscheinlichkeit für 40 Grad auf etwa 8% gestiegen sein.
+          <p class='scroll-text-kansgraph'> Mittlerweile, <mark style="background: #93003a50 !important">im Jahr 2020</mark>, in dem Paul klein ist, ist die Wahrscheinlichkeit, mit der er in seinem Leben Hitzewellen erleben wird um das 33,5-Fache gestiegen.
           </p> 
         </div>   
       {/if}      
@@ -195,12 +195,12 @@
           <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
           <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
           <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistik für:</text> 
-          <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)}>1980</text>  
+          <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)}>1960</text>  
           <line x1={screenWidth * legendPositionX1}  y1={yScale(31)} x2={screenWidth * legendPositionX2} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
           <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Wahrscheinlichkeit (%)</text>  
           <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatur (°C)</text>  
           <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>Die Wahrscheinlichkeit von Hitze pro Generation</text>
+          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>Die Häufigkeit von Hitze pro Generation</text>
           {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 
             <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
             <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
@@ -209,20 +209,20 @@
           {/if}
           {#if ratioOfCsvData > 270}
             <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
-            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.02)}>2023</text>  
+            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.02)}>1980</text>  
             <line x1={screenWidth * legendPositionX1}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * legendPositionX2} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
             <text  x={xScale(1.65)+(screenWidth * 0.003)} y={yScale(28)-(screenHeight * 0.005)} fill= "#ffb000" font-size= '2vh'>2%</text> 
           {/if}
           {#if ratioOfCsvData > 360}
             <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
-            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.04)}>2050</text>  
+            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.04)}>2020</text>  
             <line x1={screenWidth * legendPositionX1}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * legendPositionX2} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
             <text  x={xScale(7.8)+ (screenWidth * 0.003)} y={yScale(28)-(screenHeight * 0.005)} fill="#93003a" font-size= '2vh'>8%</text> 
            {/if}
         </g>
       </svg>
-      <p class='graph-description'>Hitzestatistiken für Eindhoven für das Klima von 1980, 2023 und 2050. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-&#40;WH&#41;-Szenario für 2050 berechnet. Verwendete Tools:  
-        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> und das <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 Transformationsprogramm</a>.  
+      <p class='graph-description'>Hitzestatistiken für Europa für die Wahrscheinlichkeit von Hitzewellen für 1960, 1980 und 2020. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-&#40;WH&#41;-Szenario für 2050 berechnet. Verwendete Tools:
+        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> und das <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 Transformationsprogramm</a>.
       </p>
     </div>
   </div>

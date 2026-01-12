@@ -30,7 +30,7 @@
       name:'',
       image:'',
       time:0.4,
-      text:'Diese Geschichte basiert auf den neuesten wissenschaftlichen Erkenntnissen über außergewöhnliche Wetterereignisse und auf zahlreichen Gesprächen mit Experten auf dem Gebiet der Klimaanpassung, Hitze und Krisenmanagement. Die Bilder wurden mit KI erstellt.'
+      text:'Diese Geschichte basiert auf den neuesten wissenschaftlichen Erkenntnissen über außergewöhnliche Wetterereignisse in Deutschland und auf zahlreichen Gesprächen mit Experten auf dem Gebiet der Klimaanpassung, Hitze und Krisenmanagement. Die Bilder wurden mit KI erstellt.'
     },
     {
       name:'',

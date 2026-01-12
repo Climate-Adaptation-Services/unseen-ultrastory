@@ -23,28 +23,28 @@
       name:'weeralarm',
       image:'jpg',
       time:0.09,
-      text:'Am nächsten Tag ist es wieder extrem heiß. Der Rat lautet seit Tagen, drinnen zu bleiben, aber Max hat eine Idee. Er beschließt, mit Sem ins Schwimmbad zu gehen.',
+      text:'Am nächsten Tag ist es wieder extrem heiß. Die Empfehlung lautet seit Tagen, drinnen zu bleiben, aber Daniel hat eine Idee. Er beschließt, mit Paul ins Schwimmbad zu gehen.',
       class: 'scroll-text'
     },
     {
       name:'zwembad',
       image:'png',
       time:0.18,
-      text:"Sie nehmen das Auto. Kurz etwas Kühlung von der Klimaanlage genießen. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.",
+      text:"Sie nehmen das Auto. Und genießen kurz die Kühlung der Klimaanlage. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.",
       class: 'scroll-text'
     },
     {
       name:'nielstel',
       image:'png',
       time:0.27,
-      text:'Dann erhält Max eine Nachricht von Lisa: Die ganze Stadt ist ohne Strom. Das Krankenhaus läuft auf Notstromaggregat. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"',
+      text:'Dann erhält Daniel eine Nachricht von Alisa: Die ganze Stadt ist ohne Strom. Das Krankenhaus wird mit dem Notstromaggregat betrieben. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"',
       class: 'scroll-text'
     },
     {
       name:'file',
       image:'png',
       time:0.36,
-      text:'Max und Sem steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Max macht sich Sorgen. Wie lange wird dieser Blackout dauern?',
+      text:'Daniel und Paul steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Daniel macht sich Sorgen. Wie lange wird dieser Blackout dauern?',
       class: 'scroll-text'
     },
     {
@@ -58,21 +58,21 @@
       name:'pomp',
       image:'png',
       time:0.63,
-      text:"Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.",
+      text:"Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.",
       class: 'scroll-text'
     },
     {
       name:'manonwel',
       image:'png',
       time:0.72,
-      text:"Als Max einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Max ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Lisa.",
+      text:"Als Daniel einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Daniel ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Alisa.",
       class: 'scroll-text'
     },
     {
       name:'leonieradeloos',
       image:'png',
       time:0.81,
-      text:'Max erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Max und Lisa geben sich einen hastigen Kuss. "Komm Sem, wir fahren zu Oma."<br/><br/> Lisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?',
+      text:'Daniel erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Daniel und Alisa geben sich einen hastigen Kuss. "Komm Paul, wir fahren zu Oma."<br/><br/>Alisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?',
       class: 'scroll-text'
     }
   ]

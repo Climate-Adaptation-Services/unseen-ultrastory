@@ -13,7 +13,7 @@ Unsichtbare Hitzegefahr
 
 ### Subtitle
 ```
-Eine Geschichte über mögliche extreme Hitze in den Niederlanden auf Basis wissenschaftlicher Erkenntnisse
+Eine Geschichte über mögliche extreme Hitze in Deutschland auf Basis wissenschaftlicher Erkenntnisse
 ```
 
 ### Click to start
@@ -28,7 +28,7 @@ Diese Bildgeschichte enthält Ton. Die Geschichte wirkt am besten mit Kopfhörer
 
 ### Scroll instruction
 ```
-Nach unten scrollen
+Nach unten scrollen.
 ```
 
 ---
@@ -37,16 +37,16 @@ Nach unten scrollen
 
 ### Scene 1 (bank1)
 ```
-Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen über vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.
+Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen von fast vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.
 
-Wir begleiten Lisa und Max sowie ihren siebenjährigen Sohn Sem. Max ist Lehrer. Lisa arbeitet in der Notaufnahme des Krankenhauses Barmherzige Brüder.
+Wir begleiten Alisa und Daniel sowie ihren siebenjährigen Sohn Paul. Daniel ist Deutschlehrer. Alisa arbeitet in der Notaufnahme des Krankenhauses der Barmherzigen Brüder.
 
-Lisa und Max liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Max lauscht dem Summen des Ventilators. Lisa denkt an ihre Mutter, die schlecht zu Fuß ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.
+Alisa und Daniel liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Daniel lauscht dem Summen des Ventilators. Alisa denkt an ihre Mutter, die nicht mehr so mobil ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.
 ```
 
 ### Scene 2 (seminbed1)
 ```
-Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Max Lehrer ist: Er kann tagsüber auf Sem aufpassen, während Lisa im Krankenhaus arbeitet.
+Paul kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Daniel Lehrer ist: Er kann tagsüber auf Paul aufpassen, während Alisa im Krankenhaus arbeitet.
 ```
 
 ---
@@ -55,12 +55,12 @@ Sem kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der ext
 
 ### Scene 1 (ziekenhuischaos2)
 ```
-Im Krankenhaus arbeitet Lisa so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist harte Arbeit, und morgen geht es wieder weiter.
+Im Krankenhaus arbeitet Alisa so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist eine körperlich sehr anstrengende Arbeit, und morgen geht es genau so wieder weiter.
 ```
 
 ### Scene 2 (oudevrouwziekenhuis)
 ```
-Heute war das Wartezimmer voll mit Menschen. Viele ältere Menschen landeten mit Dehydrierungserscheinungen in der Notaufnahme.
+Heute war das Wartezimmer voll mit Patienten. Viele ältere Menschen landeten mit Dehydrierungserscheinungen in der Notaufnahme.
 ```
 
 ### Scene 3 (hardloper1)
@@ -70,7 +70,7 @@ Einige junge Sportler wurden ohnmächtig, als sie trotz Warnungen joggen gingen.
 
 ### Scene 4 (boer1)
 ```
-Und ein Bauer hatte beim Heumachen einen schweren Sonnenstich bekommen.
+Und ein Landwirt hatte beim Heumachen einen schweren Sonnenstich bekommen.
 ```
 
 ---
@@ -79,9 +79,9 @@ Und ein Bauer hatte beim Heumachen einen schweren Sonnenstich bekommen.
 
 ### Scene 1 (gesprek)
 ```
-Sem kann wegen der Wärme nicht schlafen und denkt an das, was Oma heute Nachmittag am Telefon sagte. Max versucht, Sem mit nassen Waschlappen beim Einschlafen zu helfen. Den Ventilator stellt er auf die höchste Stufe. Während er damit beschäftigt ist, sagt Sem: "Laut Oma war es früher nie so heiß."
+Paul kann wegen der Wärme in der Wohnung nicht schlafen und denkt an das, was Oma heute Nachmittag am Telefon sagte. Daniel versucht, Paul mit nassen Waschlappen beim Einschlafen zu helfen. Den Ventilator stellt er auf die höchste Stufe. Während er damit beschäftigt ist, sagt Paul: "Laut Oma war es früher nie so heiß."
 
-Max: "Stimmt. Als ich so alt war wie du, gab es diese Art von Hitze nie. Wenn mir damals jemand gesagt hätte, dass es tagelang über 40 Grad werden könnte, hätte ich das nie geglaubt."
+Daniel: "Stimmt. Als ich so alt war wie du, gab es diese Art von Hitze nie. Wenn mir damals jemand gesagt hätte, dass es tagelang um die 40 Grad heiß werden könnte, hätte ich das nie geglaubt."
 ```
 
 ---
@@ -105,18 +105,17 @@ Temperaturmessungen
 
 ### Description
 ```
-Messungen zeigen, dass die jährliche Höchsttemperatur in Eindhoven bereits erheblich gestiegen ist. Bis 2019 wurde eine Temperatur über 37 Grad noch nie gemessen.
+Die Messungen zeigen, dass die jährliche Höchsttemperatur in Regensburg bereits erheblich gestiegen ist und mittlerweile deutlich öfter vorkommt. Bis 2015 wurde eine Temperatur über 37 Grad sehr selten gemessen.
 ```
 
 ### Record annotation
 ```
-Aber am 24. Juli 2019 wurden in Eindhoven 40,4 Grad erreicht. Der Hitzerekord von 2018 wurde um 3,7 Grad pulverisiert!
+Aber am 26. Juli 2019 wurden in Regensburg 38,9 Grad erreicht. Die zweit höchste Temperatur jemals. Sieben der 10 heißesten Tage traten ab 2015 auf. 
 ```
 
 ### Chart annotation
 ```
-Das erste Mal
-40+ °C in 2019
+
 ```
 
 ### Axis labels
@@ -136,41 +135,41 @@ Statistische Berechnungen
 
 ### Description
 ```
-Die Wahrscheinlichkeit von 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Eindhoven zeigen, wie hoch die Wahrscheinlichkeit ist, dass eine bestimmte Temperatur in einem Jahr auftritt.
+Die Häufigkeit von fast 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Regensburg zeigen, wie häufig heiße Tage in den Sommermonaten auftreten.
+```
+
+### 1960 text
+```
+Als Pauls Großmutter klein war, um 1960, war die Wahrscheinlichkeit Hitzewellen zu erleben sehr gering.
 ```
 
 ### 1980 text
 ```
-Als Max klein war, um 1980, war es nahezu unmöglich, dass es 40 Grad werden würde.
+Als Daniel klein war, im Jahr 1980, war die Wahrscheinlichkeit Hitzewellen zu erleben schon fast doppelt so hoch.
 ```
 
-### 2023 text
+### 2020 text
 ```
-Mittlerweile, im Jahr 2023, liegt die Wahrscheinlichkeit für 40 Grad bei etwa 2%.
-```
-
-### 2050 text
-```
-Im Jahr 2050, wenn Sem erwachsen ist, wird die Wahrscheinlichkeit für 40 Grad auf etwa 8% gestiegen sein.
+Mittlerweile, im Jahr 2020, in dem Paul klein ist, ist die Wahrscheinlichkeit, mit der er in seinem Leben Hitzewellen erleben wird um das 33,5-Fache gestiegen.
 ```
 
 ### Chart title
 ```
-Die Wahrscheinlichkeit von Hitze pro Generation
+Die Häufigkeit von Hitze pro Generation
 ```
 
 ### Axis labels
 ```
-Wahrscheinlichkeit (%)
+Jahreszahl (Zeit)
 Temperatur (°C)
 ```
 
 ### Legend
 ```
 Statistik für:
+1960
 1980
-2023
-2050
+2020
 ```
 
 ### Annotation
@@ -180,31 +179,31 @@ Bandbreite
 
 ### Chart description
 ```
-Hitzestatistiken für Eindhoven für das Klima von 1980, 2023 und 2050. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-(WH)-Szenario für 2050 berechnet. Verwendete Tools: KNMI Climate Explorer und das KNMI'14 Transformationsprogramm.
+Hitzestatistiken für Europa für die Wahrscheinlichkeit von Hitzewellen für 1960, 1980 und 2020. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-(WH)-Szenario für 2050 berechnet. Verwendete Tools: KNMI Climate Explorer und das KNMI'14 Transformationsprogramm.
 ```
 
 ---
 
 ## Wandeling.svelte (Night Walk)
 
-### Scene 1 (maxgaatwandelen)
+### Scene 1 (nielsgaatwandelen)
 ```
-Als Sem endlich schläft, beschließt Max, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass die Steine auf der Straße viel Wärme abstrahlen.
+Als Paul endlich schläft, beschließt Daniel, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass der Asphalt auf der Straße und dem Gehweg viel Wärme abstrahlt.
 ```
 
 ### Scene 2 (gasten)
 ```
-Glücklicherweise fühlt sich der Dommelplantsoen etwas kühler an. Das Festival, das hier geplant war, wurde abgesagt, aber trotzdem ist es sehr voll im Park. Es wird viel Lärm gemacht und getrunken. Trotz des Lärms schlafen manche Menschen draußen.
+Glücklicherweise fühlt sich die Grünfläche um das Schloss Pürkelgut etwas kühler an. Das Festival, das hier geplant war, wurde abgesagt, aber trotzdem ist es sehr voll in der Gegend. Es wird viel Lärm gemacht und getrunken. Trotz des Lärms schlafen sogar manche Menschen draußen.
 ```
 
 ### Scene 3 (politie)
 ```
-In der Nähe ist Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Max geht schnell weiter.
+In der Nähe ist die Polizei, um die Situation im Auge zu behalten. Die Stimmung wird unangenehm. Daniel geht schnell weiter.
 ```
 
-### Scene 4 (maxboom)
+### Scene 4 (nielsboom)
 ```
-Weiter vorne findet Max einen ruhigen Platz bei einem Baum. Er muss an das Gespräch mit Sem über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.
+Etwas abgeschottet findet Daniel einen ruhigen Platz unter einem Baum. Er muss an das Gespräch mit Paul über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.
 ```
 
 ---
@@ -213,22 +212,22 @@ Weiter vorne findet Max einen ruhigen Platz bei einem Baum. Er muss an das Gespr
 
 ### Scene 1 (weeralarm)
 ```
-Am nächsten Tag ist es wieder extrem heiß. Der Rat lautet seit Tagen, drinnen zu bleiben, aber Max hat eine Idee. Er beschließt, mit Sem ins Schwimmbad zu gehen.
+Am nächsten Tag ist es wieder extrem heiß. Die Empfehlung lautet seit Tagen, drinnen zu bleiben, aber Daniel hat eine Idee. Er beschließt, mit Paul ins Schwimmbad zu gehen.
 ```
 
 ### Scene 2 (zwembad)
 ```
-Sie nehmen das Auto. Kurz etwas Kühlung von der Klimaanlage genießen. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.
+Sie nehmen das Auto. Und genießen kurz die Kühlung der Klimaanlage. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.
 ```
 
-### Scene 3 (maxtel)
+### Scene 3 (nielstel)
 ```
-Dann erhält Max eine Nachricht von Lisa: Die ganze Stadt ist ohne Strom. Das Krankenhaus läuft auf Notstromaggregat. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"
+Dann erhält Daniel eine Nachricht von Alisa: Die ganze Stadt ist ohne Strom. Das Krankenhaus wird mit dem Notstromaggregat betrieben. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"
 ```
 
 ### Scene 4 (file)
 ```
-Max und Sem steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Max macht sich Sorgen. Wie lange wird dieser Blackout dauern?
+Daniel und Paul steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Daniel macht sich Sorgen. Wie lange wird dieser Blackout dauern?
 ```
 
 ### Scene 5 (kerk)
@@ -238,19 +237,19 @@ Kirchen, Sporthallen, Supermärkte und Gemeindezentren werden spontan als kühle
 
 ### Scene 6 (pomp)
 ```
-Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.
+Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.
 ```
 
 ### Scene 7 (manonwel)
 ```
-Als Max einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Max ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Lisa.
+Als Daniel einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Daniel ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Alisa.
 ```
 
-### Scene 8 (lisaradeloos)
+### Scene 8 (leonieradeloos)
 ```
-Max erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Max und Lisa geben sich einen hastigen Kuss. "Komm Sem, wir fahren zu Oma."
+Daniel erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Daniel und Alisa geben sich einen hastigen Kuss. "Komm Paul, wir fahren zu Oma."
 
-Lisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?
+Alisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?
 ```
 
 ---
@@ -259,7 +258,7 @@ Lisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den
 
 ### Outro text 1
 ```
-In den letzten Jahren gab es weltweit extreme Hitzeausreißer, die selbst Klimawissenschaftler überrascht haben. Auch in den Niederlanden könnte es einmal extrem heiß werden.
+In den letzten Jahren gab es weltweit extreme Hitzeausreißer, die selbst Klimawissenschaftler überrascht haben. Auch in Deutschland könnte es einmal extrem heiß werden.
 ```
 
 ### Outro text 2
@@ -269,7 +268,7 @@ Deshalb haben wir mit der Stiftung CAS diese Klimageschichte erstellt. Wir wolle
 
 ### Outro text 3
 ```
-Diese Geschichte basiert auf den neuesten wissenschaftlichen Erkenntnissen über außergewöhnliche Wetterereignisse in den Niederlanden und auf zahlreichen Gesprächen mit Experten auf dem Gebiet der Klimaanpassung, Hitze und Krisenmanagement. Die Bilder wurden mit KI erstellt.
+Diese Geschichte basiert auf den neuesten wissenschaftlichen Erkenntnissen über außergewöhnliche Wetterereignisse in Deutschland und auf zahlreichen Gesprächen mit Experten auf dem Gebiet der Klimaanpassung, Hitze und Krisenmanagement. Die Bilder wurden mit KI erstellt.
 ```
 
 ### Outro text 4 (Acknowledgments)
@@ -342,17 +341,17 @@ Katastrophenserie Hitze
 
 ### House label
 ```
-Haus von Lisa und Max
+Haus von Niels und Leonie
 ```
 
 ### Hospital label
 ```
-Krankenhaus Barmherzige Brüder
+Catharina Krankenhaus
 ```
 
 ### Swimming pool label
 ```
-Westbad
+Schwimmbad
 ```
 
 ---
@@ -379,4 +378,4 @@ Westbad
 - Keep text lengths similar to maintain proper layout
 - HTML tags like `<br/>` should remain unchanged
 - Special characters (ä, ö, ü, ß) are correctly encoded
-- The story is set in Regensburg, Germany
+- The story is set in Eindhoven, Netherlands - location names should stay in Dutch (e.g., "Dommelplantsoen", "Catharina")
