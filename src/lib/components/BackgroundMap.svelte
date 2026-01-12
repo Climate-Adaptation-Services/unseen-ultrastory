@@ -64,15 +64,19 @@
       maxBounds: [[51.263871, 3.892372],[52.263871, 4.892372]],
   };
 
-  $: if(leafletMap && !['ziekenhuis'].includes(currentStepName)){
-    const zoom = (currentStepName === 'autoritje' || (currentStepName === 'wandeling' && window.innerWidth < 600)) ? 13 : 16;
-    let centerCoords = flyToCoordsHuis
-    if(currentStepName === 'autoritje'){
-      centerCoords = [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02]
-    }else if(currentStepName === 'wandeling'){
-      centerCoords = [parseFloat(flyToCoordsHuis[0])+0.003, parseFloat(flyToCoordsHuis[1])]
-    }
-    leafletMap.flyTo(centerCoords, zoom, {duration: 3})
+  $: if(leafletMap && !['ziekenhuis', 'wandeling', 'krantenkoppen', 'autoritje'].includes(currentStepName)){
+    leafletMap.flyTo(flyToCoordsHuis, 16, {duration: 3})
+  }
+
+  $: if(leafletMap && currentStepName === 'autoritje'){
+    const centerCoords = [parseFloat(flyToCoordsHuis[0])+0.02, parseFloat(flyToCoordsHuis[1])+0.02]
+    leafletMap.flyTo(centerCoords, 13, {duration: 1})
+  }
+
+  $: if(leafletMap && ['wandeling', 'krantenkoppen'].includes(currentStepName)){
+    const zoom = (currentStepName === 'wandeling' && window.innerWidth < 600) ? 13 : 16;
+    const centerCoords = [parseFloat(flyToCoordsHuis[0])+0.003, parseFloat(flyToCoordsHuis[1])]
+    leafletMap.flyTo(centerCoords, zoom, {duration: 1})
   }
 
   $: if(leafletMap && 'ziekenhuis' === currentStepName){
