@@ -35,13 +35,13 @@
       xAxisScale = 0.7
       yAxisScale = 0.5
       textPadding = 0.65
-      title = 'Höchsttemperatur KNMI-Station Eindhoven'
+      title = 'Höchsttemperatur DWD-Station Regensburg'
     }
      else {
       xAxisScale = 0.4
       yAxisScale = 0.7
       textPadding = 0.15
-      title = 'Jährlich gemessene Höchsttemperatur an der KNMI-Station Eindhoven'
+      title = 'Jährlich gemessene Höchsttemperatur an der DWD-Station Regensburg'
     }
   
   $: xScale = d3.scaleLinear() 
