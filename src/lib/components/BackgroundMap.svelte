@@ -112,14 +112,25 @@
         {/if}
         {#if currentStepName === 'autoritje'}
           <Marker latLng={autoRoute2[0]}/>
-          {#if offset > 0.05}
-            <Polyline latLngs={autoRoute1.slice(0, Math.max(0, Math.round(offset*6*autoRoute1.length-100)))} color="#00bcd4" weight='5'/>
+          {#if offset > 0.09}
+            <!-- Route naar zwembad: offset 0.09 tot 0.18 (aankomst zwembad) -->
+            <!-- autoRoute1 heeft 295 punten, moet volledig zijn bij offset 0.18 -->
+            <Polyline latLngs={autoRoute1.slice(0, Math.max(0, Math.round((offset-0.09)*11*autoRoute1.length)))} color="#00bcd4" weight='5'/>
           {/if}
-          {#if offset > 0.24}
-            <Polyline latLngs={autoRoute2.slice(0, Math.max(0, Math.round(offset*2.5*autoRoute2.length-40)))} color="#00bcd4" weight='5'/>
-          {/if}
-          {#if offset > 0.43}
-            <Polyline latLngs={autoRoute3.slice(0, Math.max(0, Math.round(offset*16*autoRoute3.length-3500)))} color="#00bcd4" weight='5'/>
+          {#if offset > 0.36}
+            <!-- Route terug: offset 0.36 (file) tot 0.81 (ziekenhuis) -->
+            <!-- autoRoute2 heeft 398 punten -->
+            <!-- Locaties op route: -->
+            <!-- Shell Rennweg 7 (pomp) = punt ~145 (36%) bij offset 0.63 -->
+            <!-- Gutenbergstraße/Kirchmeierstraße (manonwel) = punt ~195 (49%) bij offset 0.72 -->
+            <!-- Ziekenhuis = punt 398 (100%) bij offset 0.81 -->
+            <Polyline latLngs={autoRoute2.slice(0, Math.max(0, Math.round(
+              offset <= 0.63
+                ? ((offset-0.36)/0.27) * 0.36 * autoRoute2.length
+                : offset <= 0.72
+                  ? (0.36 + ((offset-0.63)/0.09) * 0.13) * autoRoute2.length
+                  : (0.49 + ((offset-0.72)/0.09) * 0.51) * autoRoute2.length
+            )))} color="#00bcd4" weight='5'/>
           {/if}
         {/if}
       </LeafletMap>
