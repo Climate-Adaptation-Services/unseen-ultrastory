@@ -92,7 +92,7 @@
                 y={-yScale(5.3)}
                 width={barWidth}
                 height={yScale(5.3)}
-                fill="#648fff"
+                fill="#648fffb3"
                 rx="4"
               />
               <text class='bar-value' x={barWidth/2} y={-yScale(5.3) - 10} text-anchor="middle" fill="#648fff">5,3×</text>
@@ -108,7 +108,7 @@
                 y={-yScale(14)}
                 width={barWidth}
                 height={yScale(14)}
-                fill="#ffb000"
+                fill="#ffb000b3"
                 rx="4"
               />
               <text class='bar-value' x={barWidth/2} y={-yScale(14) - 10} text-anchor="middle" fill="#ffb000">14×</text>
@@ -124,7 +124,7 @@
                 y={-yScale(33.5)}
                 width={barWidth}
                 height={yScale(33.5)}
-                fill="#93003a"
+                fill="#93003ab3"
                 rx="4"
               />
               <text class='bar-value' x={barWidth/2} y={-yScale(33.5) - 10} text-anchor="middle" fill="#93003a">33,5×</text>

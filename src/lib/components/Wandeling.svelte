@@ -31,7 +31,7 @@
 <div class='stepdiv'>
   
   <div class='scroll-text-block night' style='top:{`${0.125*stepSize}px`}'>
-    <img class='nielsgaatwandelen night-image' src={'/images/maxgaatwandelen.png'} />
+    <img class='nielsgaatwandelen night-image' src={'/images/nielsgaatwandelen.png'} />
     <p class='scroll-text nighttext'>Als Paul endlich schläft, beschließt Daniel, einen Spaziergang zu machen. Draußen ist es immer noch sehr heiß. Er bemerkt, dass der Asphalt auf der Straße und dem Gehweg viel Wärme abstrahlt.</p>
   </div>
 
@@ -62,7 +62,7 @@
   {/if}
 
   <div class='scroll-text-block night' style='right:100; top:{`${0.87*stepSize}px`}'>
-    <img class='rustigplekje night-image' src={'/images/maxboom.png'} />
+    <img class='rustigplekje night-image' src={'/images/nielsboom.png'} />
     <p class='scroll-text nighttext'>Etwas abgeschottet findet Daniel einen ruhigen Platz unter einem Baum. Er muss an das Gespräch mit Paul über die Hitze denken und überprüft die neuesten Nachrichten auf seinem Handy.</p>  
   </div>
 </div>
