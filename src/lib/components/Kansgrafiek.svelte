@@ -96,7 +96,7 @@
                 rx="4"
               />
               <text class='bar-value' x={barWidth/2} y={-yScale(5.3) - 10} text-anchor="middle" fill="#648fff">5,3×</text>
-              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#648fff">1960</text>
+              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#648fff">Geboren 1960</text>
             </g>
           {/if}
 
@@ -112,7 +112,7 @@
                 rx="4"
               />
               <text class='bar-value' x={barWidth/2} y={-yScale(14) - 10} text-anchor="middle" fill="#ffb000">14×</text>
-              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#ffb000">1990</text>
+              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#ffb000">Geboren 1990</text>
             </g>
           {/if}
 
@@ -128,7 +128,7 @@
                 rx="4"
               />
               <text class='bar-value' x={barWidth/2} y={-yScale(33.5) - 10} text-anchor="middle" fill="#93003a">33,5×</text>
-              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#93003a">2020</text>
+              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#93003a">Geboren 2020</text>
             </g>
           {/if}
 
