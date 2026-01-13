@@ -1,9 +1,6 @@
 <script>
-  import XAxis from "$lib/components/axes/XAxis.svelte";
-  import YAxis from "$lib/components/axes/YAxis.svelte";
   import * as d3 from 'd3'
-  import * as _ from 'lodash'
-  import { afterUpdate, onMount } from 'svelte'
+  import { onMount } from 'svelte'
   import { getStepSize } from "$lib/noncomponents/helperFunctions";
 
   export let index
@@ -19,210 +16,129 @@
   let screenWidth
 
   $: ratioOfCsvData = Math.round((offset*6)*middellijnData.length)
-  $: ratioOfCsvDataConfidence = Math.round((offset*6)*confidenceData.length)
-  
+
   onMount(() => {
     stepSize = getStepSize(stepName);
     screenHeight = document.documentElement.clientHeight
     screenWidth = document.documentElement.clientWidth
   })
 
-  let xAxisWidthRatio
-  let yAxisScaleKans
   let textPaddingKans
   let grafiekPositionY
   let grafiekPositionX
-  let legendPositionX1
-  let legendPositionX2
-  
+  let barChartHeight
+  let barWidth
+  let barSpacing
+
   $: if(screenWidth < 600){
-      xAxisWidthRatio  = 0.7
-      yAxisScaleKans = 0.4
-      textPaddingKans = 0.52   
-      grafiekPositionY = 0
+      textPaddingKans = 0.52
+      grafiekPositionY = 0.55
       grafiekPositionX = 0.15
-      legendPositionX1 = 0.5
-      legendPositionX2 = 0.55
+      barChartHeight = screenHeight * 0.35
+      barWidth = screenWidth * 0.18
+      barSpacing = screenWidth * 0.22
     }
      else {
-      xAxisWidthRatio = 0.38
-      yAxisScaleKans = 0.7
       textPaddingKans = 0.25
-      grafiekPositionY = 0.0
-      grafiekPositionX = 0.45
-      legendPositionX1 = 0.33
-      legendPositionX2 = 0.35
+      grafiekPositionY = 0.65
+      grafiekPositionX = 0.47
+      barChartHeight = screenHeight * 0.5
+      barWidth = screenWidth * 0.08
+      barSpacing = screenWidth * 0.12
     }
 
-  $: xScale = d3.scaleLog()
-      .domain([100,0.01])
-      .range([ 0,screenWidth * xAxisWidthRatio]);
-
+  // Scale for bar height (0 to 35 to accommodate 33.5)
   $: yScale = d3.scaleLinear()
-    .domain([28, 49])
-    .range([ screenHeight * yAxisScaleKans, 0 ]);
+      .domain([0, 35])
+      .range([0, barChartHeight]);
 
-  const areaZonder = d3
-    .area()
-    .x(d => xScale(d.Kans))
-    .y0(d => yScale(d.Lower_zonder))
-    .y1(d => yScale(d.Upper_zonder))
-
-  const areaMet = d3
-    .area()
-    .x(d => xScale(d.Kans))
-    .y0(d => yScale(d.Lower_met))
-    .y1(d => yScale(d.Upper_met))
-
-  const area2050 = d3
-    .area()
-    .x(d => xScale(d.Kans))
-    .y0(d => yScale(d.Lower_2050))
-    .y1(d => yScale(d.Upper_2050))
-  
-  
-    
-  afterUpdate(() => {
-  
-    if(currentStepName === 'kansgrafiek' ){
-      d3.select('.kansgraphpathzonder').remove()
-      d3.select('.kansgraphpathconfidencemet').remove()
-      d3.select('.kansgraphpathconfidence2050').remove()
-      d3.select('.kansgraphpathmet').remove()
-      d3.select('.kansgraphpath2050').remove()
-      d3.select('.kansgraphpathconfidencezonder').remove() 
-      
-      d3.select('.svgkansgrafiek')
-      .append("path")
-      .attr('class', 'kansgraphpathzonder')
-      .datum((currentStepName === 'kansgrafiek') ? _.slice(middellijnData, 0, ratioOfCsvData) : [])
-      .attr("fill", "none")
-      .attr("stroke", "#648fff")
-      .attr("stroke-width", 1.5)
-      .attr("d", d3.line()
-        .x(function(d) { return xScale(d.Kans) })
-        .y(function(d) { return yScale(d.vroeger) })
-        )
-       
-      d3.select(".svgkansgrafiek")
-          .append("path")
-          .attr('class', 'kansgraphpathconfidencezonder')
-          .attr("d", areaZonder(_.slice(confidenceData, 0, Math.max(0, ratioOfCsvDataConfidence - 4))))
-          .attr("fill", "#648fff")
-          .attr("stroke", "none")
-          .attr("fill-opacity", "0.2")
-
-      if (ratioOfCsvData > 189){  
-        
-        d3.select('.svgkansgrafiek')
-        .append("path")
-        .attr('class', 'kansgraphpathmet')
-        .datum(_.slice(middellijnData, 0, Math.max(0, ratioOfCsvData-190)))
-        .attr("fill", "none")
-        .attr("stroke", "#ffb000")
-        .attr("stroke-width", 1.5)
-        .attr("d", d3.line()
-          .x(function(d) { return xScale(d.Kans) })
-          .y(function(d) { return yScale(d.nu) })
-          )
-      }   
-    
-      if( ratioOfCsvDataConfidence > 20){    
-        d3.select(".svgkansgrafiek")
-          .append("path")
-          .attr('class', 'kansgraphpathconfidencemet')
-          .attr("d", areaMet(_.slice(confidenceData, 0, Math.max(0, ratioOfCsvDataConfidence - 16))))
-          .attr("fill", "#ffb000")
-          .attr("stroke", "none")
-          .attr("fill-opacity", "0.2");
-      }
-
-      if (ratioOfCsvData > 329){          
-        d3.select('.svgkansgrafiek')
-        .append("path")
-        .attr('class', 'kansgraphpath2050')
-        .datum(_.slice(middellijnData2050, 0, Math.max(0, ratioOfCsvData-330)))
-        .attr("fill", "none")
-        .attr("stroke", "#93003a")
-        .attr("stroke-width", 1.5)
-        .attr("d", d3.line()
-          .x(function(d) { return xScale(d.Kans)})
-          .y(function(d) { return yScale(d.Klimaat_2050)})
-          )
-      }
-      
-      if( ratioOfCsvDataConfidence > 30){    
-        d3.select(".svgkansgrafiek")
-          .append("path")
-          .attr('class', 'kansgraphpathconfidence2050')
-          .attr("d", area2050(_.slice(confidenceData, 0, Math.max(0, ratioOfCsvDataConfidence - 26))))
-          .attr("fill", "#93003a")
-          .attr("stroke", "none")
-          .attr("fill-opacity", "0.2");
-      }
-    }
-  }
-  )
 </script>
 
 <div class='grafiek'>
   {#if index > 1}
     <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
-        <h1 class='scroll-text-kansgraph'>Statistische Berechnungen</h1>
+        <h1 class='scroll-text-kansgraph'>Klimaforschung</h1>
         <p class='scroll-text-kansgraph'>
-          Die Häufigkeit von fast 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Regensburg zeigen, wie häufig heiße Tage in den Sommermonaten auftreten.    
-        </p>   
+          Klimaforscher der Vrije Universität Brüssel haben untersucht, wie viele zusätzliche Hitzewellen Menschen wegen des Klimawandels in ihrem Leben erleben werden. Mit ihrem <a href="https://myclimatefuture.info/de" target="_blank" style="color: inherit;">Online-Tool</a> kann man sehen, wie viele zusätzliche Klimaextreme es in einer stark erwärmten Welt gibt, in der die Temperatur bis 2100 um 3,5 Grad steigt.
+        </p>
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Als Pauls Großmutter klein war, <mark style="background: #648fff50 !important"> um 1960,</mark> war die Wahrscheinlichkeit Hitzewellen zu erleben sehr gering.  
-          </p> 
-        </div>   
+          <p class='scroll-text-kansgraph'> Pauls Großmutter, <mark style="background: #648fff50 !important">geboren 1960</mark>, wird bei dieser Erwärmung in ihrem Leben 5,3-mal mehr Hitzewellen erleben als in einer Welt ohne Klimawandel.
+          </p>
+        </div>
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Als Daniel klein war, <mark style="background: #ffb00050 !important">im Jahr 1980</mark>, war die Wahrscheinlichkeit Hitzewellen zu erleben schon fast doppelt so hoch.
-          </p> 
-        </div>   
+          <p class='scroll-text-kansgraph'> Daniel, <mark style="background: #ffb00050 !important">geboren 1990</mark>, wird dadurch in seinem Leben 14-mal mehr Hitzewellen erleben als ohne Klimawandel.
+          </p>
+        </div>
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Mittlerweile, <mark style="background: #93003a50 !important">im Jahr 2020</mark>, in dem Paul klein ist, ist die Wahrscheinlichkeit, mit der er in seinem Leben Hitzewellen erleben wird um das 33,5-Fache gestiegen.
-          </p> 
-        </div>   
-      {/if}      
+          <p class='scroll-text-kansgraph'> Und der kleine Paul, <mark style="background: #93003a50 !important">geboren 2020</mark>, wird wegen des Klimawandels in seinem Leben 33,5-mal mehr Hitzewellen erleben als ohne Klimawandel.
+          </p>
+        </div>
+      {/if}
     </div>
   {/if}
-  
+
     <div class='sticky-div' >
       <svg>
         <g class='svgkansgrafiek' transform="translate({screenWidth * grafiekPositionX},{screenHeight * grafiekPositionY})" >
-          <XAxis {xScale} height={screenHeight * yAxisScaleKans}/> 
-          <YAxis {yScale} height={screenHeight * yAxisScaleKans}/>
-          <text class = 'legendtext' x={screenWidth * legendPositionX1} y={yScale(31.8)}>Statistik für:</text> 
-          <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)}>1960</text>  
-          <line x1={screenWidth * legendPositionX1}  y1={yScale(31)} x2={screenWidth * legendPositionX2} y2={yScale(31)} stroke="#648fff" stroke-width="0.3vh"/>
-          <text x={xScale(1.5)} class='axistitle' y={yScale(26)+2}>Wahrscheinlichkeit (%)</text>  
-          <text class='axistitle' transform="translate({(xAxisWidthRatio * screenWidth * -0.07)-5},{yAxisScaleKans * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Temperatur (°C)</text>  
-          <line x1={xScale(100)}  y1={yScale(40)} x2={xScale(0.01)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/> 
-          <text class = 'graphtitle' x={xScale(1)} y={yScale(48)}>Die Häufigkeit von Hitze pro Generation</text>
-          {#if ratioOfCsvData > 170 && currentStepName === 'kansgrafiek'} 
-            <line x1={xScale(0.008)}  y1={yScale(37.0855)} x2={xScale(0.008)} y2={yScale(44.0244)} stroke="grey"/>
-            <line x1={xScale(0.0075)}  y1={yScale(37.0855)} x2={xScale(0.0085)} y2={yScale(37.0855)} stroke="grey"/>
-            <line x1={xScale(0.0075)}  y1={yScale(44.0244)} x2={xScale(0.0085)} y2={yScale(44.0244)} stroke="grey"/>
-            <text x={xScale(0.0075)} y={yScale(40.5)} font-size = "1.3vh" marker-end="url(#triangle)">Bandbreite</text>
+          <!-- Chart title -->
+          <text class='graphtitle' x={barSpacing * 1} y={-barChartHeight - 30} text-anchor="middle">Zusätzliche Hitzewellen pro Generation</text>
+
+          <!-- Bar 1: 1960 - Grandmother -->
+          {#if ratioOfCsvData > 100 && currentStepName === 'kansgrafiek'}
+            <g class="bar-group" transform="translate(0, 0)">
+              <rect
+                x={0}
+                y={-yScale(5.3)}
+                width={barWidth}
+                height={yScale(5.3)}
+                fill="#648fff"
+                rx="4"
+              />
+              <text class='bar-value' x={barWidth/2} y={-yScale(5.3) - 10} text-anchor="middle" fill="#648fff">5,3×</text>
+              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#648fff">1960</text>
+            </g>
           {/if}
-          {#if ratioOfCsvData > 270}
-            <line x1={xScale(1.65)}  y1={yScale(28)} x2={xScale(1.7)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>   
-            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.02)}>1980</text>  
-            <line x1={screenWidth * legendPositionX1}  y1={yScale(31)+(screenHeight * 0.02)} x2={screenWidth * legendPositionX2} y2={yScale(31)+(screenHeight * 0.02)} stroke="#ffb000" stroke-width="0.3vh"/>    
-            <text  x={xScale(1.65)+(screenWidth * 0.003)} y={yScale(28)-(screenHeight * 0.005)} fill= "#ffb000" font-size= '2vh'>2%</text> 
+
+          <!-- Bar 2: 1990 - Daniel -->
+          {#if ratioOfCsvData > 250 && currentStepName === 'kansgrafiek'}
+            <g class="bar-group" transform="translate({barSpacing}, 0)">
+              <rect
+                x={0}
+                y={-yScale(14)}
+                width={barWidth}
+                height={yScale(14)}
+                fill="#ffb000"
+                rx="4"
+              />
+              <text class='bar-value' x={barWidth/2} y={-yScale(14) - 10} text-anchor="middle" fill="#ffb000">14×</text>
+              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#ffb000">1990</text>
+            </g>
           {/if}
-          {#if ratioOfCsvData > 360}
-            <line x1={xScale(7.8)}  y1={yScale(28)} x2={xScale(7.8)} y2={yScale(40)} stroke="grey" stroke-dasharray="5,5"/>  
-            <text class = 'legendtext' x={(screenWidth * legendPositionX2) + (screenWidth * 0.005)} y={yScale(31)+(screenHeight * 0.04)}>2020</text>  
-            <line x1={screenWidth * legendPositionX1}  y1={yScale(31)+(screenHeight * 0.04)} x2={screenWidth * legendPositionX2} y2={yScale(31)+(screenHeight * 0.04)} stroke="#93003a" stroke-width="0.3vh"/>     
-            <text  x={xScale(7.8)+ (screenWidth * 0.003)} y={yScale(28)-(screenHeight * 0.005)} fill="#93003a" font-size= '2vh'>8%</text> 
-           {/if}
+
+          <!-- Bar 3: 2020 - Paul -->
+          {#if ratioOfCsvData > 360 && currentStepName === 'kansgrafiek'}
+            <g class="bar-group" transform="translate({barSpacing * 2}, 0)">
+              <rect
+                x={0}
+                y={-yScale(33.5)}
+                width={barWidth}
+                height={yScale(33.5)}
+                fill="#93003a"
+                rx="4"
+              />
+              <text class='bar-value' x={barWidth/2} y={-yScale(33.5) - 10} text-anchor="middle" fill="#93003a">33,5×</text>
+              <text class='bar-label' x={barWidth/2} y={25} text-anchor="middle" fill="#93003a">2020</text>
+            </g>
+          {/if}
+
+          <!-- X-axis baseline -->
+          {#if currentStepName === 'kansgrafiek' && ratioOfCsvData > 100}
+            <line x1={-10} y1={0} x2={barSpacing * 2 + barWidth + 10} y2={0} stroke="#999" stroke-width="1"/>
+          {/if}
         </g>
       </svg>
-      <p class='graph-description'>Hitzestatistiken für Europa für die Wahrscheinlichkeit von Hitzewellen für 1960, 1980 und 2020. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-&#40;WH&#41;-Szenario für 2050 berechnet. Verwendete Tools:
-        <a href="https://climexp.knmi.nl">KNMI Climate Explorer</a> und das <a href="https://www.knmi.nl/nederland-nu/KNMI14_klimaatscenarios/transformatieprogramma">KNMI'14 Transformationsprogramm</a>.
+      <p class='graph-description'>In einer Welt, die bis 2100 auf eine Erwärmung von 3,5 Grad zusteuert, werden jüngere Generationen in ihrem Leben viel mehr Hitzewellen erleben als ältere Generationen. Diese Zahlen stammen aus zuverlässiger Klimaforschung der Vrije Universität Brüssel und sind auf <a href="https://myclimatefuture.info/de" target="_blank">myclimatefuture.info</a> zu finden.
       </p>
     </div>
   </div>
@@ -235,13 +151,19 @@
     float:right;
   }
 
-  .kansgraphpathconfidence{
-    opacity:0.15;
+  .bar-label{
+    font-size: 2vh;
+    font-weight: bold;
   }
 
-  .legendtext{
-    font-size: 2vh;
-     dominant-baseline: middle;
+  .bar-value{
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  .axis-label{
+    font-size: 1.8vh;
+    fill: #666;
   }
 
   .graph-description{
