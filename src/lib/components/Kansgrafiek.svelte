@@ -60,18 +60,18 @@
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
         <h1 class='scroll-text-kansgraph'>Klimaforschung</h1>
         <p class='scroll-text-kansgraph'>
-          Klimaforscher der Vrije Universität Brüssel haben untersucht, wie viele zusätzliche Hitzewellen Menschen wegen des Klimawandels in ihrem Leben erleben werden. Mit ihrem <a href="https://myclimatefuture.info/de" target="_blank" style="color: inherit;">Online-Tool</a> kann man sehen, wie viele zusätzliche Klimaextreme es in einer stark erwärmten Welt gibt, in der die Temperatur bis 2100 um 3,5 Grad steigt.
+          Klimaforscher der Vrije Universität Brüssel haben für Europa untersucht, wie viel mehr Hitzewellen Menschen im Laufe ihres Lebens wegen des Klimawandels, im Vergleich zu einem Szenario ohne Klimawandel, voraussichtlich erleben werden. Mit ihrem <a href="https://myclimatefuture.info/de" target="_blank" style="color: inherit;">Online-Tool</a> wird veranschaulicht, wie viele zusätzliche Klimaextreme es in einer stark erwärmten Welt gibt, in der die Temperatur bis 2100 um 3,5 Grad Celsius steigt.
         </p>
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 100 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Pauls Großmutter, <mark style="background: #648fff50 !important">geboren 1960</mark>, wird bei dieser Erwärmung in ihrem Leben 5,3-mal mehr Hitzewellen erleben als in einer Welt ohne Klimawandel.
+          <p class='scroll-text-kansgraph'> Pauls Großmutter, <mark style="background: #648fff50 !important">geboren 1960</mark>, wird bei dieser Erwärmung in ihrem Leben voraussichtlich bereits 5,3-mal mehr Hitzewellen erleben als in einer Welt ohne Klimawandel.
           </p>
         </div>
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 250 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Daniel, <mark style="background: #ffb00050 !important">geboren 1990</mark>, wird dadurch in seinem Leben 14-mal mehr Hitzewellen erleben als ohne Klimawandel.
+          <p class='scroll-text-kansgraph'> Daniel, <mark style="background: #ffb00050 !important">geboren 1990</mark>, wird dadurch in seinem Leben voraussichtlich 14-mal mehr Hitzewellen erleben als ohne Klimawandel.
           </p>
         </div>
         <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 360 && currentStepName ==='kansgrafiek') ? 'visible' : 'hidden'}'>
-          <p class='scroll-text-kansgraph'> Und der kleine Paul, <mark style="background: #93003a50 !important">geboren 2020</mark>, wird wegen des Klimawandels in seinem Leben 33,5-mal mehr Hitzewellen erleben als ohne Klimawandel.
+          <p class='scroll-text-kansgraph'> Und Paul selbst, <mark style="background: #93003a50 !important">der 2020 geboren ist</mark>, wird wegen des Klimawandels in seinem Leben voraussichtlich sogar 33,5-mal mehr Hitzewellen erleben als es ohne den Klimawandel geschehen würde.
           </p>
         </div>
       {/if}
@@ -138,7 +138,7 @@
           {/if}
         </g>
       </svg>
-      <p class='graph-description'>In einer Welt, die bis 2100 auf eine Erwärmung von 3,5 Grad zusteuert, werden jüngere Generationen in ihrem Leben viel mehr Hitzewellen erleben als ältere Generationen. Diese Zahlen stammen aus zuverlässiger Klimaforschung der Vrije Universität Brüssel und sind auf <a href="https://myclimatefuture.info/de" target="_blank">myclimatefuture.info</a> zu finden.
+      <p class='graph-description'>In einer Welt, die bis 2100 auf eine Erwärmung von zusätzlich 3,5 Grad Celsius zusteuert, werden jüngere Generationen sehr wahrscheinlich in ihrem Leben viel mehr Hitzewellen erleben als ältere Generationen, im Vergleich zu einem Szenario ohne Klimawandel. Diese Zahlen stammen aus zuverlässiger Klimaforschung der Vrije Universität Brüssel und sind auf <a href="https://myclimatefuture.info/de" target="_blank">myclimatefuture.info</a> zu finden.
       </p>
     </div>
   </div>

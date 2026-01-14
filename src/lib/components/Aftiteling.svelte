@@ -71,6 +71,8 @@
     <h3 class = 'leeslijstcat'>National</h3>
     <ul class="myUL">
       <li><a href="https://www.dwd.de/DE/klimaumwelt/klimaatlas/klimaatlas_node.html" target="_blank">Wetter und Klima - Deutscher Wetterdienst - Deutscher Klimaatlas</a></li>
+      <li><a href="https://www.dwd.de/DE/klimaumwelt/aktuelle_meldungen/250924/faktenpapier_extremwetterkongress_download.pdf?__blob=publicationFile&v=2" target="_blank">Faktenpapier 2025 zu Extremwetter in Deutschland - ExtremWetterKongress 2025</a></li>
+      <li><a href="https://www.klimafaktenpapier.de/Klimafaktenpapier2025.pdf" target="_blank">Klimafaktenpapier 2025</a></li>
     </ul>
 
     <h3 class = 'leeslijstcat'>International</h3>

@@ -58,7 +58,7 @@
       name:'pomp',
       image:'png',
       time:0.63,
-      text:"Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.",
+      text:"Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte wegen des Stromausfalls nicht mehr funktionieren.",
       class: 'scroll-text'
     },
     {

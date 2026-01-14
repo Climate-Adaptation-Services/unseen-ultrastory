@@ -63,13 +63,20 @@
   <div class='graphtext' style='top:{`${textPadding*screenHeight}px`}'>
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <h1 class='scroll-text'>Temperaturmessungen</h1>
-    <p class='scroll-text'> 
-      Die Messungen zeigen, dass die jährliche Höchsttemperatur in Regensburg bereits erheblich gestiegen ist und mittlerweile deutlich öfter vorkommt. Bis 2015 wurde eine Temperatur über 37 Grad sehr selten gemessen.  
+    <p class='scroll-text'>
+      Die Messungen zeigen, dass die jährliche Tageshöchsttemperatur in Regensburg bereits erheblich gestiegen ist und diese hohen Temperaturen mittlerweile deutlich öfter vorkommen. Von 1950 bis 2015 wurde eine Tageshöchsttemperatur von über 37 °C nur zweimal gemessen. <mark style="background: #ffb00050 !important">(1983 und 2003)</mark>
     </p>
     <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 60 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
-      <p class='scroll-text'> Aber am 26. Juli 2019 wurden in Regensburg 38,9 Grad erreicht. Die zweit höchste Temperatur jemals. Sieben der 10 heißesten Tage traten ab 2015 auf.  
-      </p> 
-    </div>  
+      <p class='scroll-text'> Aber am 26. Juli <mark style="background: #ff660050 !important">2019</mark> wurden in Regensburg sogar 38,9 °C erreicht. Die bis dato zweithöchste jemals gemessene Tageshöchsttemperatur.
+      Sieben der 10 heißesten Tage, mit Werten von über 37 °C, traten ab 2015 auf. <mark style="background: #ff660050 !important">(2× 2015, 2× 2018, 2× 2019, 1× 2022)</mark>
+      </p>
+    </div>
+    <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 80 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
+      <p class='scroll-text graph-description'>
+        Dargestellt wurden die jährlichen Tageshöchsttemperaturen der Jahre 1950 bis 2025. Diese Zahlen stammen aus Wetter- und Klimadatensätzen des Deutschen Wetterdienstes (DWD) für die Wetterstation 04104 Regensburg und sind aufbereitet unter <a href="https://www.mtwetter.de/" target="_blank" style="color: inherit; pointer-events: auto;">mtwetter.de</a> zu finden.
+        Die sieben heißesten Tage beziehen sich auf eine Aussage zu den monatlichen Höchstwerten in Regensburg aus dem Klimadashboard Deutschland.
+      </p>
+    </div>
     {/if}
   </div>
 

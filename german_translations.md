@@ -105,17 +105,19 @@ Temperaturmessungen
 
 ### Description
 ```
-Die Messungen zeigen, dass die jährliche Höchsttemperatur in Regensburg bereits erheblich gestiegen ist und mittlerweile deutlich öfter vorkommt. Bis 2015 wurde eine Temperatur über 37 Grad sehr selten gemessen.
+Die Messungen zeigen, dass die jährliche Tageshöchsttemperatur in Regensburg bereits erheblich gestiegen ist und diese hohen Temperaturen mittlerweile deutlich öfter vorkommen. Von 1950 bis 2015 wurde eine Tageshöchsttemperatur von über 37 °C nur zweimal gemessen. (1983 und 2003)
 ```
 
 ### Record annotation
 ```
-Aber am 26. Juli 2019 wurden in Regensburg 38,9 Grad erreicht. Die zweit höchste Temperatur jemals. Sieben der 10 heißesten Tage traten ab 2015 auf. 
+Aber am 26. Juli 2019 wurden in Regensburg sogar 38,9 °C erreicht. Die bis dato zweithöchste jemals gemessene Tageshöchsttemperatur.
+Sieben der 10 heißesten Tage, mit Werten von über 37 °C, traten ab 2015 auf. (2× 2015, 2× 2018, 2× 2019, 1× 2022)
 ```
 
-### Chart annotation
+### Source text
 ```
-
+Dargestellt wurden die jährlichen Tageshöchsttemperaturen der Jahre 1950 bis 2025. Diese Zahlen stammen aus Wetter- und Klimadatensätzen des Deutschen Wetterdienstes (DWD) für die Wetterstation 04104 Regensburg und sind aufbereitet unter mtwetter.de zu finden.
+Die sieben heißesten Tage beziehen sich auf eine Aussage zu den monatlichen Höchstwerten in Regensburg aus dem Klimadashboard Deutschland.
 ```
 
 ### Axis labels
@@ -130,56 +132,44 @@ Höchsttemperatur (°C)
 
 ### Section title
 ```
-Statistische Berechnungen
+Klimaforschung
 ```
 
 ### Description
 ```
-Die Häufigkeit von fast 40 Grad Celsius ist durch den Klimawandel stark gestiegen. Hitzestatistiken für Regensburg zeigen, wie häufig heiße Tage in den Sommermonaten auftreten.
+Klimaforscher der Vrije Universität Brüssel haben für Europa untersucht, wie viel mehr Hitzewellen Menschen im Laufe ihres Lebens wegen des Klimawandels, im Vergleich zu einem Szenario ohne Klimawandel, voraussichtlich erleben werden. Mit ihrem Online-Tool wird veranschaulicht, wie viele zusätzliche Klimaextreme es in einer stark erwärmten Welt gibt, in der die Temperatur bis 2100 um 3,5 Grad Celsius steigt.
 ```
 
 ### 1960 text
 ```
-Als Pauls Großmutter klein war, um 1960, war die Wahrscheinlichkeit Hitzewellen zu erleben sehr gering.
+Pauls Großmutter, geboren 1960, wird bei dieser Erwärmung in ihrem Leben voraussichtlich bereits 5,3-mal mehr Hitzewellen erleben als in einer Welt ohne Klimawandel.
 ```
 
-### 1980 text
+### 1990 text
 ```
-Als Daniel klein war, im Jahr 1980, war die Wahrscheinlichkeit Hitzewellen zu erleben schon fast doppelt so hoch.
+Daniel, geboren 1990, wird dadurch in seinem Leben voraussichtlich 14-mal mehr Hitzewellen erleben als ohne Klimawandel.
 ```
 
 ### 2020 text
 ```
-Mittlerweile, im Jahr 2020, in dem Paul klein ist, ist die Wahrscheinlichkeit, mit der er in seinem Leben Hitzewellen erleben wird um das 33,5-Fache gestiegen.
+Und Paul selbst, der 2020 geboren ist, wird wegen des Klimawandels in seinem Leben voraussichtlich sogar 33,5-mal mehr Hitzewellen erleben als es ohne den Klimawandel geschehen würde.
 ```
 
 ### Chart title
 ```
-Die Häufigkeit von Hitze pro Generation
+Zusätzliche Hitzewellen pro Generation
 ```
 
-### Axis labels
+### Bar labels
 ```
-Jahreszahl (Zeit)
-Temperatur (°C)
-```
-
-### Legend
-```
-Statistik für:
-1960
-1980
-2020
-```
-
-### Annotation
-```
-Bandbreite
+Geboren 1960: 5,3×
+Geboren 1990: 14×
+Geboren 2020: 33,5×
 ```
 
 ### Chart description
 ```
-Hitzestatistiken für Europa für die Wahrscheinlichkeit von Hitzewellen für 1960, 1980 und 2020. Diese wurden auf Basis von Messungen der KNMI-Station Eindhoven und dem KNMI'14 Hoch-(WH)-Szenario für 2050 berechnet. Verwendete Tools: KNMI Climate Explorer und das KNMI'14 Transformationsprogramm.
+In einer Welt, die bis 2100 auf eine Erwärmung von zusätzlich 3,5 Grad Celsius zusteuert, werden jüngere Generationen sehr wahrscheinlich in ihrem Leben viel mehr Hitzewellen erleben als ältere Generationen, im Vergleich zu einem Szenario ohne Klimawandel. Diese Zahlen stammen aus zuverlässiger Klimaforschung der Vrije Universität Brüssel und sind auf myclimatefuture.info zu finden.
 ```
 
 ---
@@ -237,7 +227,7 @@ Kirchen, Sporthallen, Supermärkte und Gemeindezentren werden spontan als kühle
 
 ### Scene 6 (pomp)
 ```
-Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte nicht mehr funktionieren.
+Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte wegen des Stromausfalls nicht mehr funktionieren.
 ```
 
 ### Scene 7 (manonwel)

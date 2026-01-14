@@ -38,6 +38,12 @@ svg text {
   color:#4e4e4e;
   font-size:2.5vh;
   text-align: left;
+  pointer-events: auto;
+}
+
+.scroll-text a, .scroll-text-kansgraph a, .graph-description a{
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .scroll-text-block{
@@ -106,10 +112,12 @@ svg text {
   position: sticky;
   position: -webkit-sticky; /* Safari */
   width: 40%;
-  height:1.5%;
+  height: 1.5%;
   margin-top: 10px;
   text-align: left;
   padding-left:3vw;
+  pointer-events: auto;
+  z-index: 100;
 }
 
 .graphtitle{
@@ -128,6 +136,7 @@ svg text {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
+  pointer-events: none;
 }
 
 .tick{
