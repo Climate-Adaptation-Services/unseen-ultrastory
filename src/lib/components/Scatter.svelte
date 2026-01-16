@@ -71,22 +71,16 @@
       Sieben der 10 heißesten Tage, mit Werten von über 37 °C, traten ab 2015 auf. <mark style="background: #ff660050 !important">(2× 2015, 2× 2018, 2× 2019, 1× 2022)</mark>
       </p>
     </div>
-    <div class= 'fade-in' style='visibility:{(ratioOfCsvData > 80 && currentStepName ==='temperatuurstijging') ? 'visible' : 'hidden'}'>
-      <p class='scroll-text graph-description'>
-        Dargestellt wurden die jährlichen Tageshöchsttemperaturen der Jahre 1950 bis 2025. Diese Zahlen stammen aus Wetter- und Klimadatensätzen des Deutschen Wetterdienstes (DWD) für die Wetterstation 04104 Regensburg und sind aufbereitet unter <a href="https://www.mtwetter.de/" target="_blank" style="color: inherit; pointer-events: auto;">mtwetter.de</a> zu finden.
-        Die sieben heißesten Tage beziehen sich auf eine Aussage zu den monatlichen Höchstwerten in Regensburg aus dem Klimadashboard Deutschland.
-      </p>
-    </div>
     {/if}
   </div>
 
   <div class='sticky-div'>
     <svg>
-      <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.05})">
+      <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.02})">
       <XAxis {xScale} height={screenHeight * yAxisScale}/>
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
       <text class='axistitle' x={xScale(1988)} y={yScale(26)+2}>Jahr</text>  
-      <text class = 'graphtitle' x={xScale(1985)} y={yScale(41)}>{title}</text>
+      <text class = 'graphtitle' x={xScale(1975)} y={yScale(41)}>{title}</text>
       <text class='axistitle' transform="translate({(xAxisScale * screenWidth * -0.07)-5},{yAxisScale * screenHeight * 0.5} ) rotate(-90)" text-anchor = 'middle'>Höchsttemperatur (°C)</text>
       <!-- Record annotation hidden for Regensburg version
       {#if ratioOfCsvData > 80 && currentStepName === 'temperatuurstijging'}
@@ -123,20 +117,59 @@
           />
         {/each}
       {/if}
+      <!-- Highlight rings for years mentioned in text: 1983 and 2003 (first mention) -->
+      {#if currentStepName === 'temperatuurstijging'}
+        {#each _.slice(maxTempData, 0, ratioOfCsvData).filter(d => [1983, 2003].includes(+d.year)) as d}
+          <circle
+            class='highlight-ring'
+            cx = {xScale(+d.year)}
+            cy = {yScale(+d.T)}
+            r = {0.012 * screenHeight}
+            fill = 'none'
+            stroke = '#ffb000'
+            stroke-width = '3'
+          />
+        {/each}
+      {/if}
+      <!-- Highlight rings for years mentioned in second text: 2015, 2018, 2019, 2022 -->
+      {#if currentStepName === 'temperatuurstijging' && ratioOfCsvData > 60}
+        {#each _.slice(maxTempData, 0, ratioOfCsvData).filter(d => [2015, 2018, 2019, 2022].includes(+d.year)) as d}
+          <circle
+            class='highlight-ring fade-in'
+            cx = {xScale(+d.year)}
+            cy = {yScale(+d.T)}
+            r = {0.012 * screenHeight}
+            fill = 'none'
+            stroke = '#ff6600'
+            stroke-width = '3'
+          />
+        {/each}
+      {/if}
       </g>
     </svg>
+    {#if currentStepName === 'temperatuurstijging'}
+      <p class='graph-description'>Dargestellt wurden die jährlichen Tageshöchsttemperaturen der Jahre 1950 bis 2025. Diese Zahlen stammen aus Wetter- und Klimadatensätzen des Deutschen Wetterdienstes (DWD) für die Wetterstation 04104 Regensburg und sind aufbereitet unter <a href="https://www.mtwetter.de/" target="_blank">mtwetter.de</a> zu finden. Die sieben heißesten Tage beziehen sich auf eine Aussage zu den monatlichen Höchstwerten in Regensburg aus dem Klimadashboard Deutschland.
+      </p>
+    {/if}
   </div>
-
-   
 </div>
 
 
 <style>
-  
+
   svg{
     width:100%;
     height:100%;
     margin-top:0%;
+  }
+
+  .graph-description{
+    color:#4e4e4e;
+    font-size:1.5vh;
+    text-align: left;
+    bottom: 5%;
+    position: absolute;
+    left: 50%;
   }
 
 </style>
