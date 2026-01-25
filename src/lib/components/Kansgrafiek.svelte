@@ -41,7 +41,7 @@
      else {
       textPaddingKans = 0.25
       grafiekPositionY = 0.65
-      grafiekPositionX = 0.47
+      grafiekPositionX = 0.30
       barChartHeight = screenHeight * 0.5
       barWidth = screenWidth * 0.08
       barSpacing = screenWidth * 0.12

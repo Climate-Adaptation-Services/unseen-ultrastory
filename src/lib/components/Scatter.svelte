@@ -79,7 +79,7 @@
 
   <div class='sticky-div'>
     <svg>
-      <g class = 'graphsvg' transform="translate({screenWidth * 0.45},{screenHeight * 0.02})">
+      <g class = 'graphsvg' transform="translate({screenWidth * 0.25},{screenHeight * 0.08})">
       <XAxis {xScale} height={screenHeight * yAxisScale}/>
       <YAxis {yScale} height={screenHeight * yAxisScale}/>
       <text class='axistitle' x={xScale(1988)} y={yScale(26)+2}>Jahr</text>  
