@@ -16,33 +16,34 @@
     stepSize = getStepSize(stepName);
   })
 
+  // Text removed for no-text version
   const scenes = [
     {
       name:'ziekenhuischaos2',
       image:'png',
       time:0.01,
-      text:'Im Krankenhaus arbeitet Alisa so hart sie kann. Eine Kollegin hat sich wegen eines Hitzschlags krankgemeldet. Und in der Notaufnahme herrscht enormer Andrang: Die Hitze verursacht massive Gesundheitsprobleme. Es ist eine körperlich sehr anstrengende Arbeit, und morgen geht es genau so wieder weiter.',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'oudevrouwziekenhuis',
       image:'png',
       time:0.25,
-      text:'Heute war das Wartezimmer voll mit Patienten. Viele ältere Menschen landeten mit Dehydrierungserscheinungen in der Notaufnahme.',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'hardloper1',
       image:'png',
       time:0.5,
-      text:'Einige junge Sportler wurden ohnmächtig, als sie trotz Warnungen joggen gingen.',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'boer1',
       image:'png',
       time:0.75,
-      text:'Und ein Landwirt hatte beim Heumachen einen schweren Sonnenstich bekommen.',
+      text:'',
       class: 'scroll-text'
     },
   ]

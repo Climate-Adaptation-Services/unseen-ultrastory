@@ -6,7 +6,9 @@
 </script>
 
 {#each scenes as scene,i}
-  <div class='scroll-text-block' style='top:{`${(scene['time']+imageOffset)*stepSize}px`}'>
-    <p class={scene['class']}>{@html scene['text']}</p>
-  </div>
+  {#if scene['text']}
+    <div class='scroll-text-block' style='top:{`${(scene['time']+imageOffset)*stepSize}px`}'>
+      <p class={scene['class']}>{@html scene['text']}</p>
+    </div>
+  {/if}
 {/each}

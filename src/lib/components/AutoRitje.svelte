@@ -18,61 +18,62 @@
   let trafficjam = 0.3
 
 
+  // Text removed for no-text version
   const scenes = [
     {
       name:'weeralarm',
       image:'jpg',
       time:0.09,
-      text:'Am nächsten Tag ist es wieder extrem heiß. Die Empfehlung lautet seit Tagen, drinnen zu bleiben, aber Daniel hat eine Idee. Er beschließt, mit Paul ins Schwimmbad zu gehen.',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'zwembad',
       image:'png',
       time:0.18,
-      text:"Sie nehmen das Auto. Und genießen kurz die Kühlung der Klimaanlage. Sie freuen sich beide so aufs Schwimmen! Aber das Schwimmbad ist geschlossen. Es ist für das Badpersonal nicht vertretbar, bei diesen Temperaturen zu arbeiten.",
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'nielstel',
       image:'png',
       time:0.27,
-      text:'Dann erhält Daniel eine Nachricht von Alisa: Die ganze Stadt ist ohne Strom. Das Krankenhaus wird mit dem Notstromaggregat betrieben. "Kannst du bitte bei meiner Mutter vorbeischauen, um zu sehen, wie es ihr geht?"',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'file',
       image:'png',
       time:0.36,
-      text:'Daniel und Paul steigen wieder ins Auto. Auf den Straßen ist sehr viel los. Viele Menschen versuchen, wegen des Stromausfalls aus der Stadt zu kommen. Daniel macht sich Sorgen. Wie lange wird dieser Blackout dauern?',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'kerk',
       image:'png',
       time:0.45,
-      text:'Kirchen, Sporthallen, Supermärkte und Gemeindezentren werden spontan als kühle Zufluchtsorte eingerichtet.',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'pomp',
       image:'png',
       time:0.63,
-      text:"Vor den Tankstellen stehen riesige Autoschlangen. Genug Benzin wäre vorhanden, aber niemand kann tanken, weil die Kartenlesegeräte wegen des Stromausfalls nicht mehr funktionieren.",
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'manonwel',
       image:'png',
       time:0.72,
-      text:"Als Daniel einen erschöpften Mann am Boden sitzen sieht, zögert er keinen Moment. Er steigt aus dem Auto und geht zu ihm. Der Mann scheint an Dehydrierung zu leiden. Schnell gibt Daniel ihm etwas Wasser und hilft ihm auf den Rücksitz des Autos. Zusammen fahren sie zum Krankenhaus. Dort sehen sie bald Alisa.",
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'leonieradeloos',
       image:'png',
       time:0.81,
-      text:'Daniel erklärt, dass sie noch nicht bei ihrer Mutter waren. "Aber wir schauen jetzt nach ihr!" Daniel und Alisa geben sich einen hastigen Kuss. "Komm Paul, wir fahren zu Oma."<br/><br/>Alisa schaut sich um. All diese Menschen, die Hilfe brauchen. Sie wischt sich den Schweiß von der Stirn. Wie soll das weitergehen?',
+      text:'',
       class: 'scroll-text'
     }
   ]
