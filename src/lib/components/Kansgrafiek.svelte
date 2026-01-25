@@ -55,6 +55,8 @@
 </script>
 
 <div class='grafiek'>
+  <!-- Text removed for no-text version -->
+  <!--
   {#if index > 1}
     <div class='graphtext' style='top:{`${textPaddingKans*screenHeight}px`}'>
       {#if currentStepName ==='scatter' || currentStepName ==='kansgrafiek'}
@@ -77,6 +79,7 @@
       {/if}
     </div>
   {/if}
+  -->
 
     <div class='sticky-div' >
       <svg>
@@ -138,8 +141,11 @@
           {/if}
         </g>
       </svg>
+      <!-- Graph description removed for no-text version -->
+      <!--
       <p class='graph-description'>In einer Welt, die bis 2100 auf eine Erwärmung von zusätzlich 3,5 Grad Celsius zusteuert, werden jüngere Generationen sehr wahrscheinlich in ihrem Leben viel mehr Hitzewellen erleben als ältere Generationen, im Vergleich zu einem Szenario ohne Klimawandel. Diese Zahlen stammen aus zuverlässiger Klimaforschung der Vrije Universität Brüssel und sind auf <a href="https://myclimatefuture.info/de" target="_blank">myclimatefuture.info</a> zu finden.
       </p>
+      -->
     </div>
   </div>
 

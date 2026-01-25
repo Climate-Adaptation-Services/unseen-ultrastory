@@ -60,6 +60,8 @@
 </script>
 
 <div class='grafiek'>
+  <!-- Text removed for no-text version -->
+  <!--
   <div class='graphtext' style='top:{`${textPadding*screenHeight}px`}'>
     {#if (currentStepName === 'temperatuurstijging') || currentStepName === 'gesprek'}
     <h1 class='scroll-text'>Temperaturmessungen</h1>
@@ -73,6 +75,7 @@
     </div>
     {/if}
   </div>
+  -->
 
   <div class='sticky-div'>
     <svg>
@@ -147,10 +150,13 @@
       {/if}
       </g>
     </svg>
+    <!-- Graph description removed for no-text version -->
+    <!--
     {#if currentStepName === 'temperatuurstijging'}
       <p class='graph-description'>Dargestellt wurden die jährlichen Tageshöchsttemperaturen der Jahre 1950 bis 2025. Diese Zahlen stammen aus Wetter- und Klimadatensätzen des Deutschen Wetterdienstes (DWD) für die Wetterstation 04104 Regensburg und sind aufbereitet unter <a href="https://www.mtwetter.de/" target="_blank">mtwetter.de</a> zu finden. Die sieben heißesten Tage beziehen sich auf eine Aussage zu den monatlichen Höchstwerten in Regensburg aus dem Klimadashboard Deutschland.
       </p>
     {/if}
+    -->
   </div>
 </div>
 

@@ -17,19 +17,20 @@
     stepSize = getStepSize(stepName);
   })
 
+  // Text removed for no-text version
   const scenes = [
     {
       name:'bank1',
       image:'png',
       time:0.2,
-      text:'Es ist Anfang Juli und in Regensburg herrschen bereits seit drei Tagen Temperaturen von fast vierzig Grad. Auch nachts sinkt die Temperatur nicht mehr unter 25 Grad. Alle leiden unter der drückenden Hitze.<br/><br/>Wir begleiten Alisa und Daniel sowie ihren siebenjährigen Sohn Paul. Daniel ist Deutschlehrer. Alisa arbeitet in der Notaufnahme des Krankenhauses der Barmherzigen Brüder.<br/><br/>Alisa und Daniel liegen erschöpft auf dem Sofa. Sie schlafen seit Nächten schlecht, weil ihr Schlafzimmer so heiß ist. Daniel lauscht dem Summen des Ventilators. Alisa denkt an ihre Mutter, die nicht mehr so mobil ist und in einer Wohnung ohne Klimaanlage oder Sonnenschutz lebt.',
+      text:'',
       class: 'scroll-text'
     },
     {
       name:'seminbed1',
       image:'png',
       time:0.5,
-      text:'Paul kann nicht schlafen und ist seit Tagen müde. Die Schulen sind wegen der extremen Hitze geschlossen. Ein Glück im Unglück, dass Daniel Lehrer ist: Er kann tagsüber auf Paul aufpassen, während Alisa im Krankenhaus arbeitet.',
+      text:'',
       class: 'scroll-text'
     }
   ]
