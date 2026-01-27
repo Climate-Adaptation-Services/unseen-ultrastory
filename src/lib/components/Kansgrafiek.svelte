@@ -141,11 +141,10 @@
           {/if}
         </g>
       </svg>
-      <!-- Graph description removed for no-text version -->
-      <!--
+      {#if currentStepName === 'kansgrafiek'}
       <p class='graph-description'>In einer Welt, die bis 2100 auf eine Erwärmung von zusätzlich 3,5 Grad Celsius zusteuert, werden jüngere Generationen sehr wahrscheinlich in ihrem Leben viel mehr Hitzewellen erleben als ältere Generationen, im Vergleich zu einem Szenario ohne Klimawandel. Diese Zahlen stammen aus zuverlässiger Klimaforschung der Vrije Universität Brüssel und sind auf <a href="https://myclimatefuture.info/de" target="_blank">myclimatefuture.info</a> zu finden.
       </p>
-      -->
+      {/if}
     </div>
   </div>
 
@@ -175,9 +174,11 @@
   .graph-description{
     color:#4e4e4e;
     font-size:1.5vh;
-    text-align: left;
+    text-align: center;
     bottom: 8%;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
   }
 </style>
