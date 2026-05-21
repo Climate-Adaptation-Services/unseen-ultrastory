@@ -1,8 +1,7 @@
 <script>
-	import BackgroundMap from "$lib/components/BackgroundMap.svelte";
-	import 'leaflet/dist/leaflet.css';
+	import BackgroundMap from "$lib/components/MapLibreMap.svelte";
 
-	import Titlepage from "$lib/components/Titlepage.svelte";
+	import Titlepage from "$lib/components/TitlepageV2.svelte";
 	import Introductie from "$lib/components/Introductie.svelte";
 	import Ziekenhuis from "$lib/components/Ziekenhuis.svelte";
 	import Gesprek from "$lib/components/Gesprek.svelte";
@@ -18,6 +17,21 @@
 
 	import Scroller from "@sveltejs/svelte-scroller";
 	import { started, sound } from "$lib/stores.js";
+	import { browser } from "$app/environment";
+	import { onMount } from "svelte";
+
+	let scrollerEl;
+
+	// Fade the scroller in when the user clicks start.
+	// We watch $started reactively and trigger the GSAP animation once.
+	$: if ($started && browser && scrollerEl) {
+		import('gsap').then(({ gsap }) => {
+			gsap.fromTo(scrollerEl,
+				{ opacity: 0 },
+				{ opacity: 1, duration: 1.4, ease: 'power2.inOut', delay: 0.1 }
+			);
+		});
+	}
 
 	// for preloading images
 	let imageModules = import.meta.glob("/static/images/*");
@@ -93,6 +107,8 @@
 			<img class='logo' src='/images/logokleur.png' width='10%'/>
 		</a>	
 		{#if $started}
+			<!-- bind:this so GSAP can fade this in on start; initial opacity:0 set inline -->
+			<div bind:this={scrollerEl} style="opacity:0">
 			<Scroller bind:index bind:offset bind:progress>
 				
 				<div slot='background' top='0' bottom='0'>
@@ -148,7 +164,8 @@
 					{/each}
 				</div>
 			</Scroller>
-		{/if}	
+			</div>
+		{/if}
 	</div>
 {/if}
 
