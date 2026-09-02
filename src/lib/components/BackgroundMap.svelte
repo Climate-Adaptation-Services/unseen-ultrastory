@@ -50,7 +50,7 @@
   // const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
   // const tileUrl = 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
   // const tileUrl = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
-  let tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+  let tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
   
   const tileLayerOptions = {
       minZoom: 2,
@@ -79,7 +79,7 @@
   }
   $: if(leafletMap && currentStepName === 'ziekenhuis'){
     leafletMap.flyTo([51.466143, 5.472363-0.0025], 15, {duration: 2})
-    tileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
     
     ziekenhuis
       .setContent("Catharina ziekenhuis")
@@ -90,7 +90,7 @@
   let audio;
   $: if(leafletMap && currentStepName === 'wandeling'){
     leafletMap.flyTo([51.426437, 5.470482-0.0025], 16, {duration: 2})
-    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
 
     audio = new Audio('sounds/night.mp3');
     audio.play();
@@ -98,7 +98,7 @@
 
   $: if(leafletMap && currentStepName === 'unseen'){
     leafletMap.flyTo([51.426437, 5.470482-0.0025], 16, {duration: 2})
-    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+    tileUrl = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
 
     audio.pause();
   }
