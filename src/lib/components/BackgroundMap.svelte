@@ -46,7 +46,7 @@
   };
 
   const nightTileURL = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
-  const dayTileURL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+  const dayTileURL = 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=70276298-f784-4ba8-93c8-439b926e8cab'
 
   const coordsHuis = [parseFloat(wandelRoute[0][0]), parseFloat(wandelRoute[0][1])]
   const coordsZiekenhuis = [49.0161882, 12.0645621]
