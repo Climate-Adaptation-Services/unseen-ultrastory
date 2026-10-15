@@ -62,7 +62,7 @@
 		justify-content: center;
 		align-items: center;
 		color: white;
-		background-image: url('$lib/heatwave.png');
+		background-image: url('$lib/heatwave.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
   }
