@@ -21,7 +21,7 @@
   const scenes = [
     {
       name:'gesprek',
-      image:'png',
+      image:'jpg',
       time:0.2,
       text:'Sem kan niet slapen door de warmte en denkt aan wat oma zei toen ze vanmiddag belde. Niels probeert Sem in slaap te helpen met natte washandjes. De ventilator zet hij op de hoogste stand. Terwijl hij hiermee bezig is, zegt Sem: “Volgens oma werd het vroeger nooit zo heet.”   <br/> <br/> Niels: “Klopt. Toen ik zo oud was als jij, kwam dit soort hitte nooit voor. Als je mij toen had verteld dat het dagen achter elkaar boven de 40 graden zou kunnen worden, had ik dat nooit geloofd.​”​',
       class: 'scroll-text'

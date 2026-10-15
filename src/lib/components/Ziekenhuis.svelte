@@ -19,28 +19,28 @@
   const scenes = [
     {
       name:'ziekenhuischaos2',
-      image:'png',
+      image:'jpg',
       time:0.01,
       text:'In het ziekenhuis werkt Leonie zo hard als ze kan. Een collega heeft zich ziekgemeld vanwege een hitteberoerte. En het is verschrikkelijk druk op de spoedeisende hulp: de hitte veroorzaakt massale gezondheidsproblemen. Het is zwaar werk, en morgen moet ze ook weer.',
       class: 'scroll-text'
     },
     {
       name:'oudevrouwziekenhuis',
-      image:'png',
+      image:'jpg',
       time:0.25,
       text:'Vandaag zat de wachtkamer vol met mensen. Er waren veel ouderen die met uitdrogingsverschijnselen op de spoedeisende hulp belandden.',
       class: 'scroll-text'
     },
     {
       name:'hardloper1',
-      image:'png',
+      image:'jpg',
       time:0.5,
       text:'Een paar jonge sporters werden onwel toen ze ondanks waarschuwingen toch gingen hardlopen.',
       class: 'scroll-text'
     },
     {
       name:'boer1',
-      image:'png',
+      image:'jpg',
       time:0.75,
       text:'En een boer had tijdens het hooien een zware zonnesteek gekregen.',
       class: 'scroll-text'

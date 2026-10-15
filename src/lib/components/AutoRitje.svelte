@@ -28,49 +28,49 @@
     },
     {
       name:'zwembad',
-      image:'png',
+      image:'jpg',
       time:0.18,
       text:"Ze nemen de auto. Even wat koelte van de airco. Ze hebben allebei zo'n zin om te zwemmen! Maar het zwembad blijkt dicht. Het is voor badpersoneel niet verantwoord om bij deze temperaturen te werken.",
       class: 'scroll-text'
     },
     {
       name:'nielstel',
-      image:'png',
+      image:'jpg',
       time:0.27,
       text:'Dan ontvangt Niels een appje van Leonie: de hele stad zit zonder stroom. Het ziekenhuis draait op het noodaggregaat. “Wil je alsjeblieft even langs mijn moeder om te checken hoe het met haar gaat?”',
       class: 'scroll-text'
     },
     {
       name:'file',
-      image:'png',
+      image:'jpg',
       time:0.36,
       text:'Niels en Sem stappen opnieuw de auto in. Het is heel druk op de weg. Veel mensen proberen de stad uit te komen door de stroomuitval. Niels maakt zich zorgen. Hoe lang gaat deze black-out duren?​',
       class: 'scroll-text'
     },
     {
       name:'kerk',
-      image:'png',
+      image:'jpg',
       time:0.45,
       text:'Kerken, sporthallen, supermarkten en buurthuizen worden spontaan als koele schuilplekken ingericht.​​​​',
       class: 'scroll-text'
     },
     {
       name:'pomp',
-      image:'png',
+      image:'jpg',
       time:0.63,
       text:"Voor tankstations staan enorme rijen auto's. Zat benzine, maar niemand die zijn tank kan volgooien omdat de pinautomaten niet meer werken.",
       class: 'scroll-text'
     },
     {
       name:'manonwel',
-      image:'png',
+      image:'jpg',
       time:0.72,
       text:"Als Niels een man uitgeput op de grond ziet zitten, aarzelt hij geen moment. Hij stapt uit de auto en loopt naar hem toe. De man lijkt last te hebben van uitdroging. Snel geeft Niels hem wat water en helpt hem op de achterbank van de auto. Samen rijden ze naar het ziekenhuis. Daar zien ze al snel Leonie. ",
       class: 'scroll-text'
     },
     {
       name:'leonieradeloos',
-      image:'png',
+      image:'jpg',
       time:0.81,
       text:'Niels legt uit dat ze nog niet bij haar moeder zijn geweest. “Maar we gaan nu poolshoogte nemen!” Niels en Leonie geven elkaar een haastige kus. “Kom Sem, wij gaan naar oma toe.”<br/><br/> Leonie kijkt om zich heen. Al die mensen die hulp nodig hebben. Ze veegt het zweet van haar voorhoofd. Hoe gaat dit verder?',
       class: 'scroll-text'
