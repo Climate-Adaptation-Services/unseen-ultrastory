@@ -30,7 +30,7 @@
       name:'',
       image:'',
       time:0.4,
-      text:'This story is based on the latest scientific insights on exceptional weather events in the Netherlands and numerous interviews with experts in climate adaptation, heat, and crisis management. The images were created with AI. '
+      text:'This story is based on the latest scientific insights on exceptional weather events in the Netherlands and numerous interviews with experts in climate adaptation, heat, and crisis management. '
     },
     {
       name:'',

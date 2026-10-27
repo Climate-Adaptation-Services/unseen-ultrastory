@@ -19,28 +19,28 @@
   const scenes = [
     {
       name:'ziekenhuischaos2',
-      image:'png',
+      image:'jpg',
       time:0.01,
       text:"At the hospital, Lisa works as hard as she can. A colleague has called in sick because of heatstroke. The emergency room is terribly busy: the heat is causing massive health problems. It's hard work, and tomorrow she has to do it again.",
       class: 'scroll-text'
     },
     {
       name:'oudevrouwziekenhuis',
-      image:'png',
+      image:'jpg',
       time:0.25,
       text:'Today, the waiting room was full of people. Many elderly people who ended up in the emergency room with dehydration symptoms.',
       class: 'scroll-text'
     },
     {
       name:'hardloper1',
-      image:'png',
+      image:'jpg',
       time:0.5,
       text:'A couple of young athletes became unwell when they went running despite warnings.',
       class: 'scroll-text'
     },
     {
       name:'boer1',
-      image:'png',
+      image:'jpg',
       time:0.75,
       text:'And a farmer had suffered severe sunstroke while harvesting.',
       class: 'scroll-text'

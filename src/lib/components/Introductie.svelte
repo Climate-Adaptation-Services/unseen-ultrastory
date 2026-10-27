@@ -20,14 +20,14 @@
   const scenes = [
     {
       name:'bank1',
-      image:'png',
+      image:'jpg',
       time:0.2,
       text:"It’s early July and it has been above 40 degrees Celsius in Eindhoven for three days already. The night temperature doesn't drop below 25 degrees either. It is sweltering. <br/><br/> We follow Lisa and Mark and their seven-year-old son Tom. Mark is a Dutch teacher at a secondary school. Lisa works in the emergency room of the Catharina Hospital. <br/><br/>Lisa and Mark lie exhausted on the sofa. They have been sleeping badly for nights because their bedroom is so hot. Mark listens to the hum of the ventilator. Lisa thinks of her mother who has difficulty walking and lives in a poorly maintained and hot apartment.​",
       class: 'scroll-text'
     },
     {
       name:'seminbed1',
-      image:'png',
+      image:'jpg',
       time:0.5,
       text:'Tom cannot sleep and has been tired for days. The summer school vacation started early because of the exceptional heat. A stroke of luck that Mark is a teacher: he can take care of Tom during the day while Lisa works at the hospital.',
       class: 'scroll-text'

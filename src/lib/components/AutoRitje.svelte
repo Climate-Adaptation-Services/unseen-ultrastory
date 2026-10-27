@@ -28,49 +28,49 @@
     },
     {
       name:'zwembad',
-      image:'png',
+      image:'jpg',
       time:0.18,
       text:"They take the car and enjoy the coolness from the air conditioning. They both feel so much like swimming! But the pool turns out to be closed. It is not responsible for pool staff to work in these temperatures.",
       class: 'scroll-text'
     },
     {
       name:'nielstel',
-      image:'png',
+      image:'jpg',
       time:0.27,
       text:'Then Mark receives a message from Lisa: the whole city is without power. The hospital is running on the emergency generator. "Would you please stop in at my mother’s to check how she’s doing?"',
       class: 'scroll-text'
     },
     {
       name:'file',
-      image:'png',
+      image:'jpg',
       time:0.36,
       text:'Mark and Tom get into the car again. The road is very busy. Many people are trying to get out of town because of the power cut. Mark is worried. How long will this blackout last?',
       class: 'scroll-text'
     },
     {
       name:'kerk',
-      image:'png',
+      image:'jpg',
       time:0.45,
       text:'Churches, sports halls, supermarkets, and community centres are spontaneously set up as cooling centres.​​​​',
       class: 'scroll-text'
     },
     {
       name:'pomp',
-      image:'png',
+      image:'jpg',
       time:0.63,
       text:"There are huge queues of cars at petrol stations. Plenty of petrol, but no one can fill up their tank because card payments are no longer possible. ",
       class: 'scroll-text'
     },
     {
       name:'manonwel',
-      image:'png',
+      image:'jpg',
       time:0.72,
       text:"When Mark sees a man sitting exhausted on the ground, he doesn’t hesitate for a moment. He gets out of the car and walks towards him. The man seems to be suffering from dehydration. Quickly, Mark gives him some water and helps him into the back seat of the car. They drive to the hospital. There, they soon see Lisa. ",
       class: 'scroll-text'
     },
     {
       name:'leonieradeloos',
-      image:'png',
+      image:'jpg',
       time:0.81,
       text:'Mark explains that they haven’t visited her mother yet. "But we\'re going to check on her now!" Mark and Lisa give each other a peck. "Come Tom, we\'re going to grandma\'s."<br/><br/> Lisa looks around. All those people needing help. She wipes the sweat from her forehead. How will this end?',
       class: 'scroll-text'
